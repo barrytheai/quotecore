@@ -76,11 +76,6 @@ export default function HomePage() {
         "Most contractors send their first quote within minutes of entering their measurements. The goal is to quote before you leave the driveway.",
     },
     {
-      question: "Is QuoteCore+ available in the UK, Australia, and New Zealand?",
-      answer:
-        "Yes. QuoteCore+ is built for contractors across the UK, Australia, and New Zealand.",
-    },
-    {
       question: "How do I get started?",
       answer:
         "Sign up for a free 2-week trial. No credit card required. You'll be quoting within minutes.",
@@ -328,6 +323,14 @@ export default function HomePage() {
       </main>
 
       <style>{`
+        .brand-wordmark {
+          white-space: nowrap;
+        }
+
+        .brand-plus {
+          color: #FF6B35;
+        }
+
         @keyframes shimmerBorder {
           0% {
             background-position: -200% center;
