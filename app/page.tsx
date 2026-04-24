@@ -136,6 +136,10 @@ export default function HomePage() {
                 Roofing quoting software that works as fast as you do.
               </h1>
 
+              <p className="mt-6 max-w-xl text-lg text-zinc-600 sm:text-xl">
+                From measurement to pricing to customer-ready quote. One clean workflow, no spreadsheets, no back-and-forth.
+              </p>
+
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a href="/free-trial" className={primaryButton}>
                   Start free trial
