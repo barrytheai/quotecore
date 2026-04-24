@@ -95,7 +95,7 @@ export default function HomePage() {
     "inline-flex h-11 min-w-[170px] items-center justify-center rounded-full px-5 py-2.5 text-sm transition-colors duration-200";
 
   const topPrimaryButton =
-    `${headerActionButton} bg-[#FF6B35] font-medium text-white hover:bg-[#e85d2b]`;
+    `${headerActionButton} bg-[#FF6B35] font-semibold text-white hover:bg-[#e85d2b]`;
 
   return (
     <>
