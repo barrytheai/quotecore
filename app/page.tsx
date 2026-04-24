@@ -91,8 +91,11 @@ export default function HomePage() {
   const topShimmerButton =
     "pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 shadow-[0_6px_24px_rgba(255,255,255,0.18)_inset,0_10px_30px_rgba(0,0,0,0.04)] backdrop-blur-3xl transition-colors duration-200";
 
+  const headerActionButton =
+    "inline-flex h-11 min-w-[170px] items-center justify-center rounded-full px-5 py-2.5 text-sm transition-colors duration-200";
+
   const topPrimaryButton =
-    "inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#e85d2b]";
+    `${headerActionButton} bg-[#FF6B35] font-medium text-white hover:bg-[#e85d2b]`;
 
   return (
     <>
