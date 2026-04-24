@@ -68,7 +68,7 @@ export default function HomePage() {
     {
       question: "Who is QuoteCore+ built for?",
       answer:
-        "QuoteCore+ is built for roofing contractors, solo operators and teams, who want to quote jobs faster and win more business with less admin.",
+        "QuoteCore+ is built for roofing contractors — solo operators and teams — who want to quote jobs faster and win more business with less admin.",
     },
     {
       question: "How long does it take to send a quote with QuoteCore+?",
@@ -78,7 +78,7 @@ export default function HomePage() {
     {
       question: "How do I get started?",
       answer:
-        "Sign up for a free 2-week trial. No credit card required. You'll be quoting within minutes.",
+        "Sign up for a free 2-week trial — no credit card required. You'll be quoting within minutes.",
     },
   ];
 
