@@ -50,7 +50,7 @@ const faqSchema = {
       name: "Who is QuoteCore+ built for?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QuoteCore+ is built for roofing contractors — solo operators and teams — who want to quote jobs faster and win more business with less admin.",
+        text: "QuoteCore+ is built for roofing contractors - solo operators and teams - who want to quote jobs faster and win more business with less admin.",
       },
     },
     {
@@ -66,7 +66,7 @@ const faqSchema = {
       name: "How do I get started?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sign up for a free 2-week trial — no credit card required. You'll be quoting within minutes.",
+        text: "Sign up for a free 2-week trial - no credit card required. You'll be quoting within minutes.",
       },
     },
   ],
