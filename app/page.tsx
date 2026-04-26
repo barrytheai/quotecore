@@ -7,17 +7,22 @@ export default function HomePage() {
     {
       number: "01",
       title: "Capture the job",
-      body: "Bring in measurements, takeoff files, and project details in one clean workflow.",
+      body: "Measurements, plans, takeoff files, and job details all come together in one place.",
     },
     {
       number: "02",
       title: "Build the quote",
-      body: "Use templates, components, and pricing logic to quote faster and stay consistent.",
+      body: "Price the roof, custom flashings, materials, labour, and delivery using your saved logic.",
     },
     {
       number: "03",
-      title: "Send it professionally",
-      body: "Deliver a clear, itemised quote your customer can understand at a glance.",
+      title: "Send for approval",
+      body: "Share a clear itemised quote your customer can approve with confidence.",
+    },
+    {
+      number: "04",
+      title: "Manage the job",
+      body: "Once approved, order materials and track the job through to completion.",
     },
   ];
 
@@ -163,13 +168,13 @@ export default function HomePage() {
             <div>
               <p className="text-sm text-zinc-500">How it works</p>
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                One clean flow from measurement to proposal.
+                One clean flow from measure-up to managed job.
               </h2>
               <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
                 <span className="brand-wordmark">
                   QuoteCore<span className="brand-plus">+</span>
                 </span>{" "}
-                helps roofers move from project inputs to pricing logic to customer-ready output without the usual friction.
+                helps roofers turn project details into accurate quotes, approved orders, and trackable jobs without the usual back-and-forth.
               </p>
 
               <div className="mt-14 flex max-w-[460px] flex-col gap-5">
@@ -208,10 +213,20 @@ export default function HomePage() {
 
                   <div className="relative">
                     <div className="border-b border-zinc-200 pb-5">
-                      <p className="text-2xl font-semibold">QUOTE #1000</p>
-                      <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
-                      <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
-                      <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
+                      <div className="flex flex-wrap items-start justify-between gap-4">
+                        <div>
+                          <p className="text-2xl font-semibold">QUOTE #1000</p>
+                          <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
+                          <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
+                          <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
+                        </div>
+                        <div className="min-w-[180px] rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm">
+                          <p className="font-semibold text-zinc-950">Job status</p>
+                          <p className="mt-2 text-zinc-600">Quote approved</p>
+                          <p className="text-zinc-600">Materials ordered</p>
+                          <p className="text-zinc-600">Install booked</p>
+                        </div>
+                      </div>
                     </div>
 
                     <div className="mt-6 space-y-4 text-sm text-zinc-700">
