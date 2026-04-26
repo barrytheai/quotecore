@@ -203,15 +203,15 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)]">
-                <div className="relative overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
+              <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)] lg:min-h-[760px]">
+                <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
                   <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
                     <span className="select-none rotate-[-30deg] text-center text-[70px] font-semibold tracking-[0.12em] text-zinc-200 opacity-30">
                       EXAMPLE QUOTE
                     </span>
                   </div>
 
-                  <div className="relative">
+                  <div className="relative flex h-full flex-col">
                     <div className="border-b border-zinc-200 pb-5">
                       <p className="text-2xl font-semibold">QUOTE #1000</p>
                       <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
@@ -219,7 +219,7 @@ export default function HomePage() {
                       <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
                     </div>
 
-                    <div className="mt-6 space-y-4 text-sm text-zinc-700">
+                    <div className="mt-6 flex-1 space-y-4 text-sm text-zinc-700">
                       {quoteItems.map(([label, value]) => (
                         <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
                           <span>{label}</span>
