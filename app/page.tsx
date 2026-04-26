@@ -181,7 +181,7 @@ export default function HomePage() {
                 {steps.map((item) => (
                   <div
                     key={item.number}
-                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-8 py-7 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
                   >
                     <div className="flex items-start gap-6">
                       <div className="w-[56px] shrink-0 pt-[2px] text-2xl font-semibold leading-none text-zinc-950">
@@ -213,25 +213,15 @@ export default function HomePage() {
 
                   <div className="relative">
                     <div className="border-b border-zinc-200 pb-5">
-                      <div className="flex flex-wrap items-start justify-between gap-4">
-                        <div>
-                          <p className="text-2xl font-semibold">QUOTE #1000</p>
-                          <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
-                          <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
-                          <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
-                        </div>
-                        <div className="min-w-[180px] rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm">
-                          <p className="font-semibold text-zinc-950">Job status</p>
-                          <p className="mt-2 text-zinc-600">Quote approved</p>
-                          <p className="text-zinc-600">Materials ordered</p>
-                          <p className="text-zinc-600">Install booked</p>
-                        </div>
-                      </div>
+                      <p className="text-2xl font-semibold">QUOTE #1000</p>
+                      <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
+                      <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
+                      <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
                     </div>
 
                     <div className="mt-6 space-y-4 text-sm text-zinc-700">
                       {quoteItems.map(([label, value]) => (
-                        <div key={label} className="flex justify-between border-b border-zinc-200 py-2">
+                        <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
                           <span>{label}</span>
                           <span className="font-medium">{value}</span>
                         </div>
