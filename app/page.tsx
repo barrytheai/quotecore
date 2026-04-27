@@ -156,7 +156,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]">
                 <video className="block h-auto w-full" autoPlay muted loop playsInline preload="auto">
-                  <source src="/qcvideo.mp4" type="video/mp4" />
+                  <source src="/Videocaption.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
