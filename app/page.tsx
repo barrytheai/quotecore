@@ -6,23 +6,23 @@ export default function HomePage() {
   const steps = [
     {
       number: "01",
-      title: "Capture the job",
-      body: "Measurements, plans, takeoff files, and job details all come together in one place.",
+      title: "The job comes in",
+      body: "No more chasing details across messages and files. Keep the measurements, plans, takeoffs, and job info together.",
     },
     {
       number: "02",
       title: "Build the quote",
-      body: "Price the roof, custom flashings, materials, labour, and delivery using your saved logic.",
+      body: "Your rates, your way. Add the roof, custom flashings, materials, labour, and delivery all in one place.",
     },
     {
       number: "03",
-      title: "Send for approval",
-      body: "Share a clear itemised quote your customer can approve with confidence.",
+      title: "Get approval faster",
+      body: "Give your customer a quote that is clear, professional, and easy to say yes to.",
     },
     {
       number: "04",
-      title: "Manage the job",
-      body: "Once approved, order materials and track the job through to completion.",
+      title: "Manage in one place",
+      body: "Move from approval to action: order materials, track progress, and keep the job moving.",
     },
   ];
 
@@ -168,13 +168,13 @@ export default function HomePage() {
             <div>
               <p className="text-sm text-zinc-500">How it works</p>
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                One clean flow from measure-up to managed job.
+                One place to quote, approve, order, and track the job.
               </h2>
               <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
                 <span className="brand-wordmark">
                   QuoteCore<span className="brand-plus">+</span>
                 </span>{" "}
-                helps roofers turn project details into accurate quotes, approved orders, and trackable jobs without the usual back-and-forth.
+                helps roofers turn job details into accurate quotes, approved orders, and trackable work without the usual back-and-forth.
               </p>
 
               <div className="mt-14 flex max-w-[460px] flex-col gap-5">
