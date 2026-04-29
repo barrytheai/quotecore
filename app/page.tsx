@@ -160,12 +160,12 @@ export default function HomePage() {
                 </video>
               </div>
 
-              <div className="mt-6 rounded-[1.75rem] border border-[#FF6B35]/30 bg-[linear-gradient(135deg,#FF6B35_0%,#ff8a61_100%)] p-5 text-white shadow-[0_24px_80px_rgba(255,107,53,0.35)]">
+              <div className="mt-6 rounded-[1.75rem] border border-[#FF6B35]/30 bg-[linear-gradient(135deg,rgba(255,107,53,1)_0%,rgba(255,138,97,0.92)_55%,rgba(255,138,97,0.78)_100%)] p-5 text-white shadow-[0_24px_80px_rgba(255,107,53,0.35)]">
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">
                   Performance guarantee
                 </p>
-                <p className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl">
-                  At least 25% faster - or it’s free.
+                <p className="mt-2 text-2xl font-semibold uppercase leading-tight tracking-[0.04em] sm:text-3xl">
+                  AT LEAST 25% FASTER - OR IT’S FREE.
                 </p>
               </div>
             </div>
