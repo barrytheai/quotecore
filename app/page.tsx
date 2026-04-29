@@ -131,7 +131,7 @@ export default function HomePage() {
           </div>
         </header>
 
-        <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden pb-12 lg:pb-16">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,107,53,0.10),transparent_34%)]" />
           <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-6 py-10 lg:grid-cols-2 lg:px-8 lg:py-12">
             <div>
@@ -160,11 +160,11 @@ export default function HomePage() {
                 </video>
               </div>
 
-              <div className="mt-6 rounded-[1.75rem] border border-[#FF6B35]/30 bg-[linear-gradient(135deg,rgba(255,107,53,1)_0%,rgba(255,138,97,0.92)_55%,rgba(255,138,97,0.78)_100%)] p-5 text-white shadow-[0_24px_80px_rgba(255,107,53,0.35)]">
+              <div className="mt-6 inline-flex max-w-full items-center rounded-[1.75rem] border border-[#FF6B35]/30 bg-[linear-gradient(135deg,rgba(255,107,53,1)_0%,rgba(255,138,97,0.92)_55%,rgba(255,138,97,0.78)_100%)] px-5 py-4 text-white shadow-[0_24px_80px_rgba(255,107,53,0.35)]">
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">
                   Performance guarantee
                 </p>
-                <p className="mt-2 text-2xl font-semibold uppercase leading-tight tracking-[0.04em] sm:text-3xl">
+                <p className="mt-2 whitespace-nowrap text-lg font-semibold uppercase leading-tight tracking-[0.04em] sm:text-xl">
                   AT LEAST 25% FASTER - OR IT’S FREE.
                 </p>
               </div>
