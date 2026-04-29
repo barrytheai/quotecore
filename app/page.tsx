@@ -159,6 +159,10 @@ export default function HomePage() {
                   <source src="/Videocaption.mp4" type="video/mp4" />
                 </video>
               </div>
+
+              <div className="mt-5 inline-flex items-center rounded-full bg-[#FF6B35] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_50px_rgba(255,107,53,0.35)] sm:text-base">
+                At least 25% faster - or it’s free.
+              </div>
             </div>
           </div>
         </section>
