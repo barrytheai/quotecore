@@ -160,8 +160,13 @@ export default function HomePage() {
                 </video>
               </div>
 
-              <div className="mt-5 inline-flex items-center rounded-full bg-[#FF6B35] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_50px_rgba(255,107,53,0.35)] sm:text-base">
-                At least 25% faster - or it’s free.
+              <div className="mt-6 rounded-[1.75rem] border border-[#FF6B35]/30 bg-[linear-gradient(135deg,#FF6B35_0%,#ff8a61_100%)] p-5 text-white shadow-[0_24px_80px_rgba(255,107,53,0.35)]">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">
+                  Performance guarantee
+                </p>
+                <p className="mt-2 text-2xl font-semibold leading-tight sm:text-3xl">
+                  At least 25% faster - or it’s free.
+                </p>
               </div>
             </div>
           </div>
