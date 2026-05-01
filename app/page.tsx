@@ -183,7 +183,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]">
+              <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]">
                 <video
                   ref={videoRef}
                   className="block h-auto w-full"
@@ -195,23 +195,43 @@ export default function HomePage() {
                 >
                   <source src="/QCfinalisedSmaller.mp4" type="video/mp4" />
                 </video>
-              </div>
 
-              <div className="mt-4 flex flex-wrap gap-3">
-                <button
-                  type="button"
-                  onClick={togglePlayback}
-                  className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors duration-200 hover:bg-zinc-50"
-                >
-                  {isPaused ? "Play video" : "Pause video"}
-                </button>
-                <button
-                  type="button"
-                  onClick={toggleMute}
-                  className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors duration-200 hover:bg-zinc-50"
-                >
-                  {isMuted ? "Unmute video" : "Mute video"}
-                </button>
+                <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-black/70 via-black/35 to-transparent px-5 pb-5 pt-12">
+                  <button
+                    type="button"
+                    onClick={togglePlayback}
+                    aria-label={isPaused ? "Play video" : "Pause video"}
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/35 text-white backdrop-blur-md transition-colors duration-200 hover:bg-black/50"
+                  >
+                    {isPaused ? (
+                      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                        <path d="M8 5.14v13.72c0 .78.84 1.26 1.5.86l10-6.86a1 1 0 000-1.72l-10-6.86A1 1 0 008 5.14z" />
+                      </svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                        <path d="M7 5h4v14H7zM13 5h4v14h-4z" />
+                      </svg>
+                    )}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={toggleMute}
+                    aria-label={isMuted ? "Unmute video" : "Mute video"}
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/35 text-white backdrop-blur-md transition-colors duration-200 hover:bg-black/50"
+                  >
+                    {isMuted ? (
+                      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                        <path d="M14 5.23v13.54a1 1 0 01-1.64.77L7.91 16H4a1 1 0 01-1-1v-6a1 1 0 011-1h3.91l4.45-3.54A1 1 0 0114 5.23zM19.78 8.8a1 1 0 010 1.41L18 12l1.78 1.79a1 1 0 11-1.41 1.41L16.59 13.4l-1.8 1.8a1 1 0 01-1.41-1.41L15.17 12l-1.79-1.79a1 1 0 011.41-1.41l1.8 1.8 1.78-1.8a1 1 0 011.41 0z" />
+                      </svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                        <path d="M14 5.23v13.54a1 1 0 01-1.64.77L7.91 16H4a1 1 0 01-1-1v-6a1 1 0 011-1h3.91l4.45-3.54A1 1 0 0114 5.23z" />
+                        <path d="M16.5 9.5a1 1 0 011.41 0A4.97 4.97 0 0119.5 13a4.97 4.97 0 01-1.59 3.5 1 1 0 01-1.41-1.42A2.98 2.98 0 0017.5 13a2.98 2.98 0 00-1-2.08 1 1 0 010-1.42z" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
               </div>
 
               <div className="mt-6 rounded-[1.75rem] border border-[#FF6B35]/30 bg-[linear-gradient(135deg,#FF6B35_0%,#ff8a61_100%)] p-5 text-white shadow-[0_24px_80px_rgba(255,107,53,0.35)]">
