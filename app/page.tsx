@@ -1,8 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function HomePage() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isMuted, setIsMuted] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
+  };
+
+  const togglePlayback = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      try {
+        await video.play();
+        setIsPaused(false);
+      } catch {
+        setIsPaused(true);
+      }
+      return;
+    }
+
+    video.pause();
+    setIsPaused(true);
+  };
+
   const steps = [
     {
       number: "01",
@@ -155,9 +184,34 @@ export default function HomePage() {
 
             <div className="relative">
               <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]">
-                <video className="block h-auto w-full" autoPlay muted loop playsInline preload="auto">
-                  <source src="/Videocaption.mp4" type="video/mp4" />
+                <video
+                  ref={videoRef}
+                  className="block h-auto w-full"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                >
+                  <source src="/QCfinalisedSmaller.mp4" type="video/mp4" />
                 </video>
+              </div>
+
+              <div className="mt-4 flex flex-wrap gap-3">
+                <button
+                  type="button"
+                  onClick={togglePlayback}
+                  className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors duration-200 hover:bg-zinc-50"
+                >
+                  {isPaused ? "Play video" : "Pause video"}
+                </button>
+                <button
+                  type="button"
+                  onClick={toggleMute}
+                  className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors duration-200 hover:bg-zinc-50"
+                >
+                  {isMuted ? "Unmute video" : "Mute video"}
+                </button>
               </div>
 
               <div className="mt-6 rounded-[1.75rem] border border-[#FF6B35]/30 bg-[linear-gradient(135deg,#FF6B35_0%,#ff8a61_100%)] p-5 text-white shadow-[0_24px_80px_rgba(255,107,53,0.35)]">
