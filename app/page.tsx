@@ -199,7 +199,7 @@ export default function HomePage() {
                   playsInline
                   preload="auto"
                 >
-                  <source src="/QCfinalisedSmaller.mp4" type="video/mp4" />
+                  <source src="/QCPFinalVideo.mp4" type="video/mp4" />
                 </video>
 
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-black/70 via-black/35 to-transparent px-5 pb-5 pt-12">
