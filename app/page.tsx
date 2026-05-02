@@ -153,6 +153,9 @@ export default function HomePage() {
             </nav>
 
             <div className="flex items-center gap-3">
+              <a href="https://calendly.com/" className={topShimmerButton}>
+                Book a Call
+              </a>
               <a href="/free-trial" className={topPrimaryButton}>
                 Start free trial
               </a>
@@ -369,6 +372,12 @@ export default function HomePage() {
                   <a href="/free-trial" className={`mt-8 ${item.featured ? primaryButton : shimmerButton}`}>
                     {item.cta}
                   </a>
+                  <a
+                    href="https://calendly.com/"
+                    className={`mt-3 ${item.featured ? shimmerButton : topShimmerButton}`}
+                  >
+                    Book a Call
+                  </a>
                 </div>
               ))}
             </div>
@@ -399,6 +408,9 @@ export default function HomePage() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="/free-trial" className={primaryButton}>
                 Start your free 2-week trial
+              </a>
+              <a href="https://calendly.com/" className={shimmerButton}>
+                Book a Call
               </a>
               <a href="#how-it-works" className={shimmerButton}>
                 See how it works
