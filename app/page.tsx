@@ -182,6 +182,9 @@ export default function HomePage() {
                 <a href="#how-it-works" className={shimmerButton}>
                   See how it works
                 </a>
+                <a href="https://calendly.com/" className={shimmerButton}>
+                  Book a Call
+                </a>
               </div>
             </div>
 
@@ -371,12 +374,6 @@ export default function HomePage() {
 
                   <a href="/free-trial" className={`mt-8 ${item.featured ? primaryButton : shimmerButton}`}>
                     {item.cta}
-                  </a>
-                  <a
-                    href="https://calendly.com/"
-                    className={`mt-3 ${item.featured ? shimmerButton : topShimmerButton}`}
-                  >
-                    Book a Call
                   </a>
                 </div>
               ))}
