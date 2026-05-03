@@ -115,6 +115,20 @@ export default function HomePage() {
         "I used to spend Sunday nights doing quotes. Now I send them from site before I drive home. Game changer for a solo operator.",
       initials: "DK",
     },
+    {
+      name: "Tony Breslin",
+      business: "Breslin Roofing Ltd.",
+      quote:
+        "The materials ordering side alone saved us hours a week. Everything is in one place — quote, approval, order. No more spreadsheets.",
+      initials: "TB",
+    },
+    {
+      name: "Karen O'Neill",
+      business: "O'Neill Commercial Roofing",
+      quote:
+        "Our close rate went up noticeably once we started sending proper quotes. Customers take you more seriously when everything looks professional.",
+      initials: "KO",
+    },
   ];
 
   const faqs = [
@@ -284,11 +298,11 @@ export default function HomePage() {
             <h2 className="mt-3 text-3xl font-semibold text-zinc-950 sm:text-4xl">Trusted by roofing contractors</h2>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-3">
+          <div className="mt-14 flex flex-wrap justify-center gap-5">
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="rounded-[1.75rem] bg-white p-7 shadow-sm border border-[#FF6B35]/20"
+                className="w-full rounded-[1.75rem] bg-white p-7 shadow-sm border border-[#FF6B35]/20 sm:w-[calc(33.333%-14px)]"
               >
                 {/* Stars */}
                 <div className="flex gap-1">
