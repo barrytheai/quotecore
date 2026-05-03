@@ -228,10 +228,10 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]">
+              <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]" style={{borderRadius: "2rem"}}>
                 <video
                   ref={videoRef}
-                  className="block h-auto w-full aspect-video"
+                  className="block w-full aspect-video"
                   autoPlay
                   muted
                   loop
@@ -241,7 +241,7 @@ export default function HomePage() {
                   <source src="/QCPFinalVideo.mp4" type="video/mp4" />
                 </video>
 
-                <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-black/70 via-black/35 to-transparent px-5 pb-5 pt-12">
+                <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-5 pb-5">
                   <button
                     type="button"
                     onClick={togglePlayback}
