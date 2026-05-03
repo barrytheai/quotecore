@@ -206,7 +206,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,107,53,0.10),transparent_34%)]" />
           <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-6 py-10 lg:grid-cols-2 lg:px-8 lg:py-12">
             <div>
-              <h1 className="max-w-2xl text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
                 Roofing quoting software that works as fast as you do.
               </h1>
 
@@ -231,13 +231,12 @@ export default function HomePage() {
               <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]">
                 <video
                   ref={videoRef}
-                  className="block h-auto w-full"
+                  className="block h-auto w-full aspect-video"
                   autoPlay
                   muted
                   loop
                   playsInline
                   preload="auto"
-                  style={{ minHeight: "420px", objectFit: "cover" }}
                 >
                   <source src="/QCPFinalVideo.mp4" type="video/mp4" />
                 </video>
