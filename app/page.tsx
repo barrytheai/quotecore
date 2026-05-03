@@ -297,8 +297,8 @@ export default function HomePage() {
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${activeTestimonial * (100 / 3)}%)` }}
               >
-                {testimonials.map((t) => (
-                  <div key={t.name} className="w-1/3 shrink-0 px-3">
+                {[...testimonials, ...testimonials].map((t, idx) => (
+                  <div key={idx} className="w-1/3 shrink-0 px-3">
                     <div className="rounded-[1.75rem] bg-white p-7 shadow-sm border border-[#FF6B35]/20 h-full">
                       {/* Stars */}
                       <div className="flex gap-1">
@@ -337,7 +337,7 @@ export default function HomePage() {
             </button>
             <button
               type="button"
-              onClick={() => setActiveTestimonial((p) => (p + 1) % testimonials.length)}
+              onClick={() => setActiveTestimonial((p) => (p + 1) % (testimonials.length * 2 - 2))}
               className="absolute -right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
               aria-label="Next"
             >
