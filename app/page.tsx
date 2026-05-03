@@ -336,9 +336,8 @@ export default function HomePage() {
             {/* Arrows */}
             <button
               type="button"
-              onClick={() => setActiveTestimonial((p) => Math.max(0, p - 1))}
-              disabled={activeTestimonial === 0}
-              className="absolute -left-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50 disabled:opacity-30"
+              onClick={() => setActiveTestimonial((p) => (p - 1 + testimonials.length) % testimonials.length)}
+              className="absolute -left-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
               aria-label="Previous"
             >
               <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
@@ -347,9 +346,8 @@ export default function HomePage() {
             </button>
             <button
               type="button"
-              onClick={() => setActiveTestimonial((p) => Math.min(testimonials.length - 3, p + 1))}
-              disabled={activeTestimonial >= testimonials.length - 3}
-              className="absolute -right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50 disabled:opacity-30"
+              onClick={() => setActiveTestimonial((p) => (p + 1) % testimonials.length)}
+              className="absolute -right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
               aria-label="Next"
             >
               <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
@@ -361,20 +359,20 @@ export default function HomePage() {
         </section>
 
         {/* Rolling banner + CTA */}
-        <div className="overflow-hidden border-y border-zinc-100 bg-zinc-950 py-4">
+        <div className="overflow-hidden border-y border-zinc-800 bg-zinc-950 py-3">
           <div className="animate-marquee flex whitespace-nowrap">
-            {[...Array(8)].map((_, i) => (
-              <span key={i} className="mx-8 text-sm font-semibold uppercase tracking-[0.18em] text-white">
-                AT LEAST 25% FASTER — OR IT&apos;S FREE.
-                <span className="mx-8 text-[#FF6B35]">&bull;</span>
+            {[...Array(10)].map((_, i) => (
+              <span key={i} className="inline-flex items-center gap-6 mx-6 text-base font-semibold uppercase tracking-[0.18em] text-white">
+                AT LEAST 25% FASTER - OR IT&apos;S FREE
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF6B35] align-middle"></span>
               </span>
             ))}
           </div>
         </div>
-        <div className="flex justify-center bg-zinc-950 pb-10 pt-6">
+        <div className="flex justify-center bg-zinc-950 py-6">
           <a
             href="https://calendly.com/"
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+            className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
           >
             Book a Call
           </a>
