@@ -355,17 +355,23 @@ export default function HomePage() {
             {[...Array(10)].map((_, i) => (
               <span key={i} className="inline-flex items-center gap-6 mx-6 text-base font-semibold uppercase tracking-[0.18em] text-white">
                 AT LEAST 25% FASTER - OR IT&apos;S FREE
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF6B35] align-middle"></span>
+                <span className="block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#FF6B35]"></span>
               </span>
             ))}
           </div>
         </div>
-        <div className="flex justify-center bg-zinc-950 py-6">
+        <div className="flex justify-center gap-4 bg-zinc-950 py-6">
           <a
             href="https://calendly.com/"
-            className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+            className="inline-flex min-h-10 items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/20"
           >
             Book a Call
+          </a>
+          <a
+            href="/free-trial"
+            className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+          >
+            Start free trial
           </a>
         </div>
 
