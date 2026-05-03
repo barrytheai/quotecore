@@ -6,6 +6,7 @@ export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const toggleMute = () => {
     const video = videoRef.current;
@@ -298,39 +299,86 @@ export default function HomePage() {
             <h2 className="mt-3 text-3xl font-semibold text-zinc-950 sm:text-4xl">Trusted by roofing contractors</h2>
           </div>
 
-          <div className="mt-14 flex flex-wrap justify-center gap-5">
-            {testimonials.map((t) => (
+          {/* Carousel */}
+          <div className="relative mt-14">
+            <div className="overflow-hidden">
               <div
-                key={t.name}
-                className="w-full rounded-[1.75rem] bg-white p-7 shadow-sm border border-[#FF6B35]/20 sm:w-[calc(33.333%-14px)]"
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${activeTestimonial * (100 / 3)}%)` }}
               >
-                {/* Stars */}
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-4 w-4 text-[#FF6B35]" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <p className="mt-4 text-sm leading-relaxed text-zinc-600">&ldquo;{t.quote}&rdquo;</p>
-
-                {/* Author */}
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-semibold text-white">
-                    {t.initials}
+                {testimonials.map((t) => (
+                  <div key={t.name} className="w-1/3 shrink-0 px-3">
+                    <div className="rounded-[1.75rem] bg-white p-7 shadow-sm border border-[#FF6B35]/20 h-full">
+                      {/* Stars */}
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="h-4 w-4 text-[#FF6B35]" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <p className="mt-4 text-sm leading-relaxed text-zinc-600">&ldquo;{t.quote}&rdquo;</p>
+                      <div className="mt-6 flex items-center gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-semibold text-white">
+                          {t.initials}
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-zinc-950">{t.name}</p>
+                          <p className="text-xs text-zinc-500">{t.business}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-semibold text-zinc-950">{t.name}</p>
-                    <p className="text-xs text-zinc-500">{t.business}</p>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Arrows */}
+            <button
+              type="button"
+              onClick={() => setActiveTestimonial((p) => Math.max(0, p - 1))}
+              disabled={activeTestimonial === 0}
+              className="absolute -left-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50 disabled:opacity-30"
+              aria-label="Previous"
+            >
+              <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTestimonial((p) => Math.min(testimonials.length - 3, p + 1))}
+              disabled={activeTestimonial >= testimonials.length - 3}
+              className="absolute -right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50 disabled:opacity-30"
+              aria-label="Next"
+            >
+              <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+            </button>
           </div>
           </div>
         </section>
+
+        {/* Rolling banner + CTA */}
+        <div className="overflow-hidden border-y border-zinc-100 bg-zinc-950 py-4">
+          <div className="animate-marquee flex whitespace-nowrap">
+            {[...Array(8)].map((_, i) => (
+              <span key={i} className="mx-8 text-sm font-semibold uppercase tracking-[0.18em] text-white">
+                AT LEAST 25% FASTER — OR IT&apos;S FREE.
+                <span className="mx-8 text-[#FF6B35]">&bull;</span>
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="flex justify-center bg-zinc-950 pb-10 pt-6">
+          <a
+            href="https://calendly.com/"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+          >
+            Book a Call
+          </a>
+        </div>
 
         <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="grid items-start gap-10 lg:grid-cols-[520px_minmax(0,1fr)]">
@@ -548,6 +596,15 @@ export default function HomePage() {
           opacity: 0;
           transition: opacity 0.3s ease-in-out;
           pointer-events: none;
+        }
+
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 18s linear infinite;
+          width: max-content;
         }
 
         .pill-shimmer:hover::before {
