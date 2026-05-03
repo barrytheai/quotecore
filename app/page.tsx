@@ -541,7 +541,12 @@ export default function HomePage() {
         </section>
 
         <footer className="border-t border-zinc-200 py-10 text-center text-sm text-zinc-500">
-          © 2026 <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span>
+          <p>
+            <a href="/roofing-quoting-software" className="hover:text-zinc-800">Roofing Quoting Software</a>
+            {" · "}
+            <a href="/free-trial" className="hover:text-zinc-800">Free Trial</a>
+          </p>
+          <p className="mt-3">© 2026 <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
         </footer>
       </main>
 

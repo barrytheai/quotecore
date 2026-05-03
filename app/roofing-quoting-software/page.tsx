@@ -1,0 +1,323 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Roofing Quoting Software for Contractors | QuoteCore+",
+  description:
+    "QuoteCore+ is roofing quoting software built for contractors. Go from measurements to a client-ready quote in minutes - no spreadsheets, no double-handling.",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is roofing quoting software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Roofing quoting software helps contractors go from job measurements to a professional, priced quote without spreadsheets or manual calculation. QuoteCore+ combines digital takeoffs, pricing logic, and client-ready output in one workflow.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is QuoteCore+ different from generic quoting tools?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most quoting tools are built for trades in general - they don't understand roofing-specific workflows like takeoffs, hip and valley calculations, or material quantities by roof section. QuoteCore+ is built specifically for roofers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to send a quote?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most contractors send their first quote within minutes of entering their measurements. The goal is to quote before you leave the driveway.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need to be tech-savvy to use it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. QuoteCore+ is designed to be straightforward. If you can use your phone and email, you can use QuoteCore+.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a free trial?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. You get 2 weeks free - no credit card required. You'll be quoting within minutes of signing up.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is QuoteCore+ available?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "QuoteCore+ is a web-based platform available wherever you have internet access. Sign up and start quoting from any device.",
+      },
+    },
+  ],
+};
+
+const steps = [
+  {
+    number: "01",
+    title: "Capture your measurements",
+    body: "Bring in your roof measurements, takeoff data, and job details in one place. No paper, no re-entry.",
+  },
+  {
+    number: "02",
+    title: "Build the quote",
+    body: "Apply your pricing logic, material rates, and templates. QuoteCore+ does the maths - you just review.",
+  },
+  {
+    number: "03",
+    title: "Send it professionally",
+    body: "Deliver a clear, itemised quote your customer can actually understand. On your phone, before you leave the driveway.",
+  },
+];
+
+const bullets = [
+  "Digital takeoffs built for roofing - not adapted from another trade",
+  "Pricing templates with component-level logic",
+  "Client-ready output that looks professional every time",
+  "Full workflow from measurement to send - in one place",
+];
+
+const faqs = [
+  {
+    q: "What is roofing quoting software?",
+    a: "Roofing quoting software helps contractors go from job measurements to a professional, priced quote without spreadsheets or manual calculation. QuoteCore+ combines digital takeoffs, pricing logic, and client-ready output in one workflow.",
+  },
+  {
+    q: "How is QuoteCore+ different from generic quoting tools?",
+    a: "Most quoting tools are built for trades in general - they don't understand roofing-specific workflows like takeoffs, hip and valley calculations, or material quantities by roof section. QuoteCore+ is built specifically for roofers.",
+  },
+  {
+    q: "How long does it take to send a quote?",
+    a: "Most contractors send their first quote within minutes of entering their measurements. The goal is to quote before you leave the driveway.",
+  },
+  {
+    q: "Do I need to be tech-savvy to use it?",
+    a: "No. QuoteCore+ is designed to be straightforward. If you can use your phone and email, you can use QuoteCore+.",
+  },
+  {
+    q: "Is there a free trial?",
+    a: "Yes. You get 2 weeks free - no credit card required. You'll be quoting within minutes of signing up.",
+  },
+  {
+    q: "Where is QuoteCore+ available?",
+    a: "QuoteCore+ is a web-based platform available wherever you have internet access. Sign up and start quoting from any device.",
+  },
+];
+
+export default function RoofingQuotingSoftwarePage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      <main className="min-h-screen bg-white text-zinc-950">
+        {/* Header */}
+        <header className="sticky top-0 z-50 border-b border-white/60 bg-white/68 shadow-[0_8px_30px_rgba(255,255,255,0.25)_inset,0_12px_40px_rgba(0,0,0,0.05)] backdrop-blur-[24px]">
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+            <a href="/" className="flex items-center gap-3">
+              <img src="/MainQCP.png" alt="QuoteCore+" className="h-10 w-auto" />
+            </a>
+            <nav className="hidden items-center gap-3 md:flex">
+              <a href="/#how-it-works" className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 backdrop-blur-3xl transition-colors duration-200">
+                How it works
+              </a>
+              <a href="/#pricing" className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 backdrop-blur-3xl transition-colors duration-200">
+                Pricing
+              </a>
+              <a href="#" className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 backdrop-blur-3xl transition-colors duration-200">
+                Login
+              </a>
+            </nav>
+            <a
+              href="/free-trial"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+            >
+              Start free trial
+            </a>
+          </div>
+        </header>
+
+        {/* Hero */}
+        <section className="relative overflow-hidden pb-16 pt-12">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,107,53,0.10),transparent_34%)]" />
+          <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+              Roofing quoting software built for the way you work.
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600 sm:text-xl">
+              From takeoff to a professional, priced quote in minutes - without the spreadsheets, the re-entry, or the back-and-forth.
+            </p>
+            <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a
+                href="/free-trial"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#FF6B35] px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+              >
+                Start your free 2-week trial
+              </a>
+            </div>
+            <p className="mt-3 text-sm text-zinc-400">No credit card required.</p>
+          </div>
+        </section>
+
+        {/* Problem section */}
+        <section className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+          <p className="text-lg leading-8 text-zinc-700">
+            Most roofers quote the same way they always have.
+          </p>
+          <p className="mt-5 text-lg leading-8 text-zinc-600">
+            Measure on site. Write it up by hand. Transfer it into a spreadsheet. Re-enter it into an email. Send it off and hope the numbers are right.
+          </p>
+          <p className="mt-5 text-lg leading-8 text-zinc-600">
+            It works - until it doesn't. A mistake in the measurements. A price that changed. A quote that took three hours and lost to someone who replied in one.
+          </p>
+          <p className="mt-5 text-lg font-semibold text-zinc-950">
+            QuoteCore+ was built to fix that.
+          </p>
+        </section>
+
+        {/* How it works */}
+        <section className="bg-zinc-50 py-20">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <h2 className="text-3xl font-semibold sm:text-4xl">One clean workflow. Takeoff to send.</h2>
+            <div className="mt-12 flex flex-col gap-5">
+              {steps.map((s) => (
+                <div key={s.number} className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-6 shadow-sm">
+                  <div className="flex items-start gap-6">
+                    <span className="w-12 shrink-0 text-2xl font-semibold text-zinc-950">{s.number}</span>
+                    <div>
+                      <h3 className="text-xl font-semibold">{s.title}</h3>
+                      <p className="mt-3 text-zinc-600">{s.body}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why QuoteCore+ */}
+        <section className="mx-auto max-w-4xl px-6 py-20 lg:px-8">
+          <h2 className="text-3xl font-semibold sm:text-4xl">
+            Built for roofers. Not generic builders. Not plumbers. Roofers.
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-zinc-600">
+            Most quoting tools are built for "trades" in general. They don't know the difference between a hip and a valley, and neither does your quote if you're using a generic template.
+          </p>
+          <p className="mt-4 text-lg leading-8 text-zinc-600">
+            QuoteCore+ is built specifically for roofing workflows - takeoffs, pricing logic, material quantities, and client-ready output that makes sense to a homeowner and holds up to scrutiny.
+          </p>
+          <ul className="mt-8 space-y-3">
+            {bullets.map((b) => (
+              <li key={b} className="flex items-start gap-3 text-zinc-700">
+                <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-[#FF6B35]" />
+                {b}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Who it's for */}
+        <section className="bg-zinc-50 py-20">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <h2 className="text-3xl font-semibold sm:text-4xl">For solo operators and roofing teams.</h2>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+              <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
+                <h3 className="text-xl font-semibold">Solo contractor</h3>
+                <p className="mt-4 text-zinc-600">
+                  You're quoting every job yourself. QuoteCore+ gets you from site to quote in minutes, not hours. No admin backlog. No late nights redoing spreadsheets.
+                </p>
+              </div>
+              <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
+                <h3 className="text-xl font-semibold">Roofing team</h3>
+                <p className="mt-4 text-zinc-600">
+                  Every quote goes out looking the same - priced consistently, formatted professionally, and not depending on whoever happens to be doing it that day.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trust bar */}
+        <section className="mx-auto max-w-4xl px-6 py-16 text-center lg:px-8">
+          <h2 className="text-3xl font-semibold sm:text-4xl">Trusted by roofing contractors.</h2>
+          <p className="mt-6 text-lg text-zinc-500">Quotes sent daily - rated 4.9 by contractors across the UK, AU, and NZ.</p>
+        </section>
+
+        {/* FAQ */}
+        <section className="bg-zinc-50 py-20">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <h2 className="text-3xl font-semibold sm:text-4xl">Common questions</h2>
+            <div className="mt-10 space-y-4">
+              {faqs.map((f) => (
+                <div key={f.q} className="rounded-[1.5rem] border border-zinc-200 bg-white px-6 py-5">
+                  <p className="font-semibold text-zinc-950">{f.q}</p>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="mx-auto max-w-4xl px-6 py-24 text-center lg:px-8">
+          <h2 className="text-3xl font-semibold sm:text-5xl">Start quoting faster today.</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
+            Stop losing time to spreadsheets and manual admin. QuoteCore+ puts your entire quoting workflow in one place - from takeoff to send.
+          </p>
+          <a
+            href="/free-trial"
+            className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+          >
+            Start your free 2-week trial
+          </a>
+          <p className="mt-4 text-sm text-zinc-400">No card required. 2 weeks free. Cancel anytime.</p>
+        </section>
+
+        {/* Footer */}
+        <footer className="border-t border-zinc-200 py-10 text-center text-sm text-zinc-500">
+          <p>
+            <a href="/" className="hover:text-zinc-800">Back to QuoteCore+</a>
+            {" · "}
+            <a href="/free-trial" className="hover:text-zinc-800">Free trial</a>
+          </p>
+          <p className="mt-3">© 2026 QuoteCore+</p>
+        </footer>
+      </main>
+
+      <style>{`
+        .pill-shimmer { position: relative; overflow: hidden; }
+        .pill-shimmer::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: inherit;
+          padding: 2px;
+          background: linear-gradient(90deg, transparent 0%, transparent 40%, #ff6b35 50%, transparent 60%, transparent 100%);
+          background-size: 200% 100%;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          pointer-events: none;
+        }
+        .pill-shimmer:hover::before { opacity: 1; animation: shimmerBorder 1.5s linear infinite; }
+        @keyframes shimmerBorder {
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+      `}</style>
+    </>
+  );
+}
