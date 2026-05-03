@@ -86,11 +86,11 @@ export default function HomePage() {
   const quoteItems = [
     ["Downpipe - 2.2 units", "$77.00"],
     ["Barge Flashing - 3.8 units", "$105.09"],
-    ["205 Underlay - 68.5 m²", "$976.37"],
+    ["205 Underlay - 68.5 m2", "$976.37"],
     ["Hip Flashing - 26.1 units", "$750.27"],
-    ["Corrugate .40g - 68.5 m²", "$1,678.67"],
+    ["Corrugate .40g - 68.5 m2", "$1,678.67"],
     ["Ridge Flashing - 6.1 units", "$174.96"],
-    ["Corrugate .40g - 0.0 m²", "$0.00"],
+    ["Corrugate .40g - 0.0 m2", "$0.00"],
     ["Delivery fee", "$500.00"],
   ];
 
@@ -106,7 +106,7 @@ export default function HomePage() {
       name: "Sarah Mitchell",
       business: "Mitchell & Sons Roofing",
       quote:
-        "QuoteCore+ paid for itself on the second job. No more chasing customers for approvals — they can see everything clearly and sign off fast.",
+        "QuoteCore+ paid for itself on the second job. No more chasing customers for approvals - they can see everything clearly and sign off fast.",
       initials: "SM",
     },
     {
@@ -120,7 +120,7 @@ export default function HomePage() {
       name: "Tony Breslin",
       business: "Breslin Roofing Ltd.",
       quote:
-        "The materials ordering side alone saved us hours a week. Everything is in one place — quote, approval, order. No more spreadsheets.",
+        "The materials ordering side alone saved us hours a week. Everything is in one place - quote, approval, order. No more spreadsheets.",
       initials: "TB",
     },
     {
@@ -237,6 +237,7 @@ export default function HomePage() {
                   loop
                   playsInline
                   preload="auto"
+                  style={{ minHeight: "420px", objectFit: "cover" }}
                 >
                   <source src="/QCPFinalVideo.mp4" type="video/mp4" />
                 </video>
@@ -277,15 +278,6 @@ export default function HomePage() {
                     )}
                   </button>
                 </div>
-              </div>
-
-              <div className="mt-6 rounded-[1.75rem] border border-[#FF6B35]/30 bg-[linear-gradient(135deg,#FF6B35_0%,#ff8a61_100%)] p-5 text-white shadow-[0_24px_80px_rgba(255,107,53,0.35)]">
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">
-                  Performance Guarantee
-                </p>
-                <p className="mt-2 text-lg font-semibold uppercase leading-tight tracking-[0.04em] sm:text-2xl">
-                  AT LEAST 25% FASTER - OR IT’S FREE.
-                </p>
               </div>
             </div>
           </div>
@@ -625,7 +617,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         className="flex w-full items-center justify-between gap-4 text-left"
       >
         <span className="text-base font-semibold text-zinc-950">{question}</span>
-        <span className="text-2xl leading-none text-zinc-500">{open ? "−" : "+"}</span>
+        <span className="text-2xl leading-none text-zinc-500">{open ? "-" : "+"}</span>
       </button>
       {open && <p className="mt-4 text-sm leading-7 text-zinc-600">{answer}</p>}
     </div>
