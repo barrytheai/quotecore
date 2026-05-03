@@ -6,7 +6,6 @@ export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const toggleMute = () => {
     const video = videoRef.current;
@@ -284,79 +283,35 @@ export default function HomePage() {
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Trusted by roofing contractors</h2>
           </div>
 
-          <div className="relative mt-14">
-            {/* Cards */}
-            <div className="overflow-hidden">
+          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-3">
+            {testimonials.map((t) => (
               <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
+                key={t.name}
+                className="pill-shimmer rounded-[1.75rem] border border-zinc-200 bg-white p-7 shadow-[0_12px_40px_rgba(0,0,0,0.05)]"
               >
-                {testimonials.map((t) => (
-                  <div key={t.name} className="w-full shrink-0 px-4">
-                    <div className="pill-shimmer mx-auto max-w-2xl rounded-[2rem] border border-zinc-200 bg-white p-10 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-                      {/* Stars */}
-                      <div className="flex gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <svg key={i} className="h-5 w-5 text-[#FF6B35]" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                      </div>
+                {/* Stars */}
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-4 w-4 text-[#FF6B35]" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
 
-                      {/* Quote */}
-                      <p className="mt-6 text-lg leading-relaxed text-zinc-700">&ldquo;{t.quote}&rdquo;</p>
+                {/* Quote */}
+                <p className="mt-4 text-sm leading-relaxed text-zinc-600">&ldquo;{t.quote}&rdquo;</p>
 
-                      {/* Author */}
-                      <div className="mt-8 flex items-center gap-4">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#FF6B35] text-sm font-semibold text-white">
-                          {t.initials}
-                        </div>
-                        <div>
-                          <p className="font-semibold text-zinc-950">{t.name}</p>
-                          <p className="text-sm text-zinc-500">{t.business}</p>
-                        </div>
-                      </div>
-                    </div>
+                {/* Author */}
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-semibold text-white">
+                    {t.initials}
                   </div>
-                ))}
+                  <div>
+                    <p className="text-sm font-semibold text-zinc-950">{t.name}</p>
+                    <p className="text-xs text-zinc-500">{t.business}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            {/* Prev / Next arrows */}
-            <button
-              type="button"
-              onClick={() => setActiveTestimonial((p) => (p - 1 + testimonials.length) % testimonials.length)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
-              aria-label="Previous testimonial"
-            >
-              <svg className="h-5 w-5 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTestimonial((p) => (p + 1) % testimonials.length)}
-              className="absolute right-0 top-1/2 -translate-y-1/2 inline-flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
-              aria-label="Next testimonial"
-            >
-              <svg className="h-5 w-5 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Dots */}
-          <div className="mt-8 flex justify-center gap-2">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setActiveTestimonial(i)}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  i === activeTestimonial ? "w-6 bg-[#FF6B35]" : "w-2.5 bg-zinc-300"
-                }`}
-                aria-label={`Go to testimonial ${i + 1}`}
-              />
             ))}
           </div>
         </section>
