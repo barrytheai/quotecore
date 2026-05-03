@@ -355,7 +355,7 @@ export default function HomePage() {
             {[...Array(10)].map((_, i) => (
               <span key={i} className="inline-flex items-center gap-6 mx-6 text-base font-semibold uppercase leading-none tracking-[0.18em] text-white">
                 <span>AT LEAST 25% FASTER - OR IT&apos;S FREE</span>
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
+                <span className="ml-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
               </span>
             ))}
           </div>
