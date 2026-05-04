@@ -378,100 +378,84 @@ export default function HomePage() {
         </div>
 
         <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-          <div className="text-center">
-            <p className="text-sm text-zinc-500">How it works</p>
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-              One place to quote, approve, order, and track the job.
-            </h2>
-            <p className="mt-4 mx-auto max-w-2xl text-lg text-zinc-600">
-              <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span>{" "}
-              helps roofers turn job details into accurate quotes, approved orders, and trackable work - without the usual back-and-forth.
-            </p>
-          </div>
+          <div className="grid items-start gap-10 lg:grid-cols-[520px_minmax(0,1fr)]">
+            <div>
+              <p className="text-sm text-zinc-500">How it works</p>
+              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                One place to quote, approve, order, and track the job.
+              </h2>
+              <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
+                <span className="brand-wordmark">
+                  QuoteCore<span className="brand-plus">+</span>
+                </span>{" "}
+                helps roofers turn job details into accurate quotes, approved orders, and trackable work without the usual back-and-forth.
+              </p>
 
-          {/* Steps + quote */}
-          <div className="mt-14 grid items-start gap-10 lg:grid-cols-[1fr_480px]">
-
-            {/* Vertical step track */}
-            <div className="flex flex-col">
-              {steps.map((item, i) => (
-                <button
-                  key={item.number}
-                  type="button"
-                  onClick={() => setActiveStep(i)}
-                  className="relative flex items-start gap-5 text-left"
-                >
-                  {/* Line + dot */}
-                  <div className="flex flex-col items-center">
-                    <div
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-sm font-semibold transition-all duration-300 ${
-                        i === activeStep
-                          ? "border-[#FF6B35] bg-[#FF6B35] text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]"
-                          : i < activeStep
-                          ? "border-[#FF6B35] bg-[#FF6B35]/10 text-[#FF6B35]"
-                          : "border-zinc-200 bg-white text-zinc-400"
-                      }`}
-                    >
-                      {item.number}
+              <div className="mt-14 flex max-w-[460px] flex-col gap-5">
+                {steps.map((item) => (
+                  <div
+                    key={item.number}
+                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                  >
+                    <div className="flex items-start gap-6">
+                      <div className="w-[56px] shrink-0 pt-[2px] text-2xl font-semibold leading-none text-zinc-950">
+                        {item.number}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-2xl font-semibold leading-none text-zinc-950">
+                          {item.title}
+                        </h3>
+                        <p className="mt-5 text-zinc-600">{item.body}</p>
+                      </div>
                     </div>
-                    {i < steps.length - 1 && (
-                      <div className={`my-1 w-px flex-1 transition-colors duration-300 ${i < activeStep ? "bg-[#FF6B35]" : "bg-zinc-200"}`} style={{height: "40px"}} />
-                    )}
                   </div>
-                  {/* Text */}
-                  <div className={`pb-8 pt-1.5 transition-opacity duration-300 ${i === activeStep ? "opacity-100" : "opacity-50"}`}>
-                    <h3 className={`font-semibold transition-colors duration-300 ${i === activeStep ? "text-zinc-950" : "text-zinc-500"}`}>{item.title}</h3>
-                    {i === activeStep && (
-                      <p className="mt-2 text-sm leading-7 text-zinc-600">{item.body}</p>
-                    )}
-                  </div>
-                </button>
-              ))}
+                ))}
+              </div>
             </div>
 
-            {/* Quote card */}
-            <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)]">
-              <div className="relative overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
-                  <span className="select-none rotate-[-30deg] text-center text-[60px] font-semibold tracking-[0.12em] text-zinc-200 opacity-30">
-                    EXAMPLE QUOTE
-                  </span>
-                </div>
-                <div className="relative flex flex-col">
-                  <div className="border-b border-zinc-200 pb-5">
-                    <p className="text-2xl font-semibold">QUOTE #1000</p>
-                    <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
-                    <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
-                    <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
+            <div className="relative">
+              <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)] lg:min-h-[760px]">
+                <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
+                    <span className="select-none rotate-[-30deg] text-center text-[70px] font-semibold tracking-[0.12em] text-zinc-200 opacity-30">
+                      EXAMPLE QUOTE
+                    </span>
                   </div>
-                  <div className="mt-6 space-y-4 text-sm text-zinc-700">
-                    {quoteItems.map(([label, value]) => (
-                      <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
-                        <span>{label}</span>
-                        <span className="font-medium">{value}</span>
-                      </div>
-                    ))}
-                    <div className="pt-4">
-                      <div className="flex justify-between">
-                        <span>Subtotal</span>
-                        <span>$4,262.36</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Tax (15%)</span>
-                        <span>$639.35</span>
-                      </div>
+                  <div className="relative flex h-full flex-col">
+                    <div className="border-b border-zinc-200 pb-5">
+                      <p className="text-2xl font-semibold">QUOTE #1000</p>
+                      <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
+                      <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
+                      <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
                     </div>
-                    <div className="border-t border-zinc-200 pt-4">
-                      <div className="flex justify-between text-lg font-semibold">
-                        <span>Total</span>
-                        <span>$4,901.71</span>
+                    <div className="mt-6 flex-1 space-y-4 text-sm text-zinc-700">
+                      {quoteItems.map(([label, value]) => (
+                        <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
+                          <span>{label}</span>
+                          <span className="font-medium">{value}</span>
+                        </div>
+                      ))}
+                      <div className="pt-4">
+                        <div className="flex justify-between">
+                          <span>Subtotal</span>
+                          <span>$4,262.36</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Tax (15%)</span>
+                          <span>$639.35</span>
+                        </div>
+                      </div>
+                      <div className="mt-4 border-t border-zinc-200 pt-4">
+                        <div className="flex justify-between text-lg font-semibold">
+                          <span>Total</span>
+                          <span>$4,901.71</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </section>
 
