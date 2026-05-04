@@ -388,68 +388,89 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Step track */}
-          <div className="mt-14">
-            {/* Track nav */}
-            <div className="relative flex items-center justify-between">
-              {/* Connecting line */}
-              <div className="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 bg-zinc-200" />
-              <div
-                className="absolute left-0 top-1/2 h-0.5 -translate-y-1/2 bg-[#FF6B35] transition-all duration-500"
-                style={{ width: `${(activeStep / (steps.length - 1)) * 100}%` }}
-              />
+          {/* Steps + quote */}
+          <div className="mt-14 grid items-start gap-10 lg:grid-cols-[1fr_480px]">
 
+            {/* Vertical step track */}
+            <div className="flex flex-col">
               {steps.map((item, i) => (
                 <button
                   key={item.number}
                   type="button"
                   onClick={() => setActiveStep(i)}
-                  className="relative z-10 flex flex-col items-center gap-3"
+                  className="relative flex items-start gap-5 text-left"
                 >
-                  <div
-                    className={`flex h-12 w-12 items-center justify-center rounded-full border-2 font-semibold text-sm transition-all duration-300 ${
-                      i <= activeStep
-                        ? "border-[#FF6B35] bg-[#FF6B35] text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]"
-                        : "border-zinc-300 bg-white text-zinc-400"
-                    }`}
-                  >
-                    {item.number}
+                  {/* Line + dot */}
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-sm font-semibold transition-all duration-300 ${
+                        i === activeStep
+                          ? "border-[#FF6B35] bg-[#FF6B35] text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]"
+                          : i < activeStep
+                          ? "border-[#FF6B35] bg-[#FF6B35]/10 text-[#FF6B35]"
+                          : "border-zinc-200 bg-white text-zinc-400"
+                      }`}
+                    >
+                      {item.number}
+                    </div>
+                    {i < steps.length - 1 && (
+                      <div className={`my-1 w-px flex-1 transition-colors duration-300 ${i < activeStep ? "bg-[#FF6B35]" : "bg-zinc-200"}`} style={{height: "40px"}} />
+                    )}
                   </div>
-                  <span
-                    className={`hidden text-xs font-medium sm:block transition-colors duration-300 ${
-                      i === activeStep ? "text-[#FF6B35]" : "text-zinc-400"
-                    }`}
-                  >
-                    {item.title}
-                  </span>
+                  {/* Text */}
+                  <div className={`pb-8 pt-1.5 transition-opacity duration-300 ${i === activeStep ? "opacity-100" : "opacity-50"}`}>
+                    <h3 className={`font-semibold transition-colors duration-300 ${i === activeStep ? "text-zinc-950" : "text-zinc-500"}`}>{item.title}</h3>
+                    {i === activeStep && (
+                      <p className="mt-2 text-sm leading-7 text-zinc-600">{item.body}</p>
+                    )}
+                  </div>
                 </button>
               ))}
             </div>
 
-            {/* Active step content */}
-            <div className="mt-8 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white px-8 py-7 shadow-sm transition-all duration-300">
-              <span className="text-2xl font-semibold text-[#FF6B35]">{steps[activeStep].number}</span>
-              <h3 className="mt-2 text-xl font-semibold text-zinc-950">{steps[activeStep].title}</h3>
-              <p className="mt-3 text-zinc-600 leading-7">{steps[activeStep].body}</p>
-              <div className="mt-6 flex gap-3">
-                <button
-                  type="button"
-                  onClick={() => setActiveStep((p) => Math.max(0, p - 1))}
-                  disabled={activeStep === 0}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 transition-colors hover:bg-zinc-50 disabled:opacity-30"
-                >
-                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActiveStep((p) => Math.min(steps.length - 1, p + 1))}
-                  disabled={activeStep === steps.length - 1}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#FF6B35] text-white transition-colors hover:bg-[#e85d2b] disabled:opacity-30"
-                >
-                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
-                </button>
+            {/* Quote card */}
+            <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)]">
+              <div className="relative overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
+                  <span className="select-none rotate-[-30deg] text-center text-[60px] font-semibold tracking-[0.12em] text-zinc-200 opacity-30">
+                    EXAMPLE QUOTE
+                  </span>
+                </div>
+                <div className="relative flex flex-col">
+                  <div className="border-b border-zinc-200 pb-5">
+                    <p className="text-2xl font-semibold">QUOTE #1000</p>
+                    <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
+                    <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
+                    <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
+                  </div>
+                  <div className="mt-6 space-y-4 text-sm text-zinc-700">
+                    {quoteItems.map(([label, value]) => (
+                      <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
+                        <span>{label}</span>
+                        <span className="font-medium">{value}</span>
+                      </div>
+                    ))}
+                    <div className="pt-4">
+                      <div className="flex justify-between">
+                        <span>Subtotal</span>
+                        <span>$4,262.36</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Tax (15%)</span>
+                        <span>$639.35</span>
+                      </div>
+                    </div>
+                    <div className="border-t border-zinc-200 pt-4">
+                      <div className="flex justify-between text-lg font-semibold">
+                        <span>Total</span>
+                        <span>$4,901.71</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
         </section>
 
