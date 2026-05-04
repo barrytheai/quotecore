@@ -464,6 +464,43 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Founder section */}
+        <section className="bg-[#FF6B35]/5 py-20">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+              <div>
+                <p className="text-sm font-medium text-[#FF6B35]">Why QuoteCore+</p>
+                <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                  Built by a roofer who got sick of quoting jobs the hard way.
+                </h2>
+                <p className="mt-5 text-lg leading-8 text-zinc-600">
+                  QuoteCore+ was built by Shaun — an ex-roofer who knew exactly where the time went, where the mistakes crept in, and what a winning quote needed to look like. He built the tool he wished had existed when he was on the tools every day.
+                </p>
+                <p className="mt-4 text-lg leading-8 text-zinc-600">
+                  Before launch, it was tested and refined by working roofers across the industry. Every iteration shaped by people who actually use it on the job.
+                </p>
+                <a
+                  href="/about"
+                  className="mt-8 inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50"
+                >
+                  Read Shaun's story
+                </a>
+              </div>
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  {/* Replace with: <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-80 w-80 rounded-[2rem] object-cover shadow-[0_30px_80px_rgba(0,0,0,0.12)]" /> */}
+                  <div className="flex h-80 w-80 items-center justify-center rounded-[2rem] border-2 border-dashed border-[#FF6B35]/30 bg-white text-sm text-zinc-400 shadow-sm">
+                    Shaun's photo coming soon
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 rounded-[1.25rem] bg-[#FF6B35] px-5 py-3 text-sm font-semibold text-white shadow-lg">
+                    Ex-roofer. Now building tools for them.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="pricing" className="bg-zinc-950 py-24 text-white">
           <div className="mx-auto max-w-7xl px-6">
             <div className="max-w-2xl">
@@ -543,6 +580,10 @@ export default function HomePage() {
         <footer className="border-t border-zinc-200 py-10 text-center text-sm text-zinc-500">
           <p>
             <a href="/roofing-quoting-software" className="hover:text-zinc-800">Roofing Quoting Software</a>
+            {" · "}
+            <a href="/about" className="hover:text-zinc-800">About</a>
+            {" · "}
+            <a href="/blog" className="hover:text-zinc-800">Blog</a>
             {" · "}
             <a href="/free-trial" className="hover:text-zinc-800">Free Trial</a>
           </p>
