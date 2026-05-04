@@ -45,10 +45,7 @@ export default function AboutPage() {
 
           {/* Founder card */}
           <div className="flex items-center gap-6 rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
-            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[#FF6B35]/20 bg-[#FF6B35]/10 text-xs text-zinc-400">
-              {/* Replace with: <img src="/shaun.jpg" alt="Shaun" className="h-20 w-20 rounded-full object-cover" /> */}
-              Photo
-            </div>
+            <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-20 w-20 rounded-full object-cover border-2 border-[#FF6B35]/20" />
             <div>
               <p className="text-xl font-semibold">Shaun</p>
               <p className="text-sm text-zinc-500">Founder, QuoteCore+</p>
