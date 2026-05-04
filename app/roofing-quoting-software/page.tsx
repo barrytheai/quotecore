@@ -251,7 +251,6 @@ export default function RoofingQuotingSoftwarePage() {
         {/* Trust bar */}
         <section className="mx-auto max-w-4xl px-6 py-16 text-center lg:px-8">
           <h2 className="text-3xl font-semibold sm:text-4xl">Trusted by roofing contractors.</h2>
-          <p className="mt-6 text-lg text-zinc-500">Quotes sent daily - rated 4.9 by contractors across the UK, AU, and NZ.</p>
         </section>
 
         {/* FAQ */}
