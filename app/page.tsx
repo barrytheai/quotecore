@@ -212,30 +212,28 @@ export default function HomePage() {
         </header>
 
         <section className="relative overflow-hidden pb-12 lg:pb-16">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,107,53,0.10),transparent_34%)]" />
-          <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-6 py-10 lg:grid-cols-2 lg:px-8 lg:py-12">
-            <div>
-              <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                Roofing quoting software that works as fast as you do.
-              </h1>
-
-              <p className="mt-6 max-w-xl text-lg text-zinc-600 sm:text-xl">
-                From measurement to pricing to customer-ready quote. One clean workflow, no spreadsheets, no back-and-forth.
-              </p>
-
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a href="/free-trial" className={primaryButton}>
-                  Start free trial
-                </a>
-                <a href="#how-it-works" className={shimmerButton}>
-                  See how it works
-                </a>
-                <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className={shimmerButton}>
-                  Book a Call
-                </a>
-              </div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,107,53,0.12),transparent_60%)]" />
+          {/* Full-width hero text */}
+          <div className="relative mx-auto max-w-4xl px-6 pb-12 pt-20 text-center lg:px-8 lg:pt-28">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Built for roofers, by a roofer</p>
+            <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
+              Quote the roof<br className="hidden sm:block" /> before you leave<br className="hidden sm:block" /> the driveway.
+            </h1>
+            <p className="mx-auto mt-8 max-w-lg text-xl text-zinc-500">
+              Measurements in. Professional quote out. No spreadsheets.
+            </p>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a href="/free-trial" className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]">
+                Start free trial
+              </a>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-300 bg-white px-10 py-3 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-50">
+                Book a Call
+              </a>
             </div>
-
+            <p className="mt-4 text-sm text-zinc-400">No card required. 2 weeks free.</p>
+          </div>
+          {/* Video below centered */}
+          <div className="relative mx-auto max-w-4xl px-6 lg:px-8">
             <div className="relative">
               <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]" style={{borderRadius: "2rem"}}>
                 <video
