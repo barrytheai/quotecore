@@ -478,9 +478,9 @@ export default function HomePage() {
                   style={{ width: `${(activeFounderStep / 2) * 100}%` }}
                 />
                 {[
-                  { label: "On the tools", sub: "Age 21 - 33" },
+                  { label: "About", sub: "Built by a roofer" },
                   { label: "The problem", sub: "No software existed" },
-                  { label: "Built it", sub: "QuoteCore+ was born" },
+                  { label: "The solution", sub: "QuoteCore+ makes it simple" },
                 ].map((s, i) => (
                   <button
                     key={i}
@@ -505,9 +505,9 @@ export default function HomePage() {
 
               {/* Content panel */}
               <div className="mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-                <div className="grid lg:grid-cols-2">
+                <div className="grid lg:grid-cols-2" style={{height: "420px"}}>
                   {/* Text */}
-                  <div className="flex flex-col justify-center p-10" style={{minHeight: "320px"}}>
+                  <div className="flex flex-col justify-center overflow-y-auto p-10">
                     {activeFounderStep === 0 && (
                       <>
                         <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Over a decade on the job</p>
@@ -551,7 +551,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   {/* Photo */}
-                  <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block">
+                  <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{height: "420px"}}>
                     <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-full w-full object-cover" />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
                       <p className="font-semibold text-white">Shaun</p>
