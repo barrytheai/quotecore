@@ -427,41 +427,27 @@ export default function HomePage() {
             </div>
 
             {/* Active step content */}
-            <div className="mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)] transition-all duration-300">
-              <div className="grid lg:grid-cols-2">
-                {/* Text */}
-                <div className="flex flex-col justify-center p-10">
-                  <span className="text-4xl font-semibold text-[#FF6B35]">{steps[activeStep].number}</span>
-                  <h3 className="mt-3 text-2xl font-semibold text-zinc-950">{steps[activeStep].title}</h3>
-                  <p className="mt-4 text-lg leading-8 text-zinc-600">{steps[activeStep].body}</p>
-                  <div className="mt-8 flex gap-3">
-                    <button
-                      type="button"
-                      onClick={() => setActiveStep((p) => Math.max(0, p - 1))}
-                      disabled={activeStep === 0}
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 transition-colors hover:bg-zinc-50 disabled:opacity-30"
-                    >
-                      <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setActiveStep((p) => Math.min(steps.length - 1, p + 1))}
-                      disabled={activeStep === steps.length - 1}
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF6B35] text-white transition-colors hover:bg-[#e85d2b] disabled:opacity-30"
-                    >
-                      <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
-                    </button>
-                  </div>
-                </div>
-                {/* Image */}
-                <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block">
-                  <img
-                    src="/placeholder-site.jpg"
-                    alt="Roofer on site with tablet"
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white/10" />
-                </div>
+            <div className="mt-8 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white px-8 py-7 shadow-sm transition-all duration-300">
+              <span className="text-2xl font-semibold text-[#FF6B35]">{steps[activeStep].number}</span>
+              <h3 className="mt-2 text-xl font-semibold text-zinc-950">{steps[activeStep].title}</h3>
+              <p className="mt-3 text-zinc-600 leading-7">{steps[activeStep].body}</p>
+              <div className="mt-6 flex gap-3">
+                <button
+                  type="button"
+                  onClick={() => setActiveStep((p) => Math.max(0, p - 1))}
+                  disabled={activeStep === 0}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 transition-colors hover:bg-zinc-50 disabled:opacity-30"
+                >
+                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveStep((p) => Math.min(steps.length - 1, p + 1))}
+                  disabled={activeStep === steps.length - 1}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#FF6B35] text-white transition-colors hover:bg-[#e85d2b] disabled:opacity-30"
+                >
+                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+                </button>
               </div>
             </div>
           </div>
