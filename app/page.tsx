@@ -465,7 +465,7 @@ export default function HomePage() {
             <div className="text-center">
               <p className="text-sm font-medium text-[#FF6B35]">Why QuoteCore+</p>
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                He spent 12 years quoting roofs the hard way. Then he built QuoteCore+.
+                He built QuoteCore+ because quoting roofs shouldn't be this painful.
               </h2>
             </div>
 
@@ -507,13 +507,13 @@ export default function HomePage() {
               <div className="mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
                 <div className="grid lg:grid-cols-2">
                   {/* Text */}
-                  <div className="flex flex-col justify-center p-10">
+                  <div className="flex flex-col justify-center p-10" style={{minHeight: "320px"}}>
                     {activeFounderStep === 0 && (
                       <>
-                        <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Age 21 - 33</p>
-                        <h3 className="mt-2 text-2xl font-semibold">12 years on the roof</h3>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Over a decade on the job</p>
+                        <h3 className="mt-2 text-2xl font-semibold">Time built QuoteCore+</h3>
                         <div className="mt-4 space-y-4 leading-8 text-zinc-600">
-                          <p>For twelve years, he was on the tools. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers home, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
+                          <p>For twelve years, Shaun was on the tools or project managing. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers to the office, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
                           <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Ten minutes searching for a measurement that should have taken ten seconds.</p>
                           <p className="font-medium text-zinc-800">He knew there had to be a better way. He just couldn't find it.</p>
                         </div>
@@ -539,10 +539,6 @@ export default function HomePage() {
                           <p>Before launch, it was tested by working roofers across the industry - contractors who quoted real jobs through the platform and gave honest feedback on what wasn't good enough.</p>
                           <p className="font-medium text-zinc-800">The result is a quoting tool that thinks the way a roofer thinks - because it was built by one.</p>
                         </div>
-                        <a href="/about" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FF6B35] hover:underline">
-                          Read Shaun's full story
-                          <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
-                        </a>
                       </>
                     )}
                     <div className="mt-8 flex gap-3">
