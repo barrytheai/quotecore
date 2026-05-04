@@ -373,7 +373,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex items-center justify-center gap-6 bg-zinc-950 py-7">
-          <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
+          <img src="/shaun-headshot.jpg" alt="Shaun" className="h-24 w-24 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
           <div>
             <p className="text-xs text-white/50 mb-2">Book a 15-minute call with Shaun</p>
             <div className="flex gap-3">
