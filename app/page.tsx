@@ -194,7 +194,7 @@ export default function HomePage() {
             </nav>
 
             <div className="flex items-center gap-3">
-              <a href="https://calendly.com/" className={topShimmerButton}>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" className={topShimmerButton}>
                 Book a Call
               </a>
               <a href="/free-trial" className={topPrimaryButton}>
@@ -223,7 +223,7 @@ export default function HomePage() {
                 <a href="#how-it-works" className={shimmerButton}>
                   See how it works
                 </a>
-                <a href="https://calendly.com/" className={shimmerButton}>
+                <a href="https://calendly.com/quote-core-info/15-minute-meeting" className={shimmerButton}>
                   Book a Call
                 </a>
               </div>
@@ -364,7 +364,7 @@ export default function HomePage() {
         </div>
         <div className="flex justify-center gap-4 bg-zinc-950 py-6">
           <a
-            href="https://calendly.com/"
+            href="https://calendly.com/quote-core-info/15-minute-meeting"
             className="inline-flex min-h-10 items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/20"
           >
             Book a Call
@@ -646,7 +646,7 @@ export default function HomePage() {
               <a href="/free-trial" className={primaryButton}>
                 Start your free 2-week trial
               </a>
-              <a href="https://calendly.com/" className={shimmerButton}>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" className={shimmerButton}>
                 Book a Call
               </a>
               <a href="#how-it-works" className={shimmerButton}>
