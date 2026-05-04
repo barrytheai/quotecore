@@ -475,121 +475,32 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Founder journey */}
-        <section className="bg-[#FF6B35]/5 py-12">
+        {/* About Shaun */}
+        <section className="bg-[#FF6B35]/5 py-16">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center">
-              <p className="text-sm font-medium text-[#FF6B35]">Why QuoteCore+</p>
-              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                He built QuoteCore+ because quoting roofs shouldn't be this painful.
-              </h2>
-            </div>
-
-            {/* Horizontal track */}
-            <div className="mt-14">
-              <div className="relative flex items-center justify-between">
-                <div className="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 bg-zinc-200" />
-                <div
-                  className="absolute left-0 top-1/2 h-0.5 -translate-y-1/2 bg-[#FF6B35] transition-all duration-500"
-                  style={{ width: `${(activeFounderStep / 2) * 100}%` }}
-                />
-                {[
-                  { label: "About", sub: "Built by a roofer" },
-                  { label: "The problem", sub: "No software existed" },
-                  { label: "The solution", sub: "QuoteCore+ makes it simple" },
-                ].map((s, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => setActiveFounderStep(i)}
-                    className="relative z-10 flex flex-col items-center gap-3"
-                  >
-                    <div className={`flex h-12 w-12 items-center justify-center rounded-full border-2 text-sm font-semibold transition-all duration-300 ${
-                      i <= activeFounderStep
-                        ? "border-[#FF6B35] bg-[#FF6B35] text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]"
-                        : "border-zinc-300 bg-white text-zinc-400"
-                    }`}>
-                      {i + 1}
-                    </div>
-                    <div className="text-center">
-                      <p className={`text-sm font-semibold transition-colors duration-300 ${i === activeFounderStep ? "text-zinc-950" : "text-zinc-400"}`}>{s.label}</p>
-                      <p className={`text-xs transition-colors duration-300 ${i === activeFounderStep ? "text-[#FF6B35]" : "text-zinc-300"}`}>{s.sub}</p>
-                    </div>
-                  </button>
-                ))}
-              </div>
-
-              {/* Content panel */}
-              <div className="mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-<div className="grid" style={{height: "480px", gridTemplateColumns: "3fr 2fr"}}>
-                  {/* Text */}
-                  <div className="flex flex-col" style={{height: "100%"}}>
-                    {/* Text panels - fixed height, absolute overlay */}
-                    <div className="relative flex-1 overflow-hidden">
-                      {[
-                        {
-                          label: "Over a decade on the job",
-                          title: "Time built QuoteCore+",
-                          content: (
-                            <div className="space-y-4 leading-8 text-zinc-600">
-                              <p>For twelve years, Shaun was on the tools or project managing. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers to the office, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
-                              <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Ten minutes searching for a measurement that should have taken ten seconds.</p>
-                              <p className="font-medium text-zinc-800">He knew there had to be a better way. He just couldn't find it.</p>
-                            </div>
-                          ),
-                        },
-                        {
-                          label: "The gap in the market",
-                          title: "The software that didn't exist",
-                          content: (
-                            <div className="space-y-4 leading-8 text-zinc-600">
-                              <p>The tools available were either generic - built for "trades" and completely misunderstanding how a roofer actually prices a job - or so complex they needed a trained estimator to operate them.</p>
-                              <p>Nothing knew the difference between a hip and a valley. Nothing could take his measurements and turn them into a professional quote without two hours of reformatting.</p>
-                              <p className="font-medium text-zinc-800">That software didn't exist. So he built it.</p>
-                            </div>
-                          ),
-                        },
-                        {
-                          label: "Why it matters",
-                          title: "Built from the inside out",
-                          content: (
-                            <div className="space-y-4 leading-8 text-zinc-600">
-                              <p>QuoteCore+ isn't built by developers who interviewed a few roofers. It's built by someone who lived the problem for over a decade. Every feature exists because someone who spent twelve years roofing decided it should.</p>
-                              <p>Before launch, it was tested by working roofers across the industry - contractors who quoted real jobs through the platform and gave honest feedback on what wasn't good enough.</p>
-                              <p className="font-medium text-zinc-800">The result is a quoting tool that thinks the way a roofer thinks - because it was built by one.</p>
-                            </div>
-                          ),
-                        },
-                      ].map((panel, i) => (
-                        <div
-                          key={i}
-                          className={`absolute inset-0 flex flex-col justify-center p-10 transition-opacity duration-300 ${
-                            i === activeFounderStep ? "opacity-100" : "opacity-0 pointer-events-none"
-                          }`}
-                        >
-                          <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">{panel.label}</p>
-                          <h3 className="mt-2 text-2xl font-semibold">{panel.title}</h3>
-                          <div className="mt-4">{panel.content}</div>
-                        </div>
-                      ))}
-                    </div>
-                    {/* Buttons always at the bottom */}
-                    <div className="flex shrink-0 gap-3 px-10 pb-8">
-                      <button type="button" onClick={() => setActiveFounderStep((p) => Math.max(0, p - 1))} disabled={activeFounderStep === 0} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 transition-colors hover:bg-zinc-50 disabled:opacity-30">
-                        <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                      </button>
-                      <button type="button" onClick={() => setActiveFounderStep((p) => Math.min(2, p + 1))} disabled={activeFounderStep === 2} className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF6B35] text-white transition-colors hover:bg-[#e85d2b] disabled:opacity-30">
-                        <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
-                      </button>
+            <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
+              <div className="grid lg:grid-cols-2">
+                <div className="flex flex-col justify-center p-10">
+                  <div className="mb-6 flex items-center gap-4">
+                    <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/20 shrink-0" />
+                    <div>
+                      <p className="font-semibold text-zinc-950">Shaun</p>
+                      <p className="text-sm text-[#FF6B35]">Founder, QuoteCore+</p>
                     </div>
                   </div>
-                  {/* Photo */}
-                  <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{minHeight: "400px"}}>
-                    <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-full w-full object-cover" />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-                      <p className="font-semibold text-white">Shaun</p>
-                      <p className="text-sm text-white/70">Founder, QuoteCore+ - 12 years on the tools</p>
-                    </div>
+                  <p className="text-xl font-semibold text-zinc-950">Meet Shaun,</p>
+                  <div className="mt-4 space-y-4 text-lg leading-8 text-zinc-600">
+                    <p>I spent 12+ years on site roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
+                    <p>I tried so many systems, but nothing really did everything well.</p>
+                    <p>So I built something that does.</p>
+                    <p className="font-medium text-zinc-800">QuoteCore+ is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
+                  </div>
+                </div>
+                <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{minHeight: "400px"}}>
+                  <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-full w-full object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                    <p className="font-semibold text-white">Shaun</p>
+                    <p className="text-sm text-white/70">Founder, QuoteCore+</p>
                   </div>
                 </div>
               </div>
