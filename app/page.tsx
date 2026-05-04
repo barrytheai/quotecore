@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -9,6 +9,13 @@ export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [activeFounderStep, setActiveFounderStep] = useState(0);
+  const [bannerOffset, setBannerOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setBannerOffset(window.scrollY * 0.3);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMute = () => {
     const video = videoRef.current;
@@ -353,8 +360,11 @@ export default function HomePage() {
 
         {/* Rolling banner + CTA */}
         <div className="overflow-hidden border-y border-zinc-800 bg-zinc-950 py-3">
-          <div className="animate-marquee flex whitespace-nowrap">
-            {[...Array(10)].map((_, i) => (
+          <div
+            className="flex whitespace-nowrap"
+            style={{ transform: `translateX(-${bannerOffset % 600}px)`, willChange: "transform" }}
+          >
+            {[...Array(12)].map((_, i) => (
               <span key={i} className="inline-flex items-center gap-6 mx-6 text-base font-semibold uppercase leading-none tracking-[0.18em] text-white">
                 <span>AT LEAST 25% FASTER - OR IT&apos;S FREE</span>
                 <span className="ml-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
@@ -717,15 +727,6 @@ export default function HomePage() {
           opacity: 0;
           transition: opacity 0.3s ease-in-out;
           pointer-events: none;
-        }
-
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 18s linear infinite;
-          width: max-content;
         }
 
         .pill-shimmer:hover::before {
