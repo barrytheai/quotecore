@@ -521,11 +521,11 @@ export default function HomePage() {
 
               {/* Content panel */}
               <div className="mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-<div className="grid lg:grid-cols-2">
+<div className="grid" style={{height: "480px", gridTemplateColumns: "3fr 2fr"}}>
                   {/* Text */}
-                  <div className="flex flex-col">
-                    {/* Text panels - tallest sets height, others overlay */}
-                    <div className="relative">
+                  <div className="flex flex-col" style={{height: "100%"}}>
+                    {/* Text panels - fixed height, absolute overlay */}
+                    <div className="relative flex-1 overflow-hidden">
                       {[
                         {
                           label: "Over a decade on the job",
@@ -563,8 +563,8 @@ export default function HomePage() {
                       ].map((panel, i) => (
                         <div
                           key={i}
-                          className={`flex flex-col justify-center p-10 transition-opacity duration-300 ${
-                            i === activeFounderStep ? "opacity-100" : "opacity-0 pointer-events-none absolute inset-0"
+                          className={`absolute inset-0 flex flex-col justify-center p-10 transition-opacity duration-300 ${
+                            i === activeFounderStep ? "opacity-100" : "opacity-0 pointer-events-none"
                           }`}
                         >
                           <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">{panel.label}</p>
