@@ -372,24 +372,24 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-center gap-5 bg-zinc-950 py-8">
-          <div className="flex items-center gap-3">
-            <img src="/shaun-headshot.jpg" alt="Shaun" className="h-10 w-10 rounded-full object-cover border-2 border-[#FF6B35]/50" />
-            <p className="text-sm text-white/70">Book a 15-minute call with Shaun</p>
-          </div>
-          <div className="flex gap-4">
-            <a
-              href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer"
-              className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
-            >
-              Book a Call
-            </a>
-            <a
-              href="/free-trial"
-              className="inline-flex min-h-10 items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/20"
-            >
-              Start free trial
-            </a>
+        <div className="flex items-center justify-center gap-6 bg-zinc-950 py-7">
+          <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
+          <div>
+            <p className="text-xs text-white/50 mb-2">Book a 15-minute call with Shaun</p>
+            <div className="flex gap-3">
+              <a
+                href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer"
+                className="inline-flex min-h-9 items-center justify-center rounded-full bg-[#FF6B35] px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+              >
+                Book a Call
+              </a>
+              <a
+                href="/free-trial"
+                className="inline-flex min-h-9 items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20"
+              >
+                Start free trial
+              </a>
+            </div>
           </div>
         </div>
 
@@ -476,7 +476,7 @@ export default function HomePage() {
         </section>
 
         {/* Founder journey */}
-        <section className="bg-[#FF6B35]/5 py-20">
+        <section className="bg-[#FF6B35]/5 py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center">
               <p className="text-sm font-medium text-[#FF6B35]">Why QuoteCore+</p>
@@ -521,7 +521,7 @@ export default function HomePage() {
 
               {/* Content panel */}
               <div className="mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-<div className="grid lg:grid-cols-2" style={{height: "520px"}}>
+<div className="grid lg:grid-cols-2" style={{height: "380px"}}>
                   {/* Text */}
                   <div className="flex flex-col" style={{height: "100%"}}>
                     {/* Text panels - fixed height, stack on top of each other */}
