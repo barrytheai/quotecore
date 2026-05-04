@@ -372,19 +372,25 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-        <div className="flex justify-center gap-4 bg-zinc-950 py-6">
-          <a
-            href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer"
-            className="inline-flex min-h-10 items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/20"
-          >
-            Book a Call
-          </a>
-          <a
-            href="/free-trial"
-            className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
-          >
-            Start free trial
-          </a>
+        <div className="flex flex-col items-center gap-5 bg-zinc-950 py-8">
+          <div className="flex items-center gap-3">
+            <img src="/shaun-headshot.jpg" alt="Shaun" className="h-10 w-10 rounded-full object-cover border-2 border-[#FF6B35]/50" />
+            <p className="text-sm text-white/70">Book a 15-minute call with Shaun</p>
+          </div>
+          <div className="flex gap-4">
+            <a
+              href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer"
+              className="inline-flex min-h-10 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+            >
+              Book a Call
+            </a>
+            <a
+              href="/free-trial"
+              className="inline-flex min-h-10 items-center justify-center rounded-full border border-white/20 bg-white/10 px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/20"
+            >
+              Start free trial
+            </a>
+          </div>
         </div>
 
         <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
