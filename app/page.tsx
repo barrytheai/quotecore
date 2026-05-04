@@ -8,6 +8,7 @@ export default function HomePage() {
   const [isPaused, setIsPaused] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
+  const [activeFounderStep, setActiveFounderStep] = useState(0);
 
   const toggleMute = () => {
     const video = videoRef.current;
@@ -476,68 +477,109 @@ export default function HomePage() {
 
         {/* Founder journey */}
         <section className="bg-[#FF6B35]/5 py-20">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8">
-            <p className="text-sm font-medium text-[#FF6B35]">Why QuoteCore+</p>
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-              He spent 12 years quoting roofs the hard way. Then he built QuoteCore+.
-            </h2>
-
-            {/* Founder card */}
-            <div className="mt-10 flex items-center gap-5 rounded-[2rem] border border-zinc-200 bg-white p-6 shadow-sm">
-              <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-16 w-16 rounded-full object-cover border-2 border-[#FF6B35]/20" />
-              <div>
-                <p className="font-semibold">Shaun</p>
-                <p className="text-sm text-zinc-500">Founder, QuoteCore+</p>
-                <p className="mt-0.5 text-sm font-medium text-[#FF6B35]">12 years on the tools</p>
-              </div>
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center">
+              <p className="text-sm font-medium text-[#FF6B35]">Why QuoteCore+</p>
+              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                He spent 12 years quoting roofs the hard way. Then he built QuoteCore+.
+              </h2>
             </div>
 
-            {/* Timeline */}
-            <div className="mt-10">
+            {/* Horizontal track */}
+            <div className="mt-14">
+              <div className="relative flex items-center justify-between">
+                <div className="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 bg-zinc-200" />
+                <div
+                  className="absolute left-0 top-1/2 h-0.5 -translate-y-1/2 bg-[#FF6B35] transition-all duration-500"
+                  style={{ width: `${(activeFounderStep / 2) * 100}%` }}
+                />
+                {[
+                  { label: "On the tools", sub: "Age 21 - 33" },
+                  { label: "The problem", sub: "No software existed" },
+                  { label: "Built it", sub: "QuoteCore+ was born" },
+                ].map((s, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setActiveFounderStep(i)}
+                    className="relative z-10 flex flex-col items-center gap-3"
+                  >
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-full border-2 text-sm font-semibold transition-all duration-300 ${
+                      i <= activeFounderStep
+                        ? "border-[#FF6B35] bg-[#FF6B35] text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]"
+                        : "border-zinc-300 bg-white text-zinc-400"
+                    }`}>
+                      {i + 1}
+                    </div>
+                    <div className="text-center">
+                      <p className={`text-sm font-semibold transition-colors duration-300 ${i === activeFounderStep ? "text-zinc-950" : "text-zinc-400"}`}>{s.label}</p>
+                      <p className={`text-xs transition-colors duration-300 ${i === activeFounderStep ? "text-[#FF6B35]" : "text-zinc-300"}`}>{s.sub}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
 
-              {/* Stop 1 */}
-              <div className="relative pl-12">
-                <div className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-bold text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]">1</div>
-                <div className="absolute bottom-0 left-4 top-9 w-px bg-zinc-300" />
-                <div className="pb-12">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Age 21 - 33</p>
-                  <h3 className="mt-2 text-xl font-semibold">12 years on the roof</h3>
-                  <div className="mt-4 space-y-4 leading-8 text-zinc-600">
-                    <p>For twelve years, he was on the tools. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers home, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
-                    <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Trying to find a previous job's measurements when a similar roof came up - ten minutes of searching through paper instead of ten seconds on a screen.</p>
-                    <p className="font-medium text-zinc-800">He knew there had to be a better way. He just couldn't find it.</p>
+              {/* Content panel */}
+              <div className="mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
+                <div className="grid lg:grid-cols-2">
+                  {/* Text */}
+                  <div className="flex flex-col justify-center p-10">
+                    {activeFounderStep === 0 && (
+                      <>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Age 21 - 33</p>
+                        <h3 className="mt-2 text-2xl font-semibold">12 years on the roof</h3>
+                        <div className="mt-4 space-y-4 leading-8 text-zinc-600">
+                          <p>For twelve years, he was on the tools. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers home, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
+                          <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Ten minutes searching for a measurement that should have taken ten seconds.</p>
+                          <p className="font-medium text-zinc-800">He knew there had to be a better way. He just couldn't find it.</p>
+                        </div>
+                      </>
+                    )}
+                    {activeFounderStep === 1 && (
+                      <>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">The gap in the market</p>
+                        <h3 className="mt-2 text-2xl font-semibold">The software that didn't exist</h3>
+                        <div className="mt-4 space-y-4 leading-8 text-zinc-600">
+                          <p>The tools available were either generic - built for "trades" and completely misunderstanding how a roofer actually prices a job - or so complex they needed a trained estimator to operate them.</p>
+                          <p>Nothing knew the difference between a hip and a valley. Nothing could take his measurements and turn them into a professional quote without two hours of reformatting.</p>
+                          <p className="font-medium text-zinc-800">That software didn't exist. So he built it.</p>
+                        </div>
+                      </>
+                    )}
+                    {activeFounderStep === 2 && (
+                      <>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Why it matters</p>
+                        <h3 className="mt-2 text-2xl font-semibold">Built from the inside out</h3>
+                        <div className="mt-4 space-y-4 leading-8 text-zinc-600">
+                          <p>QuoteCore+ isn't built by developers who interviewed a few roofers. It's built by someone who lived the problem for over a decade. Every feature exists because someone who spent twelve years roofing decided it should.</p>
+                          <p>Before launch, it was tested by working roofers across the industry - contractors who quoted real jobs through the platform and gave honest feedback on what wasn't good enough.</p>
+                          <p className="font-medium text-zinc-800">The result is a quoting tool that thinks the way a roofer thinks - because it was built by one.</p>
+                        </div>
+                        <a href="/about" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FF6B35] hover:underline">
+                          Read Shaun's full story
+                          <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+                        </a>
+                      </>
+                    )}
+                    <div className="mt-8 flex gap-3">
+                      <button type="button" onClick={() => setActiveFounderStep((p) => Math.max(0, p - 1))} disabled={activeFounderStep === 0} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 transition-colors hover:bg-zinc-50 disabled:opacity-30">
+                        <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      </button>
+                      <button type="button" onClick={() => setActiveFounderStep((p) => Math.min(2, p + 1))} disabled={activeFounderStep === 2} className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF6B35] text-white transition-colors hover:bg-[#e85d2b] disabled:opacity-30">
+                        <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+                      </button>
+                    </div>
+                  </div>
+                  {/* Photo */}
+                  <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block">
+                    <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-full w-full object-cover" />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                      <p className="font-semibold text-white">Shaun</p>
+                      <p className="text-sm text-white/70">Founder, QuoteCore+ - 12 years on the tools</p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              {/* Stop 2 */}
-              <div className="relative pl-12">
-                <div className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-bold text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]">2</div>
-                <div className="absolute bottom-0 left-4 top-9 w-px bg-zinc-300" />
-                <div className="pb-12">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">The gap in the market</p>
-                  <h3 className="mt-2 text-xl font-semibold">The software that didn't exist</h3>
-                  <div className="mt-4 space-y-4 leading-8 text-zinc-600">
-                    <p>The tools available were either generic - built for "trades" and completely misunderstanding how a roofer actually prices a job - or so complex they needed a trained estimator to operate them.</p>
-                    <p>Nothing was built for the working roofer. He wanted something that knew the difference between a hip and a valley. That could take his measurements and turn them into a professional quote without two hours of reformatting.</p>
-                    <p className="font-medium text-zinc-800">That software didn't exist. So he built it.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Stop 3 */}
-              <div className="relative pl-12">
-                <div className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-bold text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]">3</div>
-                <div className="pb-4">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Why it matters</p>
-                  <h3 className="mt-2 text-xl font-semibold">Built from the inside out</h3>
-                  <div className="mt-4 space-y-4 leading-8 text-zinc-600">
-                    <p>QuoteCore+ isn't built by developers who interviewed a few roofers. It's built by someone who lived the problem for over a decade. Every feature exists because someone who spent twelve years roofing decided it should.</p>
-                    <p className="font-medium text-zinc-800">The result is a quoting tool that thinks the way a roofer thinks - because it was built by one.</p>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         </section>
