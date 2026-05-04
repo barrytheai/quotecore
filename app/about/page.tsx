@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About | QuoteCore+",
-  description: "QuoteCore+ was built by an ex-roofer who got sick of quoting jobs the hard way. Meet Shaun and the story behind the software.",
+  description: "QuoteCore+ was built by an ex-roofer who spent 12 years quoting jobs the hard way. Meet Shaun and the story behind the software.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
               <img src="/MainQCP.png" alt="QuoteCore+" className="h-10 w-auto" />
             </a>
             <div className="flex items-center gap-3">
-              <a href="/" className="inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 hover:bg-zinc-50 transition-colors">
+              <a href="/" className="inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50">
                 Back to homepage
               </a>
               <a
@@ -35,44 +35,75 @@ export default function AboutPage() {
           <div className="relative mx-auto max-w-3xl px-6 lg:px-8">
             <p className="text-sm font-medium text-[#FF6B35]">About QuoteCore+</p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Built by someone who's been there.
+              He spent 12 years quoting roofs the hard way. Then he built QuoteCore+.
             </h1>
           </div>
         </section>
 
-        {/* Founder section */}
-        <section className="mx-auto max-w-3xl px-6 pb-20 lg:px-8">
-          <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-            {/* Photo placeholder */}
-            <div className="mb-8 flex items-center gap-6">
-              <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[#FF6B35]/10 border-2 border-[#FF6B35]/20 text-sm text-zinc-400">
-                {/* Replace with: <img src="/shaun.jpg" alt="Shaun" className="h-24 w-24 rounded-full object-cover" /> */}
-                Photo
-              </div>
-              <div>
-                <p className="text-xl font-semibold">Shaun</p>
-                <p className="text-sm text-zinc-500">Founder, QuoteCore+</p>
-                <p className="mt-1 text-sm text-[#FF6B35]">Ex-roofer</p>
+        {/* Story */}
+        <section className="mx-auto max-w-3xl px-6 pb-24 lg:px-8">
+
+          {/* Founder card */}
+          <div className="flex items-center gap-6 rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-sm">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-[#FF6B35]/20 bg-[#FF6B35]/10 text-xs text-zinc-400">
+              {/* Replace with: <img src="/shaun.jpg" alt="Shaun" className="h-20 w-20 rounded-full object-cover" /> */}
+              Photo
+            </div>
+            <div>
+              <p className="text-xl font-semibold">Shaun</p>
+              <p className="text-sm text-zinc-500">Founder, QuoteCore+</p>
+              <p className="mt-1 text-sm font-medium text-[#FF6B35]">12 years on the tools</p>
+            </div>
+          </div>
+
+          {/* Timeline */}
+          <div className="mt-12">
+
+            {/* Stop 1 */}
+            <div className="relative pl-12">
+              <div className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-bold text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]">1</div>
+              <div className="absolute bottom-0 left-4 top-9 w-px bg-zinc-200" />
+              <div className="pb-14">
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Age 21 - 33</p>
+                <h3 className="mt-2 text-xl font-semibold">12 years on the roof</h3>
+                <div className="mt-4 space-y-4 leading-8 text-zinc-600">
+                  <p>For twelve years, he was on the tools. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers home, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
+                  <p>He shared the workload with another man who had his own system. Which meant two systems. Which meant no system.</p>
+                  <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Trying to find a previous job's measurements when a similar roof came up - ten minutes of searching through paper instead of ten seconds on a screen.</p>
+                  <p className="font-medium text-zinc-800">He knew there had to be a better way. He just couldn't find it.</p>
+                </div>
               </div>
             </div>
 
-            <div className="space-y-5 text-lg leading-8 text-zinc-600">
-              <p>
-                QuoteCore+ wasn't built in a boardroom. It was built by an ex-roofer who spent years quoting jobs the same slow way everyone else does — measurements on paper, prices in a spreadsheet, quotes fired off in an email and then chased for days.
-              </p>
-              <p>
-                Shaun knew there had to be a faster way. He'd been on the tools long enough to know exactly where the time went, exactly where the mistakes crept in, and exactly what a good quote needed to look like to actually win the job.
-              </p>
-              <p>
-                So he built the tool he wished had existed when he was quoting roofs daily.
-              </p>
-              <p>
-                Before QuoteCore+ went live, it was tested and refined by working roofers across the industry — contractors who quoted real jobs through the platform and gave Shaun honest feedback on what wasn't good enough. Every iteration was shaped by people who actually use it on the job.
-              </p>
-              <p className="font-medium text-zinc-800">
-                The result is a quoting tool that thinks the way a roofer thinks — because it was built by one.
-              </p>
+            {/* Stop 2 */}
+            <div className="relative pl-12">
+              <div className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-bold text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]">2</div>
+              <div className="absolute bottom-0 left-4 top-9 w-px bg-zinc-200" />
+              <div className="pb-14">
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">The gap in the market</p>
+                <h3 className="mt-2 text-xl font-semibold">The software that didn't exist</h3>
+                <div className="mt-4 space-y-4 leading-8 text-zinc-600">
+                  <p>The tools available were either generic - built for "trades" and completely misunderstanding how a roofer actually prices a job - or so complex they needed a trained estimator to operate them.</p>
+                  <p>Nothing was built for the working roofer. He wanted something that understood roofing. That knew the difference between a hip and a valley. That could take his measurements and turn them into a professional client-ready quote without him spending two hours reformatting a Word document.</p>
+                  <p className="font-medium text-zinc-800">That software didn't exist. So he built it.</p>
+                </div>
+              </div>
             </div>
+
+            {/* Stop 3 */}
+            <div className="relative pl-12">
+              <div className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-bold text-white shadow-[0_0_0_4px_rgba(255,107,53,0.15)]">3</div>
+              <div className="pb-6">
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">Why it matters</p>
+                <h3 className="mt-2 text-xl font-semibold">Built from the inside out</h3>
+                <div className="mt-4 space-y-4 leading-8 text-zinc-600">
+                  <p>QuoteCore+ isn't built by developers who interviewed a few roofers. It's built by someone who lived the problem for over a decade. Every feature exists because someone who spent twelve years roofing decided it should.</p>
+                  <p>Before launch, it was tested and refined by working roofers across the industry - contractors who quoted real jobs through the platform and gave honest feedback on what wasn't good enough. Every iteration shaped by people who actually use it on the job.</p>
+                  <p className="font-medium text-zinc-800">The result is a quoting tool that thinks the way a roofer thinks - because it was built by one.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* CTA */}
