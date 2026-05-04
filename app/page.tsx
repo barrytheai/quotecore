@@ -505,57 +505,60 @@ export default function HomePage() {
 
               {/* Content panel */}
               <div className="mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-                <div className="grid lg:grid-cols-2" style={{minHeight: "520px"}}>
+<div className="grid lg:grid-cols-2" style={{height: "520px"}}>
                   {/* Text */}
-                  <div className="relative p-10">
-                    {/* All panels rendered, only active one visible - prevents height shift */}
-                    {[
-                      {
-                        label: "Over a decade on the job",
-                        title: "Time built QuoteCore+",
-                        content: (
-                          <div className="space-y-4 leading-8 text-zinc-600">
-                            <p>For twelve years, Shaun was on the tools or project managing. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers to the office, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
-                            <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Ten minutes searching for a measurement that should have taken ten seconds.</p>
-                            <p className="font-medium text-zinc-800">He knew there had to be a better way. He just couldn't find it.</p>
-                          </div>
-                        ),
-                      },
-                      {
-                        label: "The gap in the market",
-                        title: "The software that didn't exist",
-                        content: (
-                          <div className="space-y-4 leading-8 text-zinc-600">
-                            <p>The tools available were either generic - built for "trades" and completely misunderstanding how a roofer actually prices a job - or so complex they needed a trained estimator to operate them.</p>
-                            <p>Nothing knew the difference between a hip and a valley. Nothing could take his measurements and turn them into a professional quote without two hours of reformatting.</p>
-                            <p className="font-medium text-zinc-800">That software didn't exist. So he built it.</p>
-                          </div>
-                        ),
-                      },
-                      {
-                        label: "Why it matters",
-                        title: "Built from the inside out",
-                        content: (
-                          <div className="space-y-4 leading-8 text-zinc-600">
-                            <p>QuoteCore+ isn't built by developers who interviewed a few roofers. It's built by someone who lived the problem for over a decade. Every feature exists because someone who spent twelve years roofing decided it should.</p>
-                            <p>Before launch, it was tested by working roofers across the industry - contractors who quoted real jobs through the platform and gave honest feedback on what wasn't good enough.</p>
-                            <p className="font-medium text-zinc-800">The result is a quoting tool that thinks the way a roofer thinks - because it was built by one.</p>
-                          </div>
-                        ),
-                      },
-                    ].map((panel, i) => (
-                      <div
-                        key={i}
-                        className={`flex flex-col justify-center transition-opacity duration-300 ${
-                          i === activeFounderStep ? "relative opacity-100" : "absolute inset-0 p-10 opacity-0 pointer-events-none"
-                        }`}
-                      >
-                        <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">{panel.label}</p>
-                        <h3 className="mt-2 text-2xl font-semibold">{panel.title}</h3>
-                        <div className="mt-4">{panel.content}</div>
-                      </div>
-                    ))}
-                    <div className="mt-8 flex gap-3">
+                  <div className="flex flex-col" style={{height: "100%"}}>
+                    {/* Text panels - fixed height, stack on top of each other */}
+                    <div className="relative flex-1 overflow-hidden">
+                      {[
+                        {
+                          label: "Over a decade on the job",
+                          title: "Time built QuoteCore+",
+                          content: (
+                            <div className="space-y-4 leading-8 text-zinc-600">
+                              <p>For twelve years, Shaun was on the tools or project managing. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers to the office, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
+                              <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Ten minutes searching for a measurement that should have taken ten seconds.</p>
+                              <p className="font-medium text-zinc-800">He knew there had to be a better way. He just couldn't find it.</p>
+                            </div>
+                          ),
+                        },
+                        {
+                          label: "The gap in the market",
+                          title: "The software that didn't exist",
+                          content: (
+                            <div className="space-y-4 leading-8 text-zinc-600">
+                              <p>The tools available were either generic - built for "trades" and completely misunderstanding how a roofer actually prices a job - or so complex they needed a trained estimator to operate them.</p>
+                              <p>Nothing knew the difference between a hip and a valley. Nothing could take his measurements and turn them into a professional quote without two hours of reformatting.</p>
+                              <p className="font-medium text-zinc-800">That software didn't exist. So he built it.</p>
+                            </div>
+                          ),
+                        },
+                        {
+                          label: "Why it matters",
+                          title: "Built from the inside out",
+                          content: (
+                            <div className="space-y-4 leading-8 text-zinc-600">
+                              <p>QuoteCore+ isn't built by developers who interviewed a few roofers. It's built by someone who lived the problem for over a decade. Every feature exists because someone who spent twelve years roofing decided it should.</p>
+                              <p>Before launch, it was tested by working roofers across the industry - contractors who quoted real jobs through the platform and gave honest feedback on what wasn't good enough.</p>
+                              <p className="font-medium text-zinc-800">The result is a quoting tool that thinks the way a roofer thinks - because it was built by one.</p>
+                            </div>
+                          ),
+                        },
+                      ].map((panel, i) => (
+                        <div
+                          key={i}
+                          className={`absolute inset-0 flex flex-col justify-center p-10 transition-opacity duration-300 ${
+                            i === activeFounderStep ? "opacity-100" : "opacity-0 pointer-events-none"
+                          }`}
+                        >
+                          <p className="text-xs font-semibold uppercase tracking-widest text-[#FF6B35]">{panel.label}</p>
+                          <h3 className="mt-2 text-2xl font-semibold">{panel.title}</h3>
+                          <div className="mt-4">{panel.content}</div>
+                        </div>
+                      ))}
+                    </div>
+                    {/* Buttons always at the bottom */}
+                    <div className="flex shrink-0 gap-3 px-10 pb-8">
                       <button type="button" onClick={() => setActiveFounderStep((p) => Math.max(0, p - 1))} disabled={activeFounderStep === 0} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 transition-colors hover:bg-zinc-50 disabled:opacity-30">
                         <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                       </button>
