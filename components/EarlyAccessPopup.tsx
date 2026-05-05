@@ -101,8 +101,9 @@ export default function EarlyAccessPopup({ forceOpen, onClose }: Props = {}) {
           ) : (
             <>
               <p className="text-zinc-600 leading-7">
-                Subscribe now to be first to try the app and{" "}
-                <span className="font-semibold text-zinc-950">save 25% on your first 3 months.</span>
+                Be first in. Lock in{" "}
+                <span className="font-semibold text-zinc-950">25% off your first 3 months</span>{" "}
+                - yours to keep when we go live.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-6">
@@ -112,7 +113,7 @@ export default function EarlyAccessPopup({ forceOpen, onClose }: Props = {}) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
-                  className="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-[#FF6B35]"
+                  className="w-full rounded-2xl border border-zinc-200 px-4 py-3 text-sm text-zinc-950 placeholder:text-zinc-400 outline-none transition focus:border-[#FF6B35]"
                 />
                 {errorMsg && (
                   <p className="mt-2 text-xs text-red-500">{errorMsg}</p>
