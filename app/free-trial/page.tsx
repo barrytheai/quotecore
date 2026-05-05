@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import EarlyAccessPopup from "@/components/EarlyAccessPopup";
 
 export default function FreeTrialPage() {
+  const [showEarlyAccess, setShowEarlyAccess] = useState(false);
+
   const faqs = [
     {
       question: "Do I need a credit card to sign up?",
@@ -92,12 +95,13 @@ export default function FreeTrialPage() {
               <div id="trial-form" className="mt-10 rounded-[2rem] border border-zinc-200 bg-zinc-50 p-8">
                 <h2 className="text-xl font-semibold">Start your free trial</h2>
                 <p className="mt-3 text-sm text-zinc-500">No credit card required. 2-week access. Cancel anytime.</p>
-                <a
-                  href="https://quotecore-plus-dev.vercel.app/login"
+                <button
+                  type="button"
+                  onClick={() => setShowEarlyAccess(true)}
                   className={`${primaryButton} mt-6 w-full justify-center text-base font-semibold py-3`}
                 >
                   Create my free account
-                </a>
+                </button>
               </div>
             </div>
 
@@ -118,6 +122,7 @@ export default function FreeTrialPage() {
         </section>
       </main>
 
+      {showEarlyAccess && <EarlyAccessPopup forceOpen onClose={() => setShowEarlyAccess(false)} />}
       <style>{`
         .brand-wordmark {
           white-space: nowrap;

@@ -3,20 +3,27 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 
-export default function EarlyAccessPopup() {
+interface Props {
+  forceOpen?: boolean;
+  onClose?: () => void;
+}
+
+export default function EarlyAccessPopup({ forceOpen, onClose }: Props = {}) {
   const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
+    if (forceOpen) return; // controlled externally
     // Show after 3 seconds, only if not already dismissed this session
     if (sessionStorage.getItem("earlyAccessDismissed")) return;
     const timer = setTimeout(() => setVisible(true), 3000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [forceOpen]);
 
   const dismiss = () => {
+    if (onClose) { onClose(); return; }
     sessionStorage.setItem("earlyAccessDismissed", "1");
     setVisible(false);
   };
@@ -44,7 +51,7 @@ export default function EarlyAccessPopup() {
     }
   };
 
-  if (!visible) return null;
+  if (!forceOpen && !visible) return null;
 
   return (
     <div className="fixed inset-0 z-[999] flex items-center justify-center p-4">
