@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import EarlyAccessPopup from "@/components/EarlyAccessPopup";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -86,6 +87,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
+        <EarlyAccessPopup />
         <Script
           id="software-application-schema"
           type="application/ld+json"
