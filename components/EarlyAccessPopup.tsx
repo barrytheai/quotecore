@@ -34,6 +34,12 @@ export default function EarlyAccessPopup({ forceOpen, onClose }: Props = {}) {
     setStatus("loading");
     setErrorMsg("");
 
+    if (!supabase) {
+      setStatus("error");
+      setErrorMsg("Service unavailable. Please try again later.");
+      return;
+    }
+
     const { error } = await supabase
       .from("early_access")
       .insert([{ email: email.toLowerCase().trim() }]);
