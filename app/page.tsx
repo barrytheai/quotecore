@@ -242,30 +242,35 @@ export default function HomePage() {
         </header>
 
         <section className="relative overflow-hidden pb-12 lg:pb-16">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,107,53,0.10),transparent_34%)]" />
-          <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-6 py-10 lg:grid-cols-2 lg:px-8 lg:py-12">
-            <div>
-              <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                Roofing quoting software that works as fast as you do.
-              </h1>
-
-              <p className="mt-6 max-w-xl text-lg text-zinc-600 sm:text-xl">
-                From measurement to pricing to customer-ready quote. One clean workflow, no spreadsheets, no back-and-forth.
-              </p>
-
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a href="/free-trial" className={primaryButton}>
-                  Start free trial
-                </a>
-                <a href="#how-it-works" className={shimmerButton}>
-                  See how it works
-                </a>
-                <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className={shimmerButton}>
-                  Book a Call
-                </a>
-              </div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,107,53,0.12),transparent_60%)]" />
+          {/* Full-width hero text */}
+          <div className="relative mx-auto max-w-4xl px-6 pb-12 pt-12 text-center lg:px-8 lg:pt-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">A roofing app built by roofers</p>
+            <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
+              Measure roofs, create quotes,<br className="hidden sm:block" /> and manage every job -<br className="hidden sm:block" /> all in one app.
+            </h1>
+            <p className="mx-auto mt-8 max-w-lg text-xl text-zinc-500">
+              Measurements in. Professional quote out. No spreadsheets.
+            </p>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <a href="/free-trial" className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">
+                Start free trial
+              </a>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-7 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50">
+                Book a Call
+              </a>
             </div>
-
+            <p className="mt-3 text-sm text-zinc-400">No card required. 2 weeks free.</p>
+            {/* Scroll indicator */}
+            <div className="mt-8 flex flex-col items-center gap-1.5 font-sans text-zinc-400">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em]">Scroll</p>
+              <svg className="h-5 w-5 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+              </svg>
+            </div>
+          </div>
+          {/* Video below centered */}
+          <div className="relative mx-auto max-w-4xl px-6 lg:px-8 -mt-6">
             <div className="relative">
               <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]" style={{borderRadius: "2rem"}}>
                 <video
@@ -279,7 +284,6 @@ export default function HomePage() {
                 >
                   <source src="/QCPFinalVideo.mp4" type="video/mp4" />
                 </video>
-
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-5 pb-5">
                   <button
                     type="button"
@@ -297,7 +301,6 @@ export default function HomePage() {
                       </svg>
                     )}
                   </button>
-
                   <button
                     type="button"
                     onClick={toggleMute}
@@ -322,71 +325,50 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials */}
-        <section className="bg-[#FF6B35]/15 py-12">
+        <section className="bg-[#FF6B35]/10 py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-sm font-medium text-zinc-500">What roofers say</p>
-            <h2 className="mt-3 text-3xl font-semibold text-zinc-950 sm:text-4xl">Trusted by roofing contractors</h2>
-          </div>
-
-          {/* Carousel */}
-          <div className="relative mt-14">
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${activeTestimonial * (100 / 3)}%)` }}
-              >
-                {[...testimonials, ...testimonials].map((t, idx) => (
-                  <div key={idx} className="w-1/3 shrink-0 px-3">
-                    <div className="rounded-[1.75rem] bg-white p-7 shadow-sm border border-[#FF6B35]/20 h-full">
-                      {/* Stars */}
-                      <div className="flex gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <svg key={i} className="h-4 w-4 text-[#FF6B35]" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                      </div>
-                      <p className="mt-4 text-sm leading-relaxed text-zinc-600">&ldquo;{t.quote}&rdquo;</p>
-                      <div className="mt-6 flex items-center gap-3">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-semibold text-white">
-                          {t.initials}
+            <div className="text-center">
+              <h2 className="text-3xl font-semibold text-zinc-950 sm:text-4xl">What roofers say.</h2>
+            </div>
+            <div className="relative mt-14">
+              <div className="overflow-hidden">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${activeTestimonial * (100 / 3)}%)` }}
+                >
+                  {[...testimonials, ...testimonials].map((t, idx) => (
+                    <div key={idx} className="w-1/3 shrink-0 px-3">
+                      <div className="flex h-full flex-col rounded-[2rem] bg-white p-8 shadow-sm">
+                        <div className="flex gap-1 mb-5">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="h-4 w-4 text-[#FF6B35]" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
                         </div>
-                        <div>
-                          <p className="text-sm font-semibold text-zinc-950">{t.name}</p>
-                          <p className="text-xs text-zinc-500">{t.business}</p>
+                        <p className="flex-1 text-base leading-relaxed text-zinc-600">&ldquo;{t.quote}&rdquo;</p>
+                        <div className="mt-8 flex items-center gap-3">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-semibold text-white">{t.initials}</div>
+                          <div>
+                            <p className="text-sm font-semibold text-zinc-950">{t.name}</p>
+                            <p className="text-xs text-zinc-400">{t.business}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+              <button type="button" onClick={() => setActiveTestimonial((p) => (p - 1 + testimonials.length) % testimonials.length)} className="absolute -left-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50" aria-label="Previous">
+                <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+              </button>
+              <button type="button" onClick={() => setActiveTestimonial((p) => (p + 1) % (testimonials.length * 2 - 2))} className="absolute -right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50" aria-label="Next">
+                <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
+              </button>
             </div>
-
-            {/* Arrows */}
-            <button
-              type="button"
-              onClick={() => setActiveTestimonial((p) => (p - 1 + testimonials.length) % testimonials.length)}
-              className="absolute -left-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
-              aria-label="Previous"
-            >
-              <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTestimonial((p) => (p + 1) % (testimonials.length * 2 - 2))}
-              className="absolute -right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
-              aria-label="Next"
-            >
-              <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </div>
           </div>
         </section>
+
 
         {/* Rolling banner + CTA */}
         <div className="overflow-hidden border-y border-zinc-300 bg-zinc-200 py-3">
@@ -411,47 +393,79 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* How it works */}
-        <section id="how-it-works" className="py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-4xl font-semibold sm:text-5xl">One place. From site to send.</h2>
-              <p className="mt-6 text-xl text-zinc-500">Takeoff to customer-ready quote without the back-and-forth.</p>
-            </div>
-            <div className="mt-20 grid items-start gap-10 lg:grid-cols-[1fr_480px]">
-              <div className="flex flex-col gap-4">
-                {steps.map((item, i) => (
-                  <button key={item.number} type="button" onClick={() => setActiveStep(i)} className={`rounded-[1.75rem] border px-8 py-6 text-left transition-all duration-200 ${i === activeStep ? "border-[#FF6B35] bg-white shadow-[0_8px_40px_rgba(255,107,53,0.12)]" : "border-zinc-100 bg-zinc-50 hover:border-zinc-200"}`}>
-                    <p className={`text-xs font-semibold uppercase tracking-widest ${i === activeStep ? "text-[#FF6B35]" : "text-zinc-400"}`}>{item.number}</p>
-                    <h3 className={`mt-1 text-xl font-semibold ${i === activeStep ? "text-zinc-950" : "text-zinc-500"}`}>{item.title}</h3>
-                    {i === activeStep && <p className="mt-3 leading-7 text-zinc-600">{item.body}</p>}
-                  </button>
+        <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+          <div className="grid items-start gap-10 lg:grid-cols-[520px_minmax(0,1fr)]">
+            <div>
+              <p className="text-sm text-zinc-500">How it works</p>
+              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                One place to quote, approve, order, and track the job.
+              </h2>
+              <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
+                <span className="brand-wordmark">
+                  QuoteCore<span className="brand-plus">+</span>
+                </span>{" "}
+                helps roofers turn job details into accurate quotes, approved orders, and trackable work without the usual back-and-forth.
+              </p>
+
+              <div className="mt-14 flex max-w-[460px] flex-col gap-5">
+                {steps.map((item) => (
+                  <div
+                    key={item.number}
+                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                  >
+                    <div className="flex items-start gap-6">
+                      <div className="w-[56px] shrink-0 pt-[2px] text-2xl font-semibold leading-none text-zinc-950">
+                        {item.number}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-2xl font-semibold leading-none text-zinc-950">
+                          {item.title}
+                        </h3>
+                        <p className="mt-5 text-zinc-600">{item.body}</p>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
-              <div className="rounded-[2rem] border border-zinc-100 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-                <div className="relative overflow-hidden rounded-[1.5rem] border border-zinc-100 bg-white p-6">
-                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                    <span className="select-none rotate-[-30deg] text-[60px] font-semibold tracking-widest text-zinc-100">EXAMPLE QUOTE</span>
+            </div>
+
+            <div className="relative">
+              <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)] lg:min-h-[760px]">
+                <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
+                    <span className="select-none rotate-[-30deg] text-center text-[70px] font-semibold tracking-[0.12em] text-zinc-200 opacity-30">
+                      EXAMPLE QUOTE
+                    </span>
                   </div>
-                  <div className="relative">
-                    <div className="border-b border-zinc-100 pb-5">
-                      <p className="text-xl font-semibold">QUOTE #1000</p>
-                      <p className="mt-3 text-sm text-zinc-500">Client: John Smith</p>
-                      <p className="text-sm text-zinc-500">Job: 123 Example Street</p>
-                      <p className="text-sm text-zinc-500">Date: 10 April 2026</p>
+                  <div className="relative flex h-full flex-col">
+                    <div className="border-b border-zinc-200 pb-5">
+                      <p className="text-2xl font-semibold">QUOTE #1000</p>
+                      <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
+                      <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
+                      <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
                     </div>
-                    <div className="mt-5 space-y-3 text-sm">
+                    <div className="mt-6 flex-1 space-y-4 text-sm text-zinc-700">
                       {quoteItems.map(([label, value]) => (
-                        <div key={label} className="flex justify-between border-b border-zinc-50 py-2.5 text-zinc-700">
-                          <span>{label}</span><span className="font-medium">{value}</span>
+                        <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
+                          <span>{label}</span>
+                          <span className="font-medium">{value}</span>
                         </div>
                       ))}
-                      <div className="pt-3 text-zinc-600">
-                        <div className="flex justify-between"><span>Subtotal</span><span>$4,262.36</span></div>
-                        <div className="flex justify-between"><span>Tax (15%)</span><span>$639.35</span></div>
+                      <div className="pt-4">
+                        <div className="flex justify-between">
+                          <span>Subtotal</span>
+                          <span>$4,262.36</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Tax (15%)</span>
+                          <span>$639.35</span>
+                        </div>
                       </div>
-                      <div className="border-t border-zinc-200 pt-3">
-                        <div className="flex justify-between text-lg font-semibold"><span>Total</span><span>$4,901.71</span></div>
+                      <div className="mt-4 border-t border-zinc-200 pt-4">
+                        <div className="flex justify-between text-lg font-semibold">
+                          <span>Total</span>
+                          <span>$4,901.71</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -462,63 +476,85 @@ export default function HomePage() {
         </section>
 
         {/* About Shaun */}
-        <section className="py-32">
+        <section className="bg-[#FF6B35]/5 py-16">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="overflow-hidden rounded-[2.5rem] bg-zinc-950 text-white">
+            <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
               <div className="grid lg:grid-cols-2">
-                <div className="flex flex-col justify-center p-12 lg:p-16">
-                  <div className="mb-8 flex items-center gap-4">
-                    <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
+                <div className="flex flex-col justify-center p-10">
+                  <div className="mb-6 flex items-center gap-4">
+                    <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/20 shrink-0" />
                     <div>
-                      <p className="font-semibold text-white">Shaun</p>
+                      <p className="font-semibold text-zinc-950">Shaun</p>
                       <p className="text-sm text-[#FF6B35]">Founder, QuoteCore+</p>
                     </div>
                   </div>
-                  <h2 className="text-3xl font-semibold sm:text-4xl">Meet Shaun,</h2>
-                  <div className="mt-6 space-y-5 text-lg leading-8 text-white/70">
+                  <p className="text-xl font-semibold text-zinc-950">Meet Shaun,</p>
+                  <div className="mt-4 space-y-4 text-lg leading-8 text-zinc-600">
                     <p>I spent 12+ years on site roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
                     <p>I tried so many systems, but nothing really did everything well.</p>
                     <p>So I built something that does.</p>
-                    <p className="font-medium text-white">QuoteCore+ is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
+                    <p className="font-medium text-zinc-800">QuoteCore+ is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
                   </div>
                 </div>
-                <div className="relative hidden overflow-hidden lg:block">
-                  <img src="/shaun.jpg" alt="Shaun on site" className="h-full w-full object-cover" style={{minHeight: "500px"}} />
-                  <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/50 to-transparent" />
+                <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{minHeight: "400px"}}>
+                  <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-full w-full object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                    <p className="font-semibold text-white">Shaun</p>
+                    <p className="text-sm text-white/70">Founder, QuoteCore+</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pricing */}
-        <section id="pricing" className="bg-zinc-950 py-32 text-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-xl text-center">
-              <h2 className="text-4xl font-semibold sm:text-5xl">Simple pricing.</h2>
-              <p className="mt-6 text-xl text-zinc-400">Start free. Scale as you grow.</p>
+        <section id="pricing" className="bg-zinc-950 py-24 text-white">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="max-w-2xl">
+              <p className="text-sm font-medium text-[#FF8A61]">Pricing</p>
+              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                Simple pricing for solo users, teams, and enterprise.
+              </h2>
+              <p className="mt-4 text-lg text-zinc-300">
+                Start with a 2-week free trial, then scale as you grow.
+              </p>
             </div>
-            <div className="mt-20 grid gap-6 lg:grid-cols-3">
+
+            <div className="mt-14 grid gap-6 lg:grid-cols-3">
               {pricingPlans.map((item) => (
-                <div key={item.name} className={`rounded-[2rem] p-8 ${item.featured ? "bg-white text-zinc-950" : "border border-white/10 bg-white/5"}`}>
+                <div
+                  key={item.name}
+                  className={`rounded-[2rem] border p-8 ${
+                    item.featured
+                      ? "border-[#FF6B35] bg-white text-zinc-950"
+                      : "border-white/10 bg-white/5"
+                  }`}
+                >
                   <h3 className="text-2xl font-semibold">{item.name}</h3>
-                  <div className="mt-6 flex items-end gap-1">
-                    <span className="text-5xl font-semibold">{item.price}</span>
-                    {item.detail && <span className="mb-2 text-sm opacity-60">{item.detail}</span>}
+
+                  <div className="mt-5 flex items-end gap-1">
+                    <span className="text-4xl font-semibold">{item.price}</span>
+                    {item.detail && <span className="text-sm opacity-70">{item.detail}</span>}
                   </div>
-                  <p className="mt-4 text-sm opacity-70">{item.body}</p>
-                  <a href="/free-trial" className={`mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full text-sm font-semibold transition-colors ${item.featured ? "bg-[#FF6B35] text-white hover:bg-[#e85d2b]" : "border border-white/20 bg-white/10 text-white hover:bg-white/20"}`}>{item.cta}</a>
+
+                  <p className="mt-6 text-sm opacity-80">{item.body}</p>
+
+                  <a href="/free-trial" className={`mt-8 ${item.featured ? primaryButton : shimmerButton}`}>
+                    {item.cta}
+                  </a>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="py-32">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8">
-            <h2 className="text-4xl font-semibold sm:text-5xl">Common questions.</h2>
-            <div className="mt-12 space-y-3">
+        <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+          <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl font-semibold sm:text-4xl">Frequently asked Questions</h2>
+            </div>
+
+            <div className="mt-10 space-y-4">
               {faqs.map((faq) => (
                 <FaqItem key={faq.question} question={faq.question} answer={faq.answer} />
               ))}
@@ -526,16 +562,25 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="pb-32">
-          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">Start quoting faster.</h2>
-            <p className="mx-auto mt-6 max-w-xl text-xl text-zinc-500">No spreadsheets. No back-and-forth. Your entire quoting workflow in one place.</p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <a href="/free-trial" className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]">Start free trial</a>
-              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-300 bg-white px-10 py-3 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-50">Book a Call</a>
+        <section id="final-cta" className="mx-auto max-w-7xl px-6 py-24">
+          <div className="rounded-[2.5rem] border border-zinc-200 bg-zinc-50 p-10">
+            <h2 className="text-3xl font-semibold sm:text-5xl">Ready to quote faster?</h2>
+            <p className="mt-4 max-w-2xl text-lg text-zinc-600">
+              Stop losing time to spreadsheets and manual admin. <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> puts your entire quoting workflow in one place, from takeoff to send.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="/free-trial" className={primaryButton}>
+                Start your free 2-week trial
+              </a>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className={shimmerButton}>
+                Book a Call
+              </a>
+              <a href="#how-it-works" className={shimmerButton}>
+                See how it works
+              </a>
             </div>
-            <p className="mt-5 text-sm text-zinc-400">No card required. 2 weeks free. Cancel anytime.</p>
+            <p className="mt-4 text-sm text-zinc-500">No card required. 2 weeks free. Cancel anytime.</p>
           </div>
         </section>
 
