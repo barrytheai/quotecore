@@ -9,12 +9,42 @@ export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [activeFounderStep, setActiveFounderStep] = useState(0);
-  const [bannerOffset, setBannerOffset] = useState(0);
+  const bannerTrackRef = useRef<HTMLDivElement | null>(null);
+  const bannerPosRef = useRef(0);
 
   useEffect(() => {
-    const handleScroll = () => setBannerOffset(window.scrollY * 0.3);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const PAUSE_MS = 3000;
+    const ROLL_MS = 800;
+    let rafId: number;
+    let timerId: ReturnType<typeof setTimeout>;
+
+    const step = () => {
+      const track = bannerTrackRef.current;
+      if (!track) return;
+      const itemEl = track.querySelector<HTMLElement>('.banner-item');
+      if (!itemEl) return;
+      const itemW = itemEl.getBoundingClientRect().width;
+      bannerPosRef.current += 1;
+      track.style.transition = `transform ${ROLL_MS}ms cubic-bezier(0.4, 0, 0.2, 1)`;
+      track.style.transform = `translateX(-${bannerPosRef.current * itemW}px)`;
+      timerId = setTimeout(() => {
+        if (bannerPosRef.current >= 3) {
+          bannerPosRef.current = 0;
+          track.style.transition = 'none';
+          track.style.transform = 'translateX(0px)';
+          rafId = requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              timerId = setTimeout(step, PAUSE_MS);
+            });
+          });
+        } else {
+          timerId = setTimeout(step, PAUSE_MS);
+        }
+      }, ROLL_MS + 100);
+    };
+
+    timerId = setTimeout(step, PAUSE_MS);
+    return () => { clearTimeout(timerId); cancelAnimationFrame(rafId); };
   }, []);
 
   const toggleMute = () => {
@@ -359,113 +389,69 @@ export default function HomePage() {
         </section>
 
         {/* Rolling banner + CTA */}
-        <div className="overflow-hidden border-y border-zinc-800 bg-zinc-950 py-3">
-          <div
-            className="flex whitespace-nowrap"
-            style={{ transform: `translateX(-${bannerOffset % 600}px)`, willChange: "transform" }}
-          >
-            {[...Array(12)].map((_, i) => (
-              <span key={i} className="inline-flex items-center gap-6 mx-6 text-base font-semibold uppercase leading-none tracking-[0.18em] text-white">
-                <span>AT LEAST 25% FASTER - OR IT&apos;S FREE</span>
-                <span className="ml-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
+        <div className="overflow-hidden border-y border-zinc-300 bg-zinc-200 py-3">
+          <div ref={bannerTrackRef} className="banner-track" style={{willChange: "transform"}}>
+            {/* 3 real items + 3 clones. Item = TEXT, dot sits exactly between with equal spacing */}
+            {[0,1,2,3,4,5].map((i) => (
+              <span key={i} className="banner-item inline-flex items-center shrink-0 whitespace-nowrap">
+                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-700 px-16">AT LEAST 25% FASTER - OR IT&apos;S FREE</span>
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
               </span>
             ))}
           </div>
         </div>
-        <div className="flex items-center justify-center gap-6 bg-zinc-950 py-7">
+        <div className="flex items-center justify-center gap-6 bg-zinc-200 py-7">
           <img src="/shaun-headshot.jpg" alt="Shaun" className="h-24 w-24 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
           <div>
-            <p className="text-xs text-white/50 mb-2">Book a 15-minute call with Shaun</p>
+            <p className="text-sm text-zinc-500 mb-2">Book a 15-minute call with Shaun</p>
             <div className="flex gap-3">
-              <a
-                href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer"
-                className="inline-flex min-h-9 items-center justify-center rounded-full bg-[#FF6B35] px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
-              >
-                Book a Call
-              </a>
-              <a
-                href="/free-trial"
-                className="inline-flex min-h-9 items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20"
-              >
-                Start free trial
-              </a>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center justify-center rounded-full bg-[#FF6B35] px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">Book a Call</a>
+              <a href="/free-trial" className="inline-flex min-h-9 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-2 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50">Start free trial</a>
             </div>
           </div>
         </div>
 
-        <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-          <div className="grid items-start gap-10 lg:grid-cols-[520px_minmax(0,1fr)]">
-            <div>
-              <p className="text-sm text-zinc-500">How it works</p>
-              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                One place to quote, approve, order, and track the job.
-              </h2>
-              <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
-                <span className="brand-wordmark">
-                  QuoteCore<span className="brand-plus">+</span>
-                </span>{" "}
-                helps roofers turn job details into accurate quotes, approved orders, and trackable work without the usual back-and-forth.
-              </p>
-
-              <div className="mt-14 flex max-w-[460px] flex-col gap-5">
-                {steps.map((item) => (
-                  <div
-                    key={item.number}
-                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
-                  >
-                    <div className="flex items-start gap-6">
-                      <div className="w-[56px] shrink-0 pt-[2px] text-2xl font-semibold leading-none text-zinc-950">
-                        {item.number}
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-2xl font-semibold leading-none text-zinc-950">
-                          {item.title}
-                        </h3>
-                        <p className="mt-5 text-zinc-600">{item.body}</p>
-                      </div>
-                    </div>
-                  </div>
+        {/* How it works */}
+        <section id="how-it-works" className="py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-4xl font-semibold sm:text-5xl">One place. From site to send.</h2>
+              <p className="mt-6 text-xl text-zinc-500">Takeoff to customer-ready quote without the back-and-forth.</p>
+            </div>
+            <div className="mt-20 grid items-start gap-10 lg:grid-cols-[1fr_480px]">
+              <div className="flex flex-col gap-4">
+                {steps.map((item, i) => (
+                  <button key={item.number} type="button" onClick={() => setActiveStep(i)} className={`rounded-[1.75rem] border px-8 py-6 text-left transition-all duration-200 ${i === activeStep ? "border-[#FF6B35] bg-white shadow-[0_8px_40px_rgba(255,107,53,0.12)]" : "border-zinc-100 bg-zinc-50 hover:border-zinc-200"}`}>
+                    <p className={`text-xs font-semibold uppercase tracking-widest ${i === activeStep ? "text-[#FF6B35]" : "text-zinc-400"}`}>{item.number}</p>
+                    <h3 className={`mt-1 text-xl font-semibold ${i === activeStep ? "text-zinc-950" : "text-zinc-500"}`}>{item.title}</h3>
+                    {i === activeStep && <p className="mt-3 leading-7 text-zinc-600">{item.body}</p>}
+                  </button>
                 ))}
               </div>
-            </div>
-
-            <div className="relative">
-              <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)] lg:min-h-[760px]">
-                <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
-                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
-                    <span className="select-none rotate-[-30deg] text-center text-[70px] font-semibold tracking-[0.12em] text-zinc-200 opacity-30">
-                      EXAMPLE QUOTE
-                    </span>
+              <div className="rounded-[2rem] border border-zinc-100 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
+                <div className="relative overflow-hidden rounded-[1.5rem] border border-zinc-100 bg-white p-6">
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <span className="select-none rotate-[-30deg] text-[60px] font-semibold tracking-widest text-zinc-100">EXAMPLE QUOTE</span>
                   </div>
-                  <div className="relative flex h-full flex-col">
-                    <div className="border-b border-zinc-200 pb-5">
-                      <p className="text-2xl font-semibold">QUOTE #1000</p>
-                      <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
-                      <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
-                      <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
+                  <div className="relative">
+                    <div className="border-b border-zinc-100 pb-5">
+                      <p className="text-xl font-semibold">QUOTE #1000</p>
+                      <p className="mt-3 text-sm text-zinc-500">Client: John Smith</p>
+                      <p className="text-sm text-zinc-500">Job: 123 Example Street</p>
+                      <p className="text-sm text-zinc-500">Date: 10 April 2026</p>
                     </div>
-                    <div className="mt-6 flex-1 space-y-4 text-sm text-zinc-700">
+                    <div className="mt-5 space-y-3 text-sm">
                       {quoteItems.map(([label, value]) => (
-                        <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
-                          <span>{label}</span>
-                          <span className="font-medium">{value}</span>
+                        <div key={label} className="flex justify-between border-b border-zinc-50 py-2.5 text-zinc-700">
+                          <span>{label}</span><span className="font-medium">{value}</span>
                         </div>
                       ))}
-                      <div className="pt-4">
-                        <div className="flex justify-between">
-                          <span>Subtotal</span>
-                          <span>$4,262.36</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Tax (15%)</span>
-                          <span>$639.35</span>
-                        </div>
+                      <div className="pt-3 text-zinc-600">
+                        <div className="flex justify-between"><span>Subtotal</span><span>$4,262.36</span></div>
+                        <div className="flex justify-between"><span>Tax (15%)</span><span>$639.35</span></div>
                       </div>
-                      <div className="mt-4 border-t border-zinc-200 pt-4">
-                        <div className="flex justify-between text-lg font-semibold">
-                          <span>Total</span>
-                          <span>$4,901.71</span>
-                        </div>
+                      <div className="border-t border-zinc-200 pt-3">
+                        <div className="flex justify-between text-lg font-semibold"><span>Total</span><span>$4,901.71</span></div>
                       </div>
                     </div>
                   </div>
@@ -476,85 +462,63 @@ export default function HomePage() {
         </section>
 
         {/* About Shaun */}
-        <section className="bg-[#FF6B35]/5 py-16">
+        <section className="py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
+            <div className="overflow-hidden rounded-[2.5rem] bg-zinc-950 text-white">
               <div className="grid lg:grid-cols-2">
-                <div className="flex flex-col justify-center p-10">
-                  <div className="mb-6 flex items-center gap-4">
-                    <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/20 shrink-0" />
+                <div className="flex flex-col justify-center p-12 lg:p-16">
+                  <div className="mb-8 flex items-center gap-4">
+                    <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
                     <div>
-                      <p className="font-semibold text-zinc-950">Shaun</p>
+                      <p className="font-semibold text-white">Shaun</p>
                       <p className="text-sm text-[#FF6B35]">Founder, QuoteCore+</p>
                     </div>
                   </div>
-                  <p className="text-xl font-semibold text-zinc-950">Meet Shaun,</p>
-                  <div className="mt-4 space-y-4 text-lg leading-8 text-zinc-600">
+                  <h2 className="text-3xl font-semibold sm:text-4xl">Meet Shaun,</h2>
+                  <div className="mt-6 space-y-5 text-lg leading-8 text-white/70">
                     <p>I spent 12+ years on site roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
                     <p>I tried so many systems, but nothing really did everything well.</p>
                     <p>So I built something that does.</p>
-                    <p className="font-medium text-zinc-800">QuoteCore+ is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
+                    <p className="font-medium text-white">QuoteCore+ is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
                   </div>
                 </div>
-                <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{minHeight: "400px"}}>
-                  <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-full w-full object-cover" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-                    <p className="font-semibold text-white">Shaun</p>
-                    <p className="text-sm text-white/70">Founder, QuoteCore+</p>
-                  </div>
+                <div className="relative hidden overflow-hidden lg:block">
+                  <img src="/shaun.jpg" alt="Shaun on site" className="h-full w-full object-cover" style={{minHeight: "500px"}} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/50 to-transparent" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="pricing" className="bg-zinc-950 py-24 text-white">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="max-w-2xl">
-              <p className="text-sm font-medium text-[#FF8A61]">Pricing</p>
-              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                Simple pricing for solo users, teams, and enterprise.
-              </h2>
-              <p className="mt-4 text-lg text-zinc-300">
-                Start with a 2-week free trial, then scale as you grow.
-              </p>
+        {/* Pricing */}
+        <section id="pricing" className="bg-zinc-950 py-32 text-white">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-xl text-center">
+              <h2 className="text-4xl font-semibold sm:text-5xl">Simple pricing.</h2>
+              <p className="mt-6 text-xl text-zinc-400">Start free. Scale as you grow.</p>
             </div>
-
-            <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            <div className="mt-20 grid gap-6 lg:grid-cols-3">
               {pricingPlans.map((item) => (
-                <div
-                  key={item.name}
-                  className={`rounded-[2rem] border p-8 ${
-                    item.featured
-                      ? "border-[#FF6B35] bg-white text-zinc-950"
-                      : "border-white/10 bg-white/5"
-                  }`}
-                >
+                <div key={item.name} className={`rounded-[2rem] p-8 ${item.featured ? "bg-white text-zinc-950" : "border border-white/10 bg-white/5"}`}>
                   <h3 className="text-2xl font-semibold">{item.name}</h3>
-
-                  <div className="mt-5 flex items-end gap-1">
-                    <span className="text-4xl font-semibold">{item.price}</span>
-                    {item.detail && <span className="text-sm opacity-70">{item.detail}</span>}
+                  <div className="mt-6 flex items-end gap-1">
+                    <span className="text-5xl font-semibold">{item.price}</span>
+                    {item.detail && <span className="mb-2 text-sm opacity-60">{item.detail}</span>}
                   </div>
-
-                  <p className="mt-6 text-sm opacity-80">{item.body}</p>
-
-                  <a href="/free-trial" className={`mt-8 ${item.featured ? primaryButton : shimmerButton}`}>
-                    {item.cta}
-                  </a>
+                  <p className="mt-4 text-sm opacity-70">{item.body}</p>
+                  <a href="/free-trial" className={`mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full text-sm font-semibold transition-colors ${item.featured ? "bg-[#FF6B35] text-white hover:bg-[#e85d2b]" : "border border-white/20 bg-white/10 text-white hover:bg-white/20"}`}>{item.cta}</a>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-          <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
-            <div className="max-w-4xl">
-              <h2 className="text-3xl font-semibold sm:text-4xl">Frequently asked Questions</h2>
-            </div>
-
-            <div className="mt-10 space-y-4">
+        {/* FAQ */}
+        <section className="py-32">
+          <div className="mx-auto max-w-3xl px-6 lg:px-8">
+            <h2 className="text-4xl font-semibold sm:text-5xl">Common questions.</h2>
+            <div className="mt-12 space-y-3">
               {faqs.map((faq) => (
                 <FaqItem key={faq.question} question={faq.question} answer={faq.answer} />
               ))}
@@ -562,25 +526,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="final-cta" className="mx-auto max-w-7xl px-6 py-24">
-          <div className="rounded-[2.5rem] border border-zinc-200 bg-zinc-50 p-10">
-            <h2 className="text-3xl font-semibold sm:text-5xl">Ready to quote faster?</h2>
-            <p className="mt-4 max-w-2xl text-lg text-zinc-600">
-              Stop losing time to spreadsheets and manual admin. <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> puts your entire quoting workflow in one place, from takeoff to send.
-            </p>
-
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="/free-trial" className={primaryButton}>
-                Start your free 2-week trial
-              </a>
-              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className={shimmerButton}>
-                Book a Call
-              </a>
-              <a href="#how-it-works" className={shimmerButton}>
-                See how it works
-              </a>
+        {/* Final CTA */}
+        <section className="pb-32">
+          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">Start quoting faster.</h2>
+            <p className="mx-auto mt-6 max-w-xl text-xl text-zinc-500">No spreadsheets. No back-and-forth. Your entire quoting workflow in one place.</p>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a href="/free-trial" className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]">Start free trial</a>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-300 bg-white px-10 py-3 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-50">Book a Call</a>
             </div>
-            <p className="mt-4 text-sm text-zinc-500">No card required. 2 weeks free. Cancel anytime.</p>
+            <p className="mt-5 text-sm text-zinc-400">No card required. 2 weeks free. Cancel anytime.</p>
           </div>
         </section>
 
