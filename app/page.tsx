@@ -9,12 +9,42 @@ export default function HomePage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [activeFounderStep, setActiveFounderStep] = useState(0);
-  const [bannerOffset, setBannerOffset] = useState(0);
+  const bannerTrackRef = useRef<HTMLDivElement | null>(null);
+  const bannerPosRef = useRef(0);
 
   useEffect(() => {
-    const handleScroll = () => setBannerOffset(window.scrollY * 0.3);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const PAUSE_MS = 3000;
+    const ROLL_MS = 800;
+    let rafId: number;
+    let timerId: ReturnType<typeof setTimeout>;
+
+    const step = () => {
+      const track = bannerTrackRef.current;
+      if (!track) return;
+      const itemEl = track.querySelector<HTMLElement>('.banner-item');
+      if (!itemEl) return;
+      const itemW = itemEl.getBoundingClientRect().width;
+      bannerPosRef.current += 1;
+      track.style.transition = `transform ${ROLL_MS}ms cubic-bezier(0.4, 0, 0.2, 1)`;
+      track.style.transform = `translateX(-${bannerPosRef.current * itemW}px)`;
+      timerId = setTimeout(() => {
+        if (bannerPosRef.current >= 3) {
+          bannerPosRef.current = 0;
+          track.style.transition = 'none';
+          track.style.transform = 'translateX(0px)';
+          rafId = requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              timerId = setTimeout(step, PAUSE_MS);
+            });
+          });
+        } else {
+          timerId = setTimeout(step, PAUSE_MS);
+        }
+      }, ROLL_MS + 100);
+    };
+
+    timerId = setTimeout(step, PAUSE_MS);
+    return () => { clearTimeout(timerId); cancelAnimationFrame(rafId); };
   }, []);
 
   const toggleMute = () => {
@@ -212,28 +242,30 @@ export default function HomePage() {
         </header>
 
         <section className="relative overflow-hidden pb-12 lg:pb-16">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,107,53,0.12),transparent_60%)]" />
-          {/* Full-width hero text */}
-          <div className="relative mx-auto max-w-4xl px-6 pb-12 pt-20 text-center lg:px-8 lg:pt-28">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Built for roofers, by a roofer</p>
-            <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
-              Quote the roof<br className="hidden sm:block" /> before you leave<br className="hidden sm:block" /> the driveway.
-            </h1>
-            <p className="mx-auto mt-8 max-w-lg text-xl text-zinc-500">
-              Measurements in. Professional quote out. No spreadsheets.
-            </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <a href="/free-trial" className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]">
-                Start free trial
-              </a>
-              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-300 bg-white px-10 py-3 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-50">
-                Book a Call
-              </a>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,107,53,0.10),transparent_34%)]" />
+          <div className="relative mx-auto grid max-w-7xl items-start gap-12 px-6 py-10 lg:grid-cols-2 lg:px-8 lg:py-12">
+            <div>
+              <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                Roofing quoting software that works as fast as you do.
+              </h1>
+
+              <p className="mt-6 max-w-xl text-lg text-zinc-600 sm:text-xl">
+                From measurement to pricing to customer-ready quote. One clean workflow, no spreadsheets, no back-and-forth.
+              </p>
+
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a href="/free-trial" className={primaryButton}>
+                  Start free trial
+                </a>
+                <a href="#how-it-works" className={shimmerButton}>
+                  See how it works
+                </a>
+                <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className={shimmerButton}>
+                  Book a Call
+                </a>
+              </div>
             </div>
-            <p className="mt-4 text-sm text-zinc-400">No card required. 2 weeks free.</p>
-          </div>
-          {/* Video below centered */}
-          <div className="relative mx-auto max-w-4xl px-6 lg:px-8">
+
             <div className="relative">
               <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]" style={{borderRadius: "2rem"}}>
                 <video
@@ -289,67 +321,92 @@ export default function HomePage() {
           </div>
         </section>
 
-                {/* Testimonials */}
-        <section className="bg-[#FF6B35]/10 py-24">
+        {/* Testimonials */}
+        <section className="bg-[#FF6B35]/15 py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-4xl font-semibold sm:text-5xl">What roofers say.</h2>
-            <div className="relative mt-16">
-              <div className="overflow-hidden">
-                <div
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${activeTestimonial * (100 / 3)}%)` }}
-                >
-                  {[...testimonials, ...testimonials].map((t, idx) => (
-                    <div key={idx} className="w-1/3 shrink-0 px-3">
-                      <div className="flex h-full flex-col rounded-[2rem] bg-white p-8 shadow-sm">
-                        <div className="flex gap-1 mb-5">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="h-4 w-4 text-[#FF6B35]" viewBox="0 0 20 20" fill="currentColor">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          ))}
+          <div className="text-center">
+            <p className="text-sm font-medium text-zinc-500">What roofers say</p>
+            <h2 className="mt-3 text-3xl font-semibold text-zinc-950 sm:text-4xl">Trusted by roofing contractors</h2>
+          </div>
+
+          {/* Carousel */}
+          <div className="relative mt-14">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${activeTestimonial * (100 / 3)}%)` }}
+              >
+                {[...testimonials, ...testimonials].map((t, idx) => (
+                  <div key={idx} className="w-1/3 shrink-0 px-3">
+                    <div className="rounded-[1.75rem] bg-white p-7 shadow-sm border border-[#FF6B35]/20 h-full">
+                      {/* Stars */}
+                      <div className="flex gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="h-4 w-4 text-[#FF6B35]" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <p className="mt-4 text-sm leading-relaxed text-zinc-600">&ldquo;{t.quote}&rdquo;</p>
+                      <div className="mt-6 flex items-center gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-semibold text-white">
+                          {t.initials}
                         </div>
-                        <p className="flex-1 text-base leading-relaxed text-zinc-600">&ldquo;{t.quote}&rdquo;</p>
-                        <div className="mt-8 flex items-center gap-3">
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#FF6B35] text-xs font-semibold text-white">{t.initials}</div>
-                          <div>
-                            <p className="text-sm font-semibold text-zinc-950">{t.name}</p>
-                            <p className="text-xs text-zinc-400">{t.business}</p>
-                          </div>
+                        <div>
+                          <p className="text-sm font-semibold text-zinc-950">{t.name}</p>
+                          <p className="text-xs text-zinc-500">{t.business}</p>
                         </div>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
-              <button type="button" onClick={() => setActiveTestimonial((p) => (p - 1 + testimonials.length) % testimonials.length)} className="absolute -left-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50" aria-label="Previous">
-                <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-              </button>
-              <button type="button" onClick={() => setActiveTestimonial((p) => (p + 1) % (testimonials.length * 2 - 2))} className="absolute -right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50" aria-label="Next">
-                <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>
-              </button>
             </div>
+
+            {/* Arrows */}
+            <button
+              type="button"
+              onClick={() => setActiveTestimonial((p) => (p - 1 + testimonials.length) % testimonials.length)}
+              className="absolute -left-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
+              aria-label="Previous"
+            >
+              <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTestimonial((p) => (p + 1) % (testimonials.length * 2 - 2))}
+              className="absolute -right-5 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors hover:bg-zinc-50"
+              aria-label="Next"
+            >
+              <svg className="h-4 w-4 text-zinc-600" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+            </button>
+          </div>
           </div>
         </section>
 
         {/* Rolling banner + CTA */}
-        <div className="overflow-hidden border-y border-zinc-800 bg-zinc-950 py-3">
-          <div className="flex whitespace-nowrap" style={{ transform: `translateX(-${bannerOffset % 600}px)`, willChange: "transform" }}>
-            {[...Array(12)].map((_, i) => (
-              <span key={i} className="inline-flex items-center gap-6 mx-6 text-base font-semibold uppercase leading-none tracking-[0.18em] text-white">
-                <span>AT LEAST 25% FASTER - OR IT&apos;S FREE</span>
-                <span className="ml-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
+        <div className="overflow-hidden border-y border-zinc-300 bg-zinc-200 py-3">
+          <div ref={bannerTrackRef} className="banner-track" style={{willChange: "transform"}}>
+            {/* 3 real items + 3 clones. Item = TEXT, dot sits exactly between with equal spacing */}
+            {[0,1,2,3,4,5].map((i) => (
+              <span key={i} className="banner-item inline-flex items-center shrink-0 whitespace-nowrap">
+                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-700 px-16">AT LEAST 25% FASTER - OR IT&apos;S FREE</span>
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
               </span>
             ))}
           </div>
         </div>
-        <div className="flex items-center justify-center gap-6 bg-zinc-950 py-7">
+        <div className="flex items-center justify-center gap-6 bg-zinc-200 py-7">
           <img src="/shaun-headshot.jpg" alt="Shaun" className="h-24 w-24 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
           <div>
-            <p className="text-xs text-white/50 mb-2">Book a 15-minute call with Shaun</p>
+            <p className="text-sm text-zinc-500 mb-2">Book a 15-minute call with Shaun</p>
             <div className="flex gap-3">
               <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center justify-center rounded-full bg-[#FF6B35] px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">Book a Call</a>
-              <a href="/free-trial" className="inline-flex min-h-9 items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20">Start free trial</a>
+              <a href="/free-trial" className="inline-flex min-h-9 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-2 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50">Start free trial</a>
             </div>
           </div>
         </div>
