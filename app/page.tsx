@@ -6,11 +6,27 @@ export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
+  const [videoProgress, setVideoProgress] = useState(0);
+  const [videoHovered, setVideoHovered] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [activeFounderStep, setActiveFounderStep] = useState(0);
   const bannerTrackRef = useRef<HTMLDivElement | null>(null);
   const bannerPosRef = useRef(0);
+
+  const handleVideoTimeUpdate = () => {
+    const video = videoRef.current;
+    if (!video || !video.duration) return;
+    setVideoProgress((video.currentTime / video.duration) * 100);
+  };
+
+  const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const video = videoRef.current;
+    if (!video) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const pct = (e.clientX - rect.left) / rect.width;
+    video.currentTime = pct * video.duration;
+  };
 
   useEffect(() => {
     const PAUSE_MS = 3000;
@@ -266,7 +282,12 @@ export default function HomePage() {
           {/* Video below centered */}
           <div className="relative mx-auto max-w-4xl px-6 lg:px-8 -mt-6">
             <div className="relative">
-              <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]" style={{borderRadius: "2rem"}}>
+              <div
+                className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]"
+                style={{borderRadius: "2rem"}}
+                onMouseEnter={() => setVideoHovered(true)}
+                onMouseLeave={() => setVideoHovered(false)}
+              >
                 <video
                   ref={videoRef}
                   className="block w-full aspect-video"
@@ -275,9 +296,18 @@ export default function HomePage() {
                   loop
                   playsInline
                   preload="auto"
+                  onTimeUpdate={handleVideoTimeUpdate}
                 >
                   <source src="/QCPFinalVideoSmaller.mp4" type="video/mp4" />
                 </video>
+                {/* Progress bar - shows on hover */}
+                <div
+                  className={`absolute inset-x-0 bottom-0 h-1.5 cursor-pointer transition-opacity duration-200 ${videoHovered ? "opacity-100" : "opacity-0"}`}
+                  style={{background: "rgba(255,255,255,0.2)"}}
+                  onClick={handleProgressClick}
+                >
+                  <div className="h-full bg-[#FF6B35] transition-all duration-100" style={{width: `${videoProgress}%`}} />
+                </div>
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-5 pb-5">
                   <button
                     type="button"
@@ -395,7 +425,7 @@ export default function HomePage() {
                 Each step is faster, easier, and all in one place!
               </h2>
               <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
-                QuoteCore+ helps you go from quote requested all the way to job completed and final invoice paid without needing any other apps
+                <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> helps you go from quote requested all the way to job completed and final invoice paid without needing any other apps
               </p>
 
               <div className="mt-10 flex max-w-[460px] flex-col gap-5">
@@ -431,7 +461,9 @@ export default function HomePage() {
                       EXAMPLE QUOTE
                     </span>
                   </div>
-                  <img src="/QuoteExample.jpg" alt="Example Quote" className="relative w-full h-full object-cover object-top" />
+                  <a href="/QuoteExample.png" target="_blank" rel="noopener noreferrer">
+                    <img src="/QuoteExample.png" alt="Example Quote" className="relative w-full h-full object-cover object-top cursor-zoom-in" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -448,7 +480,7 @@ export default function HomePage() {
                     <img src="/shaun-smiling.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/20 shrink-0" />
                     <div>
                       <p className="font-semibold text-zinc-950">Shaun</p>
-                      <p className="text-sm text-[#FF6B35]">Founder, QuoteCore+</p>
+                      <p className="text-sm text-[#FF6B35]">Founder, <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
                     </div>
                   </div>
                   <p className="text-xl font-semibold text-zinc-950">Meet Shaun,</p>
@@ -456,14 +488,14 @@ export default function HomePage() {
                     <p>I spent 12+ years on site roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
                     <p>I tried so many systems, but nothing really did everything well.</p>
                     <p>So I built something that does.</p>
-                    <p className="font-medium text-zinc-800">QuoteCore+ is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
+                    <p className="font-medium text-zinc-800"><span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
                   </div>
                 </div>
                 <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{minHeight: "400px"}}>
                   <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-full w-full object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
                     <p className="font-semibold text-white">Shaun</p>
-                    <p className="text-sm text-white/70">Founder, QuoteCore+</p>
+                    <p className="text-sm text-white/70">Founder, <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
                   </div>
                 </div>
               </div>
