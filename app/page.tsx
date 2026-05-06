@@ -8,6 +8,7 @@ export default function HomePage() {
   const [isPaused, setIsPaused] = useState(false);
   const [videoProgress, setVideoProgress] = useState(0);
   const [videoHovered, setVideoHovered] = useState(false);
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [activeFounderStep, setActiveFounderStep] = useState(0);
@@ -92,7 +93,7 @@ export default function HomePage() {
     {
       number: "01",
       title: "Quote request received",
-      body: "No more needing to print out roof plans, you can now accurately measure roofs and components - Just upload a good quality roof plan into our digital takeoff system.",
+      body: "No more needing to print out roof plans, you can now accurately measure roofs and components - just upload a good quality roof plan into our digital takeoff system.",
     },
     {
       number: "02",
@@ -112,7 +113,7 @@ export default function HomePage() {
     {
       number: "05",
       title: "Everything in one place",
-      body: "From quote acceptance to materials orders, scheduling to completion invoices. You can do everything here (Project manager mode coming soon)",
+      body: "From quote acceptance to materials orders, scheduling to completion invoices. You can do everything here (Project Manager mode coming soon).",
     },
   ];
 
@@ -461,9 +462,9 @@ export default function HomePage() {
                       EXAMPLE QUOTE
                     </span>
                   </div>
-                  <a href="/QuoteExample.png" target="_blank" rel="noopener noreferrer">
-                    <img src="/QuoteExample.png" alt="Example Quote" className="relative w-full h-full object-cover object-top cursor-zoom-in" />
-                  </a>
+                  <button type="button" onClick={() => setQuoteModalOpen(true)} className="block w-full cursor-zoom-in">
+                    <img src="/QuoteExample.png" alt="Example Quote" className="w-full h-full object-cover object-top" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -582,6 +583,26 @@ export default function HomePage() {
           <p className="mt-1">Built by T3Labs</p>
         </footer>
       </main>
+
+      {/* Quote lightbox */}
+      {quoteModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          onClick={() => setQuoteModalOpen(false)}
+        >
+          <div className="relative max-h-[90vh] max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
+            <img src="/QuoteExample.png" alt="Example Quote" className="w-full h-auto rounded-[1.5rem] shadow-2xl" />
+            <button
+              type="button"
+              onClick={() => setQuoteModalOpen(false)}
+              className="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-lg text-zinc-600 hover:text-zinc-950 transition-colors"
+              aria-label="Close"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
+            </button>
+          </div>
+        </div>
+      )}
 
       <style>{`
         .brand-wordmark {
