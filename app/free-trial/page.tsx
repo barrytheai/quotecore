@@ -54,15 +54,6 @@ export default function FreeTrialPage() {
             </a>
 
             <nav className="hidden items-center gap-3 md:flex">
-              <a href="/#how-it-works" className={topShimmerButton}>
-                How it works
-              </a>
-              <a href="/#pricing" className={topShimmerButton}>
-                Pricing
-              </a>
-              <a href="#" className={topShimmerButton}>
-                Login
-              </a>
             </nav>
 
             <div className="flex items-center gap-3">

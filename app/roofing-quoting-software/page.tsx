@@ -55,7 +55,7 @@ const faqSchema = {
       name: "Where is QuoteCore+ available?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QuoteCore+ is a web-based platform available wherever you have internet access. Sign up and start quoting from any device.",
+        text: "QuoteCore+ is a web-based platform. Sign up and start quoting from your desktop or laptop.",
       },
     },
   ],
@@ -64,18 +64,28 @@ const faqSchema = {
 const steps = [
   {
     number: "01",
-    title: "Capture your measurements",
-    body: "Bring in your roof measurements, takeoff data, and job details in one place. No paper, no re-entry.",
+    title: "Quote request received",
+    body: "No more printing roof plans. Upload a quality roof plan into our digital takeoff system and accurately measure roofs and components from your desk.",
   },
   {
     number: "02",
     title: "Build the quote",
-    body: "Apply your pricing logic, material rates, and templates. QuoteCore+ does the maths - you just review.",
+    body: "Convert your measurements into a high quality, professional quote. Full control and unlimited flexibility over what the customer sees.",
   },
   {
     number: "03",
-    title: "Send it professionally",
-    body: "Deliver a clear, itemised quote your customer can actually understand. On your phone, before you leave the driveway.",
+    title: "Track quote acceptances",
+    body: "Create quote acceptance links that alert you when a quote is accepted or declined - by email and in your QuoteCore+ account. Everything is logged, nothing lost in a pile of emails.",
+  },
+  {
+    number: "04",
+    title: "Order your materials",
+    body: "Create complete materials orders directly from your quote - including custom flashing images you can draw and store in the flashings drawer.",
+  },
+  {
+    number: "05",
+    title: "Everything in one place",
+    body: "From quote acceptance to materials orders, scheduling to completion invoices. One place for all of it. (Project manager mode coming soon)",
   },
 ];
 
@@ -109,7 +119,7 @@ const faqs = [
   },
   {
     q: "Where is QuoteCore+ available?",
-    a: "QuoteCore+ is a web-based platform available wherever you have internet access. Sign up and start quoting from any device.",
+    a: "QuoteCore+ is a web-based platform. Sign up and start quoting from your desktop or laptop.",
   },
 ];
 
@@ -129,15 +139,6 @@ export default function RoofingQuotingSoftwarePage() {
               <img src="/MainQCP.png" alt="QuoteCore+" className="h-10 w-auto" />
             </a>
             <nav className="hidden items-center gap-3 md:flex">
-              <a href="/#how-it-works" className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 backdrop-blur-3xl transition-colors duration-200">
-                How it works
-              </a>
-              <a href="/#pricing" className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 backdrop-blur-3xl transition-colors duration-200">
-                Pricing
-              </a>
-              <a href="#" className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 backdrop-blur-3xl transition-colors duration-200">
-                Login
-              </a>
             </nav>
             <a
               href="/free-trial"
@@ -248,10 +249,7 @@ export default function RoofingQuotingSoftwarePage() {
           </div>
         </section>
 
-        {/* Trust bar */}
-        <section className="mx-auto max-w-4xl px-6 py-16 text-center lg:px-8">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Trusted by roofing contractors.</h2>
-        </section>
+
 
         {/* FAQ */}
         <section className="bg-zinc-50 py-20">

@@ -75,23 +75,28 @@ export default function HomePage() {
   const steps = [
     {
       number: "01",
-      title: "The job comes in",
-      body: "No more chasing details across messages and files. Keep the measurements, plans, takeoffs, and job info together.",
+      title: "Quote request received",
+      body: "No more needing to print out roof plans, you can now accurately measure roofs and components - Just upload a good quality roof plan into our digital takeoff system.",
     },
     {
       number: "02",
       title: "Build the quote",
-      body: "Your rates, your way. Add the roof, custom flashings, materials, labour, and delivery all in one place.",
+      body: "Once you have all your measurements and quantities, its time to convert them into a high quality professional quote that allows you full control and unlimited flexibility for what the customer can see.",
     },
     {
       number: "03",
-      title: "Get approval faster",
-      body: "Give your customer a quote that is clear, professional, and easy to say yes to.",
+      title: "Track quote acceptances",
+      body: "You can create quote acceptance links which alert you when your quote is accepted or declined, both via email and also in your QuoteCore+ account. Everything is logged, not lost in a pile of emails.",
     },
     {
       number: "04",
-      title: "Manage in one place",
-      body: "Move from approval to action: order materials, track progress, and keep the job moving.",
+      title: "Order your jobs",
+      body: "You can easily create complete materials orders based on quotes, including custom flashings images that you can draw and store from our flashings drawer!",
+    },
+    {
+      number: "05",
+      title: "Everything in one place",
+      body: "From quote acceptance to materials orders, scheduling to completion invoices. You can do everything here (Project manager mode coming soon)",
     },
   ];
 
@@ -219,15 +224,6 @@ export default function HomePage() {
             </a>
 
             <nav className="hidden items-center gap-3 md:flex">
-              <a href="#how-it-works" className={topShimmerButton}>
-                How it works
-              </a>
-              <a href="#pricing" className={topShimmerButton}>
-                Pricing
-              </a>
-              <a href="#" className={topShimmerButton}>
-                Login
-              </a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -282,7 +278,7 @@ export default function HomePage() {
                   playsInline
                   preload="auto"
                 >
-                  <source src="/QCPFinalVideo.mp4" type="video/mp4" />
+                  <source src="/QCPFinalVideoSmaller.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-5 pb-5">
                   <button
@@ -398,22 +394,23 @@ export default function HomePage() {
             <div>
               <p className="text-sm text-zinc-500">How it works</p>
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                One place to quote, approve, order, and track the job.
+                Each step, faster, easier, in one place!
               </h2>
               <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
-                <span className="brand-wordmark">
-                  QuoteCore<span className="brand-plus">+</span>
-                </span>{" "}
-                helps roofers turn job details into accurate quotes, approved orders, and trackable work without the usual back-and-forth.
+                QuoteCore+ helps roofers turn project details into accurate quotes, approvals, material orders and trackable jobs without the usual back and forth.
               </p>
 
-              <div className="mt-14 flex max-w-[460px] flex-col gap-5">
-                {steps.map((item) => (
+              <div className="mt-10 flex max-w-[460px] flex-col gap-5">
+                {steps.map((item, i) => (
                   <div
                     key={item.number}
                     className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
                   >
-                    <div className="flex items-start gap-6">
+                    <button
+                      type="button"
+                      onClick={() => setActiveStep(i === activeStep ? -1 : i)}
+                      className="flex w-full items-start gap-6 text-left"
+                    >
                       <div className="w-[56px] shrink-0 pt-[2px] text-2xl font-semibold leading-none text-zinc-950">
                         {item.number}
                       </div>
@@ -421,9 +418,11 @@ export default function HomePage() {
                         <h3 className="text-2xl font-semibold leading-none text-zinc-950">
                           {item.title}
                         </h3>
-                        <p className="mt-5 text-zinc-600">{item.body}</p>
+                        {i === activeStep && (
+                          <p className="mt-5 text-zinc-600">{item.body}</p>
+                        )}
                       </div>
-                    </div>
+                    </button>
                   </div>
                 ))}
               </div>
@@ -508,6 +507,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* PRICING SECTION - hidden, restore when ready
         <section id="pricing" className="bg-zinc-950 py-24 text-white">
           <div className="mx-auto max-w-7xl px-6">
             <div className="max-w-2xl">
@@ -546,7 +546,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
@@ -562,33 +562,21 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="final-cta" className="mx-auto max-w-7xl px-6 py-24">
-          <div className="rounded-[2.5rem] border border-zinc-200 bg-zinc-50 p-10">
-            <h2 className="text-3xl font-semibold sm:text-5xl">Ready to quote faster?</h2>
-            <p className="mt-4 max-w-2xl text-lg text-zinc-600">
-              Stop losing time to spreadsheets and manual admin. <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> puts your entire quoting workflow in one place, from takeoff to send.
-            </p>
-
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="/free-trial" className={primaryButton}>
-                Start your free 2-week trial
-              </a>
-              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className={shimmerButton}>
-                Book a Call
-              </a>
-              <a href="#how-it-works" className={shimmerButton}>
-                See how it works
-              </a>
+        <section className="bg-zinc-50 py-32">
+          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">Start quoting faster.</h2>
+            <p className="mx-auto mt-6 max-w-xl text-xl text-zinc-500">No spreadsheets. No back-and-forth. Your entire quoting workflow in one place.</p>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a href="/free-trial" className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]">Start free trial</a>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-300 bg-white px-10 py-3 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-50">Book a Call</a>
             </div>
-            <p className="mt-4 text-sm text-zinc-500">No card required. 2 weeks free. Cancel anytime.</p>
+            <p className="mt-5 text-sm text-zinc-400">No card required. 2 weeks free. Cancel anytime.</p>
           </div>
         </section>
 
         <footer className="border-t border-zinc-200 py-10 text-center text-sm text-zinc-500">
           <p>
             <a href="/roofing-quoting-software" className="hover:text-zinc-800">Roofing Quoting Software</a>
-            {" · "}
-            <a href="/about" className="hover:text-zinc-800">About</a>
             {" · "}
             <a href="/blog" className="hover:text-zinc-800">Blog</a>
             {" · "}
