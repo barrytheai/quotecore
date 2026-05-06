@@ -584,22 +584,25 @@ export default function HomePage() {
         </footer>
       </main>
 
-      {/* Quote lightbox */}
+      {/* Quote lightbox - full screen with scroll */}
       {quoteModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
-          onClick={() => setQuoteModalOpen(false)}
-        >
-          <div className="relative max-h-[90vh] max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
-            <img src="/QuoteExample.png" alt="Example Quote" className="w-full h-auto rounded-[1.5rem] shadow-2xl" />
-            <button
-              type="button"
-              onClick={() => setQuoteModalOpen(false)}
-              className="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-lg text-zinc-600 hover:text-zinc-950 transition-colors"
-              aria-label="Close"
-            >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
-            </button>
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto">
+          <div className="min-h-full flex flex-col">
+            {/* Close bar */}
+            <div className="sticky top-0 z-10 flex justify-end p-4">
+              <button
+                type="button"
+                onClick={() => setQuoteModalOpen(false)}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg text-zinc-600 hover:text-zinc-950 transition-colors"
+                aria-label="Close"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
+              </button>
+            </div>
+            {/* Image */}
+            <div className="flex-1 flex items-start justify-center px-4 pb-8">
+              <img src="/QuoteExample.png" alt="Example Quote" className="w-full max-w-3xl rounded-[1.5rem] shadow-2xl" />
+            </div>
           </div>
         </div>
       )}
