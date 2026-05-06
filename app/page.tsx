@@ -203,7 +203,7 @@ export default function HomePage() {
     "inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#e85d2b]";
 
   const shimmerButton =
-    "pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors duration-200";
+    "pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors duration-200 hover:border-[#FF6B35]/40";
 
   const topShimmerButton =
     "pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 shadow-[0_6px_24px_rgba(255,255,255,0.18)_inset,0_10px_30px_rgba(0,0,0,0.04)] backdrop-blur-3xl transition-colors duration-200";
@@ -250,7 +250,7 @@ export default function HomePage() {
               <a href="/free-trial" className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">
                 Start free trial
               </a>
-              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-7 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50">
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-7 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50">
                 Book a Call
               </a>
             </div>
@@ -382,7 +382,7 @@ export default function HomePage() {
             <p className="text-sm text-zinc-500 mb-2">Book a 15-minute call with Shaun</p>
             <div className="flex gap-3">
               <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center justify-center rounded-full bg-[#FF6B35] px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">Book a Call</a>
-              <a href="/free-trial" className="inline-flex min-h-9 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-2 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50">Start free trial</a>
+              <a href="/free-trial" className="pill-shimmer inline-flex min-h-9 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-2 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50">Start free trial</a>
             </div>
           </div>
         </div>
@@ -529,10 +529,10 @@ export default function HomePage() {
         <section className="bg-zinc-50 py-32">
           <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
             <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">Start quoting faster.</h2>
-            <p className="mx-auto mt-6 max-w-xl text-xl text-zinc-500">No spreadsheets. No back-and-forth. Your entire quoting workflow in one place.</p>
+
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a href="/free-trial" className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]">Start free trial</a>
-              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-300 bg-white px-10 py-3 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-50">Book a Call</a>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="pill-shimmer inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-300 bg-white px-10 py-3 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-50">Book a Call</a>
             </div>
             <p className="mt-5 text-sm text-zinc-400">No card required. 2 weeks free. Cancel anytime.</p>
           </div>
@@ -547,6 +547,7 @@ export default function HomePage() {
             <a href="/free-trial" className="hover:text-zinc-800">Free Trial</a>
           </p>
           <p className="mt-3">© 2026 <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
+          <p className="mt-1">Built by T3Labs</p>
         </footer>
       </main>
 
