@@ -39,7 +39,7 @@ const faqSchema = {
       name: "Do I need to be tech-savvy to use it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. QuoteCore+ is designed to be straightforward. If you can use your phone and email, you can use QuoteCore+.",
+        text: "No. QuoteCore+ is designed to be straightforward. If you can use a computer and email, you can use QuoteCore+.",
       },
     },
     {
@@ -111,7 +111,7 @@ const faqs = [
   },
   {
     q: "Do I need to be tech-savvy to use it?",
-    a: "No. QuoteCore+ is designed to be straightforward. If you can use your phone and email, you can use QuoteCore+.",
+    a: "No. QuoteCore+ is designed to be straightforward. If you can use a computer and email, you can use QuoteCore+.",
   },
   {
     q: "Is there a free trial?",

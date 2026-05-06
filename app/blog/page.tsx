@@ -7,7 +7,20 @@ interface Post {
   date: string;
 }
 
-const posts: Post[] = [];
+const posts: Post[] = [
+  {
+    slug: "roofing-quoting-software-uk",
+    title: "How UK Roofing Contractors Are Winning More Jobs With Digital Quotes",
+    description: "Manual quoting is costing UK roofing contractors time and jobs. Here's how digital roofing quoting software is changing that.",
+    date: "2026-05-06",
+  },
+  {
+    slug: "built-by-a-roofer",
+    title: "He Spent Over a Decade Quoting Roofs the Hard Way. Then He Built QuoteCore+.",
+    description: "QuoteCore+ was built by Shaun - a roofer who spent over a decade wishing the software existed. Here's the story behind the product.",
+    date: "2026-05-06",
+  },
+];
 
 export default function BlogIndexPage() {
   return (

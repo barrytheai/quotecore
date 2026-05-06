@@ -9,12 +9,18 @@ const posts: Record<string, {
   date: string;
   content: () => Promise<{ default: React.ComponentType }>;
 }> = {
-  // "how-to-quote-a-roofing-job": {
-  //   title: "How to Quote a Roofing Job: A Step-by-Step Guide",
-  //   description: "A practical guide for UK roofing contractors on building accurate, professional quotes.",
-  //   date: "2026-05-10",
-  //   content: () => import("./content/how-to-quote-a-roofing-job.mdx"),
-  // },
+  "roofing-quoting-software-uk": {
+    title: "How UK Roofing Contractors Are Winning More Jobs With Digital Quotes",
+    description: "Manual quoting is costing UK roofing contractors time and jobs. Here's how digital roofing quoting software is changing that - and how to get ahead.",
+    date: "2026-05-06",
+    content: () => import("./content/roofing-quoting-software-uk.mdx"),
+  },
+  "built-by-a-roofer": {
+    title: "He Spent Over a Decade Quoting Roofs the Hard Way. Then He Built QuoteCore+.",
+    description: "QuoteCore+ was built by Shaun - a roofer who spent over a decade wishing the software existed. Here's the story behind the product.",
+    date: "2026-05-06",
+    content: () => import("./content/built-by-a-roofer.mdx"),
+  },
 };
 
 type Props = { params: Promise<{ slug: string }> };
@@ -23,8 +29,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = posts[slug];
   if (!post) return {};
+  const titleOverrides: Record<string, string> = {
+    "roofing-quoting-software-uk": "How UK Roofers Are Winning More Jobs With Digital Quotes | QuoteCore+",
+  };
   return {
-    title: `${post.title} | QuoteCore+`,
+    title: titleOverrides[slug] ?? `${post.title} | QuoteCore+`,
     description: post.description,
   };
 }
