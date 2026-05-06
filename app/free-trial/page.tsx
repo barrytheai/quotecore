@@ -28,7 +28,7 @@ export default function FreeTrialPage() {
     {
       question: "What if I need help?",
       answer:
-        "Email us at support@quotecore.com and we'll get back to you within one business day.",
+        "Email us at info@quote-core.com and we'll get back to you within one business day.",
     },
   ];
 
