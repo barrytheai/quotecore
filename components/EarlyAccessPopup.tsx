@@ -75,7 +75,7 @@ export default function EarlyAccessPopup({ forceOpen, onClose }: Props = {}) {
             Coming soon
           </p>
           <h2 className="mt-1 text-2xl font-semibold text-white">
-            QuoteCore+ goes live in 5 days.
+            <span className="brand-wordmark">QuoteCore<span style={{color: '#FF6B35'}}>+</span></span> coming online in May.
           </h2>
         </div>
 

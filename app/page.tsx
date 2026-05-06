@@ -6,11 +6,28 @@ export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
+  const [videoProgress, setVideoProgress] = useState(0);
+  const [videoHovered, setVideoHovered] = useState(false);
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [activeFounderStep, setActiveFounderStep] = useState(0);
   const bannerTrackRef = useRef<HTMLDivElement | null>(null);
   const bannerPosRef = useRef(0);
+
+  const handleVideoTimeUpdate = () => {
+    const video = videoRef.current;
+    if (!video || !video.duration) return;
+    setVideoProgress((video.currentTime / video.duration) * 100);
+  };
+
+  const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const video = videoRef.current;
+    if (!video) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const pct = (e.clientX - rect.left) / rect.width;
+    video.currentTime = pct * video.duration;
+  };
 
   useEffect(() => {
     const PAUSE_MS = 3000;
@@ -75,23 +92,28 @@ export default function HomePage() {
   const steps = [
     {
       number: "01",
-      title: "The job comes in",
-      body: "No more chasing details across messages and files. Keep the measurements, plans, takeoffs, and job info together.",
+      title: "Quote request received",
+      body: "No more needing to print out roof plans, you can now accurately measure roofs and components - just upload a good quality roof plan into our digital takeoff system.",
     },
     {
       number: "02",
       title: "Build the quote",
-      body: "Your rates, your way. Add the roof, custom flashings, materials, labour, and delivery all in one place.",
+      body: "Once you have all your measurements and quantities, its time to convert them into a high quality professional quote that allows you full control and unlimited flexibility for what the customer can see.",
     },
     {
       number: "03",
-      title: "Get approval faster",
-      body: "Give your customer a quote that is clear, professional, and easy to say yes to.",
+      title: "Track quote acceptances",
+      body: "You can create quote acceptance links which alert you when your quote is accepted or declined, both via email and also in your QuoteCore+ account. Everything is logged, not lost in a pile of emails.",
     },
     {
       number: "04",
-      title: "Manage in one place",
-      body: "Move from approval to action: order materials, track progress, and keep the job moving.",
+      title: "Order your jobs",
+      body: "You can easily create complete materials orders based on quotes, including custom flashings images that you can draw and store from our flashings drawer!",
+    },
+    {
+      number: "05",
+      title: "Everything in one place",
+      body: "From quote acceptance to materials orders, scheduling to completion invoices. You can do everything here (Project Manager mode coming soon).",
     },
   ];
 
@@ -198,7 +220,7 @@ export default function HomePage() {
     "inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-5 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#e85d2b]";
 
   const shimmerButton =
-    "pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors duration-200";
+    "pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-900 transition-colors duration-200 hover:border-[#FF6B35]/40";
 
   const topShimmerButton =
     "pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-5 py-2.5 text-sm font-medium text-zinc-900 shadow-[0_6px_24px_rgba(255,255,255,0.18)_inset,0_10px_30px_rgba(0,0,0,0.04)] backdrop-blur-3xl transition-colors duration-200";
@@ -219,15 +241,6 @@ export default function HomePage() {
             </a>
 
             <nav className="hidden items-center gap-3 md:flex">
-              <a href="#how-it-works" className={topShimmerButton}>
-                How it works
-              </a>
-              <a href="#pricing" className={topShimmerButton}>
-                Pricing
-              </a>
-              <a href="#" className={topShimmerButton}>
-                Login
-              </a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -249,14 +262,12 @@ export default function HomePage() {
             <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
               Measure roofs, create quotes,<br className="hidden sm:block" /> and manage every job -<br className="hidden sm:block" /> all in one app.
             </h1>
-            <p className="mx-auto mt-8 max-w-lg text-xl text-zinc-500">
-              Measurements in. Professional quote out. No spreadsheets.
-            </p>
+
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a href="/free-trial" className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">
                 Start free trial
               </a>
-              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-7 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50">
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="pill-shimmer inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-7 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50">
                 Book a Call
               </a>
             </div>
@@ -272,7 +283,12 @@ export default function HomePage() {
           {/* Video below centered */}
           <div className="relative mx-auto max-w-4xl px-6 lg:px-8 -mt-6">
             <div className="relative">
-              <div className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]" style={{borderRadius: "2rem"}}>
+              <div
+                className="relative overflow-hidden rounded-[2rem] border border-zinc-200 bg-black shadow-[0_30px_120px_rgba(0,0,0,0.15)]"
+                style={{borderRadius: "2rem"}}
+                onMouseEnter={() => setVideoHovered(true)}
+                onMouseLeave={() => setVideoHovered(false)}
+              >
                 <video
                   ref={videoRef}
                   className="block w-full aspect-video"
@@ -281,9 +297,18 @@ export default function HomePage() {
                   loop
                   playsInline
                   preload="auto"
+                  onTimeUpdate={handleVideoTimeUpdate}
                 >
                   <source src="/QCPFinalVideoSmaller.mp4" type="video/mp4" />
                 </video>
+                {/* Progress bar - shows on hover */}
+                <div
+                  className={`absolute inset-x-0 bottom-0 h-1.5 cursor-pointer transition-opacity duration-200 ${videoHovered ? "opacity-100" : "opacity-0"}`}
+                  style={{background: "rgba(255,255,255,0.2)"}}
+                  onClick={handleProgressClick}
+                >
+                  <div className="h-full bg-[#FF6B35] transition-all duration-100" style={{width: `${videoProgress}%`}} />
+                </div>
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-5 pb-5">
                   <button
                     type="button"
@@ -383,12 +408,12 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex items-center justify-center gap-6 bg-zinc-200 py-7">
-          <img src="/shaun-headshot.jpg" alt="Shaun" className="h-24 w-24 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
+          <img src="/shaun-smiling.jpg" alt="Shaun" className="h-24 w-24 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
           <div>
             <p className="text-sm text-zinc-500 mb-2">Book a 15-minute call with Shaun</p>
             <div className="flex gap-3">
               <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center justify-center rounded-full bg-[#FF6B35] px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">Book a Call</a>
-              <a href="/free-trial" className="inline-flex min-h-9 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-2 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50">Start free trial</a>
+              <a href="/free-trial" className="pill-shimmer inline-flex min-h-9 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-2 text-sm font-semibold text-zinc-800 transition-colors hover:bg-zinc-50">Start free trial</a>
             </div>
           </div>
         </div>
@@ -398,22 +423,20 @@ export default function HomePage() {
             <div>
               <p className="text-sm text-zinc-500">How it works</p>
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                One place to quote, approve, order, and track the job.
+                Each step is faster, easier, and all in one place!
               </h2>
               <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
-                <span className="brand-wordmark">
-                  QuoteCore<span className="brand-plus">+</span>
-                </span>{" "}
-                helps roofers turn job details into accurate quotes, approved orders, and trackable work without the usual back-and-forth.
+                <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> helps you go from quote requested all the way to job completed and final invoice paid without needing any other apps.
               </p>
 
-              <div className="mt-14 flex max-w-[460px] flex-col gap-5">
-                {steps.map((item) => (
+              <div className="mt-10 flex max-w-[460px] flex-col gap-5">
+                {steps.map((item, i) => (
                   <div
                     key={item.number}
-                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md cursor-pointer"
+                    onMouseEnter={() => setActiveStep(i)}
                   >
-                    <div className="flex items-start gap-6">
+                    <div className="flex w-full items-start gap-6">
                       <div className="w-[56px] shrink-0 pt-[2px] text-2xl font-semibold leading-none text-zinc-950">
                         {item.number}
                       </div>
@@ -421,7 +444,9 @@ export default function HomePage() {
                         <h3 className="text-2xl font-semibold leading-none text-zinc-950">
                           {item.title}
                         </h3>
-                        <p className="mt-5 text-zinc-600">{item.body}</p>
+                        {i === activeStep && (
+                          <p className="mt-5 text-zinc-600">{item.body}</p>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -431,44 +456,15 @@ export default function HomePage() {
 
             <div className="relative">
               <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)] lg:min-h-[760px]">
-                <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
-                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
-                    <span className="select-none rotate-[-30deg] text-center text-[70px] font-semibold tracking-[0.12em] text-zinc-200 opacity-30">
+                <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white">
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 z-10">
+                    <span className="select-none rotate-[-30deg] text-center text-[60px] font-semibold tracking-[0.12em] text-zinc-400 opacity-40">
                       EXAMPLE QUOTE
                     </span>
                   </div>
-                  <div className="relative flex h-full flex-col">
-                    <div className="border-b border-zinc-200 pb-5">
-                      <p className="text-2xl font-semibold">QUOTE #1000</p>
-                      <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
-                      <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
-                      <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
-                    </div>
-                    <div className="mt-6 flex-1 space-y-4 text-sm text-zinc-700">
-                      {quoteItems.map(([label, value]) => (
-                        <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
-                          <span>{label}</span>
-                          <span className="font-medium">{value}</span>
-                        </div>
-                      ))}
-                      <div className="pt-4">
-                        <div className="flex justify-between">
-                          <span>Subtotal</span>
-                          <span>$4,262.36</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Tax (15%)</span>
-                          <span>$639.35</span>
-                        </div>
-                      </div>
-                      <div className="mt-4 border-t border-zinc-200 pt-4">
-                        <div className="flex justify-between text-lg font-semibold">
-                          <span>Total</span>
-                          <span>$4,901.71</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <button type="button" onClick={() => setQuoteModalOpen(true)} className="block w-full cursor-zoom-in">
+                    <img src="/QuoteExample.png" alt="Example Quote" className="w-full h-full object-cover object-top" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -482,25 +478,25 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-2">
                 <div className="flex flex-col justify-center p-10">
                   <div className="mb-6 flex items-center gap-4">
-                    <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/20 shrink-0" />
+                    <img src="/shaun-smiling.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/20 shrink-0" />
                     <div>
                       <p className="font-semibold text-zinc-950">Shaun</p>
-                      <p className="text-sm text-[#FF6B35]">Founder, QuoteCore+</p>
+                      <p className="text-sm text-[#FF6B35]">Founder, <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
                     </div>
                   </div>
                   <p className="text-xl font-semibold text-zinc-950">Meet Shaun,</p>
                   <div className="mt-4 space-y-4 text-lg leading-8 text-zinc-600">
-                    <p>I spent 12+ years on site roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
+                    <p>I spent 12+ years on site, roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
                     <p>I tried so many systems, but nothing really did everything well.</p>
-                    <p>So I built something that does.</p>
-                    <p className="font-medium text-zinc-800">QuoteCore+ is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
+                    <p>So, I built something that does.</p>
+                    <p className="font-medium text-zinc-800"><span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
                   </div>
                 </div>
                 <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{minHeight: "400px"}}>
                   <img src="/shaun.jpg" alt="Shaun, founder of QuoteCore+" className="h-full w-full object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
                     <p className="font-semibold text-white">Shaun</p>
-                    <p className="text-sm text-white/70">Founder, QuoteCore+</p>
+                    <p className="text-sm text-white/70">Founder, <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
                   </div>
                 </div>
               </div>
@@ -508,6 +504,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* PRICING SECTION - hidden, restore when ready
         <section id="pricing" className="bg-zinc-950 py-24 text-white">
           <div className="mx-auto max-w-7xl px-6">
             <div className="max-w-2xl">
@@ -546,7 +543,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
@@ -562,25 +559,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="final-cta" className="mx-auto max-w-7xl px-6 py-24">
-          <div className="rounded-[2.5rem] border border-zinc-200 bg-zinc-50 p-10">
-            <h2 className="text-3xl font-semibold sm:text-5xl">Ready to quote faster?</h2>
-            <p className="mt-4 max-w-2xl text-lg text-zinc-600">
-              Stop losing time to spreadsheets and manual admin. <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> puts your entire quoting workflow in one place, from takeoff to send.
-            </p>
+        <section className="bg-zinc-50 py-32">
+          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">Start quoting faster.</h2>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="/free-trial" className={primaryButton}>
-                Start your free 2-week trial
-              </a>
-              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className={shimmerButton}>
-                Book a Call
-              </a>
-              <a href="#how-it-works" className={shimmerButton}>
-                See how it works
-              </a>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a href="/free-trial" className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]">Start free trial</a>
+              <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="pill-shimmer inline-flex min-h-14 items-center justify-center rounded-full border border-zinc-300 bg-white px-10 py-3 text-base font-medium text-zinc-700 transition-colors hover:bg-zinc-50">Book a Call</a>
             </div>
-            <p className="mt-4 text-sm text-zinc-500">No card required. 2 weeks free. Cancel anytime.</p>
+            <p className="mt-5 text-sm text-zinc-400">No card required. 2 weeks free. Cancel anytime.</p>
           </div>
         </section>
 
@@ -588,15 +575,37 @@ export default function HomePage() {
           <p>
             <a href="/roofing-quoting-software" className="hover:text-zinc-800">Roofing Quoting Software</a>
             {" · "}
-            <a href="/about" className="hover:text-zinc-800">About</a>
-            {" · "}
             <a href="/blog" className="hover:text-zinc-800">Blog</a>
             {" · "}
             <a href="/free-trial" className="hover:text-zinc-800">Free Trial</a>
           </p>
           <p className="mt-3">© 2026 <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
+          <p className="mt-1">Built by T3Labs</p>
         </footer>
       </main>
+
+      {/* Quote lightbox - full screen with scroll */}
+      {quoteModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto">
+          <div className="min-h-full flex flex-col">
+            {/* Close bar */}
+            <div className="sticky top-0 z-10 flex justify-end p-4">
+              <button
+                type="button"
+                onClick={() => setQuoteModalOpen(false)}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg text-zinc-600 hover:text-zinc-950 transition-colors"
+                aria-label="Close"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
+              </button>
+            </div>
+            {/* Image */}
+            <div className="flex-1 flex items-start justify-center px-4 pb-8">
+              <img src="/QuoteExample.png" alt="Example Quote" className="w-full max-w-3xl rounded-[1.5rem] shadow-2xl" />
+            </div>
+          </div>
+        </div>
+      )}
 
       <style>{`
         .brand-wordmark {
