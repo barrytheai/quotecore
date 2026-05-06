@@ -426,7 +426,7 @@ export default function HomePage() {
                 Each step is faster, easier, and all in one place!
               </h2>
               <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
-                <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> helps you go from quote requested all the way to job completed and final invoice paid without needing any other apps
+                <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> helps you go from quote requested all the way to job completed and final invoice paid without needing any other apps.
               </p>
 
               <div className="mt-10 flex max-w-[460px] flex-col gap-5">
@@ -486,9 +486,9 @@ export default function HomePage() {
                   </div>
                   <p className="text-xl font-semibold text-zinc-950">Meet Shaun,</p>
                   <div className="mt-4 space-y-4 text-lg leading-8 text-zinc-600">
-                    <p>I spent 12+ years on site roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
+                    <p>I spent 12+ years on site, roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
                     <p>I tried so many systems, but nothing really did everything well.</p>
-                    <p>So I built something that does.</p>
+                    <p>So, I built something that does.</p>
                     <p className="font-medium text-zinc-800"><span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
                   </div>
                 </div>
