@@ -195,24 +195,39 @@ export default function HomePage() {
 
   const faqs = [
     {
-      question: "What is roofing quoting software?",
+      question: "What is QuoteCore+?",
       answer:
-        "Roofing quoting software helps contractors go from job measurements to a professional, priced quote without spreadsheets or manual calculation. QuoteCore+ combines digital takeoffs, pricing logic, and client-ready output in one workflow.",
+        "QuoteCore+ is an all-in-one roof measuring, quoting, ordering, and job management platform built to help contractors quote faster, stay organised, and become more profitable.",
     },
     {
       question: "Who is QuoteCore+ built for?",
       answer:
-        "QuoteCore+ is built for roofing contractors - solo operators and teams - who want to quote jobs faster and win more business with less admin.",
+        "Built for roofers, builders, and contractors who want a faster, cleaner, and a more professional way to measure, quote, store, and manage jobs digitally.",
     },
     {
-      question: "How long does it take to send a quote with QuoteCore+?",
+      question: "How fast can I create a quote?",
       answer:
-        "Most contractors send their first quote within minutes of entering their measurements. The goal is to quote before you leave the driveway.",
+        "Once set up, most standard roof quotes can be measured, built, and sent in as little as 10-15 minutes using reusable templates and our customer approval link system.",
     },
     {
       question: "How do I get started?",
       answer:
-        "Sign up for a free 2-week trial - no credit card required. You'll be quoting within minutes.",
+        "Simply create a free account and test the full system risk-free for 2 weeks.",
+    },
+    {
+      question: "Is QuoteCore+ only for roofing?",
+      answer:
+        "No. While built for roofing, QuoteCore+ can also be adapted for cladding, foundations, plumbing, drainage, and other trade-based quoting systems.",
+    },
+    {
+      question: "Does QuoteCore+ create quotes automatically?",
+      answer:
+        "QuoteCore+ gives you the tools to measure, build, and fully customise professional quotes quickly. You control your pricing, materials, labour, and templates - making every future quote faster and more consistent.",
+    },
+    {
+      question: "Why do contractors switch to QuoteCore+?",
+      answer:
+        "Because it saves time, reduces paperwork, solidifies disjointed systems, improves professionalism, and keeps everything organised in one place. Its also a very accurate system, allowing precise quotes and confident profit margins.",
     },
   ];
 
