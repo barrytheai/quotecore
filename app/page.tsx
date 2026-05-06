@@ -245,9 +245,7 @@ export default function HomePage() {
             <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
               Measure roofs, create quotes,<br className="hidden sm:block" /> and manage every job -<br className="hidden sm:block" /> all in one app.
             </h1>
-            <p className="mx-auto mt-8 max-w-lg text-xl text-zinc-500">
-              Measurements in. Professional quote out. No spreadsheets.
-            </p>
+
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a href="/free-trial" className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">
                 Start free trial
@@ -379,7 +377,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex items-center justify-center gap-6 bg-zinc-200 py-7">
-          <img src="/shaun-headshot.jpg" alt="Shaun" className="h-24 w-24 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
+          <img src="/shaun-smiling.jpg" alt="Shaun" className="h-24 w-24 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0" />
           <div>
             <p className="text-sm text-zinc-500 mb-2">Book a 15-minute call with Shaun</p>
             <div className="flex gap-3">
@@ -394,23 +392,20 @@ export default function HomePage() {
             <div>
               <p className="text-sm text-zinc-500">How it works</p>
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                Each step, faster, easier, in one place!
+                Each step is faster, easier, and all in one place!
               </h2>
               <p className="mt-4 max-w-[520px] text-lg text-zinc-600">
-                QuoteCore+ helps roofers turn project details into accurate quotes, approvals, material orders and trackable jobs without the usual back and forth.
+                QuoteCore+ helps you go from quote requested all the way to job completed and final invoice paid without needing any other apps
               </p>
 
               <div className="mt-10 flex max-w-[460px] flex-col gap-5">
                 {steps.map((item, i) => (
                   <div
                     key={item.number}
-                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                    className="pill-shimmer rounded-[2rem] border border-zinc-200 bg-white px-7 py-5 shadow-sm transition-shadow duration-200 hover:shadow-md cursor-pointer"
+                    onMouseEnter={() => setActiveStep(i)}
                   >
-                    <button
-                      type="button"
-                      onClick={() => setActiveStep(i === activeStep ? -1 : i)}
-                      className="flex w-full items-start gap-6 text-left"
-                    >
+                    <div className="flex w-full items-start gap-6">
                       <div className="w-[56px] shrink-0 pt-[2px] text-2xl font-semibold leading-none text-zinc-950">
                         {item.number}
                       </div>
@@ -422,7 +417,7 @@ export default function HomePage() {
                           <p className="mt-5 text-zinc-600">{item.body}</p>
                         )}
                       </div>
-                    </button>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -430,44 +425,13 @@ export default function HomePage() {
 
             <div className="relative">
               <div className="rounded-[2rem] border border-zinc-200 bg-white p-5 shadow-[0_20px_80px_rgba(0,0,0,0.08)] lg:min-h-[760px]">
-                <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white p-6">
-                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6">
-                    <span className="select-none rotate-[-30deg] text-center text-[70px] font-semibold tracking-[0.12em] text-zinc-200 opacity-30">
+                <div className="relative h-full overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white">
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 z-10">
+                    <span className="select-none rotate-[-30deg] text-center text-[60px] font-semibold tracking-[0.12em] text-zinc-400 opacity-40">
                       EXAMPLE QUOTE
                     </span>
                   </div>
-                  <div className="relative flex h-full flex-col">
-                    <div className="border-b border-zinc-200 pb-5">
-                      <p className="text-2xl font-semibold">QUOTE #1000</p>
-                      <p className="mt-4 text-sm text-zinc-600">Client: John Smith</p>
-                      <p className="text-sm text-zinc-600">Job: 123 Example Street</p>
-                      <p className="text-sm text-zinc-600">Date: 10 April 2026</p>
-                    </div>
-                    <div className="mt-6 flex-1 space-y-4 text-sm text-zinc-700">
-                      {quoteItems.map(([label, value]) => (
-                        <div key={label} className="flex justify-between border-b border-zinc-200 py-3">
-                          <span>{label}</span>
-                          <span className="font-medium">{value}</span>
-                        </div>
-                      ))}
-                      <div className="pt-4">
-                        <div className="flex justify-between">
-                          <span>Subtotal</span>
-                          <span>$4,262.36</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Tax (15%)</span>
-                          <span>$639.35</span>
-                        </div>
-                      </div>
-                      <div className="mt-4 border-t border-zinc-200 pt-4">
-                        <div className="flex justify-between text-lg font-semibold">
-                          <span>Total</span>
-                          <span>$4,901.71</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <img src="/QuoteExample.jpg" alt="Example Quote" className="relative w-full h-full object-cover object-top" />
                 </div>
               </div>
             </div>
@@ -481,7 +445,7 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-2">
                 <div className="flex flex-col justify-center p-10">
                   <div className="mb-6 flex items-center gap-4">
-                    <img src="/shaun-headshot.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/20 shrink-0" />
+                    <img src="/shaun-smiling.jpg" alt="Shaun" className="h-14 w-14 rounded-full object-cover border-2 border-[#FF6B35]/20 shrink-0" />
                     <div>
                       <p className="font-semibold text-zinc-950">Shaun</p>
                       <p className="text-sm text-[#FF6B35]">Founder, QuoteCore+</p>
