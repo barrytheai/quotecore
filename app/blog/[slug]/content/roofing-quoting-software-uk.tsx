@@ -14,7 +14,8 @@ export default function Post() {
       <p>A transposed measurement. A material price that changed last week. A quote that took three hours on a Sunday night and still looked less professional than the one your competitor sent from his van.</p>
       <p>The average UK roofing contractor spends 4-6 hours per week on admin related to quoting alone. That's time not spent on jobs, not spent with family, and not spent growing the business.</p>
       <p>And the hidden cost? Speed.</p>
-      <p>Research consistently shows that the first contractor to send a quote has a significantly higher chance of winning the job. Homeowners make decisions quickly. If you're sending quotes 24-48 hours after a site visit, you're already at a disadvantage - regardless of your price.</p>
+      <p>Research shows the first contractor to respond wins 78% of home service jobs - and contractors who respond within 5 minutes are 10x more likely to make contact at all. (<a href="https://chiirp.com/insider_information_blog/the-real-cost-of-slow-lead-response" target="_blank" rel="noopener noreferrer">Source: CHIIRP, based on Harvard Business Review / MIT lead response research</a>)</p>
+      <p>If you're sending quotes 24-48 hours after a site visit, you're already at a disadvantage - regardless of your price.</p>
 
       <hr />
 
@@ -37,12 +38,15 @@ export default function Post() {
       <h2>The three things UK roofers get back</h2>
       <p><strong>Time</strong></p>
       <p>The most obvious one. Contractors using digital quoting tools consistently report cutting their quoting time by 50-75%. A quote that used to take two hours takes twenty minutes. That's not a marginal improvement - it's time back in your week, every week.</p>
+
       <p><strong>Professionalism</strong></p>
       <p>A clear, itemised, well-formatted quote does something the spreadsheet version doesn't: it builds confidence. Homeowners comparing multiple quotes will almost always perceive a professional document as coming from a more reliable contractor - even if the price is the same.</p>
       <p>In a market where most roofing contractors still send quotes that look like they were formatted in 2005, a clean professional output is a genuine differentiator.</p>
+
       <p><strong>Speed</strong></p>
       <p>This is the one that wins jobs. When you can send a quote the same afternoon as a site visit - sometimes within an hour - you get to the client before anyone else does. You set the reference point. You're the one they're comparing everyone else to.</p>
-      <p>Speed doesn't just help you win more quotes. It filters out tire-kickers. Clients who are serious about getting work done tend to respond well to contractors who move quickly. It signals that you'll run the job the same way.</p>
+      <p>As Shaun, QuoteCore+'s founder and a former roofer, puts it: <em>"In over a decade on the tools, the quotes I sent same-day consistently won more work. Speed signals professionalism before the customer even reads the numbers."</em></p>
+      <p>Speed doesn't just help you win more quotes. It filters out time-wasters. Clients who are serious about getting work done respond well to contractors who move quickly - it signals that you'll run the job the same way.</p>
 
       <hr />
 

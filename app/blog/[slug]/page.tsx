@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 
-// Registry of all published posts.
-// When Robbie writes a post, add it here and create app/blog/[slug]/content/[slug].mdx
 const posts: Record<string, {
   title: string;
   description: string;
@@ -49,33 +48,64 @@ export default async function BlogPostPage({ params }: Props) {
 
   const { default: Content } = await post.content();
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "author": {
+      "@type": "Person",
+      "name": "Shaun",
+      "jobTitle": "Founder, QuoteCore+"
+    },
+    "datePublished": "2026-05-06",
+    "dateModified": "2026-05-06",
+    "publisher": {
+      "@type": "Organization",
+      "name": "QuoteCore+",
+      "url": "https://quote-core.com"
+    }
+  };
+
   return (
-    <article className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
-      <p className="text-sm text-zinc-400">{post.date}</p>
-      <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">{post.title}</h1>
+    <>
+      <Script
+        id={`blog-schema-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <article className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
+        <p className="text-sm text-zinc-400">{post.date}</p>
+        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">{post.title}</h1>
 
-      <div className="prose prose-zinc mt-10 max-w-none">
-        <Content />
-      </div>
-
-      {/* Internal links */}
-      <div className="mt-16 flex flex-col gap-3 rounded-[1.75rem] border border-[#FF6B35]/20 bg-[#FF6B35]/5 p-7 sm:flex-row sm:items-center sm:justify-between">
-        <p className="font-semibold text-zinc-950">Ready to quote faster?</p>
-        <div className="flex gap-3">
-          <a
-            href="/roofing-quoting-software"
-            className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50"
-          >
-            Learn more
-          </a>
-          <a
-            href="/free-trial"
-            className="inline-flex items-center justify-center rounded-full bg-[#FF6B35] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
-          >
-            Start free trial
-          </a>
+        {/* Author byline */}
+        <div className="mt-4 flex items-center gap-3">
+          <img src="/shaun-smiling.jpg" alt="Shaun" className="h-9 w-9 rounded-full object-cover border border-zinc-200 shrink-0" />
+          <p className="text-sm text-zinc-500">Written by <span className="font-medium text-zinc-700">Shaun</span>, Founder of QuoteCore+. Former roofing contractor with over a decade on the tools.</p>
         </div>
-      </div>
-    </article>
+
+        <div className="prose prose-zinc mt-10 max-w-none">
+          <Content />
+        </div>
+
+        {/* Internal links */}
+        <div className="mt-16 flex flex-col gap-3 rounded-[1.75rem] border border-[#FF6B35]/20 bg-[#FF6B35]/5 p-7 sm:flex-row sm:items-center sm:justify-between">
+          <p className="font-semibold text-zinc-950">Ready to quote faster?</p>
+          <div className="flex gap-3">
+            <a
+              href="/roofing-quoting-software"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50"
+            >
+              Learn more
+            </a>
+            <a
+              href="/free-trial"
+              className="inline-flex items-center justify-center rounded-full bg-[#FF6B35] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+            >
+              Start free trial
+            </a>
+          </div>
+        </div>
+      </article>
+    </>
   );
 }

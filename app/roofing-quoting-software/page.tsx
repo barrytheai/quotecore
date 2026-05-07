@@ -6,6 +6,39 @@ export const metadata: Metadata = {
     "QuoteCore+ is roofing quoting software built for contractors. Go from measurements to a client-ready quote in minutes - no spreadsheets, no double-handling.",
 };
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to quote a roofing job with QuoteCore+",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Quote request received",
+      "text": "Upload a quality roof plan into the digital takeoff system and accurately measure roofs and components from your desk."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Build the quote",
+      "text": "Convert measurements into a high quality, professional quote with full control over what the customer sees."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Track quote acceptances",
+      "text": "Create quote acceptance links that alert you when a quote is accepted or declined - by email and in your QuoteCore+ account."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Order your materials",
+      "text": "Create complete materials orders directly from your quote, including custom flashing images."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Everything in one place",
+      "text": "From quote acceptance to materials orders, scheduling to completion invoices - all in one place."
+    }
+  ]
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -129,6 +162,10 @@ export default function RoofingQuotingSoftwarePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <main className="min-h-screen bg-white text-zinc-950">
