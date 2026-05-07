@@ -15,9 +15,68 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #111111;
     --foreground: #ededed;
   }
+
+  /* Base page backgrounds and text */
+  body {
+    background-color: #111111;
+    color: #ededed;
+  }
+
+  /* White backgrounds -> dark */
+  .bg-white { background-color: #1c1c1e !important; }
+  main.min-h-screen.bg-white { background-color: #111111 !important; }
+
+  /* White/light bg sections */
+  .bg-zinc-50 { background-color: #1c1c1e !important; }
+  .bg-\[\#FF6B35\]\/10 { background-color: rgba(255,107,53,0.08) !important; }
+  .bg-\[\#FF6B35\]\/15 { background-color: rgba(255,107,53,0.08) !important; }
+  .bg-\[\#FF6B35\]\/5 { background-color: rgba(255,107,53,0.05) !important; }
+  .bg-zinc-200 { background-color: #2c2c2e !important; }
+  .bg-zinc-100 { background-color: #1c1c1e !important; }
+
+  /* Dark text -> light */
+  .text-zinc-950 { color: #f5f5f7 !important; }
+  .text-zinc-900 { color: #f0f0f0 !important; }
+  .text-zinc-800 { color: #e5e5e5 !important; }
+  .text-zinc-700 { color: #d4d4d8 !important; }
+  .text-zinc-600 { color: #a1a1aa !important; }
+  .text-zinc-500 { color: #71717a !important; }
+
+  /* Borders */
+  .border-zinc-200 { border-color: #2c2c2e !important; }
+  .border-zinc-300 { border-color: #3c3c3e !important; }
+  .border-zinc-100 { border-color: #2c2c2e !important; }
+
+  /* Header */
+  header.sticky {
+    background-color: rgba(17,17,17,0.85) !important;
+    border-bottom-color: #2c2c2e !important;
+  }
+
+  /* Cards */
+  .rounded-\[2rem\].bg-white,
+  .rounded-\[1\.75rem\].bg-white,
+  .rounded-\[1\.5rem\].bg-white {
+    background-color: #1c1c1e !important;
+  }
+
+  /* Testimonial cards */
+  .flex.h-full.flex-col.rounded-\[2rem\].bg-white {
+    background-color: #1c1c1e !important;
+  }
+
+  /* Banner */
+  .bg-zinc-200.py-3 { background-color: #2c2c2e !important; }
+  .text-zinc-700 { color: #d4d4d8 !important; }
+
+  /* Final CTA section */
+  .bg-zinc-50.py-32 { background-color: #1c1c1e !important; }
+
+  /* Footer */
+  footer { border-top-color: #2c2c2e !important; }
 
   .prose {
     --tw-prose-body: #d4d4d8;
