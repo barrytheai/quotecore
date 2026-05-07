@@ -52,15 +52,15 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <article className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
       <p className="text-sm text-zinc-400">{post.date}</p>
-      <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl">{post.title}</h1>
+      <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">{post.title}</h1>
 
-      <div className="prose prose-zinc dark:prose-invert mt-10 max-w-none">
+      <div className="prose prose-zinc mt-10 max-w-none">
         <Content />
       </div>
 
       {/* Internal links */}
-      <div className="mt-16 flex flex-col gap-3 rounded-[1.75rem] border border-[#FF6B35]/20 bg-[#FF6B35]/5 dark:bg-[#FF6B35]/10 p-7 sm:flex-row sm:items-center sm:justify-between">
-        <p className="font-semibold text-zinc-950 dark:text-zinc-50">Ready to quote faster?</p>
+      <div className="mt-16 flex flex-col gap-3 rounded-[1.75rem] border border-[#FF6B35]/20 bg-[#FF6B35]/5 p-7 sm:flex-row sm:items-center sm:justify-between">
+        <p className="font-semibold text-zinc-950">Ready to quote faster?</p>
         <div className="flex gap-3">
           <a
             href="/roofing-quoting-software"
