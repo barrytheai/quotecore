@@ -18,6 +18,25 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+
+  .prose {
+    --tw-prose-body: #d4d4d8;
+    --tw-prose-headings: #fafafa;
+    --tw-prose-lead: #a1a1aa;
+    --tw-prose-links: #fb923c;
+    --tw-prose-bold: #fafafa;
+    --tw-prose-counters: #a1a1aa;
+    --tw-prose-bullets: #a1a1aa;
+    --tw-prose-hr: #3f3f46;
+    --tw-prose-quotes: #d4d4d8;
+    --tw-prose-quote-borders: #52525b;
+    --tw-prose-captions: #a1a1aa;
+    --tw-prose-code: #fafafa;
+    --tw-prose-pre-code: #d4d4d8;
+    --tw-prose-pre-bg: #18181b;
+    --tw-prose-th-borders: #3f3f46;
+    --tw-prose-td-borders: #27272a;
+  }
 }
 
 body {
