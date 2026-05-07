@@ -1,6 +1,13 @@
 export default function Post() {
   return (
     <div className="prose prose-zinc max-w-none">
+      <div className="not-prose mb-8 flex items-center gap-4 rounded-2xl border border-zinc-100 bg-zinc-50 p-5">
+        <img src="/shaun-smiling.jpg" alt="Shaun, founder of QuoteCore+" className="h-16 w-16 rounded-full object-cover border-2 border-[#FF6B35]/30 shrink-0" />
+        <div>
+          <p className="font-semibold text-zinc-950">Shaun</p>
+          <p className="text-sm text-zinc-500">Founder, QuoteCore+</p>
+        </div>
+      </div>
       <p>Shaun spent over a decade on the tools.</p>
       <p>Residential roofing, New Zealand. Up early, on site, measuring, calculating, pricing jobs - and then coming home to do it all again on paper.</p>
       <p>The quoting never stopped. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers home, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
