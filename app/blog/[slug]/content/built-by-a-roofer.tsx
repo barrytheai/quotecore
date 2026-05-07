@@ -1,11 +1,11 @@
 export default function Post() {
   return (
     <div className="prose prose-zinc max-w-none">
-      <div className="not-prose mb-8 flex items-center gap-4 rounded-2xl border border-zinc-100 bg-zinc-50 p-5">
+      <div className="not-prose mb-8 flex items-center gap-4 rounded-2xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 p-5">
         <img src="/shaun-smiling.jpg" alt="Shaun, founder of QuoteCore+" className="h-16 w-16 rounded-full object-cover border-2 border-[#FF6B35]/30 shrink-0" />
         <div>
-          <p className="font-semibold text-zinc-950">Shaun</p>
-          <p className="text-sm text-zinc-500">Founder, QuoteCore+</p>
+          <p className="font-semibold text-zinc-950 dark:text-zinc-50">Shaun</p>
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">Founder, QuoteCore+</p>
         </div>
       </div>
       <p>Shaun spent over a decade on the tools.</p>
