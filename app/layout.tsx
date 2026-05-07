@@ -35,44 +35,7 @@ const softwareSchema = {
   },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is roofing quoting software?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Roofing quoting software helps contractors go from job measurements to a professional, priced quote without spreadsheets or manual calculation. QuoteCore+ combines digital takeoffs, pricing logic, and client-ready output in one workflow.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who is QuoteCore+ built for?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "QuoteCore+ is built for roofing contractors - solo operators and teams - who want to quote jobs faster and win more business with less admin.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to send a quote with QuoteCore+?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most contractors send their first quote within minutes of entering their measurements. The goal is to quote before you leave the driveway.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I get started?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sign up for a free 2-week trial - no credit card required. You'll be quoting within minutes.",
-      },
-    },
-  ],
-};
+
 
 export default function RootLayout({
   children,
@@ -92,11 +55,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
         />
-        <Script
-          id="faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
+
       </body>
     </html>
   );
