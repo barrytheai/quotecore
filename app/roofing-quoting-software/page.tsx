@@ -39,60 +39,6 @@ const howToSchema = {
   ]
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is roofing quoting software?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Roofing quoting software helps contractors go from job measurements to a professional, priced quote without spreadsheets or manual calculation. QuoteCore+ combines digital takeoffs, pricing logic, and client-ready output in one workflow.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How is QuoteCore+ different from generic quoting tools?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most quoting tools are built for trades in general - they don't understand roofing-specific workflows like takeoffs, hip and valley calculations, or material quantities by roof section. QuoteCore+ is built specifically for roofers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to send a quote?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most contractors send their first quote within minutes of entering their measurements. The goal is to quote before you leave the driveway.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to be tech-savvy to use it?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. QuoteCore+ is designed to be straightforward. If you can use a computer and email, you can use QuoteCore+.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a free trial?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. You get 2 weeks free - no credit card required. You'll be quoting within minutes of signing up.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Where is QuoteCore+ available?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "QuoteCore+ is a web-based platform. Sign up and start quoting from your desktop or laptop.",
-      },
-    },
-  ],
-};
 
 const steps = [
   {
@@ -159,10 +105,6 @@ const faqs = [
 export default function RoofingQuotingSoftwarePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
