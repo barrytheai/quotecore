@@ -14,6 +14,12 @@ const posts: Record<string, {
     date: "2026-05-06",
     content: () => import("./content/roofing-quoting-software-uk"),
   },
+  "roofing-quoting-software-vs-spreadsheets": {
+    title: "Roofing Quoting Software vs Spreadsheets: What Actually Saves Time",
+    description: "Most roofing contractors still quote in spreadsheets. Here's an honest comparison of what spreadsheets do well, where they fall short, and what changes when you move to purpose-built software.",
+    date: "2026-05-11",
+    content: () => import("./content/roofing-quoting-software-vs-spreadsheets"),
+  },
   "built-by-a-roofer": {
     title: "He Spent Over a Decade Quoting Roofs the Hard Way. Then He Built QuoteCore+.",
     description: "QuoteCore+ was built by Shaun - a roofer who spent over a decade wishing the software existed. Here's the story behind the product.",
@@ -30,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
   const titleOverrides: Record<string, string> = {
     "roofing-quoting-software-uk": "How UK Roofers Are Winning More Jobs With Digital Quotes | QuoteCore+",
+    "roofing-quoting-software-vs-spreadsheets": "Roofing Quoting Software vs Spreadsheets: What Actually Saves Time | QuoteCore+",
   };
   return {
     title: titleOverrides[slug] ?? `${post.title} | QuoteCore+`,
@@ -80,7 +87,11 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Author byline */}
         <div className="mt-4 flex items-center gap-3">
           <img src="/shaun-smiling.jpg" alt="Shaun" className="h-9 w-9 rounded-full object-cover border border-zinc-200 shrink-0" />
-          <p className="text-sm text-zinc-500">Written by <span className="font-medium text-zinc-700">Shaun</span>, Founder of QuoteCore+. Former roofing contractor with over a decade on the tools.</p>
+          <p className="text-sm text-zinc-500">Written by <span className="font-medium text-zinc-700">Shaun</span>, Founder of QuoteCore+.{" "}
+            {slug === "roofing-quoting-software-vs-spreadsheets"
+              ? "Over 12 years in the roofing industry - on the tools, managing projects, and running operations."
+              : "Former roofing contractor with over a decade on the tools."}
+          </p>
         </div>
 
         <div className="prose prose-zinc mt-10 max-w-none">

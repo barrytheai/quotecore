@@ -41,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${base}/blog/roofing-quoting-software-vs-spreadsheets`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${base}/blog/built-by-a-roofer`,
       lastModified: new Date(),
       changeFrequency: "monthly",

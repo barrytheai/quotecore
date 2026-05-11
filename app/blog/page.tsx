@@ -9,6 +9,12 @@ interface Post {
 
 const posts: Post[] = [
   {
+    slug: "roofing-quoting-software-vs-spreadsheets",
+    title: "Roofing Quoting Software vs Spreadsheets: What Actually Saves Time",
+    description: "Most roofing contractors still quote in spreadsheets. Here's an honest comparison of what spreadsheets do well, where they fall short, and what changes.",
+    date: "2026-05-11",
+  },
+  {
     slug: "roofing-quoting-software-uk",
     title: "How UK Roofing Contractors Are Winning More Jobs With Digital Quotes",
     description: "Manual quoting is costing UK roofing contractors time and jobs. Here's how digital roofing quoting software is changing that.",
