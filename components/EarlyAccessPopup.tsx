@@ -70,12 +70,10 @@ export default function EarlyAccessPopup({ forceOpen, onClose }: Props = {}) {
       {/* Modal */}
       <div className="relative w-full max-w-md overflow-hidden rounded-[2rem] bg-white shadow-[0_40px_120px_rgba(0,0,0,0.3)]">
         {/* Top coral bar */}
-        <div className="bg-[#FF6B35] px-8 py-6">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/80">
-            Coming soon
-          </p>
-          <h2 className="mt-1 text-2xl font-semibold text-white">
-            <span className="brand-wordmark">QuoteCore<span style={{color: '#FF6B35'}}>+</span></span> coming online in May.
+        <div className="bg-[#FF6B35] px-6 py-5">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/80">Coming soon</p>
+          <h2 className="mt-1 text-xl font-semibold text-white text-left">
+            <span className="brand-wordmark">QuoteCore<span style={{color: 'rgba(255,255,255,0.6)'}}>+</span></span> coming online in May.
           </h2>
         </div>
 
