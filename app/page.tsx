@@ -593,6 +593,8 @@ export default function HomePage() {
             <a href="/blog" className="hover:text-zinc-800">Blog</a>
             {" · "}
             <a href="/free-trial" className="hover:text-zinc-800">Free Trial</a>
+            {" · "}
+            <a href="/privacy" className="hover:text-zinc-800">Privacy Policy</a>
           </p>
           <p className="mt-3">© 2026 <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
           <p className="mt-1">Built by T3Labs</p>
