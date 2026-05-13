@@ -103,7 +103,7 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="font-semibold text-zinc-950">Ready to quote faster?</p>
           <div className="flex gap-3">
             <a
-              href="/roofing-quoting-software"
+              href="/"
               className="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50"
             >
               Learn more
