@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
       <article className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
-        <p className="text-sm text-zinc-400">{post.date}</p>
+        <p className="text-sm text-zinc-400">{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">{post.title}</h1>
 
         {/* Author byline */}

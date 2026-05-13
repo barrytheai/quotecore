@@ -58,7 +58,7 @@ export default function BlogIndexPage() {
                 href={`/blog/${post.slug}`}
                 className="block rounded-[1.75rem] border border-zinc-200 bg-white p-7 shadow-sm transition-shadow hover:shadow-md"
               >
-                <p className="text-xs text-zinc-400">{post.date}</p>
+                <p className="text-xs text-zinc-400">{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                 <h2 className="mt-2 text-xl font-semibold text-zinc-950">{post.title}</h2>
                 <p className="mt-2 text-sm text-zinc-500">{post.description}</p>
               </a>
