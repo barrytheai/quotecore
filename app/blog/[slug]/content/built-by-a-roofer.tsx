@@ -9,12 +9,12 @@ export default function Post() {
         </div>
       </div>
       <p>Shaun spent over a decade on the tools.</p>
-      <p>Residential roofing, New Zealand. Up early, on site, measuring, calculating, pricing jobs - and then coming home to do it all again on paper.</p>
+      <p>Residential roofing, New Zealand. Up early, on site, measuring, calculating, pricing jobs - and then heading back to the office to do it all again on paper.</p>
       <p>The quoting never stopped. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers home, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
       <p>He shared the workload with another man who had his own system. Which meant two systems. Which meant no system.</p>
       <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Details scattered across notebooks, scraps of paper, and memory.</p>
       <p>Then a bad weather day would hit.</p>
-      <p>Jobs had to be reorganised completely. Contractors needed to be contacted. Locations, job details, site notes - all of it had to be found and pieced together from a filing system that had never really been designed to be found quickly. It was controlled chaos at the best of times. On a wet Tuesday when three jobs needed rescheduling before 9am, it was something else entirely.</p>
+      <p>Jobs had to be reorganised completely. Contractors needed to be contacted. Locations, job details, site notes - all of it had to be found and pieced together from a filing system that had never really been designed to be found quickly. It was controlled chaos at the best of times. On a wet, windy Tuesday when three jobs needed rescheduling before 9am, it was something else entirely.</p>
       <p>Shaun knew there had to be a better way. He just couldn't find it.</p>
 
       <hr />
@@ -36,7 +36,7 @@ export default function Post() {
 
       <h2>Why that history matters</h2>
       <p>QuoteCore+ isn't a product built by developers who interviewed a few roofers and made something. It's built by someone who lived the problem.</p>
-      <p>When the <a href="/roofing-quoting-software">roofing quoting software</a> workflow was designed, it was designed by someone who knows what it's like to be on a roof at 4pm with three quotes to send before tomorrow morning. When the job management flow was built, it was built by someone who remembers the chaos of a bad weather day - contractors to contact, locations to find, details to piece together from a filing system that was never fit for purpose.</p>
+      <p>When the <a href="/">roofing quoting software</a> workflow was designed, it was designed by someone who knows what it's like to be on a roof at 4pm with three quotes to send before tomorrow morning. When the job management flow was built, it was built by someone who remembers the chaos of a bad weather day - contractors to contact, locations to find, details to piece together from a filing system that was never fit for purpose.</p>
       <p>Every feature in QuoteCore+ exists because Shaun spent over a decade knowing exactly what was missing.</p>
 
       <hr />
@@ -45,7 +45,7 @@ export default function Post() {
       <p>Most software built for trades is generic by design. QuoteCore+ is built for one trade.</p>
       <ul>
         <li>Roofing-specific measurement types - area, linear, ridge, hip, valley, eave, barge</li>
-        <li><a href="/">Custom flashing</a> creation - draw and save your own flashing components, reuse them across jobs</li>
+        <li>Custom flashing creation - draw and save your own flashing components, reuse them across jobs</li>
         <li>Pricing logic that works the way a roofer thinks - component-based, with your own rates and waste factors</li>
         <li>Professional quote output that looks like it came from a serious business, not a spreadsheet</li>
         <li>Materials ordering built into the workflow - once the job is won, the quantities are already there</li>

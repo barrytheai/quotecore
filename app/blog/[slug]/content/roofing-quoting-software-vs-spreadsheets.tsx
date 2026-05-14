@@ -89,7 +89,7 @@ export default function Post() {
       <p>Research shows the first contractor to respond wins 78% of home service jobs. (<a href="https://chiirp.com/insider_information_blog/the-real-cost-of-slow-lead-response" target="_blank" rel="noopener noreferrer">Source: CHIIRP, based on Harvard Business Review / MIT lead response research</a>) The spreadsheet won't get you there fast enough.</p>
       <p>QuoteCore+ was built by a roofer who spent over a decade doing this the slow way. It's not a generic estimating tool adapted for roofing - it's built around the way a roofing job actually works, from first measurement to final invoice.</p>
       <p>No credit card required. No spreadsheet required. Set up your pricing once, quote your next job in the system, and see how long it actually takes.</p>
-      <p><a href="/free-trial">Start your free 2-week trial</a> and see what changes when <a href="/roofing-quoting-software">roofing quoting software</a> is built around how you actually work.</p>
+      <p><a href="/">Start your free 2-week trial</a> and see what changes when <a href="/">roofing quoting software</a> is built around how you actually work.</p>
     </div>
   );
 }

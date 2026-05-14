@@ -20,18 +20,12 @@ export default function Post() {
       <hr />
 
       <h2>What digital quoting actually looks like</h2>
-      <p><a href="/roofing-quoting-software">Roofing quoting software</a> isn't about replacing your expertise. You still do the takeoffs. You still know what a hip costs versus a valley. You still price the job.</p>
+      <p><a href="/">Roofing quoting software</a> isn't about replacing your expertise. You still do the takeoffs. You still know what a hip costs versus a valley. You still price the job.</p>
       <p>What changes is everything around that.</p>
       <p>Instead of transferring measurements from a notepad to a spreadsheet to an email, you enter them once. The software applies your pricing logic - your rates, your components, your margins - and generates a professional, itemised quote automatically.</p>
       <p>Instead of formatting a Word document at 9pm, you're sending a client-ready quote in minutes - from your desk or laptop.</p>
       <p>Instead of manually building a materials list from scratch after a job is won, you order directly from the platform - quantities calculated, no re-entry required.</p>
       <p>The work is the same. The admin around it disappears.</p>
-
-      <hr />
-
-      <h2>See QuoteCore+ in action</h2>
-      <p>Before we get into the detail - here's a look at what QuoteCore+ does for roofing contractors:</p>
-      <p><a href="https://www.youtube.com/watch?v=QyYa1VbQkbQ" target="_blank" rel="noopener noreferrer">Watch the QuoteCore+ video on YouTube</a></p>
 
       <hr />
 
@@ -64,7 +58,7 @@ export default function Post() {
 
       <h2>What to look for in roofing quoting software</h2>
       <p>Not all quoting tools are built for roofing. Generic estimating software - the kind built for "trades" in general - doesn't understand roofing-specific workflows. It doesn't know the difference between a hip and a valley. It doesn't have logic for custom flashings. It forces you to work around its limitations instead of with your actual workflow.</p>
-      <p>Good <a href="/roofing-quoting-software">roofing quoting software</a> should:</p>
+      <p>Good <a href="/">roofing quoting software</a> should:</p>
       <ul>
         <li>Support roofing-specific measurement types (area, linear, ridge, hip, valley, eave, barge)</li>
         <li>Allow custom component pricing that reflects your actual rates</li>
