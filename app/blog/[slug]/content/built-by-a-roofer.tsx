@@ -10,7 +10,7 @@ export default function Post() {
       </div>
       <p>Shaun spent over a decade on the tools.</p>
       <p>Residential roofing, New Zealand. Up early, on site, measuring, calculating, pricing jobs - and then heading back to the office to do it all again on paper.</p>
-      <p>The quoting never stopped. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers home, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
+      <p>The quoting never stopped. Multiple quotes a day, some days. Each one the same process: measure on site, bring the numbers back to the office, work out the pricing, write it up, file it, send it. Then hope the client hadn't already gone with someone else.</p>
       <p>He shared the workload with another man who had his own system. Which meant two systems. Which meant no system.</p>
       <p>The paper files were a nightmare. Jobs stacked in folders. Old quotes mixed with new ones. Details scattered across notebooks, scraps of paper, and memory.</p>
       <p>Then a bad weather day would hit.</p>
