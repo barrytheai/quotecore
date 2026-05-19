@@ -196,9 +196,9 @@ export default function HomePage() {
 
   const faqs = [
     {
-      question: "What is QuoteCore+?",
+      question: "Is QuoteCore+ only for roofers?",
       answer:
-        "QuoteCore+ is an all-in-one roof measuring, quoting, ordering, and job management platform built to help contractors quote faster, stay organised, and become more profitable.",
+        "No. QuoteCore+ started in roofing — that's where our founder's experience is — but it's designed for any construction trade that measures, prices, and quotes jobs. Roofing, cladding, flooring, fencing, landscaping, general building work, and more.",
     },
     {
       question: "Who is QuoteCore+ built for?",
@@ -274,10 +274,13 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,107,53,0.12),transparent_60%)]" />
           {/* Full-width hero text */}
           <div className="relative mx-auto max-w-4xl px-6 pb-12 pt-12 text-center lg:px-8 lg:pt-16">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">A roofing app built by roofers</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Built from real construction experience</p>
             <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
-              Measure roofs, create quotes,<br className="hidden sm:block" /> and manage every job -<br className="hidden sm:block" /> all in one app.
+              If your job starts with measurements and ends with a quote, QuoteCore+ can probably save you hours.
             </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600">
+              Construction businesses that measure, price, and quote jobs are cutting admin time with QuoteCore+. Built from real roofing experience. Designed for any trade.
+            </p>
 
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a href="/free-trial" className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]">
@@ -500,12 +503,12 @@ export default function HomePage() {
                       <p className="text-sm text-[#FF6B35]">Founder, <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
                     </div>
                   </div>
-                  <p className="text-xl font-semibold text-zinc-950">Meet Shaun,</p>
+                  <p className="text-xl font-semibold text-zinc-950">Built from inside the industry</p>
                   <div className="mt-4 space-y-4 text-lg leading-8 text-zinc-600">
-                    <p>I spent 12+ years on site, roofing and running jobs from the office. Most of that time was wasted bouncing between emails, roof plans, apps, spreadsheets - just to quote, order and track jobs.</p>
-                    <p>I tried so many systems, but nothing really did everything well.</p>
-                    <p>So, I built something that does.</p>
-                    <p className="font-medium text-zinc-800"><span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> is the quoting software I wish I had - fast, simple, and built around what real roofers actually need.</p>
+                    <p>Shaun spent years in roofing and construction — on the tools, managing projects, running operations. Every day he was measuring jobs, copying numbers into spreadsheets, building quotes manually, ordering materials, tracking approvals.</p>
+                    <p>He looked for software that actually understood construction workflows. Nothing did.</p>
+                    <p>So he built it.</p>
+                    <p className="font-medium text-zinc-800"><span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> is the quoting software I wish I had - fast, simple, and built around what real tradespeople actually need.</p>
                   </div>
                 </div>
                 <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{minHeight: "400px"}}>
@@ -590,6 +593,8 @@ export default function HomePage() {
         <footer className="border-t border-zinc-200 py-10 text-center text-sm text-zinc-500">
           <p>
             <a href="/roofing-quoting-software" className="hover:text-zinc-800">Roofing Quoting Software</a>
+            {" · "}
+            <a href="/construction-quoting-software" className="hover:text-zinc-800">Construction Quoting Software</a>
             {" · "}
             <a href="/blog" className="hover:text-zinc-800">Blog</a>
             {" · "}

@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Roofing Quoting Software for Contractors | QuoteCore+",
+  title: "Construction Quoting Software for Trades | QuoteCore+",
   description:
-    "QuoteCore+ helps roofing contractors go from measurements to a professional quote in minutes. Digital takeoffs, pricing logic, client-ready output. Start free.",
+    "Construction quoting software built from real trade experience. Measure, price, and quote jobs faster — from first measurement to professional quote in minutes. Free 2-week trial.",
 };
 
 const softwareSchema = {

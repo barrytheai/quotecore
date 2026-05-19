@@ -128,6 +128,12 @@ export default function RoofingQuotingSoftwarePage() {
           </div>
         </header>
 
+        {/* Cross-trade notice */}
+        <div className="bg-zinc-50 border-b border-zinc-200 py-3 px-6 text-center text-sm text-zinc-600">
+          QuoteCore+ also works across cladding, flooring, fencing, landscaping, and other construction trades.{" "}
+          <a href="/construction-quoting-software" className="font-medium text-[#FF6B35] hover:underline">See the full construction quoting software page →</a>
+        </div>
+
         {/* Hero */}
         <section className="relative overflow-hidden pb-16 pt-12">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,107,53,0.10),transparent_34%)]" />
