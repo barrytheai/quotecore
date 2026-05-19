@@ -7,10 +7,8 @@ export default function CoffeePopup() {
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    // Don't show if already dismissed this session
     if (sessionStorage.getItem("coffee-popup-dismissed")) return;
-
-    const timer = setTimeout(() => setVisible(true), 5000);
+    const timer = setTimeout(() => setVisible(true), 10000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -26,47 +24,66 @@ export default function CoffeePopup() {
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 z-50 bg-black/50 backdrop-blur-md"
+        className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
         onClick={dismiss}
       />
 
-      {/* Popup — centred, frosted glass */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-6 pointer-events-none">
-        <div className="pointer-events-auto relative w-full max-w-md rounded-3xl border border-white/20 bg-white/80 shadow-[0_32px_80px_rgba(0,0,0,0.18)] backdrop-blur-xl px-8 py-10">
+      {/* Popup */}
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+        <div className="pointer-events-auto relative w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-[0_32px_80px_rgba(0,0,0,0.2)] flex">
 
-          <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">
-            Want a free coffee?
-          </h2>
+          {/* Left — content */}
+          <div className="flex flex-col justify-between p-8 flex-1">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Limited offer</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-950 leading-tight">
+                Want a <span className="text-[#FF6B35]">free coffee?</span>
+              </h2>
+              <div className="mt-1 h-0.5 w-16 bg-[#FF6B35] rounded-full" />
 
-          <p className="mt-4 text-zinc-600 leading-relaxed">
-            Give Shaun 15 minutes and he'll show you how QuoteCore+ helps roofers save hours every week on quoting, materials, and job admin.
-          </p>
-          <p className="mt-3 text-zinc-600 leading-relaxed">
-            Not convinced after the call? No worries - coffee's still on him.
-          </p>
+              <p className="mt-5 text-zinc-600 leading-relaxed text-sm">
+                Give Shaun 15 minutes and he'll show you how QuoteCore+ helps roofers save hours every week on quoting, materials, and job admin.
+              </p>
+              <p className="mt-3 text-zinc-600 leading-relaxed text-sm">
+                Not convinced after the call? No worries - <span className="text-[#FF6B35] font-medium">coffee's still on him.</span>
+              </p>
+            </div>
 
-          <a
-            href="https://calendly.com/quote-core-info/15-minute-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={dismiss}
-            className="mt-7 flex w-full items-center justify-center rounded-full bg-[#FF6B35] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
-          >
-            Book 15 min with Shaun
-          </a>
+            <div className="mt-8">
+              <a
+                href="https://calendly.com/quote-core-info/15-minute-meeting"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={dismiss}
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#FF6B35] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                Book 15 min with Shaun
+              </a>
+              <p className="mt-3 text-center text-xs text-zinc-400">
+                Free coffee voucher sent after completed call. One per UK roofing business.{" "}
+                <a href="/coffee-terms" target="_blank" className="text-[#FF6B35] hover:underline">
+                  T&amp;Cs apply.
+                </a>
+              </p>
+            </div>
+          </div>
 
-          <p className="mt-4 text-center text-xs text-zinc-400">
-            Free coffee voucher sent after completed call. One per UK roofing business.{" "}
-            <a href="/coffee-terms" className="underline hover:text-zinc-600">
-              Terms & conditions apply.
-            </a>
-          </p>
+          {/* Right — Shaun photo */}
+          <div className="relative hidden sm:block w-56 flex-shrink-0 bg-[#fdf6ee]">
+            <img
+              src="/shaun-smiling.jpg"
+              alt="Shaun, Founder of QuoteCore+"
+              className="h-full w-full object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#fdf6ee]/40 to-transparent" />
+          </div>
 
-          {/* Close button */}
+          {/* Close */}
           <button
             type="button"
             onClick={dismiss}
-            className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-100 text-zinc-500 transition-colors hover:bg-zinc-200"
+            className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-zinc-500 shadow-sm transition-colors hover:bg-white"
             aria-label="Close"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
