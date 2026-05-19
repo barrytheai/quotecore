@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import CoffeePopup from "@/components/CoffeePopup";
 
 export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -626,6 +627,7 @@ export default function HomePage() {
         </div>
       )}
 
+      <CoffeePopup />
       <style>{`
         .brand-wordmark {
           white-space: nowrap;
