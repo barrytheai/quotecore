@@ -60,8 +60,8 @@ export default function PrivacyPage() {
 
           <h2>Why we use it</h2>
           <ul>
-            <li>To run the website — serve pages, prevent abuse, keep the site available.</li>
-            <li>To contact you about early access — let you know when QuoteCore+ opens up.</li>
+            <li>To run the website - serve pages, prevent abuse, keep the site available.</li>
+            <li>To contact you about early access - let you know when QuoteCore+ opens up.</li>
             <li>To send transactional product updates related to early access.</li>
             <li>To comply with the law.</li>
           </ul>
@@ -70,18 +70,18 @@ export default function PrivacyPage() {
 
           <h2>Lawful basis (GDPR)</h2>
           <ul>
-            <li><strong>Consent</strong> (Art. 6(1)(a)) — for adding you to the early-access list. You can withdraw at any time.</li>
-            <li><strong>Legitimate interests</strong> (Art. 6(1)(f)) — to keep the website secure and working.</li>
-            <li><strong>Legal obligation</strong> (Art. 6(1)(c)) — to retain records required by law.</li>
+            <li><strong>Consent</strong> (Art. 6(1)(a)) - for adding you to the early-access list. You can withdraw at any time.</li>
+            <li><strong>Legitimate interests</strong> (Art. 6(1)(f)) - to keep the website secure and working.</li>
+            <li><strong>Legal obligation</strong> (Art. 6(1)(c)) - to retain records required by law.</li>
           </ul>
 
           <hr />
 
           <h2>Who we share with</h2>
           <ul>
-            <li><strong>Supabase</strong> — database and storage for the early-access list. Hosted in the EU (Frankfurt).</li>
-            <li><strong>Vercel</strong> — web hosting. Global edge network; data may transit US infrastructure.</li>
-            <li><strong>Resend</strong> — transactional email delivery. US-based.</li>
+            <li><strong>Supabase</strong> - database and storage for the early-access list. Hosted in the EU (Frankfurt).</li>
+            <li><strong>Vercel</strong> - web hosting. Global edge network; data may transit US infrastructure.</li>
+            <li><strong>Resend</strong> - transactional email delivery. US-based.</li>
           </ul>
           <p>We do not sell your data and we do not share it with advertisers, analytics providers, or social platforms.</p>
 
@@ -94,23 +94,23 @@ export default function PrivacyPage() {
 
           <h2>How long we keep it</h2>
           <ul>
-            <li><strong>Early-access email addresses</strong> — kept until QuoteCore+ launches and for a reasonable period thereafter, or until you ask us to delete it. If you do not claim a spot within 12 months of launch, we delete your entry.</li>
-            <li><strong>Server logs</strong> from Vercel/Supabase — per their own retention policies (typically 30 days).</li>
-            <li><strong>Email delivery logs</strong> at Resend — typically 30-90 days.</li>
+            <li><strong>Early-access email addresses</strong> - kept until QuoteCore+ launches and for a reasonable period thereafter, or until you ask us to delete it. If you do not claim a spot within 12 months of launch, we delete your entry.</li>
+            <li><strong>Server logs</strong> from Vercel/Supabase - per their own retention policies (typically 30 days).</li>
+            <li><strong>Email delivery logs</strong> at Resend - typically 30-90 days.</li>
           </ul>
 
           <hr />
 
           <h2>Your rights</h2>
-          <p>Contact us at info@quote-core.com to exercise any of these rights — we will respond within one month.</p>
+          <p>Contact us at info@quote-core.com to exercise any of these rights - we will respond within one month.</p>
           <ul>
-            <li><strong>Access</strong> — get a copy of the personal data we hold about you.</li>
-            <li><strong>Rectification</strong> — correct inaccurate data.</li>
-            <li><strong>Erasure</strong> — have your early-access entry deleted.</li>
-            <li><strong>Portability</strong> — receive your data in a machine-readable format.</li>
-            <li><strong>Restriction</strong> — pause our processing while a dispute is resolved.</li>
-            <li><strong>Objection</strong> — object to processing based on our legitimate interests.</li>
-            <li><strong>Withdraw consent</strong> — at any time, by emailing us or clicking unsubscribe.</li>
+            <li><strong>Access</strong> - get a copy of the personal data we hold about you.</li>
+            <li><strong>Rectification</strong> - correct inaccurate data.</li>
+            <li><strong>Erasure</strong> - have your early-access entry deleted.</li>
+            <li><strong>Portability</strong> - receive your data in a machine-readable format.</li>
+            <li><strong>Restriction</strong> - pause our processing while a dispute is resolved.</li>
+            <li><strong>Objection</strong> - object to processing based on our legitimate interests.</li>
+            <li><strong>Withdraw consent</strong> - at any time, by emailing us or clicking unsubscribe.</li>
           </ul>
           <p>California residents have additional rights under CCPA/CPRA. Costa Rica residents have rights under Law 8968 (PRODHAB). These broadly mirror the GDPR rights above.</p>
 

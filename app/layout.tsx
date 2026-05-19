@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Construction Quoting Software for Trades | QuoteCore+",
+  title: "Construction Quoting Software | QuoteCore+",
   description:
-    "Construction quoting software built from real trade experience. Measure, price, and quote jobs faster — from first measurement to professional quote in minutes. Free 2-week trial.",
+    "Construction quoting software built from real trade experience. Measure, price, and quote jobs faster - from first measurement to professional quote in minutes. Free 2-week trial.",
 };
 
 const softwareSchema = {

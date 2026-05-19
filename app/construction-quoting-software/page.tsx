@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Construction Quoting Software for Trades | QuoteCore+",
   description:
-    "Stop rebuilding quotes from scratch. QuoteCore+ helps construction businesses turn site measurements into professional quotes faster — no spreadsheets, no reformatting, no re-entering data.",
+    "Stop rebuilding quotes from scratch. QuoteCore+ helps construction businesses turn site measurements into professional quotes faster - no spreadsheets, no reformatting, no re-entering data.",
 };
 
 const softwareSchema = {
@@ -14,7 +14,7 @@ const softwareSchema = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description:
-    "Construction quoting software built for trades that measure, price, and quote jobs. Turn site measurements into professional quotes faster — no spreadsheets, no reformatting.",
+    "Construction quoting software built for trades that measure, price, and quote jobs. Turn site measurements into professional quotes faster - no spreadsheets, no reformatting.",
   offers: {
     "@type": "Offer",
     price: "79",
@@ -30,7 +30,7 @@ const howToSchema = {
     {
       "@type": "HowToStep",
       name: "Measure once",
-      text: "Upload a plan and measure directly from it. Lengths, areas, components — all routed straight into your pricing. No re-entry.",
+      text: "Upload a plan and measure directly from it. Lengths, areas, components - all routed straight into your pricing. No re-entry.",
     },
     {
       "@type": "HowToStep",
@@ -45,7 +45,7 @@ const howToSchema = {
     {
       "@type": "HowToStep",
       name: "Track acceptances",
-      text: "Know the moment a quote is accepted or declined — by email and in your account.",
+      text: "Know the moment a quote is accepted or declined - by email and in your account.",
     },
     {
       "@type": "HowToStep",
@@ -55,7 +55,7 @@ const howToSchema = {
     {
       "@type": "HowToStep",
       name: "One place for job details",
-      text: "Measurements, quotes, approvals, orders — all connected. No more hunting across emails, folders, and notebooks.",
+      text: "Measurements, quotes, approvals, orders - all connected. No more hunting across emails, folders, and notebooks.",
     },
   ],
 };
@@ -69,7 +69,7 @@ const faqSchema = {
       name: "What trades can use QuoteCore+?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Any construction trade that measures and quotes jobs. Roofing, cladding, flooring, fencing, landscaping, decking, general building, exterior works, renovation — if your workflow involves site measurements, plans, pricing, and quotes, QuoteCore+ is built for you.",
+        text: "Any construction trade that measures and quotes jobs. Roofing, cladding, flooring, fencing, landscaping, decking, general building, exterior works, renovation - if your workflow involves site measurements, plans, pricing, and quotes, QuoteCore+ is built for you.",
       },
     },
     {
@@ -77,7 +77,7 @@ const faqSchema = {
       name: "Is it only for roofing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. QuoteCore+ started in roofing — that's where our founder's experience comes from — but it works across construction trades. Roofing is the origin. Construction is the market.",
+        text: "No. QuoteCore+ started in roofing - that's where our founder's experience comes from - but it works across construction trades. Roofing is the origin. Construction is the market.",
       },
     },
     {
@@ -111,7 +111,7 @@ const steps = [
   {
     number: "01",
     title: "Measure once",
-    body: "Upload a plan and measure directly from it. Lengths, areas, components — all routed straight into your pricing. No re-entry.",
+    body: "Upload a plan and measure directly from it. Lengths, areas, components - all routed straight into your pricing. No re-entry.",
   },
   {
     number: "02",
@@ -126,7 +126,7 @@ const steps = [
   {
     number: "04",
     title: "Track acceptances",
-    body: "Know the moment a quote is accepted or declined — by email and in your account. Everything logged, nothing lost.",
+    body: "Know the moment a quote is accepted or declined - by email and in your account. Everything logged, nothing lost.",
   },
   {
     number: "05",
@@ -136,18 +136,18 @@ const steps = [
   {
     number: "06",
     title: "One place for job details",
-    body: "Measurements, quotes, approvals, orders — all connected. No more hunting across emails, folders, and notebooks.",
+    body: "Measurements, quotes, approvals, orders - all connected. No more hunting across emails, folders, and notebooks.",
   },
 ];
 
 const faqs = [
   {
     q: "What trades can use QuoteCore+?",
-    a: "Any construction trade that measures and quotes jobs. Roofing, cladding, flooring, fencing, landscaping, decking, general building, exterior works, renovation — if your workflow involves site measurements, plans, pricing, and quotes, QuoteCore+ is built for you.",
+    a: "Any construction trade that measures and quotes jobs. Roofing, cladding, flooring, fencing, landscaping, decking, general building, exterior works, renovation - if your workflow involves site measurements, plans, pricing, and quotes, QuoteCore+ is built for you.",
   },
   {
     q: "Is it only for roofing?",
-    a: "No. QuoteCore+ started in roofing — that's where our founder's experience comes from — but it works across construction trades. Roofing is the origin. Construction is the market.",
+    a: "No. QuoteCore+ started in roofing - that's where our founder's experience comes from - but it works across construction trades. Roofing is the origin. Construction is the market.",
   },
   {
     q: "How long does setup take?",
@@ -206,7 +206,7 @@ export default function ConstructionQuotingSoftwarePage() {
               Stop rebuilding quotes from scratch.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600 sm:text-xl">
-              If you&apos;re still measuring on site, copying numbers into a spreadsheet, formatting a Word document, and sending it off — you&apos;re doing it the hard way.
+              If you&apos;re still measuring on site, copying numbers into a spreadsheet, formatting a Word document, and sending it off - you&apos;re doing it the hard way.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
               QuoteCore+ is quoting software built for construction businesses that need to turn measurements into professional quotes faster. Built from real{" "}
@@ -218,7 +218,7 @@ export default function ConstructionQuotingSoftwarePage() {
                 href="/free-trial"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#FF6B35] px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]"
               >
-                Start free 2-week trial — no card required
+                Start free 2-week trial - no card required
               </a>
             </div>
             <p className="mt-3 text-sm text-zinc-400">No credit card required. Cancel anytime.</p>
@@ -247,7 +247,7 @@ export default function ConstructionQuotingSoftwarePage() {
           </p>
         </section>
 
-        {/* What QuoteCore+ does — HowTo */}
+        {/* What QuoteCore+ does - HowTo */}
         <section className="bg-zinc-50 py-20">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-semibold sm:text-4xl">What QuoteCore+ does</h2>
@@ -276,7 +276,7 @@ export default function ConstructionQuotingSoftwarePage() {
           <ul className="mt-4 space-y-3">
             {[
               "Measures jobs on site or from plans",
-              "Builds quotes manually — spreadsheets, Word docs, memory",
+              "Builds quotes manually - spreadsheets, Word docs, memory",
               "Loses time between site visit and sent quote",
               "Re-enters the same data multiple times",
               "Needs quotes to look professional without spending time on formatting",
@@ -314,7 +314,7 @@ export default function ConstructionQuotingSoftwarePage() {
                 <h2 className="text-2xl font-semibold text-zinc-950">Built from inside the industry</h2>
                 <div className="mt-6 space-y-4 text-lg leading-8 text-zinc-600">
                   <p>
-                    QuoteCore+ was built by Shaun — a construction professional with 12+ years on sites, managing projects, and running operations.
+                    QuoteCore+ was built by Shaun - a construction professional with 12+ years on sites, managing projects, and running operations.
                   </p>
                   <p>
                     He spent years dealing with the same quoting mess most trades still deal with. Measuring jobs, copying numbers, building quotes manually, ordering materials, tracking approvals.
@@ -323,7 +323,7 @@ export default function ConstructionQuotingSoftwarePage() {
                     He couldn&apos;t find software that understood how construction workflows actually work. So he built it.
                   </p>
                   <p>
-                    QuoteCore+ started with <a href="/roofing-quoting-software" className="text-[#FF6B35] hover:underline">roofing</a> because that was the problem Shaun knew best. But the system solves a wider problem — for any trade that needs to turn measurements into professional quotes faster.
+                    QuoteCore+ started with <a href="/roofing-quoting-software" className="text-[#FF6B35] hover:underline">roofing</a> because that was the problem Shaun knew best. But the system solves a wider problem - for any trade that needs to turn measurements into professional quotes faster.
                   </p>
                   <p className="font-medium text-zinc-800 italic">
                     &ldquo;I built QuoteCore+ because I was sick of quoting jobs the hard way. Turns out I wasn&apos;t the only one.&rdquo;
@@ -363,7 +363,7 @@ export default function ConstructionQuotingSoftwarePage() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-center text-sm text-zinc-400">Free 2-week trial — no credit card required</p>
+          <p className="mt-6 text-center text-sm text-zinc-400">Free 2-week trial - no credit card required</p>
         </section>
 
         {/* FAQ */}
@@ -385,7 +385,7 @@ export default function ConstructionQuotingSoftwarePage() {
         <section className="mx-auto max-w-4xl px-6 py-24 text-center lg:px-8">
           <h2 className="text-3xl font-semibold sm:text-5xl">Start quoting faster today.</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
-            Stop losing time to spreadsheets and manual admin. QuoteCore+ puts your entire quoting workflow in one place — from measurement to send.
+            Stop losing time to spreadsheets and manual admin. QuoteCore+ puts your entire quoting workflow in one place - from measurement to send.
           </p>
           <a
             href="/free-trial"

@@ -58,7 +58,7 @@ export default function TermsPage() {
           <hr />
 
           <h2>4. Content and intellectual property</h2>
-          <p>All content on the Site — text, graphics, logos, the "QuoteCore+" name, and the underlying code — is owned by us or licensed to us. You may view the Site and print or save individual pages for your own personal or internal business reference. Any other use requires our prior written permission.</p>
+          <p>All content on the Site - text, graphics, logos, the "QuoteCore+" name, and the underlying code - is owned by us or licensed to us. You may view the Site and print or save individual pages for your own personal or internal business reference. Any other use requires our prior written permission.</p>
           <p>If you believe content on the Site infringes your rights, email info@quote-core.com.</p>
 
           <hr />
@@ -86,7 +86,7 @@ export default function TermsPage() {
           <hr />
 
           <h2>9. Changes to the Site or these Terms</h2>
-          <p>We may change, suspend, or remove parts of the Site at any time without notice. We may update these Terms from time to time — material changes will be communicated to early-access subscribers by email. Continued use of the Site after a change means you accept the updated Terms.</p>
+          <p>We may change, suspend, or remove parts of the Site at any time without notice. We may update these Terms from time to time - material changes will be communicated to early-access subscribers by email. Continued use of the Site after a change means you accept the updated Terms.</p>
 
           <hr />
 

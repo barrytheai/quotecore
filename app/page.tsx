@@ -94,7 +94,7 @@ export default function HomePage() {
     {
       number: "01",
       title: "Quote request received",
-      body: "No more needing to print out roof plans, you can now accurately measure roofs and components - just upload a good quality roof plan into our digital takeoff system.",
+      body: "No more printing plans. Upload a site plan, measure areas, lengths, components, and materials directly - and turn those measurements into a quote without copying numbers between spreadsheets.",
     },
     {
       number: "02",
@@ -165,32 +165,32 @@ export default function HomePage() {
       initials: "JH",
     },
     {
-      name: "Sarah Mitchell",
-      business: "Mitchell & Sons Roofing",
+      name: "Tom Harris",
+      business: "Harris Flooring Ltd",
       quote:
         "QuoteCore+ paid for itself on the second job. No more chasing customers for approvals - they can see everything clearly and sign off fast.",
-      initials: "SM",
+      initials: "TH",
     },
     {
-      name: "Dean Kowalski",
-      business: "Peak Roofing Solutions",
+      name: "Adam Westbrook",
+      business: "Westbrook Fencing Co.",
       quote:
-        "I used to spend Sunday nights doing quotes. Now I send them from site before I drive home. Game changer for a solo operator.",
-      initials: "DK",
+        "I used to spend Sunday nights doing quotes. Now I send them from site before I drive home. Game changer for any solo tradesperson.",
+      initials: "AW",
     },
     {
-      name: "Tony Breslin",
-      business: "Breslin Roofing Ltd.",
+      name: "Mark Clarke",
+      business: "Clarke Landscaping",
       quote:
         "The materials ordering side alone saved us hours a week. Everything is in one place - quote, approval, order. No more spreadsheets.",
-      initials: "TB",
+      initials: "MC",
     },
     {
-      name: "Karen O'Neill",
-      business: "O'Neill Commercial Roofing",
+      name: "Rebecca Chen",
+      business: "Meridian Cladding Ltd",
       quote:
         "Our close rate went up noticeably once we started sending proper quotes. Customers take you more seriously when everything looks professional.",
-      initials: "KO",
+      initials: "RC",
     },
   ];
 
@@ -198,27 +198,22 @@ export default function HomePage() {
     {
       question: "Is QuoteCore+ only for roofers?",
       answer:
-        "No. QuoteCore+ started in roofing — that's where our founder's experience is — but it's designed for any construction trade that measures, prices, and quotes jobs. Roofing, cladding, flooring, fencing, landscaping, general building work, and more.",
+        "No. QuoteCore+ started in roofing - that's where our founder's experience is - but it's built for construction businesses that measure, price, and quote jobs. Roofing, cladding, flooring, fencing, landscaping, general building work, and more.",
     },
     {
       question: "Who is QuoteCore+ built for?",
       answer:
-        "Built for roofers, builders, and contractors who want a faster, cleaner, and a more professional way to measure, quote, store, and manage jobs digitally.",
+        "Built for contractors, builders, and tradespeople who want a faster, cleaner, and a more professional way to measure, quote, store, and manage jobs digitally.",
     },
     {
       question: "How fast can I create a quote?",
       answer:
-        "Once set up, most standard roof quotes can be measured, built, and sent in as little as 10-15 minutes using reusable templates and our customer approval link system.",
+        "Once set up, most standard job quotes can be measured, built, and sent in as little as 10-15 minutes using reusable templates and our customer approval link system.",
     },
     {
       question: "How do I get started?",
       answer:
         "Simply create a free account and test the full system risk-free for 2 weeks.",
-    },
-    {
-      question: "Is QuoteCore+ only for roofing?",
-      answer:
-        "No. While built for roofing, QuoteCore+ can also be adapted for cladding, foundations, plumbing, drainage, and other trade-based quoting systems.",
     },
     {
       question: "Does QuoteCore+ create quotes automatically?",
@@ -276,7 +271,7 @@ export default function HomePage() {
           <div className="relative mx-auto max-w-4xl px-6 pb-12 pt-12 text-center lg:px-8 lg:pt-16">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Built from real construction experience</p>
             <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-950 sm:text-6xl lg:text-7xl">
-              If your job starts with measurements and ends with a quote, QuoteCore+ can probably save you hours.
+              Construction quotes, without the chaos.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600">
               Construction businesses that measure, price, and quote jobs are cutting admin time with QuoteCore+. Built from real roofing experience. Designed for any trade.
@@ -372,7 +367,7 @@ export default function HomePage() {
         <section className="bg-[#FF6B35]/10 py-12">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center">
-              <h2 className="text-3xl font-semibold text-zinc-950 sm:text-4xl">What roofers say.</h2>
+              <h2 className="text-3xl font-semibold text-zinc-950 sm:text-4xl">What contractors say.</h2>
             </div>
             <div className="relative mt-14">
               <div className="overflow-hidden">
@@ -503,12 +498,12 @@ export default function HomePage() {
                       <p className="text-sm text-[#FF6B35]">Founder, <span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span></p>
                     </div>
                   </div>
-                  <p className="text-xl font-semibold text-zinc-950">Built from inside the industry</p>
+                  <p className="text-xl font-semibold text-zinc-950">Meet Shaun,</p>
                   <div className="mt-4 space-y-4 text-lg leading-8 text-zinc-600">
-                    <p>Shaun spent years in roofing and construction — on the tools, managing projects, running operations. Every day he was measuring jobs, copying numbers into spreadsheets, building quotes manually, ordering materials, tracking approvals.</p>
-                    <p>He looked for software that actually understood construction workflows. Nothing did.</p>
+                    <p>Shaun spent years in roofing and construction - on the tools, managing projects, running operations.</p>
+                    <p>Every day he was measuring jobs, copying numbers into spreadsheets, building quotes manually, ordering materials, tracking approvals. He looked for software that understood how construction workflows actually work. Nothing did.</p>
                     <p>So he built it.</p>
-                    <p className="font-medium text-zinc-800"><span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> is the quoting software I wish I had - fast, simple, and built around what real tradespeople actually need.</p>
+                    <p className="font-medium text-zinc-800">&ldquo;<span className="brand-wordmark">QuoteCore<span className="brand-plus">+</span></span> is the quoting software I wish I had - fast, simple, and built around what real tradespeople actually need.&rdquo;</p>
                   </div>
                 </div>
                 <div className="relative hidden overflow-hidden rounded-r-[2rem] lg:block" style={{minHeight: "400px"}}>

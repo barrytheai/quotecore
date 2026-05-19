@@ -32,17 +32,17 @@ export default function CoffeePopup() {
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
         <div className="pointer-events-auto relative w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-[0_32px_80px_rgba(0,0,0,0.2)] flex">
 
-          {/* Left — content */}
+          {/* Left - content */}
           <div className="flex flex-col justify-between p-8 flex-1">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Limited offer</p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-950 leading-tight">
-                Want a <span className="text-[#FF6B35]">free coffee?</span>
+                Construction quotes, without the chaos.
               </h2>
               <div className="mt-1 h-0.5 w-16 bg-[#FF6B35] rounded-full" />
 
               <p className="mt-5 text-zinc-600 leading-relaxed text-sm">
-                Give Shaun 15 minutes and he'll show you how QuoteCore+ helps roofers save hours every week on quoting, materials, and job admin.
+                Give Shaun 15 minutes and he&apos;ll show you how QuoteCore+ helps construction businesses save hours every week on quoting, materials, and job admin.
               </p>
               <p className="mt-3 text-zinc-600 leading-relaxed text-sm">
                 Not convinced after the call? No worries - <span className="text-[#FF6B35] font-medium">coffee's still on him.</span>
@@ -61,7 +61,7 @@ export default function CoffeePopup() {
                 Book 15 min with Shaun
               </a>
               <p className="mt-3 text-center text-xs text-zinc-400">
-                Free coffee voucher sent after completed call. One per UK roofing business.{" "}
+                Free coffee voucher sent after completed call. One per UK construction business.{" "}
                 <a href="/coffee-terms" target="_blank" className="text-[#FF6B35] hover:underline">
                   T&amp;Cs apply.
                 </a>
@@ -69,7 +69,7 @@ export default function CoffeePopup() {
             </div>
           </div>
 
-          {/* Right — Shaun photo */}
+          {/* Right - Shaun photo */}
           <div className="relative hidden sm:block w-56 flex-shrink-0 bg-[#fdf6ee]">
             <img
               src="/shaun-smiling.jpg"
