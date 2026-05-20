@@ -159,7 +159,7 @@ const faqs = [
   },
   {
     q: "Who do I contact with questions?",
-    a: "Email info@quote-core.com or book a free 15-minute call with Shaun: calendly.com/quote-core-info/15-minute-meeting",
+    a: "contact-link",
   },
 ];
 
@@ -289,10 +289,11 @@ export default function ConstructionQuotingSoftwarePage() {
           </ul>
           <div className="mt-10 rounded-[2rem] border border-zinc-200 bg-zinc-50 p-8">
             <h3 className="text-xl font-semibold text-zinc-950">Trades using QuoteCore+</h3>
-            <p className="mt-4 text-lg text-zinc-600">
-              <a href="/roofing-quoting-software" className="text-[#FF6B35] hover:underline">Roofing</a>
-              {" • "}Cladding{" • "}Flooring{" • "}Fencing{" • "}Landscaping{" • "}Decking{" • "}Sheds &amp; outbuildings{" • "}General building{" • "}Exterior works{" • "}Renovation trades
-            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["Roofing", "Cladding", "Flooring", "Fencing", "Landscaping", "Decking", "Sheds & outbuildings", "General building", "Exterior works", "Renovation trades"].map((trade) => (
+                <span key={trade} className="rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm text-zinc-600">{trade}</span>
+              ))}
+            </div>
             <p className="mt-5 text-base font-medium text-zinc-800">
               If your job starts with measurements and ends with a quote, QuoteCore+ can probably save you hours.
             </p>
@@ -334,38 +335,6 @@ export default function ConstructionQuotingSoftwarePage() {
           </div>
         </section>
 
-        {/* Pricing */}
-        <section className="mx-auto max-w-4xl px-6 py-20 lg:px-8">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Simple pricing. No spreadsheets required.</h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-3">
-            {[
-              { name: "Solo", price: "$79/month", body: "1 user, unlimited quotes" },
-              { name: "Pro Team", price: "$199/month", body: "$49 per additional seat, shared libraries", featured: true },
-              { name: "Enterprise", price: "Custom", body: "SSO, permissions, dedicated support" },
-            ].map((plan) => (
-              <div
-                key={plan.name}
-                className={`rounded-[2rem] border p-8 ${
-                  plan.featured
-                    ? "border-[#FF6B35] bg-[#FF6B35]/5"
-                    : "border-zinc-200 bg-white"
-                } shadow-sm`}
-              >
-                <h3 className="text-xl font-semibold">{plan.name}</h3>
-                <p className="mt-3 text-2xl font-semibold">{plan.price}</p>
-                <p className="mt-3 text-sm text-zinc-600">{plan.body}</p>
-                <a
-                  href="/free-trial"
-                  className="mt-6 inline-flex min-h-10 items-center justify-center rounded-full bg-[#FF6B35] px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]"
-                >
-                  Start free trial
-                </a>
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-center text-sm text-zinc-400">Free 2-week trial - no credit card required</p>
-        </section>
-
         {/* FAQ */}
         <section className="bg-zinc-50 py-20">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -374,7 +343,11 @@ export default function ConstructionQuotingSoftwarePage() {
               {faqs.map((f) => (
                 <div key={f.q} className="rounded-[1.5rem] border border-zinc-200 bg-white px-6 py-5">
                   <p className="font-semibold text-zinc-950">{f.q}</p>
-                  <p className="mt-3 text-sm leading-7 text-zinc-600">{f.a}</p>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">
+                    {f.a === "contact-link" ? (
+                      <>Email <a href="mailto:info@quote-core.com" className="text-[#FF6B35] hover:underline">info@quote-core.com</a> or book a free <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="text-[#FF6B35] hover:underline">15-minute call with Shaun</a>.</>
+                    ) : f.a}
+                  </p>
                 </div>
               ))}
             </div>
