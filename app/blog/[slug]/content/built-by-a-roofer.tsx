@@ -64,7 +64,8 @@ export default function Post() {
 
       <h2>Built by someone who wished it existed</h2>
       <p>Shaun is now full-time on QuoteCore+. Not because it's a clever product concept - but because he spent over a decade knowing exactly what was missing and decided to be the one to build it.</p>
-      <p>If you've ever sent a quote late because the process took too long, lost a job to a competitor who moved faster, or spent a rainy Tuesday morning trying to piece together where you were supposed to be - this was built for you.</p>
+      <p>QuoteCore+ started with roofing because that was the problem Shaun knew best. But the same chaos - manual measuring, copied numbers, reformatted spreadsheets, quotes sent too late - exists across construction. Roofing, cladding, flooring, fencing, general building, exterior works. Any trade where jobs start with measurements and end with a quote.</p>
+      <p>If you've ever sent a quote late because the process took too long, lost a job to a competitor who moved faster, or spent a Sunday evening rebuilding an estimate from scratch - this was built for you.</p>
     </div>
   );
 }
