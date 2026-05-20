@@ -290,7 +290,7 @@ export default function ConstructionQuotingSoftwarePage() {
           <div className="mt-10 rounded-[2rem] border border-zinc-200 bg-zinc-50 p-8">
             <h3 className="text-xl font-semibold text-zinc-950">Trades who can use QuoteCore+</h3>
             <div className="mt-4 flex flex-wrap gap-2">
-              {["Roofing", "Cladding", "Flooring", "Fencing", "Landscaping", "Decking", "Sheds & outbuildings", "General building", "Exterior works", "Renovation trades", "Plumbing", "Electrical", "Carpentry", "Building"].map((trade) => (
+              {["Roofing", "Plumbing", "Electrical", "Carpentry", "General builders", "Cladding", "Flooring", "Fencing", "Landscaping", "Decking", "Exterior works", "Renovation trades"].map((trade) => (
                 <span key={trade} className="rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-sm text-zinc-600">{trade}</span>
               ))}
             </div>
