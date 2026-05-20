@@ -575,7 +575,7 @@ export default function HomePage() {
 
         <section className="bg-zinc-50 py-32">
           <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">Start quoting faster.</h2>
+            <h2 className="text-5xl font-semibold tracking-tight sm:text-6xl">Quote. Manage. Grow.</h2>
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a href="/free-trial" className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]">Start free trial</a>
