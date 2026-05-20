@@ -253,7 +253,7 @@ export default function RoofingQuotingSoftwarePage() {
 
         {/* Final CTA */}
         <section className="mx-auto max-w-4xl px-6 py-24 text-center lg:px-8">
-          <h2 className="text-3xl font-semibold sm:text-5xl">Start quoting faster today.</h2>
+          <h2 className="text-3xl font-semibold sm:text-5xl">Quote. Manage. Grow.</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
             Stop losing time to spreadsheets and manual admin. QuoteCore+ puts your entire quoting workflow in one place - from takeoff to send.
           </p>
