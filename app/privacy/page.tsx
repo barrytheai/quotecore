@@ -26,13 +26,13 @@ export default function PrivacyPage() {
         <div className="prose prose-zinc mt-10 max-w-none">
           <p>This Privacy Policy explains how QuoteCore+ ("we", "our", "us") handles personal data when you visit our website at <strong>quote-core.com</strong> and when you sign up for early access to our forthcoming web application.</p>
           <p>This policy covers the <strong>public website only</strong>. A separate Privacy Policy applies to the QuoteCore+ web application itself and is presented to users when they sign in to it.</p>
-          <p>We are based in Costa Rica but our visitors and future users are in many countries. We treat every person according to the strictest privacy law that applies to them, which in most cases is the EU/UK GDPR.</p>
+          <p>We are based in New Zealand but our visitors and future users are in many countries. We treat every person according to the strictest privacy law that applies to them, which in most cases is the EU/UK GDPR.</p>
 
           <hr />
 
           <h2>Who we are</h2>
           <p>The data controller for the website and the early-access list is:</p>
-          <p><strong>[Costa Rica Entity Name TBC]</strong><br />[Costa Rica Registered Address TBC]<br />Email: info@quote-core.com</p>
+          <p><strong>T3 Play Limited</strong><br />New Zealand<br />Email: info@quote-core.com</p>
           <p>For visitors in the EU or UK, we have not yet appointed a representative under Article 27 of the GDPR / UK GDPR. Until we do, you can contact us directly at the email above for any privacy queries.</p>
 
           <hr />
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
             <li><strong>Objection</strong> - object to processing based on our legitimate interests.</li>
             <li><strong>Withdraw consent</strong> - at any time, by emailing us or clicking unsubscribe.</li>
           </ul>
-          <p>California residents have additional rights under CCPA/CPRA. Costa Rica residents have rights under Law 8968 (PRODHAB). These broadly mirror the GDPR rights above.</p>
+          <p>California residents have additional rights under CCPA/CPRA. New Zealand residents have rights under Law 8968 (New Zealand Privacy Commissioner). These broadly mirror the GDPR rights above.</p>
 
           <hr />
 

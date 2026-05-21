@@ -25,7 +25,7 @@ export default function TermsPage() {
 
         <div className="prose prose-zinc mt-10 max-w-none">
           <p>These Terms of Use ("Terms") govern your access to and use of the public website at <strong>quote-core.com</strong> (the "Site"), including any early-access signup form.</p>
-          <p>The Site is operated by <strong>[Costa Rica Entity Name TBC]</strong>, with registered address at <strong>[Costa Rica Registered Address TBC]</strong>. You can reach us at info@quote-core.com.</p>
+          <p>The Site is operated by <strong>T3 Play Limited</strong>, with registered address at <strong>New Zealand</strong>. You can reach us at info@quote-core.com.</p>
           <p>These Terms cover the <strong>public website only</strong>. When QuoteCore+ launches and you create an account, a separate Terms of Service governs your use of the application itself.</p>
           <p>By using the Site you agree to these Terms. If you don't agree, please don't use the Site.</p>
 
@@ -101,7 +101,7 @@ export default function TermsPage() {
           <hr />
 
           <h2>12. Governing law and disputes</h2>
-          <p>These Terms are governed by the laws of <strong>Costa Rica</strong>, without regard to its conflict-of-laws rules. Any dispute arising out of or related to the Site will be brought exclusively in the competent courts of San Jose, Costa Rica.</p>
+          <p>These Terms are governed by the laws of <strong>New Zealand</strong>, without regard to its conflict-of-laws rules. Any dispute arising out of or related to the Site will be brought exclusively in the competent courts of San Jose, New Zealand.</p>
           <p>Nothing in this section overrides any mandatory consumer-protection rights you have under the law of the country where you live.</p>
 
           <hr />
