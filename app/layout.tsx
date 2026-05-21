@@ -27,11 +27,24 @@ const softwareSchema = {
   name: "QuoteCore+",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  description: "Roofing measuring and quoting platform for contractors",
+  description: "Construction quoting software for trades that measure, price and quote jobs. Turn site measurements into professional quotes faster.",
   offers: {
     "@type": "Offer",
     price: "79",
     priceCurrency: "USD",
+  },
+};
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "QuoteCore+",
+  url: "https://quote-core.com",
+  logo: "https://quote-core.com/MainQCP.png",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "info@quote-core.com",
+    contactType: "customer support",
   },
 };
 
@@ -67,6 +80,11 @@ export default function RootLayout({
           id="software-application-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        />
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
 
       </body>
