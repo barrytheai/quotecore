@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Roofing Quoting Software for Contractors | QuoteCore+",
   description:
     "QuoteCore+ is roofing quoting software built for contractors. Go from measurements to a client-ready quote in minutes - no spreadsheets, no double-handling.",
+  alternates: {
+    canonical: "https://quote-core.com/roofing-quoting-software",
+  },
 };
 
 const howToSchema = {

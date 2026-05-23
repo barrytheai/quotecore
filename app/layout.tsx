@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: "Construction Quoting Software | QuoteCore+",
   description:
     "Construction quoting software built from real trade experience. Measure, price, and quote jobs faster - from first measurement to professional quote in minutes. Free 2-week trial.",
+  metadataBase: new URL("https://quote-core.com"),
+  alternates: {
+    canonical: "https://quote-core.com/",
+  },
 };
 
 const softwareSchema = {

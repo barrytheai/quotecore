@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Construction Quoting Software for Trades | QuoteCore+",
   description:
     "Stop rebuilding quotes from scratch. QuoteCore+ helps construction businesses turn site measurements into professional quotes faster - no spreadsheets, no reformatting, no re-entering data.",
+  alternates: {
+    canonical: "https://quote-core.com/construction-quoting-software",
+  },
 };
 
 const softwareSchema = {
