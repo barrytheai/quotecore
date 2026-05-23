@@ -9,6 +9,12 @@ interface Post {
 
 const posts: Post[] = [
   {
+    slug: "quotecore-plus-vs-quotesmith",
+    title: "QuoteCore+ vs QuoteSmith: Which Quoting Software Is Right for Your Trade?",
+    description: "QuoteSmith and QuoteCore+ both help trades businesses produce professional quotes faster. Here's an honest comparison of what each does, where they differ, and how to choose.",
+    date: "2026-05-23",
+  },
+  {
     slug: "roofing-quoting-software-vs-spreadsheets",
     title: "Roofing Quoting Software vs Spreadsheets: What Actually Saves Time",
     description: "Most roofing contractors still quote in spreadsheets. Here's an honest comparison of what spreadsheets do well, where they fall short, and what changes.",

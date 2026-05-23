@@ -41,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${base}/blog/quotecore-plus-vs-quotesmith`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${base}/blog/roofing-quoting-software-uk`,
       lastModified: new Date(),
       changeFrequency: "monthly",

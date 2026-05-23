@@ -8,6 +8,12 @@ const posts: Record<string, {
   date: string;
   content: () => Promise<{ default: React.ComponentType }>;
 }> = {
+  "quotecore-plus-vs-quotesmith": {
+    title: "QuoteCore+ vs QuoteSmith: Which Quoting Software Is Right for Your Trade?",
+    description: "QuoteSmith and QuoteCore+ both help trades businesses produce professional quotes faster. Here's an honest comparison of what each does, where they differ, and how to choose.",
+    date: "2026-05-23",
+    content: () => import("./content/quotecore-plus-vs-quotesmith"),
+  },
   "roofing-quoting-software-uk": {
     title: "How UK Roofing Contractors Are Winning More Jobs With Digital Quotes",
     description: "Manual quoting is costing UK roofing contractors time and jobs. Here's how digital roofing quoting software is changing that - and how to get ahead.",
@@ -37,6 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const titleOverrides: Record<string, string> = {
     "roofing-quoting-software-uk": "How UK Roofers Are Winning More Jobs With Digital Quotes | QuoteCore+",
     "roofing-quoting-software-vs-spreadsheets": "Roofing Quoting Software vs Spreadsheets: What Actually Saves Time | QuoteCore+",
+    "quotecore-plus-vs-quotesmith": "QuoteCore+ vs QuoteSmith: Which Quoting Software Is Right for Your Trade? | QuoteCore+",
   };
   return {
     title: titleOverrides[slug] ?? `${post.title} | QuoteCore+`,
@@ -87,10 +94,15 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Author byline */}
         <div className="mt-4 flex items-center gap-3">
           <img src="/shaun-smiling.jpg" alt="Shaun" className="h-9 w-9 rounded-full object-cover border border-zinc-200 shrink-0" />
-          <p className="text-sm text-zinc-500">Written by <span className="font-medium text-zinc-700">Shaun</span>, Founder of QuoteCore+.{" "}
-            {slug === "roofing-quoting-software-vs-spreadsheets"
-              ? "Over 12 years in the roofing industry - on the tools, managing projects, and running operations."
-              : "Former roofing contractor with over a decade on the tools."}
+          <p className="text-sm text-zinc-500">
+            {slug === "quotecore-plus-vs-quotesmith"
+              ? <>Written by the <span className="font-medium text-zinc-700">QuoteCore+ team</span>.</>
+              : <>Written by <span className="font-medium text-zinc-700">Shaun</span>, Founder of QuoteCore+.{" "}
+                  {slug === "roofing-quoting-software-vs-spreadsheets"
+                    ? "Over 12 years in the roofing industry - on the tools, managing projects, and running operations."
+                    : "Former roofing contractor with over a decade on the tools."}
+                </>
+            }
           </p>
         </div>
 
