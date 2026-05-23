@@ -198,7 +198,7 @@ export default function RoofingQuotingSoftwarePage() {
         {/* Why QuoteCore+ */}
         <section className="mx-auto max-w-4xl px-6 py-20 lg:px-8">
           <h2 className="text-3xl font-semibold sm:text-4xl">
-            Built for roofers. Not generic builders. Not plumbers. Roofers.
+            Started in roofing. Works across construction trades.
           </h2>
           <p className="mt-6 text-lg leading-8 text-zinc-600">
             Most quoting tools are built for "trades" in general. They don't know the difference between a hip and a valley, and neither does your quote if you're using a generic template.

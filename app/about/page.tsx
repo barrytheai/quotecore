@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | QuoteCore+",
+  title: "About QuoteCore+ | Construction Quoting Software Built From the Industry",
   description: "QuoteCore+ was built by an ex-roofer who spent 12 years quoting jobs the hard way. Meet Shaun and the story behind the software.",
 };
 
@@ -97,6 +97,7 @@ export default function AboutPage() {
                   <p>QuoteCore+ isn't built by developers who interviewed a few roofers. It's built by someone who lived the problem for over a decade. Every feature exists because someone who spent twelve years roofing decided it should.</p>
                   <p>Before launch, it was tested and refined by working roofers across the industry - contractors who quoted real jobs through the platform and gave honest feedback on what wasn't good enough. Every iteration shaped by people who actually use it on the job.</p>
                   <p className="font-medium text-zinc-800">The result is a quoting tool that thinks the way a roofer thinks - because it was built by one.</p>
+                  <p className="mt-4 text-zinc-600">QuoteCore+ started in roofing because that was the problem Shaun knew first-hand. But the same chaos - manual measuring, copied numbers, reformatted spreadsheets, quotes sent too late - exists across construction. Today QuoteCore+ is used by trades businesses of all kinds: roofing, cladding, flooring, fencing, landscaping, general building, exterior works, and more.</p>
                 </div>
               </div>
             </div>
