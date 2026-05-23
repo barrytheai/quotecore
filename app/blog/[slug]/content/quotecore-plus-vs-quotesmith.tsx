@@ -53,7 +53,7 @@ export default function Post() {
               ["Materials ordering from quote", "No", "Yes - built from accepted quote"],
               ["Job tracking after acceptance", "No", "Yes - from quote to completion"],
               ["Connected end-to-end workflow", "No - ends at proposal", "Yes - measurement to job completion"],
-              ["Mobile-friendly", "Yes", "Desktop/laptop"],
+              ["Mobile-friendly", "Yes", "Yes - except digital takeoff (desktop/laptop)"],
               ["Pricing", "From £9.99/mo", "From £15/mo"],
               ["Free trial", "Yes", "Yes - 2 weeks, no card required"],
             ].map(([feature, qs, qcp], i) => (
