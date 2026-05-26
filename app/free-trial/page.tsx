@@ -101,6 +101,29 @@ export default function FreeTrialPage() {
                 </p>
               </div>
 
+              <div className="mt-10 max-w-xl space-y-6 text-zinc-600">
+                <div>
+                  <h2 className="text-lg font-semibold text-zinc-950">What is included in your free trial</h2>
+                  <p className="mt-2">
+                    Your 14-day free trial gives you full access to every QuoteCore+ feature with no restrictions. That includes the digital takeoff tool for measuring from plans, the quote builder with your own pricing logic and components, automated materials ordering from accepted quotes, and the job management dashboard to track everything from first measurement to completion. You can send real quotes to real customers from day one. Nothing is locked behind a paywall during the trial period.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-lg font-semibold text-zinc-950">How to get started</h2>
+                  <p className="mt-2">
+                    Getting started takes less than ten minutes. Create your account, set up your pricing rates and components once, and you are ready to quote. Upload a site plan, measure the job directly from it, and QuoteCore+ builds the quote automatically using your pricing logic. Review it, make any adjustments, and send it to your client as a professional PDF. When your client accepts, you can generate a materials order directly from the approved quote - no re-entering numbers.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-lg font-semibold text-zinc-950">Who QuoteCore+ is for</h2>
+                  <p className="mt-2">
+                    QuoteCore+ is built for construction businesses that measure and quote jobs regularly. It works for roofing, plumbing, electrical, cladding, flooring, fencing, landscaping, decking, general building, exterior works, and renovation trades. If your current quoting process involves a spreadsheet, a notepad, and a Sunday evening, QuoteCore+ was built for you. The software was designed by a former roofer who spent over a decade doing it the hard way - so every feature exists because someone who worked on site decided it should.
+                  </p>
+                </div>
+              </div>
+
               <FreeTrialClient />
             </div>
 
