@@ -32,6 +32,18 @@ const faqs = [
     question: "What if I need help?",
     answer: "Email us at info@quote-core.com and we'll get back to you within one business day.",
   },
+  {
+    question: "What is included in the free trial?",
+    answer: "Your 14-day free trial gives you full access to every QuoteCore+ feature. That includes the digital takeoff tool, quote builder with your own pricing logic, automated materials ordering from accepted quotes, and the job management dashboard. You can send real quotes to real customers from day one - nothing is locked.",
+  },
+  {
+    question: "How do I get started?",
+    answer: "Getting started takes less than ten minutes. Create your account, set up your pricing rates and components once, and you are ready to quote. Upload a site plan, measure the job directly from it, and QuoteCore+ builds the quote automatically using your pricing logic.",
+  },
+  {
+    question: "Who is QuoteCore+ for?",
+    answer: "QuoteCore+ is built for construction businesses that measure and quote jobs regularly - roofing, plumbing, electrical, cladding, flooring, fencing, landscaping, decking, general building, exterior works, and renovation trades. If your quoting process involves a spreadsheet, a notepad, and a Sunday evening, QuoteCore+ was built for you.",
+  },
 ];
 
 const faqSchema = {
@@ -86,8 +98,14 @@ export default function FreeTrialPage() {
                 See how fast you can go from measurement to customer-ready quote before you spend a penny.
               </p>
 
-              {/* Body copy for SEO */}
-              <div className="mt-8 max-w-xl space-y-4 text-zinc-600">
+              <div className="mt-10 max-w-xl space-y-6 text-zinc-600 hidden" aria-hidden="true">
+                {/* SEO content — moved to FAQ section */}
+              </div>
+
+              <FreeTrialClient />
+
+              {/* Moved below button */}
+              <div className="mt-8 max-w-xl space-y-4 text-sm text-zinc-500">
                 <p>
                   QuoteCore+ is construction quoting software built for trades that measure and quote jobs every day. During your free trial you get full access to every feature - digital takeoff, quote builder, materials ordering, and job management.
                 </p>
@@ -97,35 +115,7 @@ export default function FreeTrialPage() {
                 <p>
                   No spreadsheets. No re-entering the same data twice. No formatting quotes in Word at 9pm. QuoteCore+ keeps your measuring, pricing, quoting, and job details in one place - so you can get quotes out the same day as a site visit.
                 </p>
-                <p className="text-sm text-zinc-400">
-                  Free for 14 days. No credit card required. Cancel anytime.
-                </p>
               </div>
-
-              <div className="mt-10 max-w-xl space-y-6 text-zinc-600">
-                <div>
-                  <h2 className="text-lg font-semibold text-zinc-950">What is included in your free trial</h2>
-                  <p className="mt-2">
-                    Your 14-day free trial gives you full access to every QuoteCore+ feature with no restrictions. That includes the digital takeoff tool for measuring from plans, the quote builder with your own pricing logic and components, automated materials ordering from accepted quotes, and the job management dashboard to track everything from first measurement to completion. You can send real quotes to real customers from day one. Nothing is locked behind a paywall during the trial period.
-                  </p>
-                </div>
-
-                <div>
-                  <h2 className="text-lg font-semibold text-zinc-950">How to get started</h2>
-                  <p className="mt-2">
-                    Getting started takes less than ten minutes. Create your account, set up your pricing rates and components once, and you are ready to quote. Upload a site plan, measure the job directly from it, and QuoteCore+ builds the quote automatically using your pricing logic. Review it, make any adjustments, and send it to your client as a professional PDF. When your client accepts, you can generate a materials order directly from the approved quote - no re-entering numbers.
-                  </p>
-                </div>
-
-                <div>
-                  <h2 className="text-lg font-semibold text-zinc-950">Who QuoteCore+ is for</h2>
-                  <p className="mt-2">
-                    QuoteCore+ is built for construction businesses that measure and quote jobs regularly. It works for roofing, plumbing, electrical, cladding, flooring, fencing, landscaping, decking, general building, exterior works, and renovation trades. If your current quoting process involves a spreadsheet, a notepad, and a Sunday evening, QuoteCore+ was built for you. The software was designed by a former roofer who spent over a decade doing it the hard way - so every feature exists because someone who worked on site decided it should.
-                  </p>
-                </div>
-              </div>
-
-              <FreeTrialClient />
             </div>
 
             <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.08)]">
