@@ -1,4 +1,3 @@
-import SocialIcons from "@/components/SocialIcons";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
@@ -131,7 +130,6 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </article>
     <div className="mt-12 border-t border-zinc-200 pt-8 text-center">
-        <SocialIcons />
       </div>
     </>
   );
