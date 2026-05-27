@@ -9,6 +9,12 @@ interface Post {
 
 const posts: Post[] = [
   {
+    slug: "quotecore-plus-reviews",
+    title: "QuoteCore+ Reviews: Is It Worth It for Trades Businesses?",
+    description: "Wondering if QuoteCore+ is legit? Here's an honest breakdown of who built it, what it does, who it's for, and what to expect from the free trial.",
+    date: "2026-05-27",
+  },
+  {
     slug: "quotecore-plus-vs-quotesmith",
     title: "QuoteCore+ vs QuoteSmith: Which Quoting Software Is Right for Your Trade?",
     description: "QuoteSmith and QuoteCore+ both help trades businesses produce professional quotes faster. Here's an honest comparison of what each does, where they differ, and how to choose.",
