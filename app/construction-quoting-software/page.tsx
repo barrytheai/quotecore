@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SocialIcons from "@/components/SocialIcons";
 
 export const metadata: Metadata = {
   title: "Construction Quoting Software for Trades | QuoteCore+",
@@ -383,6 +384,8 @@ export default function ConstructionQuotingSoftwarePage() {
           </p>
           <p className="mt-3">© 2026 QuoteCore+</p>
           <p className="mt-1">Built by T3Labs</p>
+        
+          <SocialIcons />
         </footer>
       </main>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SocialIcons from "@/components/SocialIcons";
 
 export const metadata: Metadata = {
   title: "About QuoteCore+ | Construction Quoting Software Built From the Industry",
@@ -126,6 +127,8 @@ export default function AboutPage() {
             <a href="/free-trial" className="hover:text-zinc-800">Free Trial</a>
           </p>
           <p className="mt-3">© 2026 QuoteCore+</p>
+        
+          <SocialIcons />
         </footer>
       </main>
     </>

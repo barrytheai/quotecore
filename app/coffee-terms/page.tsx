@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SocialIcons from "@/components/SocialIcons";
 
 export const metadata: Metadata = {
   title: "Coffee Offer Terms & Conditions | QuoteCore+",

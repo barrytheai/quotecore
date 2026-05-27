@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SocialIcons from "@/components/SocialIcons";
 import Script from "next/script";
 import FreeTrialClient from "./client";
 

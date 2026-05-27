@@ -1,3 +1,5 @@
+import SocialIcons from "@/components/SocialIcons";
+
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
@@ -11,6 +13,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
           <a href="/free-trial" className="hover:text-zinc-800">Free Trial</a>
         </p>
         <p className="mt-3">© 2026 QuoteCore+</p>
+        <SocialIcons />
       </footer>
     </>
   );
