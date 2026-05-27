@@ -74,11 +74,6 @@ export default function Post() {
 
       <hr />
 
-      <h2>Pricing</h2>
-      <p>From $20/month (£15/month). Free 2-week trial, no credit card required.</p>
-
-      <hr />
-
       <h2>How to try it</h2>
       <p><a href="/free-trial">quote-core.com/free-trial</a> - no card required. Set up pricing once, run a real job through it.</p>
       <p>Book a free <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer">15-minute call with Shaun</a>.</p>
