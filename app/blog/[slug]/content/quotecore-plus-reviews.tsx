@@ -19,7 +19,7 @@ export default function Post() {
       <p>Yes. Here's what you can verify independently:</p>
       <ul>
         <li>Website: <a href="https://quote-core.com">quote-core.com</a> - live, with a working free trial</li>
-        <li>Founder: Shaun - real person, accessible via Calendly</li>
+        <li>Founder: Shaun - real person, <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer">accessible via Calendly</a></li>
         <li>Contact: info@quote-core.com</li>
         <li>Capterra: <a href="https://www.capterra.com/p/10042670/QuoteCore" target="_blank" rel="noopener noreferrer">capterra.com/p/10042670/QuoteCore</a></li>
         <li>GetApp: <a href="https://www.getapp.co.uk/software/2094477/quotecore" target="_blank" rel="noopener noreferrer">getapp.co.uk/software/2094477/quotecore</a></li>
