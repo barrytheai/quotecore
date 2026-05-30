@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import EarlyAccessPopup from "@/components/EarlyAccessPopup";
+// EarlyAccessPopup handles attribution submission via /api/leads
 
 export default function FreeTrialClient() {
   const [showEarlyAccess, setShowEarlyAccess] = useState(false);

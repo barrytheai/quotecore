@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import AttributionTracker from "@/components/AttributionTracker";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -67,6 +68,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
+        <AttributionTracker />
         {/* Google Analytics 4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-HV8F4G8BN1"

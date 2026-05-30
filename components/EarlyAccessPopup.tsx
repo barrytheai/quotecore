@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
+import { getAttribution } from "@/components/AttributionTracker";
 
 interface Props {
   forceOpen?: boolean;
@@ -39,6 +40,21 @@ export default function EarlyAccessPopup({ forceOpen, onClose }: Props = {}) {
       setErrorMsg("Service unavailable. Please try again later.");
       return;
     }
+
+    // Send to /api/leads with attribution
+    const attribution = getAttribution() || {};
+    try {
+      await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email.toLowerCase().trim(),
+          form_type: "early_access",
+          current_page_at_signup: window.location.pathname + window.location.search,
+          ...attribution,
+        }),
+      });
+    } catch { /* fallback to supabase direct below */ }
 
     const { error } = await supabase
       .from("early_access")
