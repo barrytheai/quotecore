@@ -10,10 +10,14 @@ export default function Post() {
       <style>{`
         @media print {
           header, nav, footer, .no-print { display: none !important; }
-          .print-checklist { border: 2px solid #000 !important; background: #fff !important; }
+          .print-checklist { border: 2px solid #e4e4e7 !important; background: #fff !important; page-break-inside: avoid; }
           .print-title { display: block !important; }
+          .print-logo { display: block !important; }
+          body { margin: 0; }
+          @page { margin: 1.5cm; }
         }
         .print-title { display: none; }
+        .print-logo { display: none; }
       `}</style>
 
       <p className="no-print">The first contractor to respond wins 78% of home service jobs.</p>
@@ -33,7 +37,7 @@ export default function Post() {
       <h2 className="no-print">The Construction Quote Speed Checklist</h2>
 
       <div className="not-prose my-8 rounded-2xl border-2 border-zinc-200 bg-zinc-50 p-6 sm:p-8 print-checklist">
-        <p className="print-title mb-4 text-xl font-bold text-zinc-900">The Construction Quote Speed Checklist</p>
+        <p className="print-title mb-6 text-2xl font-bold text-zinc-900">Quote Checklist</p>
 
         <div className="mb-6 flex items-center justify-between no-print">
           <p className="text-sm font-medium text-zinc-500">Save this and run through it after every site visit</p>
@@ -108,6 +112,11 @@ export default function Post() {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Print footer logo */}
+        <div className="print-logo mt-8 flex justify-center border-t border-zinc-200 pt-6">
+          <img src="/MainQCP.png" alt="QuoteCore+" style={{ height: "36px", width: "auto" }} />
         </div>
       </div>
 
