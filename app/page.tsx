@@ -158,11 +158,11 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      name: "NZ Audio Visual",
-      business: "NZAV - Christchurch",
+      name: "Tony Edwards",
+      business: "NZ Audio Visual",
       quote:
         "Its been hard as an AV company offering very diverse services to find a 1 app does it all solution, but after using QuoteCore+ this is as good as we've found, it does 90% of what we need it to perfectly, and the apps designed in a way that we can improvise making the app work for the other 10%, keeping everything in 1 app! This saves us so much time/money",
-      initials: "NZ",
+      initials: "TE",
     },
     {
       name: "James Hargrove",
