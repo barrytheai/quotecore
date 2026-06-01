@@ -86,12 +86,12 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
-      <article className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
-        <p className="text-sm text-zinc-400">{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
-        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">{post.title}</h1>
+      <article className="mx-auto max-w-3xl px-6 py-20 print:py-0 lg:px-8">
+        <p className="text-sm text-zinc-400 print:hidden">{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl print:hidden">{post.title}</h1>
 
         {/* Author byline */}
-        <div className="mt-4 flex items-center gap-3">
+        <div className="mt-4 flex items-center gap-3 print:hidden">
           <img src="/shaun-smiling.jpg" alt="Shaun" className="h-9 w-9 rounded-full object-cover border border-zinc-200 shrink-0" />
           <p className="text-sm text-zinc-500">Written by <span className="font-medium text-zinc-700">Shaun</span>, Founder of QuoteCore+.{" "}
             {slug === "roofing-quoting-software-vs-spreadsheets"
@@ -105,7 +105,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Internal links */}
-        <div className="mt-16 flex flex-col gap-3 rounded-[1.75rem] border border-[#FF6B35]/20 bg-[#FF6B35]/5 p-7 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-3 rounded-[1.75rem] border border-[#FF6B35]/20 bg-[#FF6B35]/5 p-7 sm:flex-row sm:items-center sm:justify-between print:hidden">
           <p className="font-semibold text-zinc-950">Ready to quote faster?</p>
           <div className="flex gap-3">
             <a
