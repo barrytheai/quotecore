@@ -10,17 +10,18 @@ export default function Post() {
       <style>{`
         @media print {
           header, nav, footer, .no-print { display: none !important; }
-          .print-checklist { border: 1px solid #e4e4e7 !important; background: #fff !important; page-break-inside: avoid; padding: 16px !important; border-radius: 8px !important; }
-          .print-title { display: block !important; }
+          html, body { width: 210mm !important; margin: 0 !important; padding: 0 !important; }
+          article { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+          .print-checklist { border: 1px solid #e4e4e7 !important; background: #fff !important; page-break-inside: avoid; padding: 20px !important; border-radius: 8px !important; margin: 0 !important; }
+          .print-title { display: block !important; font-size: 18pt !important; margin-bottom: 14px !important; }
           .print-logo { display: block !important; }
-          .print-section { margin-bottom: 8px !important; }
-          .print-section h3 { margin-bottom: 3px !important; font-size: 10pt !important; }
-          .print-item { font-size: 11pt !important; margin-bottom: 0px !important; gap: 8px !important; line-height: 1.35 !important; }
-          .print-item span:first-child { font-size: 12pt !important; }
-          .print-logo img { height: 24px !important; }
-          .print-logo { margin-top: 12px !important; padding-top: 8px !important; }
-          body { margin: 0; }
-          @page { size: A4; margin: 1.2cm; }
+          .print-section { margin-bottom: 10px !important; }
+          .print-section h3 { margin-bottom: 4px !important; font-size: 11pt !important; }
+          .print-item { font-size: 12pt !important; gap: 8px !important; line-height: 1.4 !important; }
+          .print-item span:first-child { font-size: 13pt !important; }
+          .print-logo img { height: 28px !important; }
+          .print-logo { margin-top: 14px !important; padding-top: 10px !important; }
+          @page { size: A4; margin: 1.5cm; }
         }
         .print-title { display: none; }
         .print-logo { display: none; }
