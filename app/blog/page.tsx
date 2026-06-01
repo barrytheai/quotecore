@@ -9,6 +9,12 @@ interface Post {
 
 const posts: Post[] = [
   {
+    slug: "construction-quote-speed-checklist",
+    title: "The Construction Quote Speed Checklist [Free Printable]",
+    description: "The first contractor to respond wins 78% of jobs. Use this free printable checklist to get quotes out the same day as a site visit.",
+    date: "2026-06-01",
+  },
+  {
     slug: "roofing-quoting-software-vs-spreadsheets",
     title: "Roofing Quoting Software vs Spreadsheets: What Actually Saves Time",
     description: "Most roofing contractors still quote in spreadsheets. Here's an honest comparison of what spreadsheets do well, where they fall short, and what changes.",

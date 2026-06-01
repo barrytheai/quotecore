@@ -26,6 +26,12 @@ const posts: Record<string, {
     date: "2026-05-06",
     content: () => import("./content/built-by-a-roofer"),
   },
+  "construction-quote-speed-checklist": {
+    title: "The Construction Quote Speed Checklist [Free Printable]",
+    description: "The first contractor to respond wins 78% of jobs. Use this free printable checklist to get quotes out the same day as a site visit.",
+    date: "2026-06-01",
+    content: () => import("./content/construction-quote-speed-checklist"),
+  },
 };
 
 type Props = { params: Promise<{ slug: string }> };
