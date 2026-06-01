@@ -2,7 +2,10 @@
 
 export default function Post() {
   const handlePrint = () => {
+    const originalTitle = document.title;
+    document.title = '';
     window.print();
+    setTimeout(() => { document.title = originalTitle; }, 500);
   };
 
   return (
@@ -15,10 +18,10 @@ export default function Post() {
           .print-checklist { border: 1px solid #e4e4e7 !important; background: #fff !important; page-break-inside: avoid; padding: 20px !important; border-radius: 8px !important; margin: 0 !important; }
           .print-title { display: block !important; font-size: 18pt !important; margin-bottom: 14px !important; }
           .print-logo { display: block !important; }
-          .print-section { margin-bottom: 10px !important; }
-          .print-section h3 { margin-bottom: 4px !important; font-size: 11pt !important; }
-          .print-item { font-size: 12pt !important; gap: 8px !important; line-height: 1.4 !important; }
-          .print-item span:first-child { font-size: 13pt !important; }
+          .print-section { margin-bottom: 12px !important; }
+          .print-section h3 { margin-bottom: 4px !important; font-size: 12pt !important; }
+          .print-item { font-size: 13.5pt !important; gap: 10px !important; line-height: 1.45 !important; }
+          .print-item span:first-child { font-size: 18pt !important; line-height: 1 !important; }
           .print-logo img { height: 28px !important; }
           .print-logo { margin-top: 14px !important; padding-top: 10px !important; }
           @page { size: A4; margin: 1.5cm; }
