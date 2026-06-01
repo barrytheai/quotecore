@@ -10,11 +10,17 @@ export default function Post() {
       <style>{`
         @media print {
           header, nav, footer, .no-print { display: none !important; }
-          .print-checklist { border: 2px solid #e4e4e7 !important; background: #fff !important; page-break-inside: avoid; }
+          .print-checklist { border: 1px solid #e4e4e7 !important; background: #fff !important; page-break-inside: avoid; padding: 16px !important; border-radius: 8px !important; }
           .print-title { display: block !important; }
           .print-logo { display: block !important; }
+          .print-section { margin-bottom: 6px !important; }
+          .print-section h3 { margin-bottom: 2px !important; font-size: 9pt !important; }
+          .print-item { font-size: 9pt !important; margin-bottom: 1px !important; gap: 6px !important; }
+          .print-item span:first-child { font-size: 10pt !important; }
+          .print-logo img { height: 24px !important; }
+          .print-logo { margin-top: 10px !important; padding-top: 8px !important; }
           body { margin: 0; }
-          @page { margin: 1.5cm; }
+          @page { margin: 1cm; }
         }
         .print-title { display: none; }
         .print-logo { display: none; }
@@ -52,66 +58,26 @@ export default function Post() {
           </button>
         </div>
 
-        <div className="space-y-6">
-          <div>
-            <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-zinc-700">Before You Leave</h3>
-            <ul className="space-y-2" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {["Pricing template is up to date - materials costs, labour rates, margins all current", "You know the job scope before you arrive", "Measurement tools are ready"].map((item) => (
-                <li key={item} style={{ display: "flex", alignItems: "baseline", gap: "10px", fontSize: "14px", color: "#3f3f46" }}>
-                  <span style={{ flexShrink: 0, fontSize: "16px", lineHeight: 1 }}>&#9633;</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-zinc-700">On Site</h3>
-            <ul className="space-y-2" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {["Measure everything in one pass - don't leave gaps", "Record measurements in a consistent format you can read back clearly", "Photograph anything that affects pricing", "Flag any variables to the client immediately"].map((item) => (
-                <li key={item} style={{ display: "flex", alignItems: "baseline", gap: "10px", fontSize: "14px", color: "#3f3f46" }}>
-                  <span style={{ flexShrink: 0, fontSize: "16px", lineHeight: 1 }}>&#9633;</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-zinc-700">Back at the Van or Desk</h3>
-            <ul className="space-y-2" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {["Enter measurements once - not notepad to spreadsheet to email", "Apply your pricing - rates should be preset, not recalculated from scratch", "Generate a clean professional output - not a raw spreadsheet", "Review before sending - numbers correct, scope clear, contact details present"].map((item) => (
-                <li key={item} style={{ display: "flex", alignItems: "baseline", gap: "10px", fontSize: "14px", color: "#3f3f46" }}>
-                  <span style={{ flexShrink: 0, fontSize: "16px", lineHeight: 1 }}>&#9633;</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-zinc-700">Sending the Quote</h3>
-            <ul className="space-y-2" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {["Send same day - ideally within 2 hours of leaving site", "Include a clear way for the client to accept", "Set a 48-hour follow-up reminder"].map((item) => (
-                <li key={item} style={{ display: "flex", alignItems: "baseline", gap: "10px", fontSize: "14px", color: "#3f3f46" }}>
-                  <span style={{ flexShrink: 0, fontSize: "16px", lineHeight: 1 }}>&#9633;</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-zinc-700">After Acceptance</h3>
-            <ul className="space-y-2" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {["Move straight to materials ordering", "Log the job - date, scope, value, client details", "Note what slowed you down - improve the process each time"].map((item) => (
-                <li key={item} style={{ display: "flex", alignItems: "baseline", gap: "10px", fontSize: "14px", color: "#3f3f46" }}>
-                  <span style={{ flexShrink: 0, fontSize: "16px", lineHeight: 1 }}>&#9633;</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          {[
+            { heading: "Before You Leave", items: ["Pricing template is up to date - materials costs, labour rates, margins all current", "You know the job scope before you arrive", "Measurement tools are ready"] },
+            { heading: "On Site", items: ["Measure everything in one pass - don't leave gaps", "Record measurements in a consistent format you can read back clearly", "Photograph anything that affects pricing", "Flag any variables to the client immediately"] },
+            { heading: "Back at the Van or Desk", items: ["Enter measurements once - not notepad to spreadsheet to email", "Apply your pricing - rates should be preset, not recalculated from scratch", "Generate a clean professional output - not a raw spreadsheet", "Review before sending - numbers correct, scope clear, contact details present"] },
+            { heading: "Sending the Quote", items: ["Send same day - ideally within 2 hours of leaving site", "Include a clear way for the client to accept", "Set a 48-hour follow-up reminder"] },
+            { heading: "After Acceptance", items: ["Move straight to materials ordering", "Log the job - date, scope, value, client details", "Note what slowed you down - improve the process each time"] },
+          ].map(({ heading, items }) => (
+            <div key={heading} className="print-section">
+              <h3 className="mb-2 text-sm font-bold uppercase tracking-wide text-zinc-700">{heading}</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "4px" }}>
+                {items.map((item) => (
+                  <li key={item} className="print-item" style={{ display: "flex", alignItems: "baseline", gap: "10px", fontSize: "14px", color: "#3f3f46" }}>
+                    <span style={{ flexShrink: 0, fontSize: "16px", lineHeight: 1 }}>&#9633;</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Print footer logo */}
