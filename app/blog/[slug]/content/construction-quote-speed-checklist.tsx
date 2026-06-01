@@ -13,14 +13,14 @@ export default function Post() {
           .print-checklist { border: 1px solid #e4e4e7 !important; background: #fff !important; page-break-inside: avoid; padding: 16px !important; border-radius: 8px !important; }
           .print-title { display: block !important; }
           .print-logo { display: block !important; }
-          .print-section { margin-bottom: 6px !important; }
-          .print-section h3 { margin-bottom: 2px !important; font-size: 9pt !important; }
-          .print-item { font-size: 9pt !important; margin-bottom: 1px !important; gap: 6px !important; }
-          .print-item span:first-child { font-size: 10pt !important; }
+          .print-section { margin-bottom: 8px !important; }
+          .print-section h3 { margin-bottom: 3px !important; font-size: 10pt !important; }
+          .print-item { font-size: 11pt !important; margin-bottom: 0px !important; gap: 8px !important; line-height: 1.35 !important; }
+          .print-item span:first-child { font-size: 12pt !important; }
           .print-logo img { height: 24px !important; }
-          .print-logo { margin-top: 10px !important; padding-top: 8px !important; }
+          .print-logo { margin-top: 12px !important; padding-top: 8px !important; }
           body { margin: 0; }
-          @page { margin: 1cm; }
+          @page { size: A4; margin: 1.2cm; }
         }
         .print-title { display: none; }
         .print-logo { display: none; }
