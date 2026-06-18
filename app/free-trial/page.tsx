@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import SocialIcons from "@/components/SocialIcons";
 import Script from "next/script";
 import FreeTrialClient from "./client";
+import FreeTrialFaqPanel from "./FreeTrialFaqPanel";
+import SiteFooter from "@/components/SiteFooter";
+import BlogHeader from "@/components/BlogHeader";
 
 export const metadata: Metadata = {
-  title: "Free 2-Week Trial - No Card Required | QuoteCore+",
+  title: "Free 14-Day Trial - No Card Required | QuoteCore+",
   description: "Try QuoteCore+ free for 14 days. Measure jobs, build professional quotes, track acceptances, and manage materials orders. No credit card needed.",
   alternates: {
     canonical: "https://quote-core.com/free-trial",
@@ -44,6 +46,10 @@ const faqs = [
     question: "Who is QuoteCore+ for?",
     answer: "QuoteCore+ is built for construction businesses that measure and quote jobs regularly - roofing, plumbing, electrical, cladding, flooring, fencing, landscaping, decking, general building, exterior works, and renovation trades. If your quoting process involves a spreadsheet, a notepad, and a Sunday evening, QuoteCore+ was built for you.",
   },
+  {
+    question: "What are Smart Components™?",
+    answer: "Smart Components™ are reusable parts of your quoting workflow. You can create components that include materials, labour, waste allowances, measurements, drawings, images, calculations and pricing rules, then reuse them in future quotes. They help each quote make the next quote faster.",
+  },
 ];
 
 const faqSchema = {
@@ -68,16 +74,7 @@ export default function FreeTrialPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="min-h-screen bg-white text-zinc-950">
-        <header className="sticky top-0 z-50 border-b border-white/60 bg-white/68 shadow-[0_8px_30px_rgba(255,255,255,0.25)_inset,0_12px_40px_rgba(0,0,0,0.05)] backdrop-blur-[24px]">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-            <a href="/" className="flex items-center gap-3">
-              <img src="/MainQCP.png" alt="QuoteCore+" className="h-10 w-auto" />
-            </a>
-            <a href="/" className="inline-flex h-11 items-center justify-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-50">
-              Back to homepage
-            </a>
-          </div>
-        </header>
+        <BlogHeader backLabel="Back to homepage" backHref="/" />
 
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,107,53,0.10),transparent_34%)]" />
@@ -85,13 +82,13 @@ export default function FreeTrialPage() {
             <div>
               <p className="text-sm font-medium text-zinc-500">Free trial</p>
               <h1 className="mt-3 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                Try QuoteCore+ free for 2 weeks.
+                Try QuoteCore+ free for 14 days.
               </h1>
 
               <p className="mt-4 max-w-2xl text-3xl font-semibold leading-tight text-zinc-700 sm:text-4xl">
-                No card. No commitment.
+                Test the full quoting workflow.
                 <br />
-                Just faster quotes.
+                No card. No commitment.
               </p>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-600 sm:text-xl">
@@ -105,34 +102,13 @@ export default function FreeTrialPage() {
               <FreeTrialClient />
 
               {/* Moved below button */}
-              <div className="mt-8 max-w-xl space-y-4 text-sm text-zinc-500">
-                <p>
-                  QuoteCore+ is construction quoting software built for trades that measure and quote jobs every day. During your free trial you get full access to every feature - digital takeoff, quote builder, materials ordering, and job management.
-                </p>
-                <p>
-                  Most contractors send their first quote within minutes of signing up. Your pricing rates, component logic, and margins are set up once - then applied automatically to every quote you build.
-                </p>
-                <p>
-                  No spreadsheets. No re-entering the same data twice. No formatting quotes in Word at 9pm. QuoteCore+ keeps your measuring, pricing, quoting, and job details in one place - so you can get quotes out the same day as a site visit.
-                </p>
-              </div>
+
             </div>
 
-            <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_20px_80px_rgba(0,0,0,0.08)]">
-              <div className="space-y-8">
-                <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
-                <div className="space-y-4">
-                  {faqs.map((faq) => (
-                    <div key={faq.question} className="rounded-[1.5rem] border border-zinc-200 bg-zinc-50 px-6 py-5">
-                      <p className="text-base font-semibold text-zinc-950">{faq.question}</p>
-                      <p className="mt-3 text-sm leading-7 text-zinc-600">{faq.answer}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <FreeTrialFaqPanel faqs={faqs} />
           </div>
         </section>
+        <SiteFooter />
       </main>
     </>
   );

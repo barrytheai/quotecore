@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SocialIcons from "@/components/SocialIcons";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Coffee Offer Terms & Conditions | QuoteCore+",
@@ -80,6 +80,7 @@ export default function CoffeeTermsPage() {
           <p>For questions about this offer, please contact QuoteCore+ through the contact details provided on our website.</p>
         </div>
       </div>
+      <SiteFooter />
     </main>
   );
 }

@@ -1,104 +1,142 @@
 export default function Post() {
   return (
     <div className="prose prose-zinc max-w-none">
-      <p>If you've come across QuoteCore+ and want to know whether it's worth your time - or whether it's legitimate - this page is for you.</p>
-      <p>We'll cover who built it, what it actually does, who it works best for, and what to expect from the free trial.</p>
+      <p>If you have come across QuoteCore+ and are trying to work out whether it is legitimate, whether it is worth trying, or whether it is right for your trade, this page should help.</p>
+      <p>QuoteCore+ is a construction workflow platform designed to help businesses move from measurement to quote to managed job without relying on scattered spreadsheets, notes, folders and old templates.</p>
+      <p>It is still early in its journey, but it is a real platform with a working product, public business profiles, a free trial and a team actively onboarding construction businesses.</p>
 
       <hr />
 
-      <h2>Who built QuoteCore+ and why</h2>
-      <p>QuoteCore+ was built by Shaun, a construction industry professional with over 12 years of experience - on the tools, managing projects, and running operations.</p>
-      <p>Like most contractors, Shaun spent years watching jobs slip away to competitors who quoted faster. The admin between a site visit and a sent quote was the bottleneck: measurements from a notepad, pricing rebuilt in a spreadsheet, reformatting everything into a document professional enough to send.</p>
-      <p>He looked for software that understood how construction jobs actually work. Nothing did.</p>
-      <p>When he approached a developer to build it, the quote came back at $70,000 NZD. So he built it himself - drawing on a background in coding, graphics and web design that predated his construction career.</p>
-      <p>QuoteCore+ launched in 2026. You can read Shaun's full story on <a href="https://medium.com/@shaun_8162/i-built-an-app-because-i-was-slow-and-messy-879eed186194" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+      <h2>Who is behind QuoteCore+?</h2>
+      <p>QuoteCore+ was shaped by real roofing and construction experience.</p>
+      <p>Shaun spent more than 12 years in the industry, including time on the tools, managing projects and running operations. He understood the quoting and admin problem because he had lived it directly.</p>
+      <p>The product direction came from that experience. The QuoteCore+ team then built around the workflow Shaun knew was missing: a way to keep measurements, pricing, quotes, approvals, follow-ups, material ordering and job details connected.</p>
+      <p>That matters because the product was not designed around a generic software idea. It was built around how construction businesses actually handle work.</p>
+      <p>For the full story - including why Shaun built it himself after being quoted $70,000 NZD by a developer - <a href="/blog/built-by-a-roofer">read how QuoteCore+ was built from inside the industry</a>.</p>
 
       <hr />
 
-      <h2>Is QuoteCore+ legitimate?</h2>
-      <p>Yes. Here's what you can verify independently:</p>
+      <h2>Is QuoteCore+ legit?</h2>
+      <p>Yes. QuoteCore+ is a real construction workflow platform.</p>
+      <p>You can check the main trust signals here:</p>
       <ul>
-        <li>Website: <a href="https://quote-core.com">quote-core.com</a> - live, with a working free trial</li>
-        <li>Founder: Shaun - real person, <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer">accessible via Calendly</a></li>
-        <li>Contact: info@quote-core.com</li>
-        <li>Capterra: <a href="https://www.capterra.com/p/10042670/QuoteCore" target="_blank" rel="noopener noreferrer">capterra.com/p/10042670/QuoteCore</a></li>
-        <li>GetApp: <a href="https://www.getapp.co.uk/software/2094477/quotecore" target="_blank" rel="noopener noreferrer">getapp.co.uk/software/2094477/quotecore</a></li>
-        <li>Trustpilot: <a href="https://www.trustpilot.com/review/quote-core.com" target="_blank" rel="noopener noreferrer">trustpilot.com/review/quote-core.com</a></li>
-        <li>Free trial: 2 weeks, no credit card required</li>
+        <li>live website at quote-core.com</li>
+        <li>free 14-day trial</li>
+        <li>no card required to start</li>
+        <li>public contact email</li>
+        <li>founder call option with Shaun</li>
+        <li>Terms &amp; Conditions and Privacy Policy</li>
+        <li>LinkedIn company page</li>
+        <li>Trustpilot profile</li>
+        <li>Capterra and GetApp profiles</li>
+        <li>product walkthrough and support resources being added as the platform opens to more users</li>
       </ul>
+      <p>As with any software, the best way to know whether it fits your business is to try it with a real job.</p>
 
       <hr />
 
-      <h2>What QuoteCore+ actually does</h2>
-      <p>QuoteCore+ is construction quoting and job management software that takes you from site measurements all the way through to a completed job - measuring, pricing, quoting, tracking acceptances, ordering materials, and managing jobs, all in one place.</p>
+      <h2>What does QuoteCore+ actually do?</h2>
+      <p>QuoteCore+ helps construction businesses manage the workflow around quotes.</p>
+      <p>That includes the parts before and after the quote is sent.</p>
+      <p>The platform supports:</p>
+      <ul>
+        <li>job measurements</li>
+        <li>pricing logic</li>
+        <li>quote creation</li>
+        <li>quote sending</li>
+        <li>acceptance or decline tracking</li>
+        <li>follow-ups</li>
+        <li>material ordering</li>
+        <li>job management after the quote is won</li>
+      </ul>
+      <p>The main idea is that the quote should not become a loose document that sits separately from the job. Once the customer approves it, the information should already be there to help move the work forward.</p>
 
-      <h3>Workflow</h3>
+      <hr />
+
+      <h2>Who is QuoteCore+ best for?</h2>
+      <p>QuoteCore+ is best suited to construction businesses that quote work regularly and still rely on manual systems.</p>
+      <p>It is likely to be useful for:</p>
+      <ul>
+        <li>roofing contractors</li>
+        <li>general builders</li>
+        <li>plumbers</li>
+        <li>electricians</li>
+        <li>carpenters</li>
+        <li>cladding businesses</li>
+        <li>fencing contractors</li>
+        <li>flooring businesses</li>
+        <li>landscaping businesses</li>
+        <li>decking businesses</li>
+        <li>renovation trades</li>
+        <li>exterior works businesses</li>
+      </ul>
+      <p>It is especially relevant if the current workflow includes:</p>
+      <ul>
+        <li>spreadsheets</li>
+        <li>paper notes</li>
+        <li>old Word templates</li>
+        <li>disconnected folders</li>
+        <li>photos stored separately</li>
+        <li>manual follow-up</li>
+        <li>material orders created from scratch</li>
+        <li>job details kept in someone&apos;s head</li>
+      </ul>
+      <p>If that process feels familiar, QuoteCore+ is probably worth testing.</p>
+
+      <hr />
+
+      <h2>Is it only for roofers?</h2>
+      <p>No.</p>
+      <p>QuoteCore+ started from roofing experience because that is where Shaun understood the pain most deeply. Roofing was the starting point, not the limit.</p>
+      <p>The wider platform is designed for construction businesses that measure, price, quote, follow up, order materials and manage jobs.</p>
+      <p>Roofing is the origin story. Construction is the market.</p>
+
+      <hr />
+
+      <h2>What happens during the free trial?</h2>
+      <p>The free trial gives you a chance to test QuoteCore+ with a real workflow.</p>
+      <p>The best way to try it is not to click around randomly. It is to take one job you would normally quote manually and run it through the platform.</p>
+      <p>To see what digital quoting changes in practice for a working roofer, <a href="/blog/roofing-quoting-software-uk">read how UK contractors are using it to send quotes faster and win more jobs</a>.</p>
+      <p>A good trial process looks like this:</p>
       <ol>
-        <li>Upload a plan and measure from it</li>
-        <li>Pricing logic applies automatically</li>
-        <li>Client-ready quote generated - no reformatting</li>
-        <li>Track when the quote is accepted or declined</li>
-        <li>Materials order built directly from the accepted quote</li>
-        <li>Job tracked through to completion</li>
+        <li>Add a real job.</li>
+        <li>Enter or upload the relevant job information.</li>
+        <li>Build the quote.</li>
+        <li>Check the output.</li>
+        <li>Send it if you are happy with it.</li>
+        <li>See how the approval, follow-up and job workflow feels compared with your usual process.</li>
       </ol>
-
-      <h3>What's included</h3>
-      <ul>
-        <li>Digital takeoff - measure from a plan, no re-entry</li>
-        <li>Automated pricing - set up once, applied to every quote</li>
-        <li>Professional PDF output</li>
-        <li>Quote acceptance tracking - email and in-platform alerts</li>
-        <li>Automated follow-up on sent quotes</li>
-        <li>Materials ordering from accepted quotes</li>
-        <li>Job tracking from acceptance to completion</li>
-      </ul>
-
-      <h3>What it doesn't do (yet)</h3>
-      <ul>
-        <li>Payroll or invoicing</li>
-        <li>Mobile - desktop and laptop only</li>
-      </ul>
+      <p>If you want help, you can book a short call with Shaun and walk through how QuoteCore+ would fit your current process.</p>
 
       <hr />
 
-      <h2>Who it's best for</h2>
-      <p>Any trade that measures, quotes, and manages jobs:</p>
-      <p>Roofing, Plumbing, Electrical, Cladding, Flooring, Fencing, Landscaping, Decking, General building, Exterior works, Renovation trades</p>
-      <p><strong>Best fit:</strong></p>
+      <h2>Is QuoteCore+ worth it?</h2>
+      <p>QuoteCore+ is worth trying if the current quoting process is slowing you down or making jobs harder to manage.</p>
+      <p>It may be a good fit if:</p>
       <ul>
-        <li>Sole traders and small teams quoting multiple jobs per week</li>
-        <li>Project managers quoting for a team</li>
-        <li>Business owners who want consistent professional quotes every time</li>
-        <li>Anyone losing jobs to faster competitors</li>
+        <li>quotes take too long after site visits</li>
+        <li>job information is spread across too many places</li>
+        <li>pricing is being rebuilt manually</li>
+        <li>follow-ups are easy to forget</li>
+        <li>materials are ordered separately from the accepted quote</li>
+        <li>accepted jobs still need to be organised from scratch</li>
+        <li>you want a more professional customer experience</li>
       </ul>
+      <p>It may not be necessary if:</p>
+      <ul>
+        <li>you only quote occasionally</li>
+        <li>your current spreadsheet genuinely handles everything</li>
+        <li>you do not need approval tracking or material ordering</li>
+        <li>the job admin after the quote is already well organised</li>
+      </ul>
+      <p>The easiest way to know is to try one real job. While you are deciding, <a href="/blog/construction-quote-speed-checklist">the Construction Quote Speed Checklist is free to download</a> - it gives you a clear benchmark for what same-day quoting actually looks like before you commit to any software.</p>
 
       <hr />
 
-      <h2>How to try it</h2>
-      <p><a href="/free-trial">quote-core.com/free-trial</a> - no card required. Set up pricing once, run a real job through it.</p>
-      <p>Book a free <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer">15-minute call with Shaun</a>.</p>
-
-      <hr />
-
-      <h2>Frequently asked questions</h2>
-
-      <h3>Is QuoteCore+ a scam?</h3>
-      <p>No. Legitimate software, real founder, multiple directory listings, working free trial. No credit card required to try it.</p>
-
-      <h3>Who owns QuoteCore+?</h3>
-      <p>Founded and built by Shaun - 12+ years in construction. Was quoted $70,000 NZD to have it built. Built it himself.</p>
-
-      <h3>Where is QuoteCore+ based?</h3>
-      <p>New Zealand.</p>
-
-      <h3>Is it only for roofing?</h3>
-      <p>No. Works for roofing, plumbing, electrical, cladding, flooring, fencing, landscaping, decking, general building, exterior works, and renovation trades.</p>
-
-      <h3>Can I cancel anytime?</h3>
-      <p>Yes. No long-term contracts.</p>
-
-      <h3>What if I need help?</h3>
-      <p>Book a free <a href="https://calendly.com/quote-core-info/15-minute-meeting" target="_blank" rel="noopener noreferrer">15-minute call with Shaun</a> via the website.</p>
+      <h2>The bottom line</h2>
+      <p>QuoteCore+ is not just about creating a nicer quote document.</p>
+      <p>It is about keeping the job workflow connected, from measurement through to quote, approval, follow-up, materials and management.</p>
+      <p>For construction businesses that are still rebuilding job information across spreadsheets, notes, emails and folders, QuoteCore+ is built to make that process cleaner.</p>
     </div>
   );
 }

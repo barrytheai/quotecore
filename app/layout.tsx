@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import AttributionTracker from "@/components/AttributionTracker";
+import CookieConsent from "@/components/CookieConsent";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -17,40 +18,70 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Construction Quoting Software | QuoteCore+",
+  title: "QuoteCore+ | Quoting Software for Contractors & Trade Businesses",
   description:
-    "Construction quoting software built from real trade experience. Measure, price, and quote jobs faster - from first measurement to professional quote in minutes. Free 2-week trial.",
+    "QuoteCore+ helps contractors and trade businesses measure from plans, price jobs, send professional quotes, track approvals, create materials orders, and manage quote information in one workflow.",
   metadataBase: new URL("https://quote-core.com"),
   alternates: {
     canonical: "https://quote-core.com/",
   },
-};
-
-const softwareSchema = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "QuoteCore+",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Web",
-  description: "Construction quoting software for trades that measure, price and quote jobs. Turn site measurements into professional quotes faster.",
-  offers: {
-    "@type": "Offer",
-    price: "79",
-    priceCurrency: "USD",
+  openGraph: {
+    title: "QuoteCore+ | Quoting Software for Contractors",
+    description: "Measure, price, send, approve, and manage quotes in one connected workflow.",
+    url: "https://quote-core.com/",
+    siteName: "QuoteCore+",
+    type: "website",
   },
 };
 
-const orgSchema = {
+const combinedSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "QuoteCore+",
-  url: "https://quote-core.com",
-  logo: "https://quote-core.com/MainQCP.png",
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "info@quote-core.com",
-    contactType: "customer support",
-  },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quote-core.com/#organization",
+      name: "QuoteCore+",
+      alternateName: ["QuoteCore", "Quote Core", "Quote Core Plus", "QuoteCore Plus"],
+      url: "https://quote-core.com/",
+      logo: "https://quote-core.com/MainQCP.png",
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "info@quote-core.com",
+        contactType: "customer support",
+      },
+      sameAs: [
+        "https://www.linkedin.com/company/quotecore/",
+        "https://www.trustpilot.com/review/quote-core.com",
+        "https://www.capterra.com/p/10023337/QuoteCore/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quote-core.com/#website",
+      name: "QuoteCore+",
+      url: "https://quote-core.com/",
+      publisher: {
+        "@id": "https://quote-core.com/#organization",
+      },
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://quote-core.com/#software",
+      name: "QuoteCore+",
+      alternateName: ["QuoteCore", "Quote Core", "Quote Core Plus", "QuoteCore Plus"],
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      description: "Quoting software for contractors and trade businesses, including digital takeoff, quote building, approval tracking, materials ordering, and quote-to-job workflow.",
+      url: "https://quote-core.com/",
+      publisher: {
+        "@id": "https://quote-core.com/#organization",
+      },
+      offers: {
+        "@type": "Offer",
+        url: "https://quote-core.com/#pricing",
+      },
+    },
+  ],
 };
 
 
@@ -69,7 +100,10 @@ export default function RootLayout({
         {children}
         <Analytics />
         <AttributionTracker />
-        {/* Google Analytics 4 */}
+        <CookieConsent />
+        {/* Google Analytics 4 — loads gtag.js with Consent Mode default denied.
+            Optional tracking scripts (Clarity, Meta Pixel, LinkedIn) are
+            loaded conditionally by CookieConsent after user accepts. */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-HV8F4G8BN1"
           strategy="afterInteractive"
@@ -78,24 +112,21 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied'
+            });
             gtag('js', new Date());
             gtag('config', 'G-HV8F4G8BN1');
           `}
         </Script>
         <Script
-          id="software-application-schema"
+          id="combined-schema"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
         />
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-        />
-        {/* Microsoft Clarity */}
-        <Script id="clarity" strategy="afterInteractive">
-          {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wwl3bv888v");`}
-        </Script>
 
       </body>
     </html>

@@ -1,66 +1,94 @@
 export default function Post() {
   return (
     <div className="prose prose-zinc max-w-none">
-      <p>If you've been looking for quoting software for your trades business, you may have come across both QuoteSmith and QuoteCore+.</p>
-      <p>Both help you produce professional quotes faster than a spreadsheet. Both are a step up from Word documents and manual calculations. But they're built to solve different problems.</p>
+      <p>If you are comparing QuoteCore+ and QuoteSmith, the main thing to understand is that they are not trying to solve exactly the same problem.</p>
+      <p>Both can help trades businesses produce better quotes than a messy spreadsheet or old template. But the way they approach the problem is different.</p>
+      <p>If you are newer to digital quoting and want to understand what the shift actually looks like in practice before comparing tools, <a href="/blog/roofing-quoting-software-uk">this breakdown of how UK roofers are winning more jobs with digital quotes</a> is a useful starting point.</p>
+      <p>QuoteSmith is mainly focused on helping create polished proposal-style quotes.</p>
+      <p>QuoteCore+ is focused on the wider workflow around the quote, from measurement and pricing through to approval, follow-up, materials and job management.</p>
+      <p>That difference matters because not every business has the same quoting problem.</p>
 
       <hr />
 
-      <h2>What QuoteSmith does</h2>
-      <p>QuoteSmith is an AI-powered proposal writer. You manually enter the job details - customer information, job type, materials, quantities - and the AI writes a detailed scope of work for you. It produces a branded PDF that looks professional.</p>
-      <p>The key word is manually. QuoteSmith doesn't measure from plans. It doesn't connect to your pricing logic. It doesn't know what you've charged for similar jobs before. You still do all of that yourself - QuoteSmith just makes the final document look better.</p>
-      <p>The workflow ends when the PDF is sent. There's no quote acceptance tracking, no materials ordering, no job tracking after the proposal goes out.</p>
-      <p>Pricing starts from £9.99/month.</p>
-
-      <hr />
-
-      <h2>What QuoteCore+ does</h2>
-      <p>QuoteCore+ is a full quoting and job management workflow. The difference starts before you've written a single line of the quote.</p>
-      <p>Instead of manually entering measurements, you upload a plan and measure directly from it. Your rates, components and margins are set up once and applied automatically. The quote builds itself from the measurements - not from memory or manual entry.</p>
-      <p>When a quote is sent, you know the moment a client accepts or declines - by email and in your account. When it's accepted, a materials order is built directly from it. The job stays organised in one place from that point through to completion.</p>
-      <p>QuoteCore+ isn't just a better-looking proposal. It's a connected workflow from first measurement to finished job.</p>
-
-      <hr />
-
-      <h2>The key difference</h2>
-      <p>QuoteSmith makes a manually-built quote look better. QuoteCore+ replaces the manual process entirely.</p>
-      <p>With QuoteSmith, you still measure, calculate, price, and enter everything yourself. The AI writes the description. The PDF looks professional. That's it - the workflow ends there.</p>
-      <p>With QuoteCore+, the measurements drive everything. Upload a plan, measure from it, and the quote prices itself. When it's accepted, the materials order builds itself. The job tracks itself.</p>
+      <h2>What QuoteSmith is useful for</h2>
+      <p>QuoteSmith can be useful if the main issue is presentation. For example, if the numbers are already worked out elsewhere, but the quote or proposal needs to look better, read better or be built faster, an AI proposal writer can help.</p>
+      <p>That kind of tool may suit contractors who already have a quoting process they are happy with but want help turning the job details into a more professional document.</p>
+      <p>It can help with things like:</p>
       <ul>
-        <li>If your pain is: <em>My proposals don't look professional enough</em> - QuoteSmith solves that.</li>
-        <li>If your pain is: <em>I'm spending too long on the process from measurement to sent quote, and losing track of jobs after</em> - QuoteCore+ is built for that.</li>
+        <li>proposal wording</li>
+        <li>quote structure</li>
+        <li>making the document look more polished</li>
+        <li>reducing time spent writing descriptions</li>
+        <li>presenting the scope more clearly</li>
       </ul>
+      <p>For some businesses, that is enough.</p>
+
+      <hr />
+
+      <h2>Where QuoteSmith may not be enough</h2>
+      <p>If the real problem is the whole workflow, not just the wording, then a proposal writer may only solve part of it.</p>
+      <p>A lot of construction businesses are not only struggling with how the quote reads. They are struggling with the process around it:</p>
+      <ul>
+        <li>measuring the job</li>
+        <li>calculating materials</li>
+        <li>applying pricing logic</li>
+        <li>building the quote</li>
+        <li>sending it</li>
+        <li>following up</li>
+        <li>tracking approval</li>
+        <li>creating material orders</li>
+        <li>keeping job details organised after acceptance</li>
+      </ul>
+      <p>If those steps are spread across different tools, a better-looking proposal does not fix the wider admin problem.</p>
+
+      <hr />
+
+      <h2>What QuoteCore+ is built for</h2>
+      <p>QuoteCore+ was built around the full quoting and job workflow.</p>
+      <p>The idea is that job information should not have to be rebuilt at every stage. The same measurements and pricing details used to create the quote should also help with approvals, follow-ups, material ordering and job management.</p>
+      <p>A typical QuoteCore+ workflow looks like this:</p>
+      <ol>
+        <li>Add or upload the job information.</li>
+        <li>Measure from the plan or site details.</li>
+        <li>Apply pricing.</li>
+        <li>Generate the quote.</li>
+        <li>Send it to the client.</li>
+        <li>Track acceptance or decline.</li>
+        <li>Follow up.</li>
+        <li>Use the accepted quote to support material ordering.</li>
+        <li>Keep the job details organised.</li>
+      </ol>
+      <p>The quote is not treated as the final destination. It becomes part of the job.</p>
 
       <hr />
 
       <h2>Side-by-side comparison</h2>
-
-      <div className="not-prose overflow-x-auto my-8">
-        <table className="w-full text-sm border-collapse">
+      <div className="not-prose overflow-x-auto">
+        <table className="w-full border-collapse text-sm">
           <thead>
-            <tr className="bg-zinc-50">
-              <th className="text-left px-4 py-3 border border-zinc-200 font-semibold text-zinc-700 w-1/3"></th>
-              <th className="text-left px-4 py-3 border border-zinc-200 font-semibold text-zinc-700">QuoteSmith</th>
-              <th className="text-left px-4 py-3 border border-zinc-200 font-semibold text-[#FF6B35]">QuoteCore+</th>
+            <tr className="border-b border-zinc-200 bg-zinc-50">
+              <th className="px-4 py-3 text-left font-semibold text-zinc-950">Area</th>
+              <th className="px-4 py-3 text-left font-semibold text-zinc-950">QuoteSmith</th>
+              <th className="px-4 py-3 text-left font-semibold text-zinc-950">QuoteCore+</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-zinc-100">
             {[
-              ["AI-generated proposal text", "Yes", "No - you control the content"],
-              ["Measure from plans (digital takeoff)", "No - manual entry only", "Yes"],
-              ["Automated pricing logic", "No - you enter all pricing manually", "Set up once, applied automatically"],
-              ["Quote acceptance tracking", "No", "Yes - instant alerts by email and in account"],
-              ["Materials ordering from quote", "No", "Yes - built from accepted quote"],
-              ["Job tracking after acceptance", "No", "Yes - from quote to completion"],
-              ["Connected end-to-end workflow", "No - ends at proposal", "Yes - measurement to job completion"],
-              ["Mobile-friendly", "Yes", "Yes - except digital takeoff (desktop/laptop)"],
-              ["Pricing", "From £9.99/mo", "From £15/mo"],
-              ["Free trial", "Yes", "Yes - 2 weeks, no card required"],
-            ].map(([feature, qs, qcp], i) => (
-              <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-zinc-50/50"}>
-                <td className="px-4 py-3 border border-zinc-200 font-medium text-zinc-800">{feature}</td>
-                <td className="px-4 py-3 border border-zinc-200 text-zinc-500">{qs}</td>
-                <td className="px-4 py-3 border border-zinc-200 text-zinc-800">{qcp}</td>
+              ["Main focus", "Proposal writing", "Connected quote-to-job workflow"],
+              ["Professional quote output", "Yes", "Yes"],
+              ["AI writing support", "Yes", "Not the main focus"],
+              ["Measurement workflow", "Not the core feature", "Built around measurement and quoting"],
+              ["Pricing logic", "Mainly manual input", "Designed to support repeatable pricing"],
+              ["Approval tracking", "Not the main workflow", "Yes"],
+              ["Follow-ups", "Not the main workflow", "Yes"],
+              ["Material ordering", "Not the main workflow", "Connected to accepted quotes"],
+              ["Job management after quote", "Limited", "Built into the workflow"],
+              ["Best suited for", "Better proposal presentation", "Businesses wanting less disconnected admin"],
+            ].map(([area, quotesmith, qcp]) => (
+              <tr key={area}>
+                <td className="px-4 py-3 font-medium text-zinc-800">{area}</td>
+                <td className="px-4 py-3 text-zinc-600">{quotesmith}</td>
+                <td className="px-4 py-3 text-zinc-600">{qcp}</td>
               </tr>
             ))}
           </tbody>
@@ -69,33 +97,22 @@ export default function Post() {
 
       <hr />
 
-      <h2>Who QuoteSmith is best for</h2>
-      <ul>
-        <li>Contractors who want AI to write a proposal description so they don't have to</li>
-        <li>Smaller operators quoting on their phone after a site visit</li>
-        <li>Trades that already have a fast manual pricing process and want better-looking output</li>
-        <li>Budget-conscious operators - £9.99/month is low risk</li>
-      </ul>
-
-      <h2>Who QuoteCore+ is best for</h2>
-      <ul>
-        <li>Construction businesses quoting volume - multiple jobs per week</li>
-        <li>Any trade re-entering measurements multiple times before a quote goes out</li>
-        <li>Businesses that want quoting, materials ordering, and job tracking in one place</li>
-        <li>Anyone losing jobs to competitors who quote faster</li>
-      </ul>
-      <p>Works for: Roofing, plumbing, electrical, cladding, flooring, fencing, landscaping, decking, general building, exterior works, renovation trades.</p>
+      <h2>Which one should you choose?</h2>
+      <p>If your process already works and your main issue is that your quotes need to look or read better, QuoteSmith may be a good option.</p>
+      <p>If your issue is that the job information is scattered across measurements, spreadsheets, notes, quote documents, emails and material orders, QuoteCore+ is likely a better fit. That applies across many trades, including roofers, builders, plumbers, electricians, carpenters, landscapers, fencing contractors and flooring teams.</p>
+      <p>The choice comes down to the real bottleneck.</p>
+      <p>If you are still quoting in a spreadsheet rather than choosing between dedicated platforms, <a href="/blog/roofing-quoting-software-vs-spreadsheets">here is how roofing quoting software and spreadsheets actually compare</a> - including where spreadsheets hold up and where they start costing you jobs.</p>
+      <p>If the bottleneck is writing, choose the tool that helps with writing.</p>
+      <p>If the bottleneck is the workflow around the quote, choose the tool built for the workflow.</p>
 
       <hr />
 
-      <h2>The honest verdict</h2>
-      <p>QuoteSmith does one thing well: it makes a manually-built quote look professional. If that's your only problem, it's affordable and effective.</p>
-      <p>But if the problem is deeper - measurements re-entered multiple times, pricing rebuilt from scratch, no visibility on acceptance, materials ordered separately, jobs tracked in spreadsheets - QuoteSmith doesn't touch any of that. You're still doing everything manually. The proposal just looks better at the end.</p>
-      <p>QuoteCore+ removes the manual process. Measurements drive the quote. The quote drives the materials order. The accepted job stays tracked. 30 minutes on paper becomes 15 minutes in QuoteCore+.</p>
-      <ul>
-        <li>If you want a better-looking proposal: QuoteSmith.</li>
-        <li>If you want to fix the whole process: <a href="/free-trial">QuoteCore+</a>.</li>
-      </ul>
+      <h2>The bottom line</h2>
+      <p>QuoteSmith and QuoteCore+ both sit in the quoting space, but they are solving different parts of the problem.</p>
+      <p>QuoteSmith helps with proposal writing.</p>
+      <p>QuoteCore+ helps connect the job from measurement to managed workflow.</p>
+      <p>For construction businesses that want to stop rebuilding the same job information across multiple places, QuoteCore+ is built for that wider process.</p>
+      <p>Before you make a decision, it is worth knowing <a href="/blog/quotecore-plus-reviews">what to expect from QuoteCore+ as a product and what the free trial actually gives you access to</a>.</p>
     </div>
   );
 }

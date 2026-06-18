@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SocialIcons from "@/components/SocialIcons";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Roofing Quoting Software for Contractors | QuoteCore+",
@@ -74,7 +74,7 @@ const steps = [
 
 const bullets = [
   "Digital takeoffs built for roofing - not adapted from another trade",
-  "Pricing templates with component-level logic",
+  "Smart Components™ with materials, labour, measurements, drawings, calculations and pricing rules",
   "Client-ready output that looks professional every time",
   "Full workflow from measurement to send - in one place",
 ];
@@ -98,7 +98,7 @@ const faqs = [
   },
   {
     q: "Is there a free trial?",
-    a: "Yes. You get 2 weeks free - no credit card required. You'll be quoting within minutes of signing up.",
+    a: "Yes. You get 14 days free - no credit card required. You'll be quoting within minutes of signing up.",
   },
   {
     q: "Where is QuoteCore+ available?",
@@ -148,12 +148,16 @@ export default function RoofingQuotingSoftwarePage() {
             <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600 sm:text-xl">
               From takeoff to a professional, priced quote in minutes - without the spreadsheets, the re-entry, or the back-and-forth.
             </p>
+            <div className="mt-6 mx-auto max-w-2xl rounded-xl border border-zinc-200 bg-zinc-50 px-5 py-4 text-left">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#FF6B35] mb-2">Quick answer</p>
+              <p className="text-sm leading-6 text-zinc-600">QuoteCore+ is roofing quoting software for contractors who quote from plans and want one connected workflow from digital takeoff to priced quote, customer approval, materials ordering, and job management. It may not be the right fit for roofers doing mostly reactive repair work or teams that mainly need mobile job dispatch.</p>
+            </div>
             <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
                 href="/free-trial"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#FF6B35] px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]"
               >
-                Start your free 2-week trial
+                Start your free 14-day trial
               </a>
             </div>
             <p className="mt-3 text-sm text-zinc-400">No credit card required.</p>
@@ -194,6 +198,37 @@ export default function RoofingQuotingSoftwarePage() {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* Smart Components™ */}
+        <section id="smart-components" className="mx-auto max-w-4xl px-6 py-20 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Smart Components™</p>
+          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Smart Components™ for roofing quotes</h2>
+          <p className="mt-6 text-lg leading-8 text-zinc-600">
+            Roofing quotes repeat more than people think. Materials, labour, waste, pitch, angles, lengths, areas, flashing details and pricing rules all come back again and again.
+          </p>
+          <p className="mt-4 text-lg leading-8 text-zinc-600">
+            With Smart Components™, you can save the way you price and build those parts of a job, then reuse them in future quotes without starting from scratch.
+          </p>
+          <p className="mt-6 text-base font-medium text-zinc-700">Use Smart Components™ for:</p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {[
+              "Roof sections",
+              "Flashings",
+              "Labour rules",
+              "Waste allowances",
+              "Pitch and angle calculations",
+              "Area and length calculations",
+              "Drawings and images",
+              "Materials and pricing logic",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-zinc-700">
+                <span className="mt-1 shrink-0 text-[#FF6B35] font-bold">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 text-base font-medium text-zinc-700">Make the component once. Reuse it whenever the same type of work comes up again.</p>
         </section>
 
         {/* Why QuoteCore+ */}
@@ -265,22 +300,13 @@ export default function RoofingQuotingSoftwarePage() {
             href="/free-trial"
             className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]"
           >
-            Start your free 2-week trial
+            Start your free 14-day trial
           </a>
-          <p className="mt-4 text-sm text-zinc-400">No card required. 2 weeks free. Cancel anytime.</p>
+          <p className="mt-4 text-sm text-zinc-400">No card required. 14 days free.</p>
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-zinc-200 py-10 text-center text-sm text-zinc-500">
-          <p>
-            <a href="/" className="hover:text-zinc-800">Back to QuoteCore+</a>
-            {" · "}
-            <a href="/free-trial" className="hover:text-zinc-800">Free trial</a>
-          </p>
-          <p className="mt-3">© 2026 QuoteCore+</p>
-        
-          <SocialIcons />
-        </footer>
+        <SiteFooter />
       </main>
 
       <style>{`

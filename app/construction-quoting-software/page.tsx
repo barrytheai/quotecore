@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import SocialIcons from "@/components/SocialIcons";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Construction Quoting Software for Trades | QuoteCore+",
+  title: "Construction Quoting Software for Trades That Quote From Measurements | QuoteCore+",
   description:
-    "Stop rebuilding quotes from scratch. QuoteCore+ helps construction businesses turn site measurements into professional quotes faster - no spreadsheets, no reformatting, no re-entering data.",
+    "Construction quoting software for trades that measure, price, and quote jobs. Turn site measurements into professional quotes faster - no spreadsheets, no reformatting, no re-entering data.",
   alternates: {
     canonical: "https://quote-core.com/construction-quoting-software",
   },
@@ -39,7 +39,7 @@ const howToSchema = {
     {
       "@type": "HowToStep",
       name: "Price automatically",
-      text: "Set up your rates, components, and margins once. QuoteCore+ applies them to every quote. You review, adjust if needed, and send.",
+      text: "Set up your rates, components, margins and pricing rules once with Smart Components™. QuoteCore+ applies that knowledge to future quotes so you are not rebuilding the same job logic every time.",
     },
     {
       "@type": "HowToStep",
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "Can I try it before paying?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. 2-week free trial, no credit card required. Full access from day one.",
+        text: "Yes. 14-day free trial, no credit card required. Full access from day one.",
       },
     },
     {
@@ -120,7 +120,7 @@ const steps = [
   {
     number: "02",
     title: "Price automatically",
-    body: "Set up your rates, components, and margins once. QuoteCore+ applies them to every quote. You review, adjust if needed, and send.",
+    body: "Set up your rates, components, margins and pricing rules once with Smart Components™. QuoteCore+ applies that knowledge to future quotes so you are not rebuilding the same job logic every time.",
   },
   {
     number: "03",
@@ -159,7 +159,7 @@ const faqs = [
   },
   {
     q: "Can I try it before paying?",
-    a: "Yes. 2-week free trial, no credit card required. Full access from day one.",
+    a: "Yes. 14-day free trial, no credit card required. Full access from day one.",
   },
   {
     q: "Who do I contact with questions?",
@@ -207,10 +207,10 @@ export default function ConstructionQuotingSoftwarePage() {
           <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Construction Quoting Software</p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-              Stop rebuilding quotes from scratch.
+              Construction quoting software for trades that quote from measurements
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600 sm:text-xl">
-              If you&apos;re still measuring on site, copying numbers into a spreadsheet, formatting a Word document, and sending it off - you&apos;re doing it the hard way.
+              Stop rebuilding quotes from scratch. If you&apos;re still measuring on site, copying numbers into a spreadsheet, formatting a Word document, and sending it off - you&apos;re doing it the hard way.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
               QuoteCore+ is quoting software built for construction businesses that need to turn measurements into professional quotes faster. Built from real{" "}
@@ -222,10 +222,10 @@ export default function ConstructionQuotingSoftwarePage() {
                 href="/free-trial"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#FF6B35] px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]"
               >
-                Start free 2-week trial - no card required
+                Start free 14-day trial - no card required
               </a>
             </div>
-            <p className="mt-3 text-sm text-zinc-400">No credit card required. Cancel anytime.</p>
+            <p className="mt-3 text-sm text-zinc-400">No credit card required. 14 days free.</p>
           </div>
         </section>
 
@@ -241,7 +241,7 @@ export default function ConstructionQuotingSoftwarePage() {
             Measure on site. Write it up from memory, photos, and notes. Transfer the numbers into a spreadsheet. Format it into something that looks professional enough to send. Then hope you got it out before someone else did.
           </p>
           <p className="mt-5 text-lg leading-8 text-zinc-600">
-            The research is clear: the first contractor to respond wins 78% of jobs. Every hour between site visit and sent quote is a risk.
+            <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Harvard Business Review</a> found that contractors who respond within an hour are 7x more likely to win the job. Every hour between site visit and sent quote is a risk.
           </p>
           <p className="mt-5 text-lg leading-8 text-zinc-600">
             And it&apos;s not just speed. It&apos;s errors. Measurements copied wrong. Prices that weren&apos;t updated. Materials orders built from scratch because nothing connects to anything else.
@@ -268,6 +268,24 @@ export default function ConstructionQuotingSoftwarePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Smart Components™ */}
+        <section id="smart-components" className="bg-zinc-50 py-20">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Smart Components™</p>
+            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Your quoting knowledge, saved properly.</h2>
+            <p className="mt-6 text-lg leading-8 text-zinc-600">
+              Most construction businesses already know how they price jobs. The problem is that knowledge is scattered across spreadsheets, old quotes, memory, photos, folders and notes.
+            </p>
+            <p className="mt-4 text-lg leading-8 text-zinc-600">
+              Smart Components™ give that knowledge a proper home.
+            </p>
+            <p className="mt-4 text-lg leading-8 text-zinc-600">
+              Save materials, labour, waste allowances, measurements, drawings, images, calculations and pricing rules once - then reuse them across future quotes.
+            </p>
+            <p className="mt-6 text-base font-semibold text-zinc-950">Make them once. Reuse them in seconds.</p>
           </div>
         </section>
 
@@ -368,25 +386,13 @@ export default function ConstructionQuotingSoftwarePage() {
             href="/free-trial"
             className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full bg-[#FF6B35] px-10 py-3 text-base font-semibold text-white transition-colors hover:bg-[#e85d2b]"
           >
-            Start your free 2-week trial →
+            Start your free 14-day trial →
           </a>
-          <p className="mt-4 text-sm text-zinc-400">No card required. 2 weeks free. Cancel anytime.</p>
+          <p className="mt-4 text-sm text-zinc-400">No card required. 14 days free.</p>
         </section>
 
         {/* Footer */}
-        <footer className="border-t border-zinc-200 py-10 text-center text-sm text-zinc-500">
-          <p>
-            <a href="/" className="hover:text-zinc-800">Back to QuoteCore+</a>
-            {" · "}
-            <a href="/roofing-quoting-software" className="hover:text-zinc-800">Roofing Quoting Software</a>
-            {" · "}
-            <a href="/free-trial" className="hover:text-zinc-800">Free trial</a>
-          </p>
-          <p className="mt-3">© 2026 QuoteCore+</p>
-          <p className="mt-1">Built by T3Labs</p>
-        
-          <SocialIcons />
-        </footer>
+        <SiteFooter />
       </main>
 
       <style>{`

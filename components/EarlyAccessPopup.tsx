@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import { getAttribution } from "@/components/AttributionTracker";
+import { trackEvent } from "@/lib/analytics";
 
 interface Props {
   forceOpen?: boolean;
@@ -64,12 +65,14 @@ export default function EarlyAccessPopup({ forceOpen, onClose }: Props = {}) {
       if (error.code === "23505") {
         // Already signed up
         setStatus("success");
+        trackEvent("signup_complete", { form_type: "early_access", duplicate: 1 });
       } else {
         setStatus("error");
         setErrorMsg("Something went wrong. Please try again.");
       }
     } else {
       setStatus("success");
+      trackEvent("signup_complete", { form_type: "early_access" });
     }
   };
 

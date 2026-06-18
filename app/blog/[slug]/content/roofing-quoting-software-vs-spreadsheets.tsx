@@ -1,80 +1,99 @@
 export default function Post() {
   return (
     <div className="prose prose-zinc max-w-none">
-      <p>Most roofing contractors have a spreadsheet they're quietly proud of.</p>
-      <p>It took years to build. It knows your pricing. It gets the job done - mostly. And it feels risky to touch.</p>
-      <p>This isn't a post telling you that spreadsheet is wrong. It's a comparison of what spreadsheets actually do well, where they cost you time and money, and what changes when you move to software built specifically for roofing.</p>
+      <p>A lot of roofing businesses run on spreadsheets, and there is a good reason for that.</p>
+      <p>Spreadsheets are flexible. They are familiar. They let you build your own formulas, adjust rates, copy old jobs and keep control of the numbers. For a small business, especially in the early days, a spreadsheet can do a decent job.</p>
+      <p>So the question is not whether spreadsheets are bad.</p>
+      <p>The better question is: at what point does the spreadsheet start creating more admin than it saves?</p>
+      <p>For many roofers, the answer comes when the spreadsheet becomes the middle of a much bigger workflow. The job starts with measurements and photos, then moves into pricing, then into a quote document, then into follow-up, then materials, then job management. If the spreadsheet only handles one part of that, everything else still has to be managed somewhere else.</p>
 
       <hr />
 
-      <h2>What spreadsheets get right</h2>
-      <p>Let's be honest about this.</p>
-      <p>A well-built roofing spreadsheet is genuinely useful. If you've spent time setting up your pricing logic, your material components, your labour rates - that spreadsheet knows your business. It gives you control. It costs nothing extra per month.</p>
-      <p>Spreadsheets also have zero learning curve once they're set up. You know exactly where everything is. You can tweak anything without calling support.</p>
-      <p>For a contractor who quotes two or three jobs a month, a spreadsheet might be the right tool. No shame in it.</p>
-      <p>The problems start when volume increases, when the quote needs to look professional, when measurements need to flow into materials orders, or when someone other than you needs to use it.</p>
+      <h2>Where spreadsheets work well</h2>
+      <p>Spreadsheets can be useful for:</p>
+      <ul>
+        <li>basic pricing calculations</li>
+        <li>keeping material rates in one place</li>
+        <li>duplicating similar jobs</li>
+        <li>adjusting margins</li>
+        <li>working through labour and material costs</li>
+        <li>creating a familiar quoting structure</li>
+      </ul>
+      <p>If a contractor only sends a small number of quotes each month and the process is simple, a spreadsheet may be enough.</p>
+      <p>There is no need to overcomplicate things if the current system is genuinely working.</p>
 
       <hr />
 
-      <h2>Where spreadsheets break down</h2>
-
-      <p><strong>1. Every quote starts from scratch</strong></p>
-      <p>Even with a good template, you're re-entering data every time. Measurements from your site notes. Photos on your phone. Material components from memory. Pricing from the version you updated last month (or was it the month before?).</p>
-      <p>The data exists. You're just the system connecting it all manually.</p>
-
-      <p><strong>2. The output doesn't look like a quote</strong></p>
-      <p>A spreadsheet formatted for your own calculations rarely looks like something a homeowner trusts. You're either sending a raw spreadsheet - which looks unfinished - or you're copying everything into a Word document to format it properly.</p>
-      <p>That's double the work for every quote you send.</p>
-
-      <p><strong>3. It's not connected to anything else</strong></p>
-      <p>When a quote is accepted, your spreadsheet doesn't know. You still have to manually build a materials order. You still have to track whether the client approved it. You still have to re-enter data when invoicing.</p>
-      <p>The spreadsheet is an island. Everything around it has to be done separately.</p>
-
-      <p><strong>4. One error multiplies</strong></p>
-      <p>A transposed measurement, a formula broken by an accidental edit, a price that didn't update. In a spreadsheet, one mistake can ripple through an entire quote silently. You only find out when something doesn't add up on site.</p>
-
-      <p><strong>5. It only works for you</strong></p>
-      <p>The moment you have someone else quote a job, you're either training them on your specific spreadsheet - with all its quirks - or they're guessing. There's no consistency. Every quote looks slightly different.</p>
+      <h2>Where spreadsheets start to slow things down</h2>
+      <p>The problem usually starts when the spreadsheet is expected to do more than it was built for.</p>
+      <p>A roofing quote is not just a set of numbers. It is connected to the customer, the site, the measurements, the materials, the scope, the approval, the order and eventually the job itself.</p>
+      <p>A spreadsheet can calculate, but it does not naturally manage the full process.</p>
+      <p>Common problems include:</p>
+      <ul>
+        <li>measurements being copied from notes into the spreadsheet</li>
+        <li>quote details being copied again into a Word or PDF template</li>
+        <li>old files being reused and accidentally left with the wrong details</li>
+        <li>material orders being created separately after the quote is accepted</li>
+        <li>follow-ups being handled manually</li>
+        <li>job details being stored across folders, emails and someone&apos;s memory</li>
+      </ul>
+      <p>None of these problems are dramatic on their own. But over time, they add up.</p>
+      <p>The business ends up doing the same job admin more than once.</p>
+      <p>For a broader look at what the shift to digital quoting actually looks like on the ground, <a href="/blog/roofing-quoting-software-uk">this breakdown of how UK roofers are winning more jobs by moving away from manual processes</a> puts the context around it.</p>
 
       <hr />
 
-      <h2>What roofing-specific software changes</h2>
-      <p>This isn't about replacing the logic in your spreadsheet. It's about removing the manual work around it.</p>
-      <p><strong>Measurements enter once.</strong> With digital takeoff built in, you measure the roof from a plan - roof area, ridge, hip, valley, eave, barge - and those numbers feed directly into your pricing. No re-entry. No transcription.</p>
-      <p><strong>The quote builds itself.</strong> Your pricing rules, component logic, and margins are set up once. After that, the software applies them. You review, adjust if needed, and send. What used to take two hours takes twenty minutes.</p>
-      <p><strong>The output is already professional.</strong> The client-facing quote comes out of the system formatted and ready to send. No reformatting in Word. A professional document that reflects the quality of your work.</p>
-      <p><strong>Acceptance triggers the next step.</strong> When a client accepts, you know immediately - by email and in your account. Materials orders can be built directly from the accepted quote.</p>
-      <p><strong>Anyone on your team can use it.</strong> Because the pricing logic is in the system, any member of your team can produce a consistent, accurate quote.</p>
+      <h2>Why the quote output matters</h2>
+      <p>A spreadsheet might be great internally, but it is not always what the customer should see.</p>
+      <p>Most businesses end up turning spreadsheet information into something more polished before sending it. That often means copying the details into a separate quote template, checking the formatting, removing internal notes and making sure it looks professional.</p>
+      <p>That is another step where time is lost and mistakes can creep in.</p>
+      <p>With a connected quote workflow, the aim is for the information used to price the job to also help create the customer-facing quote. That reduces the need to rebuild the quote just to make it presentable.</p>
 
       <hr />
 
-      <h2>Side-by-side comparison</h2>
+      <h2>What QuoteCore+ changes</h2>
+      <p>QuoteCore+ is not just a prettier spreadsheet.</p>
+      <p>It is built to connect the job information from measurement through to quote and then into the next steps after the customer responds.</p>
+      <p>Instead of using separate tools for each stage, QuoteCore+ helps keep the workflow in one place:</p>
+      <ul>
+        <li>measurements feed the quote</li>
+        <li>pricing logic can be reused consistently</li>
+        <li>the quote is ready to send</li>
+        <li>acceptance or decline can be tracked</li>
+        <li>follow-ups are easier to manage</li>
+        <li>materials can be ordered from the accepted quote</li>
+        <li>job details stay connected after the quote is won</li>
+      </ul>
+      <p>The point is not that every roofing business must stop using spreadsheets immediately. The point is that once the spreadsheet becomes the thing holding the entire job together, it may be time for a better system.</p>
+      <p>If speed is the main issue - not just accuracy - <a href="/blog/construction-quote-speed-checklist">the Construction Quote Speed Checklist</a> shows how to build a process that gets quotes out the same day as a site visit, regardless of what tool you are using.</p>
 
-      {/* Comparison table */}
-      <div className="not-prose overflow-x-auto my-8">
-        <table className="w-full text-sm border-collapse">
+      <hr />
+
+      <h2>Spreadsheet vs QuoteCore+</h2>
+      <div className="not-prose overflow-x-auto">
+        <table className="w-full border-collapse text-sm">
           <thead>
-            <tr className="bg-zinc-50">
-              <th className="text-left px-4 py-3 border border-zinc-200 font-semibold text-zinc-700 w-1/3"></th>
-              <th className="text-left px-4 py-3 border border-zinc-200 font-semibold text-zinc-700">Spreadsheet</th>
-              <th className="text-left px-4 py-3 border border-zinc-200 font-semibold text-[#FF6B35]">QuoteCore+</th>
+            <tr className="border-b border-zinc-200 bg-zinc-50">
+              <th className="px-4 py-3 text-left font-semibold text-zinc-950">Workflow area</th>
+              <th className="px-4 py-3 text-left font-semibold text-zinc-950">Spreadsheet</th>
+              <th className="px-4 py-3 text-left font-semibold text-zinc-950">QuoteCore+</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-zinc-100">
             {[
-              ["Setup time", "Hours to build, ongoing to maintain", "Set up once, add jobs immediately"],
-              ["Quoting time", "1-3 hours per quote", "15-20 minutes per quote"],
-              ["Quote output", "Raw data or reformatted Word doc", "Client-ready, professional PDF"],
-              ["Measurement input", "Manual re-entry every time", "Digital takeoff, enter once"],
-              ["Materials ordering", "Separate manual process", "Built directly from the quote"],
-              ["Quote acceptance tracking", "Email or phone", "Automated alerts, tracked in account"],
-              ["Team use", "Training required, inconsistent results", "Consistent, anyone can use"],
-              ["Error risk", "Formula errors, version control issues", "Locked pricing logic, no manual transfer"],
-            ].map(([feature, spreadsheet, software], i) => (
-              <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-zinc-50/50"}>
-                <td className="px-4 py-3 border border-zinc-200 font-medium text-zinc-800">{feature}</td>
-                <td className="px-4 py-3 border border-zinc-200 text-zinc-500">{spreadsheet}</td>
-                <td className="px-4 py-3 border border-zinc-200 text-zinc-800">{software}</td>
+              ["Measurements", "Usually copied in manually", "Built into the workflow"],
+              ["Pricing", "Flexible but often dependent on formulas", "Set up to apply consistently"],
+              ["Quote output", "Often needs formatting elsewhere", "Designed to create a client-ready quote"],
+              ["Follow-up", "Manual", "Built into the workflow"],
+              ["Approval tracking", "Usually manual", "Track accepted or declined quotes"],
+              ["Materials", "Ordered separately", "Can be linked to the accepted quote"],
+              ["Job details", "Spread across files and emails", "Kept with the job"],
+              ["Team use", "Often depends on who built the sheet", "Easier to keep consistent"],
+            ].map(([area, spreadsheet, qcp]) => (
+              <tr key={area}>
+                <td className="px-4 py-3 font-medium text-zinc-800">{area}</td>
+                <td className="px-4 py-3 text-zinc-600">{spreadsheet}</td>
+                <td className="px-4 py-3 text-zinc-600">{qcp}</td>
               </tr>
             ))}
           </tbody>
@@ -83,13 +102,25 @@ export default function Post() {
 
       <hr />
 
-      <h2>The honest verdict</h2>
-      <p>If you're solo, quoting a handful of jobs a month, and your spreadsheet works - keep using it until it doesn't.</p>
-      <p>But if you're losing time after site visits, sending quotes that look less professional than your work deserves, or missing jobs because someone got there first - the spreadsheet is the bottleneck.</p>
-      <p>Research shows the first contractor to respond wins 78% of home service jobs. (<a href="https://chiirp.com/insider_information_blog/the-real-cost-of-slow-lead-response" target="_blank" rel="noopener noreferrer">Source: CHIIRP, based on Harvard Business Review / MIT lead response research</a>) The spreadsheet won't get you there fast enough.</p>
-      <p>QuoteCore+ was built by a roofer who spent over a decade doing this the slow way. It's not a generic estimating tool adapted for roofing - it's built around the way a roofing job actually works, from first measurement to final invoice.</p>
-      <p>No credit card required. No spreadsheet required. Set up your pricing once, quote your next job in the system, and see how long it actually takes.</p>
-      <p><a href="/">Start your free 2-week trial</a> and see what changes when <a href="/">roofing quoting software</a> is built around how you actually work.</p>
+      <h2>When a spreadsheet may still be enough</h2>
+      <p>A spreadsheet may still work if:</p>
+      <ul>
+        <li>you only quote a few jobs each month</li>
+        <li>you work alone</li>
+        <li>your quotes are simple</li>
+        <li>you already have a clean follow-up process</li>
+        <li>you do not need material ordering connected to quotes</li>
+        <li>you are not losing time after site visits</li>
+      </ul>
+      <p>But if quoting is becoming a bottleneck, or if job information keeps getting copied between different places, a spreadsheet may no longer be the best centre of the workflow.</p>
+
+      <hr />
+
+      <h2>The honest answer</h2>
+      <p>Spreadsheets are not the enemy. Disconnected admin is.</p>
+      <p>QuoteCore+ was built for roofing and construction businesses that want measurements, pricing, quotes, approvals, materials and job details to stay connected.</p>
+      <p>If your spreadsheet still works, keep it.</p>
+      <p>If it has become the thing you are constantly working around, it may be time to try a different workflow. <a href="/blog/best-roofing-quoting-software-uk-2026">Here is a full comparison of the best roofing quoting software for UK contractors in 2026</a> - with honest assessments of six tools across the criteria that actually matter for roofers.</p>
     </div>
   );
 }

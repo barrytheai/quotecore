@@ -27,3 +27,17 @@ a, button, [role="button"], select, label[for] {
   display: flex;
   white-space: nowrap;
 }
+
+.brand-wordmark {
+  white-space: nowrap;
+}
+
+.brand-plus {
+  color: #FF6B35;
+}
+
+
+@keyframes floatBubble {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}

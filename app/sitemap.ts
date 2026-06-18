@@ -23,12 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${base}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
       url: `${base}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -81,6 +75,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
+    },
+    {
+      url: `${base}/blog/construction-quote-speed-checklist`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/blog/how-to-get-more-work-as-a-contractor`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${base}/blog/best-roofing-quoting-software-uk-2026`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/blog/best-quoting-software-nz`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${base}/cookie-policy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${base}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
   ];
 }
