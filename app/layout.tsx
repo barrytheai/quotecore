@@ -78,9 +78,29 @@ const combinedSchema = {
         "@id": "https://quote-core.com/#organization",
       },
       offers: {
-        "@type": "Offer",
+        "@type": "AggregateOffer",
         url: "https://quote-core.com/#pricing",
+        priceCurrency: "USD",
+        lowPrice: "19",
+        highPrice: "59",
+        offerCount: 3,
+        offers: [
+          { "@type": "Offer", name: "Starter", price: "19", priceCurrency: "USD", url: "https://quote-core.com/#pricing" },
+          { "@type": "Offer", name: "Growth", price: "39", priceCurrency: "USD", url: "https://quote-core.com/#pricing" },
+          { "@type": "Offer", name: "Pro", price: "59", priceCurrency: "USD", url: "https://quote-core.com/#pricing" },
+        ],
       },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://quote-core.com/",
+        },
+      ],
     },
   ],
 };

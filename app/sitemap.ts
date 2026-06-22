@@ -95,12 +95,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${base}/blog/best-quoting-software-nz`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
       url: `${base}/cookie-policy`,
       lastModified: new Date(),
       changeFrequency: "yearly",
