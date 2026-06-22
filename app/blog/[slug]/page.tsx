@@ -57,12 +57,6 @@ const posts: Record<string, {
     date: "2026-06-15",
     content: () => import("./content/best-roofing-quoting-software-uk-2026"),
   },
-  "best-quoting-software-nz": {
-    title: "Best Quoting Software for NZ Tradies (2026): Compared",
-    description: "Comparing the best quoting software for New Zealand tradies in 2026. Honest breakdown of QuoteCore+, Tradify, Fergus, ServiceM8, Buildxact, and more - with a comparison table and recommendations by trade type.",
-    date: "2026-06-16",
-    content: () => import("./content/best-quoting-software-nz"),
-  },
 };
 
 type Props = { params: Promise<{ slug: string }> };
@@ -80,7 +74,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "construction-quote-speed-checklist": "The Construction Quote Speed Checklist | QuoteCore+",
     "how-to-get-more-work-as-a-contractor": "How to Get More Work as a Contractor: 7 Things to Fix Before You Spend Money on Ads | QuoteCore+",
     "best-roofing-quoting-software-uk-2026": "Best Roofing Quoting Software UK (2026): Compared for Contractors | QuoteCore+",
-    "best-quoting-software-nz": "Best Quoting Software for NZ Tradies (2026): Compared | QuoteCore+",
   };
   return {
     title: titleOverrides[slug] ?? `${post.title} | QuoteCore+`,
@@ -99,19 +92,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const { default: Content } = await post.content();
 
-  const faqSchema = slug === "best-quoting-software-nz" ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "What is the best quoting software for tradies in New Zealand?", "acceptedAnswer": { "@type": "Answer", "text": "The right option depends on your trade and workflow. QuoteCore+ is the strongest choice for tradies who quote from plans and need a complete workflow from measurement to job completion. Tradify and Fergus are strong for team management and job tracking. ServiceM8 works well for high-volume service trades." } },
-      { "@type": "Question", "name": "Is there free quoting software for NZ tradies?", "acceptedAnswer": { "@type": "Answer", "text": "QuoteCore+ offers a 14-day free trial with no credit card required. Tradify has a trial period. Most platforms require a paid subscription - the cost is typically recovered in the first month through time saved on admin and faster quote turnaround." } },
-      { "@type": "Question", "name": "How much does quoting software cost for NZ tradespeople?", "acceptedAnswer": { "@type": "Answer", "text": "Most quoting platforms for NZ tradies range from approximately $39 to $79 per month for a sole trader or small team. Buildxact starts higher at around $149/month due to its more complex feature set." } },
-      { "@type": "Question", "name": "What is the difference between quoting software and job management software?", "acceptedAnswer": { "@type": "Answer", "text": "Quoting software focuses on generating priced proposals quickly and professionally. Job management software focuses on what happens after a quote is accepted - scheduling, team coordination, job tracking, and invoicing. Most modern platforms attempt to do both." } },
-      { "@type": "Question", "name": "Can I use quoting software on my phone on site?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most platforms on this list have mobile apps that work on iOS and Android. For plan-based takeoffs, a tablet is more practical than a phone, though both work." } },
-      { "@type": "Question", "name": "Is Tradify or Fergus better for NZ tradies?", "acceptedAnswer": { "@type": "Answer", "text": "Both are NZ-built and well-regarded. Tradify is stronger on job scheduling and team management. Fergus is stronger on job costing and profitability tracking. If knowing your actual job margins matters most, Fergus. If managing a team is the priority, Tradify." } },
-      { "@type": "Question", "name": "How long does it take to send a quote using quoting software?", "acceptedAnswer": { "@type": "Answer", "text": "For a straightforward job with saved pricing templates, most platforms can produce a quote in 10-20 minutes. For complex project work using plan-based takeoff in QuoteCore+, the first quote on a new project type might take 30-45 minutes to set up - after that, similar jobs are much faster." } }
-    ]
-  } : slug === "best-roofing-quoting-software-uk-2026" ? {
+  const faqSchema = slug === "best-roofing-quoting-software-uk-2026" ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [

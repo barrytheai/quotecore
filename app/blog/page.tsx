@@ -11,12 +11,6 @@ interface Post {
 
 const posts: Post[] = [
   {
-    slug: "best-quoting-software-nz",
-    title: "Best Quoting Software for NZ Tradies (2026): Compared",
-    description: "Comparing the best quoting software for New Zealand tradies in 2026. Honest breakdown of QuoteCore+, Tradify, Fergus, ServiceM8, Buildxact, and more - with a comparison table and recommendations by trade type.",
-    date: "2026-06-16",
-  },
-  {
     slug: "best-roofing-quoting-software-uk-2026",
     title: "Best Roofing Quoting Software UK (2026): Compared for Contractors",
     description: "Comparing the best roofing quoting software available to UK contractors in 2026. Honest breakdown of QuoteCore+, Sleepless Tradesman, Tradify, Jobber, Powered Now, Fergus, and EasyEstimate - with a comparison table and recommendations by business type.",
