@@ -170,7 +170,7 @@ export default function HomePage() {
       isFree: false,
     },
     {
-      name: "Professional",
+      name: "Growth",
       usd: "$39",
       gbp: `£${toGBP(39)}`,
       originalUsd: "$90",
@@ -182,7 +182,7 @@ export default function HomePage() {
       isFree: false,
     },
     {
-      name: "Pro Plus",
+      name: "Pro",
       usd: "$59",
       gbp: `£${toGBP(59)}`,
       originalUsd: "$120",
@@ -552,6 +552,9 @@ export default function HomePage() {
                 </p>
                 <p className="mt-4 max-w-xl text-base leading-7 text-zinc-600 sm:text-lg">
                   The all-in-1 business platform that adapts to how you work.
+                </p>
+                <p className="mt-3 max-w-xl text-base leading-7 text-zinc-600 sm:text-lg">
+                  QuoteCore+ is contractor quoting software for trades that work from measurements. It helps roofers, builders and trade businesses measure jobs, build priced quotes, track customer approval, order materials, manage work, invoice and get paid - all in one connected workflow.
                 </p>
                 <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
                   <a href="/free-trial" className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FF6B35] px-7 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#e85d2b]" onClick={() => trackEvent("free_trial_click", { location: "hero" })}>
@@ -1074,19 +1077,19 @@ export default function HomePage() {
                   } ${plan.comingSoon ? "opacity-60" : ""}`}
                 >
                   <h3 className="text-xl font-semibold">{plan.name}</h3>
-                  <div className="mt-4 flex items-end gap-2 flex-wrap">
-                    <span className="text-4xl font-semibold">
-                      {plan.isFree || plan.comingSoon ? (currency === "GBP" ? plan.gbp : plan.usd) : (currency === "GBP" ? plan.gbp : plan.usd)}
-                    </span>
+                  <div className="mt-4 space-y-1">
+                    <p className="text-4xl font-semibold">
+                      {currency === "GBP" ? plan.gbp : plan.usd}
+                      {!plan.isFree && !plan.comingSoon && (
+                        <span className={`ml-1 align-baseline text-sm font-medium ${
+                          plan.featured ? "text-zinc-400" : "text-zinc-500"
+                        }`}>/mo</span>
+                      )}
+                    </p>
                     {!plan.isFree && !plan.comingSoon && plan.originalUsd && (
-                      <span className="mb-1 text-sm line-through text-zinc-500">
-                        {currency === "GBP" ? plan.originalGbp : plan.originalUsd}
-                      </span>
-                    )}
-                    {!plan.isFree && !plan.comingSoon && (
-                      <span className={`mb-1 text-sm ${
-                        plan.featured ? "text-zinc-400" : "text-zinc-500"
-                      }`}>/mo</span>
+                      <p className={`text-sm ${plan.featured ? "text-zinc-500" : "text-zinc-400"}`}>
+                        Regular price <s>{currency === "GBP" ? plan.originalGbp : plan.originalUsd}/mo</s>
+                      </p>
                     )}
                   </div>
                   <p className={`mt-3 text-sm ${
