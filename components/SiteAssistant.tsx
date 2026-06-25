@@ -448,13 +448,13 @@ export default function SiteAssistant() {
                   </p>
                 </div>
 
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {quickQuestions.map((question) => (
                     <button
                       key={question}
                       type="button"
                       onClick={() => askQuestion(question)}
-                      className="rounded-full border border-zinc-200 bg-white px-3 py-2 text-left text-xs font-semibold text-zinc-700 transition hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
+                      className="min-h-10 rounded-full border border-zinc-200 bg-white px-3 py-2 text-left text-[12px] font-semibold leading-4 text-zinc-700 transition hover:border-[#FF6B35]/40 hover:text-[#FF6B35]"
                     >
                       {question}
                     </button>
