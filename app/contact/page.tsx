@@ -15,12 +15,12 @@ export default function ContactPage() {
         <div className="pointer-events-none absolute left-0 bottom-24 h-64 w-80 rounded-full bg-[#FF6B35]/6 blur-3xl" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
         {/* Hero */}
-        <div className="mx-auto max-w-2xl text-center mb-14">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF6B35] mb-3">Get in touch</p>
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl mb-4">
+        <div className="mx-auto mb-14 max-w-4xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Get in touch</p>
+          <h1 className="mb-4 text-5xl font-semibold tracking-tight text-zinc-900 sm:text-6xl md:whitespace-nowrap">
             We&apos;d love to hear from you
           </h1>
-          <p className="text-lg text-zinc-500 leading-relaxed">
+          <p className="text-lg leading-8 text-zinc-500">
             Not ready to book a call? No problem. Send us a message and we&apos;ll get back to you within 24 hours - no jargon, no pressure.
           </p>
         </div>
@@ -36,9 +36,9 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-zinc-900 mb-1">Email us directly</h3>
-                  <p className="text-sm text-zinc-500 mb-1">For general questions, support, or feedback.</p>
-                  <a href="mailto:info@quote-core.com" className="text-sm font-semibold text-[#FF6B35] hover:underline">info@quote-core.com</a>
+                  <h3 className="mb-1 text-base font-semibold text-zinc-900">Email us directly</h3>
+                  <p className="mb-1 text-base leading-7 text-zinc-500">For general questions, support, or feedback.</p>
+                  <a href="mailto:info@quote-core.com" className="text-base font-semibold text-[#FF6B35] hover:underline">info@quote-core.com</a>
                 </div>
               </div>
 
@@ -49,13 +49,13 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-zinc-900 mb-1">Book a free call</h3>
-                  <p className="text-sm text-zinc-500 mb-1">15 minutes. No pitch. Just a straight conversation.</p>
+                  <h3 className="mb-1 text-base font-semibold text-zinc-900">Book a free call</h3>
+                  <p className="mb-1 text-base leading-7 text-zinc-500">15 minutes. No pitch. Just a straight conversation.</p>
                   <a
                     href="https://calendly.com/quote-core-info/15-minute-meeting"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-semibold text-[#FF6B35] hover:underline"
+                    className="text-base font-semibold text-[#FF6B35] hover:underline"
                   >
                     Book on Calendly &rarr;
                   </a>
@@ -69,16 +69,16 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-zinc-900 mb-1">Response time</h3>
-                  <p className="text-sm text-zinc-500">We reply to all messages within 24 hours, usually much faster.</p>
+                  <h3 className="mb-1 text-base font-semibold text-zinc-900">Response time</h3>
+                  <p className="text-base leading-7 text-zinc-500">We reply to all messages within 24 hours, usually much faster.</p>
                 </div>
               </div>
             </div>
 
             {/* Reassurance box */}
             <div className="mt-10 rounded-2xl border border-zinc-100 bg-zinc-50 p-6">
-              <p className="text-sm font-semibold text-zinc-800 mb-2">What happens when you reach out?</p>
-              <ul className="space-y-2 text-sm text-zinc-500">
+              <p className="mb-2 text-base font-semibold text-zinc-800">What happens when you reach out?</p>
+              <ul className="space-y-2 text-base leading-7 text-zinc-500">
                 <li className="flex items-start gap-2"><span className="mt-0.5 text-[#FF6B35] font-bold">&#10003;</span> A real person reads your message</li>
                 <li className="flex items-start gap-2"><span className="mt-0.5 text-[#FF6B35] font-bold">&#10003;</span> No automated sales sequences</li>
                 <li className="flex items-start gap-2"><span className="mt-0.5 text-[#FF6B35] font-bold">&#10003;</span> Straight, useful answer - no fluff</li>
@@ -89,8 +89,8 @@ export default function ContactPage() {
 
           {/* Right - form */}
           <div className="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm">
-            <h2 className="text-xl font-bold text-zinc-900 mb-1">Send us a message</h2>
-            <p className="text-sm text-zinc-500 mb-6">Fill in what you can - we only need your name, email, and message.</p>
+            <h2 className="mb-1 text-2xl font-semibold text-zinc-900">Send us a message</h2>
+            <p className="mb-6 text-base leading-7 text-zinc-500">Fill in what you can - we only need your name, email, and message.</p>
 
             <form
               className="space-y-5"
@@ -125,7 +125,7 @@ export default function ContactPage() {
                   type="text"
                   required
                   placeholder="First name or full name"
-                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
+                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-base text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
                 />
               </div>
 
@@ -139,7 +139,7 @@ export default function ContactPage() {
                   type="email"
                   required
                   placeholder="you@company.com"
-                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
+                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-base text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
                 />
               </div>
 
@@ -152,7 +152,7 @@ export default function ContactPage() {
                   name="company"
                   type="text"
                   placeholder="Your business name"
-                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
+                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-base text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
                 />
               </div>
 
@@ -165,7 +165,7 @@ export default function ContactPage() {
                   name="subject"
                   type="text"
                   placeholder="e.g. Question about pricing, Feature request..."
-                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
+                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-base text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
                 />
               </div>
 
@@ -179,7 +179,7 @@ export default function ContactPage() {
                   rows={5}
                   required
                   placeholder="Tell us what you need help with or what you'd like to know..."
-                  className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100 resize-y"
+                  className="w-full resize-y rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-base text-zinc-900 placeholder-zinc-400 outline-none transition focus:border-zinc-400 focus:bg-white focus:ring-2 focus:ring-zinc-100"
                 />
               </div>
 
