@@ -60,6 +60,21 @@ export default function Post() {
       </ol>
       <p>The quote is not treated as the final destination. It becomes part of the job.</p>
 
+            <h2>See the workflow beyond the quote</h2>
+      <p>
+        The easiest way to understand the difference is to see what happens after the quote is built. This walkthrough shows how QuoteCore+ connects the wider workflow — from measurements and pricing through to customer approval, follow-up, materials and job management.
+      </p>
+
+      <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+        <iframe
+          src="https://www.youtube.com/embed/pqIfx-rOcmo?start=3"
+          title="QuoteCore+ quote-to-job workflow walkthrough"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+
       <hr />
 
       <h2>Side-by-side comparison</h2>
