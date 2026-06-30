@@ -58,7 +58,7 @@ export default function Post() {
 
       <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
         <iframe
-          src="https://www.youtube.com/embed/pqIfx-rOcmo&t=3s"
+          src="https://www.youtube.com/embed/pqIfx-rOcmo?start=3"
           title="Watch QuoteCore+ in action"
           className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
