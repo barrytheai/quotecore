@@ -853,22 +853,24 @@ export default function HomePage() {
 
 
               {/* Rolling banner + CTA */}
-        <div className="border-y border-zinc-300 bg-zinc-200 py-3">
-          {/* Rolling banner: all screen sizes */}
-          <div className="overflow-hidden">
-            {/* One crawlable version of the guarantee */}
-            <p className="sr-only">At least 25% faster - or it&apos;s free.</p>
-            {/* Decorative animated marquee - hidden from crawlers */}
-            <div ref={bannerTrackRef} className="banner-track" aria-hidden="true" data-nosnippet style={{willChange: "transform"}}>
-              {[0,1,2,3,4,5].map((i) => (
-                <span key={i} className="banner-item inline-flex items-center shrink-0 whitespace-nowrap">
-                  <span className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-700 px-6 lg:px-16">{carouselMounted ? "AT LEAST 25% FASTER - OR IT'S FREE" : "\u00a0"}</span>
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+{false && (
+  <div className="border-y border-zinc-300 bg-zinc-200 py-3">
+    {/* Rolling banner: all screen sizes */}
+    <div className="overflow-hidden">
+      {/* One crawlable version of the guarantee */}
+      <p className="sr-only">At least 25% faster - or it&apos;s free.</p>
+      {/* Decorative animated marquee - hidden from crawlers */}
+      <div ref={bannerTrackRef} className="banner-track" aria-hidden="true" data-nosnippet style={{willChange: "transform"}}>
+        {[0,1,2,3,4,5].map((i) => (
+          <span key={i} className="banner-item inline-flex items-center shrink-0 whitespace-nowrap">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-700 px-6 lg:px-16">{carouselMounted ? "AT LEAST 25% FASTER - OR IT'S FREE" : "\u00a0"}</span>
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6B35]"></span>
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
         <div className="flex items-center justify-center gap-4 bg-zinc-200 px-6 py-6 sm:gap-6 sm:py-7">
           <img src="/shaun-smiling.jpg" alt="Shaun" className="h-20 w-20 rounded-full object-cover border-2 border-[#FF6B35]/50 shrink-0 sm:h-24 sm:w-24" />
           <div className="min-w-0 flex-1 sm:flex-none">
