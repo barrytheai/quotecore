@@ -51,6 +51,21 @@ export default function Post() {
       </ul>
       <p>The main idea is that the quote should not become a loose document that sits separately from the job. Once the customer approves it, the information should already be there to help move the work forward.</p>
 
+            <h2>Watch QuoteCore+ in action</h2>
+      <p>
+        Not sure what QuoteCore+ actually looks like? This walkthrough shows how the platform connects the quoting workflow — from measurements and pricing through to customer-ready quotes, approvals, materials and job management.
+      </p>
+
+      <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+        <iframe
+          src="https://www.youtube.com/embed/pqIfx-rOcmo&t=3s"
+          title="Watch QuoteCore+ in action"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+      
       <hr />
 
       <h2>Who is QuoteCore+ best for?</h2>
