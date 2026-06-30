@@ -53,7 +53,7 @@ export default function Post() {
 
             <h2>Watch QuoteCore+ in action</h2>
       <p>
-        Not sure what QuoteCore+ actually looks like? This walkthrough shows how the platform connects the quoting workflow — from measurements and pricing through to customer-ready quotes, approvals, materials and job management.
+        Not sure what QuoteCore+ actually looks like? This walkthrough shows how the platform connects the quoting workflow - from measurements and pricing through to customer-ready quotes, approvals, materials and job management.
       </p>
 
       <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
