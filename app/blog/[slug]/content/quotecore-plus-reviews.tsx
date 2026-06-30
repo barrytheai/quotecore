@@ -111,7 +111,6 @@ export default function Post() {
       <h2>What happens during the free trial?</h2>
       <p>The free trial gives you a chance to test QuoteCore+ with a real workflow.</p>
       <p>The best way to try it is not to click around randomly. It is to take one job you would normally quote manually and run it through the platform.</p>
-      <p>To see what digital quoting changes in practice for a working roofer, <a href="/blog/roofing-quoting-software-uk">read how UK contractors are using it to send quotes faster and win more jobs</a>.</p>
       <p>A good trial process looks like this:</p>
       <ol>
         <li>Add a real job.</li>
