@@ -66,7 +66,22 @@ export default function Post() {
       </ul>
       <p>The point is not that every roofing business must stop using spreadsheets immediately. The point is that once the spreadsheet becomes the thing holding the entire job together, it may be time for a better system.</p>
       <p>If speed is the main issue - not just accuracy - <a href="/blog/construction-quote-speed-checklist">the Construction Quote Speed Checklist</a> shows how to build a process that gets quotes out the same day as a site visit, regardless of what tool you are using.</p>
+            <h2>See how reusable pricing replaces spreadsheet workarounds</h2>
+      <p>
+        If your spreadsheet is mainly holding repeat pricing rules, this Smart Components tutorial shows how QuoteCore+ lets you save materials, labour, waste, pitch, measurements and pricing logic so you do not rebuild the same quote every time.
+      </p>
 
+      <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+        <iframe
+          src="https://www.youtube.com/embed/XZSTIfGUHAU&t?start=3"
+          title="How to set up Smart Components in QuoteCore+"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+
+      
       <hr />
 
       <h2>Spreadsheet vs QuoteCore+</h2>
