@@ -73,7 +73,7 @@ export default function Post() {
 
       <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
         <iframe
-          src="https://www.youtube.com/embed/XZSTIfGUHAU&t?start=3"
+          src="https://www.youtube.com/embed/XZSTIfGUHAU?start=3"
           title="How to set up Smart Components in QuoteCore+"
           className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
