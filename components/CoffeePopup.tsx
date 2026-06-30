@@ -33,15 +33,15 @@ export default function CoffeePopup() {
           {/* Left - content */}
           <div className="flex flex-col justify-between p-8 flex-1">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Limited offer</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-950 leading-tight">
-                Want a free <span className="text-[#FF6B35]">coffee?</span>
-              </h2>
-              <div className="mt-1 h-0.5 w-16 bg-[#FF6B35] rounded-full" />
+<p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF6B35]">Limited offer</p>
+<h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-950 leading-tight">
+  Want a free <span className="text-[#FF6B35]">coffee?</span>
+</h2>
+<div className="mt-1 h-0.5 w-16 bg-[#FF6B35] rounded-full" />
 
-              <p className="mt-5 text-zinc-600 leading-relaxed text-sm">
-                Give Shaun 15 minutes and he&apos;ll show you how QuoteCore+ will save you hours every week, and make more money from quoting, ordering, tracking, and invoicing jobs. Not convinced after the call? No worries - <span className="text-[#FF6B35] font-medium">coffee&apos;s still on him.</span>
-              </p>
+<p className="mt-5 text-zinc-600 leading-relaxed text-sm">
+  Give Shaun 15 minutes and he&apos;ll show you how QuoteCore+ will save you hours every week, and make more money from quoting, ordering, tracking, and invoicing jobs. Not convinced after the call? No worries - <span className="text-[#FF6B35] font-medium">coffee&apos;s still on him.</span>
+</p>
             </div>
 
             <div className="mt-8">
@@ -61,13 +61,6 @@ export default function CoffeePopup() {
                   T&amp;Cs apply.
                 </a>
               </p>
-              <button
-                type="button"
-                onClick={dismiss}
-                className="mt-3 w-full text-center text-xs text-zinc-400 hover:text-zinc-600 transition-colors"
-              >
-                Not yet
-              </button>
             </div>
           </div>
 
