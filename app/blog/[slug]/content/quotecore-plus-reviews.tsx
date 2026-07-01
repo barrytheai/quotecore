@@ -35,9 +35,9 @@ export default function Post() {
 
       <hr />
 
-      <h2>What does QuoteCore+ actually do?</h2>
-      <p>QuoteCore+ helps construction businesses manage the workflow around quotes.</p>
-      <p>That includes the parts before and after the quote is sent.</p>
+            <h2>What does QuoteCore+ actually do?</h2>
+      <p>QuoteCore+ helps construction businesses manage the workflow around quotes, jobs, materials, invoices and payment.</p>
+      <p>That includes the parts before the quote is sent, after the customer responds, and after the job is ready to be invoiced.</p>
       <p>The platform supports:</p>
       <ul>
         <li>job measurements</li>
@@ -48,12 +48,14 @@ export default function Post() {
         <li>follow-ups</li>
         <li>material ordering</li>
         <li>job management after the quote is won</li>
+        <li>invoicing</li>
+        <li>payment workflow</li>
       </ul>
-      <p>The main idea is that the quote should not become a loose document that sits separately from the job. Once the customer approves it, the information should already be there to help move the work forward.</p>
+      <p>The main idea is that the quote should not become a loose document that sits separately from the job. Once the customer approves it, the same information should help move the work forward through materials, job management, invoicing and payment.</p>
 
-            <h2>Watch QuoteCore+ in action</h2>
+      <h2>Watch QuoteCore+ in action</h2>
       <p>
-        Not sure what QuoteCore+ actually looks like? This walkthrough shows how the platform connects the quoting workflow - from measurements and pricing through to customer-ready quotes, approvals, materials and job management.
+        Not sure what QuoteCore+ actually looks like? This walkthrough shows how the platform connects the workflow from job details and measurements through to customer-ready quotes, approvals, materials and job management.
       </p>
 
       <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
@@ -103,7 +105,7 @@ export default function Post() {
       <h2>Is it only for roofers?</h2>
       <p>No.</p>
       <p>QuoteCore+ started from roofing experience because that is where Shaun understood the pain most deeply. Roofing was the starting point, not the limit.</p>
-      <p>The wider platform is designed for construction businesses that measure, price, quote, follow up, order materials and manage jobs.</p>
+      <p>The wider platform is designed for construction businesses that measure, price, quote, follow up, order materials, manage jobs, invoice clients and get paid.</p>
       <p>Roofing is the origin story. Construction is the market.</p>
 
       <hr />
@@ -118,7 +120,7 @@ export default function Post() {
         <li>Build the quote.</li>
         <li>Check the output.</li>
         <li>Send it if you are happy with it.</li>
-        <li>See how the approval, follow-up and job workflow feels compared with your usual process.</li>
+        <li>See how the approval, follow-up, job, invoice and payment workflow feels compared with your usual process.</li>
       </ol>
       <p>If you want help, you can book a short call with Shaun and walk through how QuoteCore+ would fit your current process.</p>
 
@@ -149,7 +151,7 @@ export default function Post() {
 
       <h2>The bottom line</h2>
       <p>QuoteCore+ is not just about creating a nicer quote document.</p>
-      <p>It is about keeping the job workflow connected, from measurement through to quote, approval, follow-up, materials and management.</p>
+      <p>It is about keeping the job workflow connected, from measurement through to quote, approval, follow-up, material orders, job management, invoicing and payment.</p>
       <p>For construction businesses that are still rebuilding job information across spreadsheets, notes, emails and folders, QuoteCore+ is built to make that process cleaner.</p>
     </div>
   );
