@@ -31,13 +31,13 @@ const posts: Post[] = [
   {
     slug: "quotecore-plus-reviews",
     title: "QuoteCore+ Reviews: Is It Legit and Who Is It For?",
-    description: "Wondering if QuoteCore+ is legit? Here's what the platform does, who it is for, how the free trial works, and how it helps construction businesses manage the quote-to-job workflow.",
+    description: "Wondering if QuoteCore+ is legit? Here's what the platform does, who it is for, how the free trial works, and how it helps construction businesses manage the workflow from quote to material orders, job management and invoicing.",
     date: "2026-05-27",
   },
   {
     slug: "quotecore-plus-vs-quotesmith",
     title: "QuoteCore+ vs QuoteSmith: Proposal Writer or Full Quote Workflow?",
-    description: "QuoteSmith and QuoteCore+ both help trades create better quotes, but they solve different problems. One focuses on proposal writing, the other on the workflow from measurement to managed job.",
+    description: "QuoteSmith and QuoteCore+ both help trades create better quotes, but they solve different problems. One focuses on proposal writing, the other on the workflow from measurement to quote, material orders, job management and invoicing.",
     date: "2026-05-23",
   },
   {
@@ -64,12 +64,12 @@ const landingPages = [
   {
     href: "/roofing-quoting-software",
     title: "Roofing Quoting Software",
-    description: "How QuoteCore+ helps roofing contractors measure jobs, build professional quotes, and manage everything from takeoff to completed job - in one place.",
+    description: "How QuoteCore+ helps roofing contractors measure jobs, build professional quotes, create material orders, manage jobs and invoice - in one place.",
   },
   {
     href: "/construction-quoting-software",
     title: "Construction Quoting Software",
-    description: "QuoteCore+ is built for construction businesses that measure, price, and quote jobs. Roofing, cladding, flooring, fencing, landscaping, and more.",
+    description: "QuoteCore+ is built for construction businesses that measure, price, quote, create material orders, manage jobs and invoice. Roofing, cladding, flooring, fencing, landscaping, and more.",
   },
 ];
 
