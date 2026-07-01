@@ -52,6 +52,21 @@ export default function Post() {
       <p>A good quote should explain what is included, what is not included, the price, the expected timeline, and any important details about the job. It should have your business name, contact details, and ideally your logo. It should look like it came from a serious business, not something quickly thrown together in the van between jobs.</p>
       <p>This does not mean making the quote fancy. Customers do not need a design masterpiece. They need clarity. They want to know what they are paying for, what happens next, and whether they can trust you to do the job properly.</p>
       <p>The quality of your quote affects how people see the quality of your work. That might not always be fair, but it is how customers make decisions. A messy quote can make good work look less reliable. A clear quote can make a business feel more organised before the job has even started.</p>
+            <h2>See how a professional quote comes together</h2>
+      <p>
+        A clear quote helps the customer trust you sooner. This walkthrough shows how QuoteCore+ helps turn job details and measurements into a professional quote, then keeps the follow-up and next steps connected.
+      </p>
+
+      <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+        <iframe
+          src="https://www.youtube.com/embed/pqIfx-rOcmo?start=3"
+          title="Create a professional quote from start to finish with QuoteCore+"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+      
       <p>If you are still putting quotes together manually, <a href="/blog/roofing-quoting-software-uk">here is how UK roofers are using digital quoting to send better quotes faster - and what that means for winning work</a>.</p>
 
       <hr />
