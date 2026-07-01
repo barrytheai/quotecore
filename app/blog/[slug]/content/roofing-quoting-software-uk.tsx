@@ -45,7 +45,7 @@ export default function Post() {
 
       <h2>What a better workflow looks like</h2>
       <p>QuoteCore+ was built around the idea that roofing quotes should not sit separate from the rest of the job. <a href="/blog/built-by-a-roofer">It was built by a roofer who spent over a decade wishing it existed</a> - and that changes what the product actually does.</p>
-      <p>Instead of treating measurement, pricing, quoting, approval, materials and job management as separate steps scattered across different tools, the workflow can be connected.</p>
+      <p>Instead of treating measurement, pricing, quoting, approval, material orders, job management and invoicing as separate steps scattered across different tools, the workflow can be connected.</p>
       <p>A better process looks more like this:</p>
       <ol>
         <li>Start with the job or plan.</li>
@@ -86,8 +86,8 @@ export default function Post() {
       <hr />
 
       <h2>Where QuoteCore+ fits</h2>
-      <p>QuoteCore+ helps roofing businesses move from measurement to quote to managed job without rebuilding the same information across spreadsheets, old templates, emails and folders.</p>
-      <p>It is built from real roofing experience, but designed as a wider construction workflow system. That means it can also fit general builders, plumbers, electricians, carpenters, flooring teams, fencing contractors, landscapers, cladding businesses and renovation trades where the same measurement-to-quote-to-job problem exists.</p>
+      <p>QuoteCore+ helps roofing businesses move from measurement to quote, material orders, job management and invoicing without rebuilding the same information across spreadsheets, old templates, emails and folders.</p>
+      <p>It is built from real roofing experience, but designed as a wider construction workflow system. That means it can also fit general builders, plumbers, electricians, carpenters, flooring teams, fencing contractors, landscapers, cladding businesses and renovation trades where the same measurement-to-quote-to-job management-to-invoice problem exists.</p>
       <p>For roofers, it means a cleaner way to handle the admin around the job without needing to change how they actually understand the work.</p>
       <p>If your quotes are still getting stuck after site visits, the issue may not be the measuring. It may be the workflow that happens afterwards.</p>
     </div>
