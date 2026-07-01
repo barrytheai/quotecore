@@ -90,6 +90,21 @@ export default function Post() {
       </ul>
 
       <p><strong>Best scenario:</strong> You receive a set of architectural drawings for a new-build roof from a site manager. You upload the plans to QuoteCore+, measure the roof sections digitally, build a priced quote with full component breakdown, and send it before you have left your desk. When it is accepted, you generate the materials order in the same platform. The job is tracked from first measurement to completion in one place.</p>
+            <h3>Watch QuoteCore+ create a roofing quote</h3>
+      <p>
+        To see how QuoteCore+ works in practice, this walkthrough shows a roofing quote being created from start to finish — from job setup and measurements through to a customer-ready quote.
+      </p>
+
+      <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+        <iframe
+          src="https://www.youtube.com/embed/pqIfx-rOcmo?start=3"
+          title="Create a roofing quote from start to finish with QuoteCore+"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+      
       <p><a href="/free-trial">Start a free 14-day trial</a></p>
 
       <hr />
