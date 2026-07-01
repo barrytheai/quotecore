@@ -57,6 +57,21 @@ export default function Post() {
         <li>Use the accepted quote to help organise materials and job details.</li>
       </ol>
       <p>That does not remove the roofer&apos;s judgement. It just means the information stays in one place instead of being rebuilt again and again.</p>
+            <h2>Watch a faster roofing quote workflow</h2>
+      <p>
+        This walkthrough shows the faster workflow in practice: start with the job details, build the quote, send it professionally, track the response and keep the job moving without rebuilding the same information again and again.
+      </p>
+
+      <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+        <iframe
+          src="https://www.youtube.com/embed/pqIfx-rOcmo?start=3"
+          title="Create a roofing quote from start to finish in QuoteCore+"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+      
       <p>If you want a repeatable process for getting quotes out the same day as a site visit, <a href="/blog/construction-quote-speed-checklist">the Construction Quote Speed Checklist</a> breaks it down into four stages you can run through every time.</p>
 
       <hr />
