@@ -38,8 +38,8 @@ export default function Post() {
               ["UK material types", "Tiles, breathable membrane, lead flashing, dry ridge - the software should understand these"],
               ["Professional quote output", "Branded PDFs that hold up to scrutiny from homeowners and project managers"],
               ["Quote acceptance tracking", "Know when a quote is viewed, accepted, or declined without chasing by phone"],
-              ["Materials ordering", "Convert an accepted quote into a materials order without re-entering everything"],
-              ["Workflow from quote to job", "Keeps the accepted quote connected to the job, not lost in email threads"],
+              ["Material orders", "Convert an accepted quote into a material order without re-entering everything"],
+              ["Workflow from quote to invoice", "Keeps the accepted quote connected through job management and invoicing"],
               ["Mobile-friendly", "Works on site, in a van, not just at a desk"],
               ["UK pricing and VAT", "Handles UK tax requirements without workarounds"],
               ["Free trial", "Low-risk way to test before committing"],
@@ -60,12 +60,12 @@ export default function Post() {
       <hr />
 
       <h3>1. QuoteCore+</h3>
-      <p><em>Best for: UK roofers and construction contractors who quote from architectural plans and need a complete workflow from measurement to job.</em></p>
-      <p>QuoteCore+ is a construction quoting platform built specifically for UK contractors, designed around the full workflow that happens between site visit and completed job. It was built by someone with over a decade in roofing - not adapted from a generic invoicing tool. <a href="/blog/built-by-a-roofer">Read the full story of how QuoteCore+ was built by a roofer</a>.</p>
+      <p><em>Best for: UK roofers and construction contractors who quote from architectural plans and need a complete workflow from measurement to invoice.</em></p>
+      <p>QuoteCore+ is a construction quoting platform built for UK contractors, designed around the full workflow that happens between site visit, quote, material orders, job management and invoicing. It was shaped by real roofing experience - not adapted from a generic invoicing tool. <a href="/blog/built-by-a-roofer">Read the full story of how QuoteCore+ was built from inside the industry</a>.</p>
       <p>The starting point is digital takeoff. You upload a roof plan directly into the platform and measure from it - roof sections, hips, valleys, ridges, and components - without printing anything or transferring numbers between tools. This is particularly useful when quoting from architectural drawings provided by a homeowner, builder, or project manager, where site access may not yet be possible.</p>
       <p>From the takeoff, you build the quote directly. QuoteCore+ gives you full control over what the customer sees - line items, pricing structure, and scope - while keeping the measurement data connected throughout. Quotes are formatted professionally and ready to send.</p>
       <p>Once the quote goes out, acceptance tracking runs automatically. You receive an alert by email and in your QuoteCore+ account when a quote is accepted or declined. Nothing gets lost in a pile of emails.</p>
-      <p>From an accepted quote, you create a materials order directly - including custom flashing details you can draw and store in the flashings drawer. The job moves from quote to managed workflow in one place.</p>
+      <p>From an accepted quote, you create material orders directly - including custom flashing details you can draw and store in the flashings drawer. The job then stays connected through job management and invoicing.</p>
 
       <p><strong>Pricing:</strong> QuoteCore+ has monthly plans and a 14-day free trial with no card required. <a href="https://quote-core.com/#pricing">See current pricing</a>.</p>
 
@@ -73,10 +73,10 @@ export default function Post() {
       <ul>
         <li>Digital takeoffs from uploaded roof plans - no printing, no manual transfer</li>
         <li>Built specifically for roofing workflows, not adapted from generic templates</li>
-        <li>Full workflow: measurement to quote to acceptance tracking to materials order to job management</li>
+        <li>Full workflow: measurement to quote to acceptance tracking to material orders to job management and invoicing</li>
         <li>Professional quote output that holds up to scrutiny</li>
         <li>Quote acceptance alerts by email and in-app</li>
-        <li>Materials ordering directly from accepted quotes</li>
+        <li>Material orders directly from accepted quotes</li>
         <li>Works across construction trades beyond roofing</li>
         <li>Built specifically for UK contractors and UK workflows</li>
         <li>Free 14-day trial, no card required</li>
@@ -89,8 +89,8 @@ export default function Post() {
         <li>Better suited to contractors who regularly quote from plans than those doing reactive or repair work only</li>
       </ul>
 
-      <p><strong>Best scenario:</strong> You receive a set of architectural drawings for a new-build roof from a site manager. You upload the plans to QuoteCore+, measure the roof sections digitally, build a priced quote with full component breakdown, and send it before you have left your desk. When it is accepted, you generate the materials order in the same platform. The job is tracked from first measurement to completion in one place.</p>
-            <h3>Watch QuoteCore+ create a roofing quote</h3>
+      <p><strong>Best scenario:</strong> You receive a set of architectural drawings for a new-build roof from a site manager. You upload the plans to QuoteCore+, measure the roof sections digitally, build a priced quote with full component breakdown, and send it before you have left your desk. When it is accepted, you generate the material order in the same platform and keep the job connected through to invoice.</p>
+      <h3>Watch QuoteCore+ create a roofing quote</h3>
       <p>
         To see how QuoteCore+ works in practice, this walkthrough shows a roofing quote being created from start to finish — from job setup and measurements through to a customer-ready quote.
       </p>
@@ -304,7 +304,8 @@ export default function Post() {
               ["AI photo analysis", "❌", "✅", "❌", "❌", "❌", "❌", "❌"],
               ["Live UK material prices", "❌", "❌", "❌", "❌", "❌", "❌", "✅"],
               ["Quote acceptance tracking", "✅", "✅", "✅", "✅", "✅", "✅", "Basic"],
-              ["Materials ordering", "✅", "❌", "❌", "❌", "❌", "❌", "❌"],
+              ["Material orders", "✅", "❌", "❌", "❌", "❌", "❌", "❌"],
+              ["Invoicing workflow", "✅", "❌", "✅", "✅", "✅", "✅", "Basic"],
               ["Job scheduling", "✅", "Basic", "Strong", "Strong", "Basic", "✅", "Basic"],
               ["Team management", "✅", "Basic", "Strong", "Strong", "Basic", "✅", "Basic"],
               ["Job costing", "Basic", "Basic", "✅", "✅", "Basic", "Strong", "Basic"],
@@ -348,7 +349,7 @@ export default function Post() {
       <p>Roofing quoting software helps contractors turn measurements and job specifications into professional, priced quotes - without spreadsheets or manual calculation. The best tools for roofers include workflows specific to roofing: digital takeoffs, component-level pricing, material calculations, and structured output that customers can read and act on.</p>
 
       <h3>What is the best roofing quoting software for UK contractors in 2026?</h3>
-      <p>The best option depends on your workflow. QuoteCore+ is the strongest for contractors quoting from plans who need a full workflow from measurement to materials order. Sleepless Tradesman suits sole traders doing high volumes of repair work. Tradify works well for small teams needing job management alongside quoting. EasyEstimate stands out if live UK merchant pricing built into your estimates is a priority.</p>
+      <p>The best option depends on your workflow. QuoteCore+ is the strongest for contractors quoting from plans who need a full workflow from measurement to quote, material orders, job management and invoicing. Sleepless Tradesman suits sole traders doing high volumes of repair work. Tradify works well for small teams needing job management alongside quoting. EasyEstimate stands out if live UK merchant pricing built into your estimates is a priority.</p>
 
       <h3>How long does it take to send a roofing quote with software?</h3>
       <p>With a platform like QuoteCore+, most contractors send their first quote within minutes of entering their measurements. The goal is to quote the same day as the site visit - ideally before leaving. The delay in most quoting processes is not measurement but the admin that comes after it. See the <a href="/blog/construction-quote-speed-checklist">Construction Quote Speed Checklist</a> for a step-by-step process to quote the same day, every time.</p>
