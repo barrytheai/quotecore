@@ -5,7 +5,7 @@ export default function Post() {
       <p>Both can help trades businesses produce better quotes than a messy spreadsheet or old template. But the way they approach the problem is different.</p>
       <p>If you are newer to digital quoting and want to understand what the shift actually looks like in practice before comparing tools, <a href="/blog/roofing-quoting-software-uk">this breakdown of how UK roofers are winning more jobs with digital quotes</a> is a useful starting point.</p>
       <p>QuoteSmith is mainly focused on helping create polished proposal-style quotes.</p>
-      <p>QuoteCore+ is focused on the wider workflow around the quote, from measurement and pricing through to approval, follow-up, material orders, job management, invoicing and payment.</p>
+      <p>QuoteCore+ is focused on the wider workflow around the quote, from measurement and pricing through to approval, follow-up, material orders, job management and invoicing.</p>
       <p>That difference matters because not every business has the same quoting problem.</p>
 
       <hr />
@@ -39,7 +39,7 @@ export default function Post() {
         <li>creating material orders</li>
         <li>keeping job details organised after acceptance</li>
         <li>creating invoices from accepted work</li>
-        <li>keeping the job connected through to payment</li>
+        <li>keeping the job connected through to invoice</li>
       </ul>
       <p>If those steps are spread across different tools, a better-looking proposal does not fix the wider admin problem.</p>
 
@@ -47,7 +47,7 @@ export default function Post() {
 
       <h2>What QuoteCore+ is built for</h2>
       <p>QuoteCore+ was built around the full quoting and job workflow.</p>
-      <p>The idea is that job information should not have to be rebuilt at every stage. The same measurements and pricing details used to create the quote should also help with approvals, follow-ups, material ordering, job management, invoicing and payment.</p>
+      <p>The idea is that job information should not have to be rebuilt at every stage. The same measurements and pricing details used to create the quote should also help with approvals, follow-ups, material orders, job management and invoicing.</p>
       <p>A typical QuoteCore+ workflow looks like this:</p>
       <ol>
         <li>Add or upload the job information.</li>
@@ -57,17 +57,17 @@ export default function Post() {
         <li>Send it to the client.</li>
         <li>Track acceptance or decline.</li>
         <li>Follow up.</li>
-        <li>Use the accepted quote to support material ordering.</li>
+        <li>Use the accepted quote to support material orders.</li>
         <li>Keep the job details organised.</li>
         <li>Create the invoice without starting again.</li>
-        <li>Keep the workflow connected through to payment.</li>
+        <li>Keep the workflow connected through to invoice.</li>
       </ol>
-      <p>The quote is not treated as the final destination. It becomes part of the job, from first measurement through to final payment.</p>
+      <p>The quote is not treated as the final destination. It becomes part of the job, from first measurement through to final invoice.</p>
 
-            <h2>See the workflow beyond the quote</h2>
+      <h2>See the workflow beyond the quote</h2>
       <p>
-  The easiest way to understand the difference is to see what happens after the quote is built. This walkthrough shows how QuoteCore+ connects the wider workflow - from measurements and pricing through to customer approval, follow-up, material orders, job management and invoicing.
-</p>
+        The easiest way to understand the difference is to see what happens after the quote is built. This walkthrough shows how QuoteCore+ connects the wider workflow - from measurements and pricing through to customer approval, follow-up, material orders, job management and invoicing.
+      </p>
 
       <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
         <iframe
@@ -100,7 +100,7 @@ export default function Post() {
               ["Pricing logic", "Mainly manual input", "Designed to support repeatable pricing"],
               ["Approval tracking", "Not the main workflow", "Yes"],
               ["Follow-ups", "Not the main workflow", "Yes"],
-              ["Material ordering", "Not the main workflow", "Connected to accepted quotes"],
+              ["Material orders", "Not the main workflow", "Connected to accepted quotes"],
               ["Job management after quote", "Limited", "Built into the workflow"],
               ["Invoicing workflow", "Not the main workflow", "Connected after the quote is accepted"],
               ["Best suited for", "Better proposal presentation", "Businesses wanting one connected workflow"],
@@ -130,7 +130,7 @@ export default function Post() {
       <h2>The bottom line</h2>
       <p>QuoteSmith and QuoteCore+ both sit in the quoting space, but they are solving different parts of the problem.</p>
       <p>QuoteSmith helps with proposal writing.</p>
-      <p>QuoteCore+ helps connect the job from measurement to quote, approval, materials, job management, invoicing and payment.</p>
+      <p>QuoteCore+ helps connect the job from measurement to quote, approval, material orders, job management and invoicing.</p>
       <p>For construction businesses that want to stop rebuilding the same job information across multiple places, QuoteCore+ is built for the wider workflow from first quote to invoice.</p>
       <p>Before you make a decision, it is worth knowing <a href="/blog/quotecore-plus-reviews">what to expect from QuoteCore+ as a product and what the free trial actually gives you access to</a>.</p>
     </div>
