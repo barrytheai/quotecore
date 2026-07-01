@@ -11,13 +11,13 @@ const posts: Record<string, {
 }> = {
   "quotecore-plus-reviews": {
     title: "QuoteCore+ Reviews: Is It Legit and Who Is It For?",
-    description: "Wondering if QuoteCore+ is legit? Here's what the platform does, who it is for, how the free trial works, and how it helps construction businesses manage the quote-to-job workflow.",
+    description: "Wondering if QuoteCore+ is legit? Here's what the platform does, who it is for, how the free trial works, and how it helps construction businesses manage the workflow from quote to material orders, job management and invoicing.",
     date: "2026-05-27",
     content: () => import("./content/quotecore-plus-reviews"),
   },
   "quotecore-plus-vs-quotesmith": {
     title: "QuoteCore+ vs QuoteSmith: Proposal Writer or Full Quote Workflow?",
-    description: "QuoteSmith and QuoteCore+ both help trades create better quotes, but they solve different problems. One focuses on proposal writing, the other on the workflow from measurement to managed job.",
+    description: "QuoteSmith and QuoteCore+ both help trades create better quotes, but they solve different problems. One focuses on proposal writing, the other on the workflow from measurement to quote, material orders, job management and invoicing.",
     date: "2026-05-23",
     content: () => import("./content/quotecore-plus-vs-quotesmith"),
   },
@@ -29,7 +29,7 @@ const posts: Record<string, {
   },
   "roofing-quoting-software-vs-spreadsheets": {
     title: "Roofing Quoting Software vs Spreadsheets: What Actually Saves Time?",
-    description: "Spreadsheets can work for roofing quotes, but they start to slow businesses down when measurements, pricing, approvals, materials and job details need to stay connected.",
+    description: "Spreadsheets can work for roofing quotes, but they start to slow businesses down when measurements, pricing, approvals, material orders, job details and invoicing need to stay connected.",
     date: "2026-05-11",
     content: () => import("./content/roofing-quoting-software-vs-spreadsheets"),
   },
@@ -104,7 +104,7 @@ export default async function BlogPostPage({ params }: Props) {
       {
         "@type": "Question",
         "name": "What is the best roofing quoting software for UK contractors in 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The best option depends on your workflow. QuoteCore+ is the strongest for contractors quoting from plans who need a full workflow from measurement to materials order. Sleepless Tradesman is a strong choice for sole traders doing high volumes of repair work who want AI-assisted quoting from customer photos. Tradify works well for small teams that need job management alongside quoting." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The best option depends on your workflow. QuoteCore+ is the strongest for contractors quoting from plans who need a full workflow from measurement to quote, material orders, job management and invoicing. Sleepless Tradesman is a strong choice for sole traders doing high volumes of repair work who want AI-assisted quoting from customer photos. Tradify works well for small teams that need job management alongside quoting." }
       },
       {
         "@type": "Question",
