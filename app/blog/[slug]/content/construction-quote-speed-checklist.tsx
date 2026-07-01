@@ -51,9 +51,9 @@ export default function Post() {
       <hr />
 
       <h2>How QuoteCore+ fits in</h2>
-      <p>QuoteCore+ is built around this checklist. Upload a plan, measure from it, pricing applies automatically, professional quote generated - ready to send. When accepted, the materials order builds from the same numbers.</p>
+      <p>QuoteCore+ is built around this checklist. Upload a plan, measure from it, apply pricing, generate a professional quote and send it to the client. When accepted, the same job information can support material orders, job management and invoicing.</p>
       <p>No re-entry. No reformatting. Quote to client, same day.</p>
-            <h2>See the quote speed workflow in practice</h2>
+      <h2>See the quote speed workflow in practice</h2>
       <p>
         This walkthrough shows how QuoteCore+ helps turn job details and measurements into a professional quote without rebuilding the same information across notes, spreadsheets, quote templates and emails.
       </p>
