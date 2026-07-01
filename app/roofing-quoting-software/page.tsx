@@ -378,8 +378,8 @@ export default function RoofingQuotingSoftwarePage() {
         {/* Final CTA */}
         <section className="mx-auto max-w-4xl px-6 py-24 text-center lg:px-8">
           <h2 className="text-3xl font-semibold sm:text-5xl">
-            Measure. Quote. Order. Manage. Invoice. Get paid.
-          </h2>
+  Quote. Manage. Grow.
+</h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-lg text-zinc-600">
             Stop running one roofing job through five different tools. QuoteCore+ gives you one connected workflow from first measurement to final payment.
