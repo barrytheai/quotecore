@@ -53,7 +53,20 @@ export default function Post() {
       </ul>
       <p>The aim is not to replace trade knowledge. The aim is to remove the unnecessary admin around the work.</p>
       <p>Experienced tradespeople already know how to price and manage jobs. QuoteCore+ is there to make sure the information does not have to be rebuilt across several places every time.</p>
+      <h2>See what the workflow became</h2>
+      <p>
+        To see what Shaun’s workflow idea became, this walkthrough shows how QuoteCore+ helps move from job setup and measurements through to a professional quote and the next steps after the customer responds.
+      </p>
 
+      <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+        <iframe
+          src="https://www.youtube.com/embed/pqIfx-rOcmo?start=3"
+          title="QuoteCore+ workflow walkthrough"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
       <hr />
 
       <h2>Why the founder story matters</h2>
