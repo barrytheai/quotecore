@@ -53,6 +53,20 @@ export default function Post() {
       <h2>How QuoteCore+ fits in</h2>
       <p>QuoteCore+ is built around this checklist. Upload a plan, measure from it, pricing applies automatically, professional quote generated - ready to send. When accepted, the materials order builds from the same numbers.</p>
       <p>No re-entry. No reformatting. Quote to client, same day.</p>
+            <h2>See the quote speed workflow in practice</h2>
+      <p>
+        This walkthrough shows how QuoteCore+ helps turn job details and measurements into a professional quote without rebuilding the same information across notes, spreadsheets, quote templates and emails.
+      </p>
+
+      <div className="not-prose my-8 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+        <iframe
+          src="https://www.youtube.com/embed/pqIfx-rOcmo?start=3"
+          title="Create a quote from start to finish with QuoteCore+"
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
       <p>Getting quotes out faster solves one part of the problem - if you want the broader picture on growing a contracting business without spending money on ads first, <a href="/blog/how-to-get-more-work-as-a-contractor">here are the basics worth fixing</a>.</p>
       <p><a href="/free-trial" className="text-[#FF6B35] font-medium hover:underline">Start your free 14-day trial</a> - no card required.</p>
     </div>
