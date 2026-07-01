@@ -52,7 +52,7 @@ export default function Post() {
       <p>A good quote should explain what is included, what is not included, the price, the expected timeline, and any important details about the job. It should have your business name, contact details, and ideally your logo. It should look like it came from a serious business, not something quickly thrown together in the van between jobs.</p>
       <p>This does not mean making the quote fancy. Customers do not need a design masterpiece. They need clarity. They want to know what they are paying for, what happens next, and whether they can trust you to do the job properly.</p>
       <p>The quality of your quote affects how people see the quality of your work. That might not always be fair, but it is how customers make decisions. A messy quote can make good work look less reliable. A clear quote can make a business feel more organised before the job has even started.</p>
-            <h2>See how a professional quote comes together</h2>
+      <h2>See how a professional quote comes together</h2>
       <p>
         A clear quote helps the customer trust you sooner. This walkthrough shows how QuoteCore+ helps turn job details and measurements into a professional quote, then keeps the follow-up and next steps connected.
       </p>
@@ -111,7 +111,7 @@ export default function Post() {
       <p>A lot of contractors think getting more work means getting more leads. Sometimes it does. But often, the quickest win is converting more of the enquiries and quotes you already have.</p>
       <p>If you send ten quotes and win five, the other five are not just &quot;lost&quot;. Some may have gone elsewhere, but some may have needed a follow-up. Some may have wanted more detail. Some may have trusted another contractor more because their quote looked clearer and more professional.</p>
       <p>That is why your quoting process matters so much. Speed matters. Detail matters. Follow-up matters. If a customer contacts three contractors and you are the first to send a clear, professional quote, you have already made their decision easier. If you then follow up properly, you give yourself another chance to win the job.</p>
-      <p>This is exactly the kind of workflow <a href="/free-trial">QuoteCore+</a> was built for. If you are weighing up which quoting software to use, <a href="/blog/quotecore-plus-vs-quotesmith">here is a direct comparison of QuoteCore+ and QuoteSmith</a> - two of the main options for UK contractors - so you can see which one fits your workflow. It helps trades businesses keep the quoting process organised, from measuring and pricing through to sending the quote and tracking what happens next. Instead of quotes getting lost across emails, notes, spreadsheets, and messages, everything stays in one place.</p>
+      <p>This is exactly the kind of workflow <a href="/free-trial">QuoteCore+</a> was built for. If you are weighing up which quoting software to use, <a href="/blog/quotecore-plus-vs-quotesmith">here is a direct comparison of QuoteCore+ and QuoteSmith</a> - two of the main options for UK contractors - so you can see which one fits your workflow. It helps trades businesses keep the quoting process organised, from measuring and pricing through to sending the quote, tracking what happens next, creating material orders, managing the job and invoicing. Instead of jobs getting lost across emails, notes, spreadsheets, quote documents and messages, everything stays in one place.</p>
 
       <hr />
 
