@@ -229,6 +229,22 @@ export default function RoofingQuotingSoftwarePage() {
             ))}
           </ul>
           <p className="mt-8 text-base font-medium text-zinc-700">Make the component once. Reuse it whenever the same type of work comes up again.</p>
+                    <div className="mt-10">
+            <h3 className="text-2xl font-semibold text-zinc-950">Watch Smart Components™ in action</h3>
+            <p className="mt-4 text-lg leading-8 text-zinc-600">
+              This tutorial shows how QuoteCore+ lets you save roofing materials, labour, waste, pitch, measurements and pricing logic so you do not have to rebuild the same quote setup every time.
+            </p>
+
+            <div className="mt-6 aspect-video overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-100">
+              <iframe
+                src="https://www.youtube.com/embed/XZSTIfGUHAU?start=3"
+                title="How to set up Smart Components in QuoteCore+"
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </section>
 
         {/* Why QuoteCore+ */}
