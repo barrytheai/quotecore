@@ -5,7 +5,7 @@ export default function Post() {
       <p>Spreadsheets are flexible. They are familiar. They let you build your own formulas, adjust rates, copy old jobs and keep control of the numbers. For a small business, especially in the early days, a spreadsheet can do a decent job.</p>
       <p>So the question is not whether spreadsheets are bad.</p>
       <p>The better question is: at what point does the spreadsheet start creating more admin than it saves?</p>
-      <p>For many roofers, the answer comes when the spreadsheet becomes the middle of a much bigger workflow. The job starts with measurements and photos, then moves into pricing, then into a quote document, then into follow-up, then materials, then job management. If the spreadsheet only handles one part of that, everything else still has to be managed somewhere else.</p>
+      <p>For many roofers, the answer comes when the spreadsheet becomes the middle of a much bigger workflow. The job starts with measurements and photos, then moves into pricing, then into a quote document, then into follow-up, then material orders, then job management and invoicing. If the spreadsheet only handles one part of that, everything else still has to be managed somewhere else.</p>
 
       <hr />
 
@@ -26,7 +26,7 @@ export default function Post() {
 
       <h2>Where spreadsheets start to slow things down</h2>
       <p>The problem usually starts when the spreadsheet is expected to do more than it was built for.</p>
-      <p>A roofing quote is not just a set of numbers. It is connected to the customer, the site, the measurements, the materials, the scope, the approval, the order and eventually the job itself.</p>
+      <p>A roofing quote is not just a set of numbers. It is connected to the customer, the site, the measurements, the material orders, the scope, the approval, the job itself and eventually the invoice.</p>
       <p>A spreadsheet can calculate, but it does not naturally manage the full process.</p>
       <p>Common problems include:</p>
       <ul>
@@ -62,11 +62,12 @@ export default function Post() {
         <li>acceptance or decline can be tracked</li>
         <li>follow-ups are easier to manage</li>
         <li>materials can be ordered from the accepted quote</li>
+        <li>invoices can be created without starting again</li>
         <li>job details stay connected after the quote is won</li>
       </ul>
       <p>The point is not that every roofing business must stop using spreadsheets immediately. The point is that once the spreadsheet becomes the thing holding the entire job together, it may be time for a better system.</p>
       <p>If speed is the main issue - not just accuracy - <a href="/blog/construction-quote-speed-checklist">the Construction Quote Speed Checklist</a> shows how to build a process that gets quotes out the same day as a site visit, regardless of what tool you are using.</p>
-            <h2>See how reusable pricing replaces spreadsheet workarounds</h2>
+      <h2>See how reusable pricing replaces spreadsheet workarounds</h2>
       <p>
         If your spreadsheet is mainly holding repeat pricing rules, this Smart Components tutorial shows how QuoteCore+ lets you save materials, labour, waste, pitch, measurements and pricing logic so you do not rebuild the same quote every time.
       </p>
@@ -101,7 +102,8 @@ export default function Post() {
               ["Quote output", "Often needs formatting elsewhere", "Designed to create a client-ready quote"],
               ["Follow-up", "Manual", "Built into the workflow"],
               ["Approval tracking", "Usually manual", "Track accepted or declined quotes"],
-              ["Materials", "Ordered separately", "Can be linked to the accepted quote"],
+              ["Material orders", "Created separately", "Can be created from the accepted quote"],
+              ["Invoicing", "Usually handled separately", "Can follow from the accepted quote"],
               ["Job details", "Spread across files and emails", "Kept with the job"],
               ["Team use", "Often depends on who built the sheet", "Easier to keep consistent"],
             ].map(([area, spreadsheet, qcp]) => (
@@ -124,7 +126,7 @@ export default function Post() {
         <li>you work alone</li>
         <li>your quotes are simple</li>
         <li>you already have a clean follow-up process</li>
-        <li>you do not need material ordering connected to quotes</li>
+        <li>you do not need material orders or invoices connected to accepted quotes</li>
         <li>you are not losing time after site visits</li>
       </ul>
       <p>But if quoting is becoming a bottleneck, or if job information keeps getting copied between different places, a spreadsheet may no longer be the best centre of the workflow.</p>
@@ -133,7 +135,7 @@ export default function Post() {
 
       <h2>The honest answer</h2>
       <p>Spreadsheets are not the enemy. Disconnected admin is.</p>
-      <p>QuoteCore+ was built for roofing and construction businesses that want measurements, pricing, quotes, approvals, materials and job details to stay connected.</p>
+      <p>QuoteCore+ was built for roofing and construction businesses that want measurements, pricing, quotes, approvals, material orders, job details and invoicing to stay connected.</p>
       <p>If your spreadsheet still works, keep it.</p>
       <p>If it has become the thing you are constantly working around, it may be time to try a different workflow. <a href="/blog/best-roofing-quoting-software-uk-2026">Here is a full comparison of the best roofing quoting software for UK contractors in 2026</a> - with honest assessments of six tools across the criteria that actually matter for roofers.</p>
     </div>
